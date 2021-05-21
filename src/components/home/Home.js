@@ -1,22 +1,21 @@
 import React from 'react';
-import Header from '../layouts/Header';
-import Body from '../layouts/Bodylayout/Body'
-
+import Header from '../layouts/Header/Header';
+import Main from '../layouts/Bodylayout/Main';
+import Footer from '../layouts/footer/Footer'
 
 
 function Home(props) {
 
 
-
     return (
-        <header>
+        <div>
             <Header /> 
-            <Body />
+            <Main />
+            <Footer />
 
-        </header>
+        </div>
     )
 }
-
 
 export default Home
 

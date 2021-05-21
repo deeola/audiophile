@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar(props) {
   return (
-    <nav>
+    <nav className='sticky'>
       <div className='logo-ham'>
         <img
           className="hamburger hamtab"

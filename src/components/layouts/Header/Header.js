@@ -10,10 +10,8 @@ function Header(props) {
         backgroundSize:'center',
         paddingTop:'28px',
         height:'650px',
-        width:'1440px',
-        position:'absolute',
-        left:'-1px',
-        top:'0px'
+        width:'1400px',
+        position:'relative'
     }
     return (
         <div   style={styles}>

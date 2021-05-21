@@ -10,6 +10,9 @@ nav{
     height: 28px;
     margin: auto;
     align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: unset;
 
     ul{
         display: flex;
@@ -46,7 +49,11 @@ nav{
         cursor: pointer;
     }
 }
-
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
 .heroText{
     position: absolute;
     width: 360px;
@@ -89,4 +96,137 @@ nav{
         color: $very-light-gray;
         cursor: pointer;
     }
+}
+
+
+
+//BODY
+
+.firstSection{
+    display: flex;
+    width: 1110px;
+    margin: auto;
+    height: 284px;
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    .shopSection{
+        color: $orange;
+        width: 350px;
+        height: 283px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .shopImageDiv{
+            position: absolute;
+            left: 32.48%;
+            right: 32.39%;
+            top: 0%;
+            bottom: 32.66%;
+            z-index: 100;
+            width: 160px;
+        }
+
+        .shopTextDiv{
+            background-color: whitesmoke;
+            position: relative;
+            top:3rem;
+            text-align: center;
+            color: rgb(99, 61, 61);
+            padding-top: 5rem;
+            padding-bottom: 1rem;
+
+            .shoptitle{
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+
+                
+            }
+
+            .shopText{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span{
+                color: $orange;
+                cursor: pointer;
+                margin-left: 3px;
+                font-weight: 700;
+                font-size: 22px;
+            }
+        }
+    }
+    
+}
+
+
+
+//Second Div
+
+.secondSection{
+    background-color: $orange !important;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    height: 560px;
+    width: 1110px;
+    position: relative;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    .zxspeaker{
+        width: 410px;
+        height: 473px;
+        position: relative;
+        top: 45px;
+        right: 60px;
+        overflow: hidden;
+    }
+
+
+    .secondTextDiv{
+        width: 349px;
+        height: 303px;
+
+        .sdMainText{
+            font-size: 56px;
+            color: $light-gray;
+        }
+
+        .sdproductDescr {
+            font-size: 15px;
+            color: $gray;
+            margin-top: 10px;
+            
+        }
+
+        button{
+            width: 160px;
+            height: 48px;
+            background-color: $black;
+            color: white;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//Zspeaker
+
+.zspeakermain{
+    width: 1110px;
+    height: 320px;
+    margin: 48px auto;
 }

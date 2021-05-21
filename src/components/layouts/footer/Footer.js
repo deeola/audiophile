@@ -1,14 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-function Gear(props) {
+
+function Footer(props) {
     const styles={
         background: `url('${process.env.PUBLIC_URL}/assets/home/desktop/image-hero.jpg')`,
         backgroundPosition: 'center',
         backgroundSize:'center',
         marginTop:'38px',
-        height:'588px',
-        width:'1110px',
+
+        height:'365px',
         position:'relative',
         margin:'auto'
     }
@@ -18,9 +18,6 @@ function Gear(props) {
     )
 }
 
-Gear.propTypes = {
 
-}
-
-export default Gear
+export default Footer
 
