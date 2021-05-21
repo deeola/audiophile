@@ -1,0 +1,91 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 1109.83px;
+  height: 28px;
+  margin: auto;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  width: 429px;
+  justify-content: space-between;
+  color: #ffffff;
+  align-items: center;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  font-weight: 700px;
+  font-size: 13px;
+}
+
+nav ul li:hover {
+  color: #d87d4a;
+  cursor: pointer;
+}
+
+nav .logo-ham {
+  display: flex;
+  width: 143px;
+  height: 25px;
+}
+
+nav .logo-ham .hamburger {
+  display: none;
+}
+
+nav .cartIcon {
+  cursor: pointer;
+}
+
+.heroText {
+  position: absolute;
+  width: 360px;
+  left: 165px;
+  top: 225px;
+}
+
+.heroText .productPara {
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+
+.heroText h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  width: 396px;
+  height: 116px;
+  color: #ffffff;
+  margin-top: 24px;
+}
+
+.heroText .productDescr {
+  font-weight: 500px;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 24px;
+  color: #fafafa;
+}
+
+.heroText button {
+  width: 160px;
+  height: 48px;
+  margin-top: 24px;
+  background-color: #d87d4a;
+  color: #ffffff;
+  cursor: pointer;
+}

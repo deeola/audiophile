@@ -1,0 +1,25 @@
+//Colors Variables
+
+$orange: #d87d4a;
+$orange-light:#fbaf85;
+$black:#101010;
+$very-black:#000000;
+$gray:#f1f1f1;
+$light-gray:#fafafa;
+$very-light-gray:#ffffff;
+
+
+//Typography
+
+$font-family: 'Manrope', sans-serif;
+
+
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: $font-family;
+    
+}

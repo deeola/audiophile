@@ -1,0 +1,92 @@
+@import 'config';
+@import 'utilities';
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 1109.83px;
+    height: 28px;
+    margin: auto;
+    align-items: center;
+
+    ul{
+        display: flex;
+        width: 429px;
+        justify-content: space-between;
+        color: $very-light-gray;
+        align-items: center;
+
+        li{
+            text-transform: uppercase;
+            font-weight: 700px;
+            font-size: 13px;
+            &:hover{
+                color: $orange;
+                cursor: pointer;
+            }
+        }
+
+
+
+    }
+
+    .logo-ham{
+        display: flex;
+        width: 143px;
+        height: 25px;
+
+        .hamburger{
+            display: none;
+        }
+    }
+
+    .cartIcon{
+        cursor: pointer;
+    }
+}
+
+.heroText{
+    position: absolute;
+    width: 360px;
+    left: 165px;
+    top: 225px;
+
+    .productPara{
+        opacity: 0.5;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: $very-light-gray;
+
+    }
+
+    h1{
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 58px;
+        letter-spacing: 2px;
+        width: 396px;
+        height: 116px;
+        color:$very-light-gray;
+        margin-top: 24px;
+        
+    }
+
+    .productDescr{
+        font-weight: 500px;
+        font-size: 15px;
+        line-height: 25px;
+        margin-top: 24px;
+        color: $light-gray;
+    }
+
+    button{
+        width: 160px;
+        height: 48px;
+        margin-top: 24px;
+        background-color: $orange;
+        color: $very-light-gray;
+        cursor: pointer;
+    }
+}
