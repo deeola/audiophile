@@ -2,7 +2,6 @@
   border: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: "Manrope", sans-serif;
 }
 
@@ -10,19 +9,19 @@ img {
   width: 100%;
 }
 
-nav {
+nav, .footerNav {
   display: flex;
   justify-content: space-between;
-  width: 1109.83px;
-  height: 28px;
+  width: 80%;
   margin: auto;
   align-items: center;
   position: sticky;
+  padding-top: 20px;
   top: 0;
-  overflow: unset;
+  z-index: 200;
 }
 
-nav ul {
+nav ul, .footerNav ul {
   display: flex;
   width: 429px;
   justify-content: space-between;
@@ -30,41 +29,63 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
+nav ul li, .footerNav ul li {
   text-transform: uppercase;
   font-weight: 700px;
   font-size: 13px;
+  list-style: none;
 }
 
-nav ul li:hover {
+nav ul li:hover, .footerNav ul li:hover {
   color: #d87d4a;
   cursor: pointer;
 }
 
-nav .logo-ham {
+nav .logo-ham, .footerNav .logo-ham {
   display: flex;
   width: 143px;
   height: 25px;
 }
 
-nav .logo-ham .hamburger {
+nav .logo-ham .hamburger, .footerNav .logo-ham .hamburger {
   display: none;
 }
 
-nav .cartIcon {
+nav .cartIcon, .footerNav .cartIcon {
   cursor: pointer;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
+.footerNav {
+  padding-top: unset;
+}
+
+.Header {
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  background-color: #000000;
+  height: 698px;
+  background-repeat: no-repeat;
+}
+
+.mainHero {
+  width: 100%;
+  background-size: cover;
+}
+
+.herowrapper {
+  width: 80%;
+  margin: auto;
 }
 
 .heroText {
-  position: absolute;
-  width: 360px;
-  left: 165px;
-  top: 225px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  position: relative;
+  top: 170px;
 }
 
 .heroText .productPara {
@@ -72,6 +93,7 @@ nav .cartIcon {
   text-transform: uppercase;
   letter-spacing: 10px;
   color: #ffffff;
+  text-align: left;
 }
 
 .heroText h1 {
@@ -100,13 +122,14 @@ nav .cartIcon {
   background-color: #d87d4a;
   color: #ffffff;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .firstSection {
   display: flex;
-  width: 1110px;
+  width: 80%;
   margin: auto;
-  height: 284px;
   margin-top: 2rem;
   justify-content: space-between;
   align-items: center;
@@ -114,8 +137,7 @@ nav .cartIcon {
 
 .firstSection .shopSection {
   color: #d87d4a;
-  width: 350px;
-  height: 283px;
+  width: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -124,8 +146,7 @@ nav .cartIcon {
 
 .firstSection .shopSection .shopImageDiv {
   position: absolute;
-  left: 32.48%;
-  right: 32.39%;
+  right: 27.39%;
   top: 0%;
   bottom: 32.66%;
   z-index: 100;
@@ -139,7 +160,7 @@ nav .cartIcon {
   text-align: center;
   color: #633d3d;
   padding-top: 5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 30px;
 }
 
 .firstSection .shopSection .shopTextDiv .shoptitle {
@@ -168,10 +189,9 @@ nav .cartIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 560px;
-  width: 1110px;
+  width: 80%;
   position: relative;
-  margin: auto;
+  margin: 98px auto auto auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -211,10 +231,161 @@ nav .cartIcon {
   margin-top: 20px;
   border-radius: 5px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .zspeakermain {
-  width: 1110px;
+  width: 80%;
   height: 320px;
   margin: 48px auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.zspeakermain .zspeakerDiv {
+  width: 204px;
+  height: 118px;
+  left: 260px;
+  position: relative;
+  left: 100px;
+  top: 100px;
+}
+
+.zspeakermain .zspeakerDiv .zspeakertitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.zspeakermain .zspeakerDiv button {
+  width: 160px;
+  height: 48px;
+  margin-top: 10px;
+  border: 1px solid #101010;
+  cursor: pointer;
+}
+
+.earphonesDiv {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin: auto auto 48px auto;
+  justify-content: space-between;
+}
+
+.earphonesDiv .earphoneImageDiv {
+  width: 49%;
+  height: 100%;
+}
+
+.earphonesDiv .earphoneImageDiv img {
+  display: block;
+}
+
+.earphonesDiv .earphoneTextDiv {
+  width: 49%;
+  background-color: #f1f1f1;
+  padding: 100px 50px 0px 50px;
+}
+
+.earphonesDiv .earphoneTextDiv .earphoneText {
+  width: 100%;
+}
+
+.earphonesDiv .earphoneTextDiv .earphoneText p {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.earphonesDiv .earphoneTextDiv button {
+  text-transform: uppercase;
+  width: 9rem;
+  height: 3rem;
+  margin-top: 20px;
+  border: 1px solid #101010;
+  cursor: pointer;
+}
+
+.Gear {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 48px;
+}
+
+.Gear .GearTextDiv {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Gear .GearTextDiv .ggtext {
+  position: relative;
+  width: 90%;
+}
+
+.Gear .GearTextDiv .ggtext .gearmaintitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.Gear .GearTextDiv .ggtext .gearmaintitle span {
+  color: #d87d4a;
+}
+
+.Gear .GearTextDiv .ggtext .gmaintext {
+  font-size: .9rem;
+  margin-top: 20px;
+  line-height: 24px;
+}
+
+.Gear .gearImageDiv {
+  width: 50%;
+}
+
+.footer {
+  background-color: #000000;
+  padding: 106px 0px 50px 0px;
+}
+
+.footer .footerSecondDiv {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.footer .footerSecondDiv .footerSecondText {
+  width: 50%;
+  line-height: 24px;
+  font-size: 15px;
+  margin-top: 40px;
+  color: #f1f1f1;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 10%;
+}
+
+.icons .iconDiv {
+  width: 14px;
+  position: relative;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.copyRight {
+  color: #f1f1f1;
+  width: 80%;
+  margin: 40px auto auto auto;
+}
+
+.copyRight span {
+  color: #d87d4a;
 }

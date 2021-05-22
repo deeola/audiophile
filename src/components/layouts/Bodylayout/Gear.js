@@ -1,26 +1,26 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 function Gear(props) {
-    const styles={
-        background: `url('${process.env.PUBLIC_URL}/assets/home/desktop/image-hero.jpg')`,
-        backgroundPosition: 'center',
-        backgroundSize:'center',
-        marginTop:'38px',
-        height:'588px',
-        width:'1110px',
-        position:'relative',
-        margin:'auto'
-    }
+
     return (
-        <div   style={styles}>
+        <div className='Gear'>
+            <div className='GearTextDiv'>
+                <div className='ggtext'>
+                <p className='gearmaintitle'>Bringing you the <span>best</span>  audio gear</p>
+                <p className='gmaintext'>  Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
+
+                </div>
+                
+
+            </div>
+            <div className='gearImageDiv'>
+                <img src={"/assets/shared/desktop/image-best-gear.jpg"}  alt='man with headphone'></img>
+            </div>
         </div>
     )
 }
 
-Gear.propTypes = {
-
-}
 
 export default Gear
 

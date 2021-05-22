@@ -1,18 +1,19 @@
 import React from 'react'
 
 function Earphones(props) {
-    const styles={
-        background: `url('${process.env.PUBLIC_URL}/assets/home/desktop/image-hero.jpg')`,
-        backgroundPosition: 'center',
-        backgroundSize:'center',
-        marginTop:'58px',
-        height:'320px',
-        width:'1110px',
-        position:'relative',
-        margin:'auto'
-    }
     return (
-        <div   style={styles}>
+        <div className='earphonesDiv' style={{display:'flex'}}>
+            <div className='earphoneImageDiv' >
+                <img src={"/assets/home/desktop/image-earphones-yx1.jpg"} alt='earbud image'></img>
+            </div>
+            <div className='earphoneTextDiv'>
+                <div className='earphoneText'>
+                    <p>YX1 earphones</p>
+                    <button>See product</button>
+                </div>
+
+            </div>
+
         </div>
     )
 }
