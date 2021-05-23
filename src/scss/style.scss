@@ -21,12 +21,14 @@ nav, .footerNav{
         align-items: center;
         align-items: center;
 
-        li{
+        .mylink,li{
             text-transform: uppercase;
             font-weight: 700;
             font-size: 13px;
             list-style: none;
             margin-left: 1em;
+            text-decoration: none;
+            color: $gray;
             &:hover{
                 color: $orange;
                 cursor: pointer;
@@ -485,4 +487,101 @@ nav, .footerNav{
 }
 
 
+//Headphone Section
+
+.HeaderShared{
+    background-color: $black;
+    height:316px;
+}
+
+.proptitle{
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.headers{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeadphoneGear{
+    margin-top: 40px !important;
+    background-color: aliceblue !important;
+}
+
+.HeadphoneSection{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 48px;
+}
+.HeadImageOne{
+    
+    width: 50% !important;
+    img{
+        display: block;
+    }
+}
+
+.SectionText{
+    width: 50%;
+}
+
+.sectionOne{
+    padding: 10px 70px !important;
+}
+
+.sectionTwo{
+    padding: 130px  0px 0px 0px !important;
+    .sectionPara{
+        width: 70% !important;
+        margin-top: 10px;
+        font-size: 13.5px;
+        line-height: 20px;
+    }
+    
+
+
+}
+
+.newProductSec{
+    margin-top: 100px;
+    letter-spacing: 7px;
+    color: $orange;
+}
+
+.secTopic{
+    margin-top: 150px !important;
+}
+
+.SectionMainTitle{
+    text-transform: uppercase;
+    width: 70%;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.sectionPara{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 13.5px;
+    line-height: 20px;
+}
+
+.sectionButton{
+    padding: 15px 25px;
+    margin-top: 20px;
+    background-color: $orange;
+    color: $gray;
+    cursor: pointer;
+}
+
+.HeadphoneMain,.EarphoneMain,.SpeakerMain{
+    .Gear{
+        margin-top: 100px;
+    }
+}
 @import 'mediaQueries';

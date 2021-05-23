@@ -29,15 +29,17 @@ nav ul, .footerNav ul {
   align-items: center;
 }
 
-nav ul li, .footerNav ul li {
+nav ul .mylink, nav ul li, .footerNav ul .mylink, .footerNav ul li {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
   list-style: none;
   margin-left: 1em;
+  text-decoration: none;
+  color: #f1f1f1;
 }
 
-nav ul li:hover, .footerNav ul li:hover {
+nav ul .mylink:hover, nav ul li:hover, .footerNav ul .mylink:hover, .footerNav ul li:hover {
   color: #d87d4a;
   cursor: pointer;
 }
@@ -430,6 +432,99 @@ nav .cartIcon, .footerNav .cartIcon {
 
 .copyRight span {
   color: #d87d4a;
+}
+
+.HeaderShared {
+  background-color: #101010;
+  height: 316px;
+}
+
+.proptitle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.headers {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeadphoneGear {
+  margin-top: 40px !important;
+  background-color: aliceblue !important;
+}
+
+.HeadphoneSection {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 48px;
+}
+
+.HeadImageOne {
+  width: 50% !important;
+}
+
+.HeadImageOne img {
+  display: block;
+}
+
+.SectionText {
+  width: 50%;
+}
+
+.sectionOne {
+  padding: 10px 70px !important;
+}
+
+.sectionTwo {
+  padding: 130px  0px 0px 0px !important;
+}
+
+.sectionTwo .sectionPara {
+  width: 70% !important;
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 20px;
+}
+
+.newProductSec {
+  margin-top: 100px;
+  letter-spacing: 7px;
+  color: #d87d4a;
+}
+
+.secTopic {
+  margin-top: 150px !important;
+}
+
+.SectionMainTitle {
+  text-transform: uppercase;
+  width: 70%;
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.sectionPara {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 20px;
+}
+
+.sectionButton {
+  padding: 15px 25px;
+  margin-top: 20px;
+  background-color: #d87d4a;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.HeadphoneMain .Gear, .EarphoneMain .Gear, .SpeakerMain .Gear {
+  margin-top: 100px;
 }
 
 @media (max-width: 802px) {

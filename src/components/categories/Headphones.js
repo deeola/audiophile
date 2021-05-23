@@ -1,18 +1,20 @@
 import React from "react";
-import Header from '../layouts/Header/Header';
-import Main from '../layouts/Bodylayout/Main';
-import Footer from '../layouts/footer/Footer'
-
-
-
+import Gear from "../layouts/Bodylayout/Gear";
+import Shop from "../layouts/Bodylayout/Shop";
+import Footer from "../layouts/footer/Footer";
+import HeadphoneBody from "./Headphone/HeadphoneBody";
+import HeaderShared from "./shared/HeaderShared";
 
 
 function Headphones(props) {
   return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
+    <div className='HeadphoneMain'>
+        <HeaderShared />
+        <HeadphoneBody />
+        <Shop />
+        <Gear className='HeadphoneGear' />
+        <Footer />
+        
     </div>
   );
 }
