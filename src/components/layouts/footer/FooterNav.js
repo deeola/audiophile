@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import footerlogo from '../../../assets/shared/desktop/logo.svg';
+// import earphonestab from '../../../assets/home/tablet/earphonestab.jpg';
 
 
 function FooterNav(props) {
@@ -10,7 +12,7 @@ function FooterNav(props) {
               src={"/assets/shared/tablet/icon-hamburger.svg"}
               alt="hamburger"
             ></img>
-            <img alt='logo' className='logo' src={"/assets/shared/desktop/logo.svg"}></img>
+            <img alt='logo' className='logo' src={footerlogo}></img>
           </div>
           <ul>
             <li>Home</li>

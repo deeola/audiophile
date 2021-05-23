@@ -23,17 +23,18 @@ nav, .footerNav {
 
 nav ul, .footerNav ul {
   display: flex;
-  width: 429px;
   justify-content: space-between;
   color: #ffffff;
+  align-items: center;
   align-items: center;
 }
 
 nav ul li, .footerNav ul li {
   text-transform: uppercase;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 13px;
   list-style: none;
+  margin-left: 1em;
 }
 
 nav ul li:hover, .footerNav ul li:hover {
@@ -43,8 +44,6 @@ nav ul li:hover, .footerNav ul li:hover {
 
 nav .logo-ham, .footerNav .logo-ham {
   display: flex;
-  width: 143px;
-  height: 25px;
 }
 
 nav .logo-ham .hamburger, .footerNav .logo-ham .hamburger {
@@ -60,10 +59,10 @@ nav .cartIcon, .footerNav .cartIcon {
 }
 
 .Header {
+  background-image: url("../assets/home/desktop/image-hero.jpg");
   background-position: center;
   background-size: cover;
   max-width: 100%;
-  background-color: #000000;
   height: 698px;
   background-repeat: no-repeat;
 }
@@ -101,10 +100,9 @@ nav .cartIcon, .footerNav .cartIcon {
   font-weight: 700;
   line-height: 58px;
   letter-spacing: 2px;
-  width: 396px;
-  height: 116px;
   color: #ffffff;
   margin-top: 24px;
+  text-transform: uppercase;
 }
 
 .heroText .productDescr {
@@ -136,37 +134,41 @@ nav .cartIcon, .footerNav .cartIcon {
 }
 
 .firstSection .shopSection {
-  color: #d87d4a;
   width: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
 }
 
 .firstSection .shopSection .shopImageDiv {
   position: absolute;
-  right: 27.39%;
   top: 0%;
   bottom: 32.66%;
   z-index: 100;
-  width: 160px;
+  width: 80%;
+  margin: auto;
 }
 
 .firstSection .shopSection .shopTextDiv {
-  background-color: whitesmoke;
+  background-color: #f1f1f1;
   position: relative;
-  top: 3rem;
+  top: 6rem;
   text-align: center;
   color: #633d3d;
   padding-top: 5rem;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .firstSection .shopSection .shopTextDiv .shoptitle {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  display: inline-block;
+  padding-top: 40px;
 }
 
 .firstSection .shopSection .shopTextDiv .shopText {
@@ -198,7 +200,12 @@ nav .cartIcon, .footerNav .cartIcon {
   overflow: hidden;
 }
 
-.secondSection .zxspeaker {
+.secondSection .imagetab {
+  display: none;
+}
+
+.secondSection .imagedesktop {
+  display: block;
   width: 410px;
   height: 473px;
   position: relative;
@@ -236,16 +243,17 @@ nav .cartIcon, .footerNav .cartIcon {
 
 .zspeakermain {
   width: 80%;
-  height: 320px;
   margin: 48px auto;
   background-size: cover;
   background-position: center;
+  background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+  height: 320px;
 }
 
 .zspeakermain .zspeakerDiv {
   width: 204px;
   height: 118px;
-  left: 260px;
+  left: 2em;
   position: relative;
   left: 100px;
   top: 100px;
@@ -275,35 +283,47 @@ nav .cartIcon, .footerNav .cartIcon {
 .earphonesDiv .earphoneImageDiv {
   width: 49%;
   height: 100%;
+  background-color: bisque;
 }
 
 .earphonesDiv .earphoneImageDiv img {
   display: block;
 }
 
+.earphonesDiv .earphonestab {
+  display: none;
+}
+
 .earphonesDiv .earphoneTextDiv {
-  width: 49%;
   background-color: #f1f1f1;
-  padding: 100px 50px 0px 50px;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText {
+  position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3em;
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText p {
-  font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 2rem;
 }
 
-.earphonesDiv .earphoneTextDiv button {
-  text-transform: uppercase;
-  width: 9rem;
-  height: 3rem;
-  margin-top: 20px;
+.earphonesDiv .earphoneTextDiv .earphoneText button {
+  padding: .9em;
   border: 1px solid #101010;
-  cursor: pointer;
+  color: #101010;
+  margin-top: .9rem;
+  display: inline-block;
+  width: 40%;
+  text-transform: uppercase;
 }
 
 .Gear {
@@ -311,6 +331,7 @@ nav .cartIcon, .footerNav .cartIcon {
   width: 80%;
   margin: auto;
   margin-bottom: 48px;
+  flex-direction: row;
 }
 
 .Gear .GearTextDiv {
@@ -322,13 +343,13 @@ nav .cartIcon, .footerNav .cartIcon {
 
 .Gear .GearTextDiv .ggtext {
   position: relative;
-  width: 90%;
+  width: 80%;
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle {
-  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 2.5rem;
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle span {
@@ -343,6 +364,19 @@ nav .cartIcon, .footerNav .cartIcon {
 
 .Gear .gearImageDiv {
   width: 50%;
+  height: 100%;
+}
+
+.Gear .gearImageDiv img {
+  display: block;
+}
+
+.Gear .tabgear {
+  display: none;
+}
+
+.Gear .mobilegear {
+  display: none;
 }
 
 .footer {
@@ -366,10 +400,19 @@ nav .cartIcon, .footerNav .cartIcon {
   font-weight: 500;
 }
 
+.copyIcon {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
 .icons {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 10%;
 }
 
@@ -382,10 +425,303 @@ nav .cartIcon, .footerNav .cartIcon {
 
 .copyRight {
   color: #f1f1f1;
-  width: 80%;
-  margin: 40px auto auto auto;
+  margin-top: 30px;
 }
 
 .copyRight span {
   color: #d87d4a;
+}
+
+@media (max-width: 802px) {
+  body nav ul {
+    display: none;
+  }
+  body nav .logo-ham {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body nav .logo-ham .hamburger {
+    display: block;
+    margin-right: 50px;
+  }
+  body .Header {
+    background-image: url("../assets/home/tablet/image-header.jpg");
+    display: flex;
+    justify-content: center;
+  }
+  .herowrapper {
+    width: 379px;
+    position: relative;
+    height: 346px;
+    top: 150px;
+  }
+  .heroText {
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    align-items: center;
+  }
+  .heroText .productPara {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+  .heroText .heroMainText {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .heroText .productDescr {
+    text-align: center;
+    width: 80%;
+  }
+  .firstSection .shopSection {
+    width: 32%;
+  }
+  .firstSection .shopSection .shopImageDiv {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .firstSection .shopSection .shopTextDiv {
+    top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 10px;
+  }
+  .secondSection {
+    flex-direction: column;
+    margin: 48px auto auto auto;
+    padding-top: 50px;
+  }
+  .secondSection .imagedesktop {
+    display: none;
+  }
+  .secondSection .zxspeaker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .secondSection .imagetab {
+    display: block;
+    width: 50%;
+  }
+  .secondSection .secondTextDiv {
+    text-align: center;
+    margin: 30px 0px;
+  }
+  .earphonesDiv .earphoneImageDiv {
+    display: none;
+  }
+  .earphonesDiv .earphonestab {
+    display: block;
+    width: 49%;
+    height: 100%;
+    background-color: bisque;
+  }
+  .earphonesDiv .earphonestab img {
+    display: block;
+  }
+  .earphoneText {
+    padding-left: 1em !important;
+  }
+  .earphoneText p {
+    font-size: 1.2rem !important;
+  }
+  .earphoneText button {
+    width: 70% !important;
+    padding: 0.4em !important;
+  }
+  .Gear {
+    flex-direction: column;
+  }
+  .Gear .tabgear {
+    display: block;
+  }
+  .Gear .mobilegear {
+    display: none;
+  }
+  .Gear .gearImageDiv {
+    display: none;
+  }
+  .Gear .GearTextDiv {
+    width: 100%;
+    text-align: center;
+  }
+  .Gear .ggtext {
+    width: 100%;
+    margin: auto;
+  }
+  .footerNav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    position: unset;
+    padding-top: 20px;
+    top: 0;
+    z-index: 200;
+    align-items: flex-start;
+  }
+  .footerNav .logo-ham {
+    justify-content: left;
+  }
+  .footerNav ul {
+    text-align: left;
+    justify-content: left;
+    padding: 0px;
+    margin-top: 2rem;
+  }
+  .footerNav ul li {
+    text-align: left;
+    margin-left: unset;
+    margin-right: 1rem;
+  }
+  .icons {
+    align-items: center;
+  }
+  .copyRight {
+    margin-top: unset;
+  }
+}
+
+@media (max-width: 490px) {
+  nav .logo-ham .hamburger {
+    display: block;
+    margin-right: 10000px;
+  }
+  .Header {
+    background-image: url("../assets/home/mobile/image-header.jpg") !important;
+    background-size: cover;
+  }
+  .herowrapper {
+    width: 80%;
+    position: relative;
+    height: 346px;
+    top: 180px;
+  }
+  h1 {
+    font-size: 36px !important;
+  }
+  .productPara {
+    font-size: 14px;
+  }
+  .firstSection {
+    flex-direction: column;
+  }
+  .shopSection {
+    width: 100% !important;
+  }
+  .shopImageDiv {
+    top: -5% !important;
+  }
+  .secondSection {
+    width: 80%;
+  }
+  .imagedesktop {
+    width: 40% !important;
+    background-color: violet !important;
+  }
+  .secondTextDiv {
+    width: 80% !important;
+    height: unset !important;
+  }
+  .sdMainText {
+    font-size: 36px !important;
+  }
+  .sdproductDescr {
+    font-size: 10px !important;
+    width: 100%;
+    display: inline-block;
+  }
+  .zspeakermain {
+    height: unset !important;
+    background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
+    margin: 48px auto 48px auto !important;
+    padding: 50px 10px;
+  }
+  .zspeakerDiv {
+    width: 204px !important;
+    height: 118px !important;
+    position: unset !important;
+  }
+  .zspeakerDiv .zspeakertitle {
+    font-size: 28px !important;
+  }
+  .earphonesDiv {
+    flex-direction: column;
+  }
+  .earphonesDiv .earphonestab {
+    width: 100%;
+  }
+  .earphonesDiv .earphoneTextDiv {
+    width: 100%;
+    padding: 50px 10px;
+    margin-top: 20px;
+  }
+  .Gear {
+    margin-bottom: 48px;
+  }
+  .tabgear {
+    display: none !important;
+  }
+  .gearImageDiv {
+    display: none !important;
+  }
+  .mobilegear {
+    display: block !important;
+  }
+  .GearTextDiv {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .GearTextDiv .ggtext {
+    position: relative;
+    width: 80%;
+  }
+  .GearTextDiv .ggtext .gearmaintitle {
+    font-size: 1.1rem !important;
+  }
+  .GearTextDiv .ggtext .gmaintext {
+    font-size: 10px !important;
+    margin-top: 20px;
+    line-height: 24px;
+    width: 100%;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 0px 30px 0px !important;
+  }
+  .footerNav {
+    width: 100% !important;
+    align-items: center;
+  }
+  .footerNav ul {
+    flex-direction: column;
+  }
+  .footerNav ul li {
+    margin-top: 10px;
+  }
+  .footerSecondDiv {
+    width: 100% !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerSecondDiv .footerSecondText {
+    width: 90% !important;
+    margin: auto;
+  }
+  .copyIcon {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .icons {
+    align-items: center;
+    justify-content: space-between !important;
+    width: 30% !important;
+    margin-top: 10px;
+  }
 }

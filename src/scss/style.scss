@@ -16,16 +16,17 @@ nav, .footerNav{
     z-index: 200;
     ul{
         display: flex;
-        width: 429px;
         justify-content: space-between;
         color: $very-light-gray;
+        align-items: center;
         align-items: center;
 
         li{
             text-transform: uppercase;
-            font-weight: 700px;
+            font-weight: 700;
             font-size: 13px;
             list-style: none;
+            margin-left: 1em;
             &:hover{
                 color: $orange;
                 cursor: pointer;
@@ -38,8 +39,6 @@ nav, .footerNav{
 
     .logo-ham{
         display: flex;
-        width: 143px;
-        height: 25px;
 
         .hamburger{
             display: none;
@@ -58,12 +57,13 @@ nav, .footerNav{
 
 
 .Header{
+    background-image: url("../assets/home/desktop/image-hero.jpg");
     background-position: center;
     background-size:cover;
     max-width:100%;
-    background-color: $very-black;
     height: 698px;
     background-repeat: no-repeat;
+    
 }
 
 .mainHero{
@@ -101,10 +101,9 @@ nav, .footerNav{
         font-weight: 700;
         line-height: 58px;
         letter-spacing: 2px;
-        width: 396px;
-        height: 116px;
         color:$very-light-gray;
         margin-top: 24px;
+        text-transform: uppercase;
         
     }
 
@@ -139,38 +138,43 @@ nav, .footerNav{
     margin-top: 2rem;
     justify-content: space-between;
     align-items: center;
+
     
 
     .shopSection{
-        color: $orange;
         width: 30%;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin-bottom: 48px;
 
         .shopImageDiv{
             position: absolute;
-            right: 27.39%;
             top: 0%;
             bottom: 32.66%;
             z-index: 100;
-            width: 160px;
+            width: 80%;
+            margin: auto;
         }
 
         .shopTextDiv{
-            background-color: whitesmoke;
+            background-color: $gray;
             position: relative;
-            top:3rem;
+            top:6rem;
             text-align: center;
             color: rgb(99, 61, 61);
             padding-top: 5rem;
             padding-bottom: 30px;
+            width: 100%;
 
             .shoptitle{
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-bottom: 10px;
+                display: inline-block;
+                padding-top: 40px;
 
                 
             }
@@ -199,6 +203,20 @@ nav, .footerNav{
 //Second Div
 
 .secondSection{
+
+    .imagetab{
+        display: none;
+    }
+    
+    .imagedesktop{
+        display: block;
+        width: 410px;
+        height: 473px;
+        position: relative;
+        top: 45px;
+        right: 60px;
+        overflow: hidden;
+    }
     background-color: $orange !important;
     display: flex;
     justify-content: center;
@@ -210,16 +228,6 @@ nav, .footerNav{
     background-size: cover;
     background-position: center;
     overflow: hidden;
-
-    .zxspeaker{
-        width: 410px;
-        height: 473px;
-        position: relative;
-        top: 45px;
-        right: 60px;
-        overflow: hidden;
-    }
-
 
     .secondTextDiv{
         width: 349px;
@@ -254,15 +262,18 @@ nav, .footerNav{
 
 .zspeakermain{
     width: 80%;
-    height: 320px;
     margin: 48px auto;
     background-size: cover;
     background-position: center;
+    background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+
+    //height
+    height: 320px;
 
     .zspeakerDiv{
         width: 204px;
         height: 118px;
-        left: 260px;
+        left: 2em;
         position: relative;
         left: 100px;
         top: 100px;
@@ -296,37 +307,54 @@ nav, .footerNav{
     .earphoneImageDiv{
         width: 49%;
         height: 100%;
+        background-color: bisque;
         img{
             display: block;
         }
+
+
+    }
+
+    .earphonestab{
+        display: none;
     }
     
 
     .earphoneTextDiv{
-        width: 49%;
         background-color: $gray;
-        padding: 100px 50px 0px 50px;
+        width: 49%;
+        // padding: 10px 50px 0px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
 
         .earphoneText{
+            position: relative;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 3em;
+            
             p{
-                font-size: 28px;
                 text-transform: uppercase;
                 font-weight: 700;
+                font-size: 2rem;
+                
+            }
+
+            button{
+                padding: .9em;
+                border: 1px solid $black;
+                color: $black;
+                margin-top: .9rem;
+                display: inline-block;
+                width: 40%;
+                text-transform: uppercase;
             }
 
         }
-
-        button{
-            text-transform: uppercase;
-            width: 9rem;
-            height: 3rem;
-            margin-top: 20px;
-            border: 1px solid $black;
-            cursor: pointer;
-
-        }
+ 
     }
 }
 
@@ -340,20 +368,26 @@ nav, .footerNav{
     margin: auto;
     margin-bottom: 48px;
 
+
+    flex-direction: row;
+
     .GearTextDiv{
         width: 50%;
         display: flex;
         justify-content: left;
         align-items: center;
 
+
+       
+        
+
         .ggtext{
             position: relative;
-            width: 90%;
+            width: 80%;
             .gearmaintitle{
-                font-size: 2.5rem;
                 font-weight: 700;
                 text-transform: uppercase;
-
+                font-size: 2.5rem;
                 span{
                     color: $orange;
                 }
@@ -370,6 +404,18 @@ nav, .footerNav{
 
     .gearImageDiv{
         width: 50%;
+        height: 100%;
+        img{
+            display: block;
+        }
+    }
+
+    .tabgear{
+        display: none;
+    }
+
+    .mobilegear{
+        display: none;
     }
 
 }
@@ -399,10 +445,20 @@ nav, .footerNav{
     }
 }
 
+.copyIcon{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: flex-start;
+}
+
 .icons{
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:flex-start;
+
     
     width: 10%;
     
@@ -415,10 +471,11 @@ nav, .footerNav{
     }
 }
 
+
+
 .copyRight{
     color: $gray;
-    width: 80%;
-    margin: 40px auto auto auto;
+    margin-top: 30px;
 
     span{
         color: $orange;
@@ -426,3 +483,6 @@ nav, .footerNav{
     
 
 }
+
+
+@import 'mediaQueries';

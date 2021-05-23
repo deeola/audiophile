@@ -1,11 +1,15 @@
 import React from "react";
+import imageheadphones from '../../../assets/shared/desktop/imageheadphones.png';
+import imagespeakers from '../../../assets/shared/desktop/imagespeakers.png';
+import imageearphones from '../../../assets/shared/desktop/imageearphones.png';
+
 
 function Shop(props) {
   return (
     <section className="firstSection">
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={"/assets/shared/desktop/image-headphones.png"}></img>
+          <img src={imageheadphones}></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -17,7 +21,7 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={"/assets/shared/desktop/image-speakers.png"}></img>
+          <img src={imagespeakers}></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -29,7 +33,7 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={"/assets/shared/desktop/image-earphones.png"}></img>
+          <img src={imageearphones}></img>
         </div>
 
         <div className='shopTextDiv'>
