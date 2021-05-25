@@ -9,8 +9,8 @@ function Speaker(props) {
   return (
     <section className="secondSection" style={styles}>
       <div className="zxspeaker">
-        <img className="imagedesktop"  alt= 'speaker image' src={speakerzx}></img>
-        <img className="imagetab"  alt= 'speaker image'  src={tabspeaker}></img>
+        <img className="imagedesktop"  alt= 'speakerdesktop' src={speakerzx}></img>
+        <img className="imagetab"  alt= 'speakertab'  src={tabspeaker}></img>
       </div>
       <div className="secondTextDiv">
         <h1 className="sdMainText">

@@ -9,7 +9,7 @@ function Shop(props) {
     <section className="firstSection">
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imageheadphones}></img>
+          <img src={imageheadphones} alt='imageheadphones'></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -21,7 +21,7 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imagespeakers}></img>
+          <img src={imagespeakers} alt='imagespeakers'></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -33,7 +33,7 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imageearphones}></img>
+          <img src={imageearphones} alt='imageearphones'></img>
         </div>
 
         <div className='shopTextDiv'>

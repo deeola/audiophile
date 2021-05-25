@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import {Link} from 'react-router-dom'
 import earphoneDesktop from "../../../assets/category-earphones/desktop/earphoneDesktop.jpg";
 
 function EarSection(props) {
@@ -7,7 +7,7 @@ function EarSection(props) {
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={earphoneDesktop}></img>
+          <img src={earphoneDesktop} alt='earphone section'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -18,7 +18,7 @@ function EarSection(props) {
             even in noisy environments with its active noise cancellation
             feature.
           </p>
-          <button className="sectionButton">SEE PRODUCT</button>
+          <Link to='/yx1' className="sectionButton">SEE PRODUCT</Link>
         </div>
       </section>
     </div>

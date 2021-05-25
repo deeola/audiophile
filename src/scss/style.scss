@@ -584,4 +584,24 @@ nav, .footerNav{
         margin-top: 100px;
     }
 }
+
+
+//PRODUCT DESIGN
+
+
+.productnav{
+    background-color: $very-black;
+    width: 100%;
+    height: 97px;
+}
+
+.Gobacklink{
+    display: block;
+    width: 80%;
+    margin: 80px auto auto auto;
+    text-decoration: none;
+    color: $black;
+}
+
+
 @import 'mediaQueries';

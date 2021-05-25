@@ -1,6 +1,5 @@
 import React from "react";
 import HeaderShared from "./shared/HeaderShared";
-import PropTypes from "prop-types";
 import Gear from "../layouts/Bodylayout/Gear";
 import Shop from "../layouts/Bodylayout/Shop";
 import Footer from "../layouts/footer/Footer";

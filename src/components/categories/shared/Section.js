@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import firstImagedesktop from "../../../assets/category-headphones/desktop/markone.jpg";
 import secondImagedesktop from "../../../assets/category-headphones/desktop/marktwo.jpg";
 import thirdImagedesktop from "../../../assets/category-headphones/desktop/markthree.jpg";
@@ -9,7 +8,7 @@ function Section(props) {
     <div >
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={secondImagedesktop}></img>
+          <img src={secondImagedesktop} alt='secondimage'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -33,12 +32,12 @@ function Section(props) {
           <button className='sectionButton'>SEE PRODUCT</button>
         </div>
         <div className="HeadImageOne">
-          <img src={firstImagedesktop}></img>
+          <img src={firstImagedesktop} alt='firstimage'></img>
         </div>
       </section>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={thirdImagedesktop}></img>
+          <img src={thirdImagedesktop} alt='thirdimage'></img>
         </div>
         <div className="SectionText sectionOne">
           <h2 className="SectionMainTitle secTopic">XX59 Headphones</h2>

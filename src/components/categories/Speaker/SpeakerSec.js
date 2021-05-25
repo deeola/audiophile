@@ -7,7 +7,7 @@ function SpeakerSec(props) {
     <div >
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={firstImagedesktop}></img>
+          <img src={firstImagedesktop} alt='speaker section'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -33,7 +33,7 @@ function SpeakerSec(props) {
           <button className="sectionButton">SEE PRODUCT</button>
         </div>
         <div className="HeadImageOne">
-          <img src={secondImagedesktop}></img>
+          <img src={secondImagedesktop} alt='another speaker'></img>
         </div>
       </section>
     </div>

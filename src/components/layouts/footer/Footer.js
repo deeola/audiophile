@@ -21,13 +21,13 @@ function Footer(props) {
       <p className='copyRight'>Copyright 2021. All Rights Reserved by  <span>Adeola Bamigboye</span> </p>
         <div className="icons">
           <div className="iconDiv">
-            <img src={facebook}></img>
+            <img src={facebook} alt='facebookicon'></img>
           </div>
           <div className="iconDiv">
-            <img src={twitter}></img>
+            <img src={twitter} alt='twittericon'></img>
           </div>
           <div className="iconDiv">
-            <img src={instagram}></img>
+            <img src={instagram} alt='instagramicon'></img>
           </div>
         </div>
         
