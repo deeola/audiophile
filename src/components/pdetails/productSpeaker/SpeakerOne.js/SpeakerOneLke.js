@@ -1,18 +1,18 @@
-import React, { useContext, useEffect } from "react";
+import React,{useContext,useEffect} from 'react';
+import audioContext from '../../../../context/Audiophile/audioContext';
+import firstimagedesktop from '../../../../assets/shared/desktop/image-zx7-speaker.jpg';
+import secondimagedesktop from '../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg';
+import thirdimagedesktop from "../../../../assets/shared/desktop/image-xx59-headphones.jpg";
 
-import audioContext from "../../../context/Audiophile/audioContext";
 
-import firstimagedesktop from "../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
-import secondimagedesktop from "../../../assets/shared/desktop/image-xx59-headphones.jpg";
-import thirdimagedesktop from "../../../assets/shared/desktop/image-xx99-mark-two-headphones.jpg";
+function SpeakerOneLke(props) {
 
-function EarpodLike(props) {
-  const AudioContexts = useContext(audioContext);
+    const AudioContexts = useContext(audioContext);
 
   let others;
 
   if (AudioContexts.data.length > 0) {
-    others = AudioContexts.data[0].others;
+    others = AudioContexts.data[5].others;
 
   }
 
@@ -21,8 +21,8 @@ function EarpodLike(props) {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <div>
+    return (
+        <div>
       <h4>YOU MAY ALSO LIKE</h4>
       <div style={{ display: "flex", margin: "auto", width: "80%" }}>
         <div style={{ width: "30%", display:'flex', alignItems:'center', flexDirection:'column', justifyContent:'center' }}>
@@ -42,7 +42,8 @@ function EarpodLike(props) {
         </div>
       </div>
     </div>
-  );
+    )
 }
 
-export default EarpodLike;
+export default SpeakerOneLke
+

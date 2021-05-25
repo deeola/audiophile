@@ -19,7 +19,6 @@ function EarpodFeatures(props) {
   if (AudioContexts.data.length > 0) {
     includes = AudioContexts.data[0].includes;
 
-    console.log(includes);
   }
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React from "react";
 import secondImagedesktop from "../../../assets/category-speakers/desktop/image-zx7.jpg";
 import firstImagedesktop from "../../../assets/category-speakers/desktop/image-zx9.jpg";
-
+import {Link} from 'react-router-dom'
 function SpeakerSec(props) {
   return (
     <div >
@@ -18,7 +18,7 @@ function SpeakerSec(props) {
             -- creating new possibilities for more pleasing and practical audio
             setups.
           </p>
-          <button className="sectionButton">SEE PRODUCT</button>
+          <Link to='/zx9' className="sectionButton">SEE PRODUCT</Link>
         </div>
       </section>
       <section className="HeadphoneSection">

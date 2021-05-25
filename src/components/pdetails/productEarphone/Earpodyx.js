@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Gear from "../../layouts/Bodylayout/Gear";
+import Shop from "../../layouts/Bodylayout/Shop";
+import Footer from "../../layouts/footer/Footer";
 import Navbar from "../../layouts/Header/Navbar";
 import EarpodBody from "./EarpodBody";
 
@@ -19,6 +22,9 @@ function Test(props) {
       </div>
       <Link className='Gobacklink' to='/earphones'>Go Back</Link>
       <EarpodBody />
+      <Shop />
+      <Gear />
+      <Footer />
     </div>
   );
 }
