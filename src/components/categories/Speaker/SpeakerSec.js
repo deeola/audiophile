@@ -30,7 +30,7 @@ function SpeakerSec(props) {
             represents the top of the line powered speakers for home or studio
             use.
           </p>
-          <button className="sectionButton">SEE PRODUCT</button>
+          <Link to='/zx7' className="sectionButton">SEE PRODUCT</Link>
         </div>
         <div className="HeadImageOne">
           <img src={secondImagedesktop} alt='another speaker'></img>

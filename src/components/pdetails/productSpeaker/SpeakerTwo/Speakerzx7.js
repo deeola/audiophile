@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Gear from "../../../layouts/Bodylayout/Gear";
-import Shop from "../../../layouts/Bodylayout/Shop";
-import Footer from "../../../layouts/footer/Footer";
 import Navbar from "../../../layouts/Header/Navbar";
-import SpeakerOnebody from "./SpeakerOnebody";
+import {Link} from 'react-router-dom'
+import SpeakerTwobody from "./SpeakerTwobody";
+import Shop from "../../../layouts/Bodylayout/Shop";
+import Gear from "../../../layouts/Bodylayout/Gear";
+import Footer from "../../../layouts/footer/Footer";
 
-
-function Speakerzx9(props) {
+function Speakerzx7(props) {
   return (
     <div>
       <div
@@ -24,7 +23,7 @@ function Speakerzx9(props) {
         <Navbar />
       </div>
       <Link className='Gobacklink' to='/speakers'>Go Back</Link>
-      <SpeakerOnebody />
+      <SpeakerTwobody />
       <Shop />
       <Gear />
       <Footer />
@@ -32,4 +31,4 @@ function Speakerzx9(props) {
   );
 }
 
-export default Speakerzx9;
+export default Speakerzx7;

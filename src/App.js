@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import EarpodProduct from "./components/pdetails/productEarphone/Earpodyx";
 import AudioState from "./context/Audiophile/AudioState";
-import SpeakerOne from './components/pdetails/productSpeaker/SpeakerOne.js/Speakerzx9'
+import SpeakerOne from './components/pdetails/productSpeaker/SpeakerOne.js/Speakerzx9';
+import SpeakerTwo from './components/pdetails/productSpeaker/SpeakerTwo/Speakerzx7'
 
 function App(props) {
 
@@ -27,6 +28,10 @@ function App(props) {
             <Route
               path="/zx9"
               render={(props) => <SpeakerOne  />}
+            />
+            <Route
+              path="/zx7"
+              render={(props) => <SpeakerTwo  />}
             />
           </Switch>
         </div>
