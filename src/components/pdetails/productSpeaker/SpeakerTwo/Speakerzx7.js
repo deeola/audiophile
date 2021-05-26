@@ -7,6 +7,8 @@ import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function Speakerzx7(props) {
+
+  const {countCartItems} = props;
   return (
     <div>
       <div
@@ -20,7 +22,7 @@ function Speakerzx7(props) {
           alignItems: "center",
         }}
       >
-        <Navbar />
+        <Navbar countCartItems={countCartItems} />
       </div>
       <Link className='Gobacklink' to='/speakers'>Go Back</Link>
       <SpeakerTwobody />

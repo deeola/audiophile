@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 
 
 function Navbar(props) {
+
+  const {countCartItems} = props;
+
+  console.log(countCartItems)
+
   return (
     <nav className='sticky'>
       <div className='logo-ham'>
@@ -24,7 +29,10 @@ function Navbar(props) {
         <Link className='mylink' to='/Earphones'>Earphones</Link>
       </ul>
       <div>
-        <img className='cartIcon' src={cart} alt="carticon"></img>
+        <Link style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={cart} alt="carticon"></img>{''} {countCartItems ? (
+          <p style={{marginLeft:'10px'}} className='countCart'>{countCartItems}</p>
+        ) : ('')}</Link>
+        
       </div>
     </nav>
   );

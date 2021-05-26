@@ -5,10 +5,11 @@ function Header(props) {
     // const styles = {
     //     backgroundImage: `url('../assets/home/desktop/image-hero.jpg')`,
     //   };
+    const {countCartItems} = props
 
     return (
         <div className='Header'>   
-            <Hero />
+            <Hero countCartItems={countCartItems} />
         </div>
     )
 }

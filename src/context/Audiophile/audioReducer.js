@@ -1,20 +1,24 @@
-import { get_Data, set_loading } from "../types";
+import { get_Data, set_loading, set_cartItems } from "../types";
 // eslint-disable-next-line
-export default  (state, action) => {
+export default (state, action) => {
   switch (action.type) {
     case get_Data:
       return {
         ...state,
         data: action.payload,
-        loading:false
-      }
+        loading: false,
+      };
+    case set_cartItems:
+      return {
+        ...state,
+        cartItems: action.payload
+      };
 
     case set_loading:
-      return{
+      return {
         ...state,
-        loading:true
-      }
-    
+        loading: true,
+      };
 
     default:
       return state;

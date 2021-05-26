@@ -2,9 +2,12 @@ import React from "react";
 import Navbar from "./Navbar";
 
 function Hero(props) {
+  const {countCartItems} = props;
+
+  console.log(countCartItems)
   return (
     <div className="mainHero">
-      <Navbar />
+      <Navbar countCartItems={countCartItems} />
       <div className="herowrapper">
         <div className="heroText">
           <p className="productPara">New Product</p>

@@ -6,9 +6,10 @@ import Footer from "../layouts/footer/Footer";
 import SpeakerBody from "./Speaker/SpeakerBody";
 
 function Speakers(props) {
+  const {countCartItems} = props;
   return (
     <div className='SpeakerMain'>
-      <HeaderShared />
+      <HeaderShared countCartItems={countCartItems} />
       <SpeakerBody />
       <Shop />
       <Gear />

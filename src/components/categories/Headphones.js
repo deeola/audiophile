@@ -7,9 +7,11 @@ import HeaderShared from "./shared/HeaderShared";
 
 
 function Headphones(props) {
+
+  const {countCartItems} = props;
   return (
     <div className='HeadphoneMain'>
-        <HeaderShared />
+        <HeaderShared countCartItems = {countCartItems} />
         <HeadphoneBody />
         <Shop />
         <Gear className='HeadphoneGear' />

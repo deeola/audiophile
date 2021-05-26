@@ -541,6 +541,12 @@ nav .cartIcon, .footerNav .cartIcon {
   color: #101010;
 }
 
+.countCart {
+  color: #d87d4a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 @media (max-width: 802px) {
   body nav ul {
     display: none;

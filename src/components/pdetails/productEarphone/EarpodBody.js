@@ -5,7 +5,11 @@ import EarpodImages from "./EarpodImages";
 import EarpodLike from "./EarpodLike";
 import audioContext from "../../../context/Audiophile/audioContext";
 function EarpodBody(props) {
+  const {onAdd} = props
+
   const AudioContext = useContext(audioContext);
+
+
 
   //Price
   let price;
@@ -27,6 +31,16 @@ function EarpodBody(props) {
     description = AudioContext.data[0].description;
   }
 
+
+  //DATA
+
+  // //Price
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[0];
+  }
+
+
   useEffect(() => {
     AudioContext.getdata();
 
@@ -37,6 +51,26 @@ function EarpodBody(props) {
 
   const increaseQuantity = () => setquantity(quantity + 1);
   const decreaseQuantity = () => setquantity(quantity - 1);
+
+
+  // //CART ITEMS
+  // const [cartItems, setCartItems] = useState([]);
+
+  // const onAdd = (product) => {
+  //   const exist = cartItems.find( x => x.id === product.id);
+
+  //   if (exist) {
+  //     setCartItems(
+  //       cartItems.map((x) =>
+  //         x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+  //       )
+  //     );
+  //   } else{
+  //     setCartItems([...cartItems, {...data, qty:1}])
+  //   }
+  // };
+
+  // console.log(onAdd)
 
   return (
     <div>
@@ -59,7 +93,7 @@ function EarpodBody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={() => onAdd(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>

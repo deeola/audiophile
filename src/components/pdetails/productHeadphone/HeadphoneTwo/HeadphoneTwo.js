@@ -7,6 +7,8 @@ import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneTwo(props) {
+
+  const {countCartItems} = props
   return (
     <div>
       <div
@@ -20,7 +22,7 @@ function HeadphoneTwo(props) {
           alignItems: "center",
         }}
       >
-        <Navbar />
+        <Navbar countCartItems={countCartItems} />
       </div>
       <Link className="Gobacklink" to="/headphones">
         Go Back
