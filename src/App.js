@@ -78,6 +78,7 @@ function App(props) {
               render={(props) => <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}
             />
           </Switch>
+          <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
         </div>
       </Router>
     </AudioState>

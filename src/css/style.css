@@ -547,6 +547,15 @@ nav .cartIcon, .footerNav .cartIcon {
   text-decoration: none;
 }
 
+.Bucket {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: 10000;
+  background-color: #3f1616;
+  width: 377px;
+}
+
 @media (max-width: 802px) {
   body nav ul {
     display: none;

@@ -610,4 +610,13 @@ nav, .footerNav{
     text-decoration: none;
 }
 
+.Bucket{
+    position: absolute;
+    top: 10rem;
+    right:0;
+    z-index: 10000;
+    background-color: rgb(63, 22, 22);
+    width: 377px;
+}
+
 @import 'mediaQueries';
