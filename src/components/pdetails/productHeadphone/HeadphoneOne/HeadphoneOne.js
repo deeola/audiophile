@@ -7,7 +7,7 @@ import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneOne(props) {
-  const {countCartItems} = props;
+  const {countCartItems,onAdd} = props;
   return (
     <div>
       <div
@@ -26,7 +26,7 @@ function HeadphoneOne(props) {
       <Link className="Gobacklink" to="/headphones">
         Go Back
       </Link>
-      <HeadphoneOnebody />
+      <HeadphoneOnebody onAdd = {onAdd} />
       <Shop />
       <Gear />
       <Footer />

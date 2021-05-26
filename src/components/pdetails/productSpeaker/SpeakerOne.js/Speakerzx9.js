@@ -9,7 +9,7 @@ import SpeakerOnebody from "./SpeakerOnebody";
 
 function Speakerzx9(props) {
 
-  const {countCartItems} = props;
+  const {countCartItems, onAdd} = props;
   return (
     <div>
       <div
@@ -26,7 +26,7 @@ function Speakerzx9(props) {
         <Navbar countCartItems={countCartItems}/>
       </div>
       <Link className='Gobacklink' to='/speakers'>Go Back</Link>
-      <SpeakerOnebody />
+      <SpeakerOnebody onAdd={onAdd} />
       <Shop />
       <Gear />
       <Footer />

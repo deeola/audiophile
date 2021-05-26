@@ -5,7 +5,7 @@ import EarpodImages from "./EarpodImages";
 import EarpodLike from "./EarpodLike";
 import audioContext from "../../../context/Audiophile/audioContext";
 function EarpodBody(props) {
-  const {onAdd} = props
+  const {onAdd, onRemove} = props;
 
   const AudioContext = useContext(audioContext);
 
@@ -89,9 +89,9 @@ function EarpodBody(props) {
           <p className="price">{price !== undefined ? price : null}</p>
           <div>
             <div>
-              <p onClick={quantity > 1 ? decreaseQuantity : undefined}>-</p>
+              <p  onClick={quantity > 1 ? decreaseQuantity : undefined}>-</p>
               <p>{quantity}</p>
-              <p onClick={increaseQuantity}>+</p>
+              <p  onClick={increaseQuantity}>+</p>
             </div>
             <button onClick={() => onAdd(data)}>ADD TO CART</button>
           </div>

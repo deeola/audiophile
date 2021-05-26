@@ -7,6 +7,8 @@ import HeadphoneThreeLikes from './HeadphoneThreeLikes';
 
 
 function HeadphoneThreebody(props) {
+
+  const {onAdd} = props
     const AudioContext = useContext(audioContext);
 
   //Price
@@ -27,6 +29,13 @@ function HeadphoneThreebody(props) {
 
   if (AudioContext.data.length > 0) {
     description = AudioContext.data[1].description;
+  }
+
+  //DATA
+
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[1];
   }
 
   useEffect(() => {
@@ -60,7 +69,7 @@ function HeadphoneThreebody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={() => onAdd(data)} >ADD TO CART</button>
           </div>
         </div>
       </section>

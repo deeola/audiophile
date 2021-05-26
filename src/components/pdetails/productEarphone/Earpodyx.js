@@ -10,7 +10,7 @@ import EarpodBody from "./EarpodBody";
 function Test(props) {
 
 
-  const {onAdd,countCartItems} = props;
+  const {onAdd,countCartItems, onRemove } = props;
 
   return (
     <div>
@@ -21,7 +21,7 @@ function Test(props) {
         <Navbar  countCartItems = {countCartItems}/>
       </div>
       <Link className='Gobacklink' to='/earphones'>Go Back</Link>
-      <EarpodBody onAdd={onAdd}/>
+      <EarpodBody onAdd={onAdd} onRemove={onRemove}/>
       <Shop />
       <Gear />
       <Footer />

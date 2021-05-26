@@ -8,7 +8,7 @@ import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneThree(props) {
 
-  const {countCartItems} = props
+  const {countCartItems, onAdd} = props
   return (
     <div>
       <div
@@ -27,7 +27,7 @@ function HeadphoneThree(props) {
       <Link className="Gobacklink" to="/headphones">
         Go Back
       </Link>
-      <HeadphoneThreebody />
+      <HeadphoneThreebody onAdd={onAdd} />
       <Shop />
       <Gear />
       <Footer />

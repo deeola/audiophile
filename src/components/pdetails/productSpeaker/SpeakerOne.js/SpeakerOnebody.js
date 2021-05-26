@@ -8,6 +8,10 @@ import SpeakerOneLke from "./SpeakerOneLke";
 function SpeakerOnebody(props) {
   const AudioContext = useContext(audioContext);
 
+  const {onAdd} = props;
+
+  console.log(onAdd)
+
   //Price
   let price;
   if (AudioContext.data.length > 0) {
@@ -26,6 +30,13 @@ function SpeakerOnebody(props) {
 
   if (AudioContext.data.length > 0) {
     description = AudioContext.data[5].description;
+  }
+
+  //DATA
+
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[5];
   }
 
   useEffect(() => {
@@ -61,7 +72,7 @@ function SpeakerOnebody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button>ADD TO CART</button>
+            <button  onClick={() => onAdd(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>

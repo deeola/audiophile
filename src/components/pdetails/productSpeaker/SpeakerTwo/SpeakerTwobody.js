@@ -6,8 +6,9 @@ import SpeakerTwoImages from "./SpeakerTwoImages";
 import SpeakerTwoLikes from "./SpeakerTwoLikes";
 
 function SpeakerTwobody(props) {
+
+  const {onAdd} = props;
   const AudioContext = useContext(audioContext);
-  console.log(AudioContext);
 
   //Price
   let price;
@@ -27,6 +28,13 @@ function SpeakerTwobody(props) {
 
   if (AudioContext.data.length > 0) {
     description = AudioContext.data[4].description;
+  }
+
+  //DATA
+
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[4];
   }
 
   useEffect(() => {
@@ -60,7 +68,7 @@ function SpeakerTwobody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={() => onAdd(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>

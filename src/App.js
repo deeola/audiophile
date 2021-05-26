@@ -34,6 +34,9 @@ function App(props) {
     }
   };
 
+
+  
+
   const onRemove= (product) => {
     const exist = cartItems.find( x => x.id === product.id);
 
@@ -64,12 +67,12 @@ function App(props) {
             <Route path="/headphones" render={(props) => <Headphones countCartItems={cartItems.length}  />} />
             <Route path="/speakers" render={(props) => <Speakers countCartItems={cartItems.length}  />} />
             <Route path="/earphones" render={(props) => <Earphones countCartItems={cartItems.length}  />} />
-            <Route path="/yx1" render={(props) => <EarpodProduct countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/zx9" render={(props) => <SpeakerOne countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/zx7" render={(props) => <SpeakerTwo countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx99-mark-one" render={(props) => <HeadphoneOne countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx99-mark-two" render={(props) => <HeadphoneTwo countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx59" render={(props) => <HeadphoneThree countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/yx1" render={(props) => <EarpodProduct onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/zx9" render={(props) => <SpeakerOne onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/zx7" render={(props) => <SpeakerTwo onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/xx99-mark-one" render={(props) => <HeadphoneOne onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/xx99-mark-two" render={(props) => <HeadphoneTwo onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route path="/xx59" render={(props) => <HeadphoneThree onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
             <Route
               path="/cart"
               render={(props) => <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}

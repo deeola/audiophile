@@ -6,6 +6,8 @@ import HeadphoneOneImages from "./HeadphoneOneImages";
 import HeadphoneOneLikes from "./HeadphoneOneLikes";
 
 function HeadphoneOnebody(props) {
+
+  const {onAdd} = props
   const AudioContext = useContext(audioContext);
 
   //Price
@@ -26,6 +28,14 @@ function HeadphoneOnebody(props) {
 
   if (AudioContext.data.length > 0) {
     description = AudioContext.data[2].description;
+  }
+
+
+  //DATA
+
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[2];
   }
 
   useEffect(() => {
@@ -59,7 +69,7 @@ function HeadphoneOnebody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button>ADD TO CART</button>
+            <button onClick={() => onAdd(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>
