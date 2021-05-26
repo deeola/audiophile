@@ -8,7 +8,10 @@ import React from "react";
 import EarpodProduct from "./components/pdetails/productEarphone/Earpodyx";
 import AudioState from "./context/Audiophile/AudioState";
 import SpeakerOne from './components/pdetails/productSpeaker/SpeakerOne.js/Speakerzx9';
-import SpeakerTwo from './components/pdetails/productSpeaker/SpeakerTwo/Speakerzx7'
+import SpeakerTwo from './components/pdetails/productSpeaker/SpeakerTwo/Speakerzx7';
+import HeadphoneOne from './components/pdetails/productHeadphone/HeadphoneOne/HeadphoneOne';
+import HeadphoneTwo from './components/pdetails/productHeadphone/HeadphoneTwo/HeadphoneTwo';
+import HeadphoneThree from './components/pdetails/productHeadphone/HeadphoneThree/HeadphoneThree';
 
 function App(props) {
 
@@ -32,6 +35,18 @@ function App(props) {
             <Route
               path="/zx7"
               render={(props) => <SpeakerTwo  />}
+            />
+            <Route
+              path="/xx99-mark-one"
+              render={(props) => <HeadphoneOne  />}
+            />
+            <Route
+              path="/xx99-mark-two"
+              render={(props) => <HeadphoneTwo  />}
+            />
+            <Route
+              path="/xx59"
+              render={(props) => <HeadphoneThree  />}
             />
           </Switch>
         </div>

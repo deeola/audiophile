@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
+import React,{useEffect,useContext,useState} from 'react';
 import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from "../../../../assets/product-zx7-speaker/desktop/image-product.jpg";
-import SpeakerTwoFeatures from "./SpeakerTwoFeatures";
-import SpeakerTwoImages from "./SpeakerTwoImages";
-import SpeakerTwoLikes from "./SpeakerTwoLikes";
+import imageDesktop from "../../../../assets/product-xx59-headphones/desktop/image-product.jpg";
+import HeadphoneThreeFeatures from './HeadphoneThreeFeatures';
+import HeadphoneThreeImages from './HeadphoneThreeImages';
+import HeadphoneThreeLikes from './HeadphoneThreeLikes';
 
-function SpeakerTwobody(props) {
-  const AudioContext = useContext(audioContext);
-  console.log(AudioContext);
+
+function HeadphoneThreebody(props) {
+    const AudioContext = useContext(audioContext);
 
   //Price
   let price;
   if (AudioContext.data.length > 0) {
-    price = AudioContext.data[4].price;
+    price = AudioContext.data[2].price;
   }
 
   //Slug
   let slug;
   if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[4].slug;
+    slug = AudioContext.data[1].slug;
   }
 
   //Description
@@ -26,7 +26,7 @@ function SpeakerTwobody(props) {
   let description;
 
   if (AudioContext.data.length > 0) {
-    description = AudioContext.data[4].description;
+    description = AudioContext.data[1].description;
   }
 
   useEffect(() => {
@@ -39,9 +39,9 @@ function SpeakerTwobody(props) {
 
   const increaseQuantity = () => setquantity(quantity + 1);
   const decreaseQuantity = () => setquantity(quantity - 1);
-  return (
-    <div>
-      <section className="HeadphoneSection">
+    return (
+        <div>
+            <section className="HeadphoneSection">
         <div className="HeadImageOne">
           <img src={imageDesktop} alt="speaker"></img>
         </div>
@@ -64,11 +64,14 @@ function SpeakerTwobody(props) {
           </div>
         </div>
       </section>
-      <SpeakerTwoFeatures />
-      <SpeakerTwoImages />
-      <SpeakerTwoLikes />
-    </div>
-  );
+      <HeadphoneThreeFeatures />
+      <HeadphoneThreeImages />
+      <HeadphoneThreeLikes />
+            
+        </div>
+    )
 }
 
-export default SpeakerTwobody;
+
+export default HeadphoneThreebody
+

@@ -1,24 +1,23 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from "../../../../assets/product-zx7-speaker/desktop/image-product.jpg";
-import SpeakerTwoFeatures from "./SpeakerTwoFeatures";
-import SpeakerTwoImages from "./SpeakerTwoImages";
-import SpeakerTwoLikes from "./SpeakerTwoLikes";
+import imageDesktop from "../../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
+import HeadphoneTwoFeatures from "./HeadphoneTwoFeatures";
+import HeadphoneTwoImages from "./HeadphoneTwoImages";
+import HeadphoneTwoLikes from "./HeadphoneTwoLikes";
 
-function SpeakerTwobody(props) {
+function HeadphoneTwobody(props) {
   const AudioContext = useContext(audioContext);
-  console.log(AudioContext);
 
   //Price
   let price;
   if (AudioContext.data.length > 0) {
-    price = AudioContext.data[4].price;
+    price = AudioContext.data[3].price;
   }
 
   //Slug
   let slug;
   if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[4].slug;
+    slug = AudioContext.data[3].slug;
   }
 
   //Description
@@ -26,7 +25,7 @@ function SpeakerTwobody(props) {
   let description;
 
   if (AudioContext.data.length > 0) {
-    description = AudioContext.data[4].description;
+    description = AudioContext.data[3].description;
   }
 
   useEffect(() => {
@@ -64,11 +63,11 @@ function SpeakerTwobody(props) {
           </div>
         </div>
       </section>
-      <SpeakerTwoFeatures />
-      <SpeakerTwoImages />
-      <SpeakerTwoLikes />
+      <HeadphoneTwoFeatures />
+      <HeadphoneTwoImages />
+      <HeadphoneTwoLikes />
     </div>
   );
 }
 
-export default SpeakerTwobody;
+export default HeadphoneTwobody;

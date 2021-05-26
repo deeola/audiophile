@@ -2,6 +2,7 @@ import React from "react";
 import firstImagedesktop from "../../../assets/category-headphones/desktop/markone.jpg";
 import secondImagedesktop from "../../../assets/category-headphones/desktop/marktwo.jpg";
 import thirdImagedesktop from "../../../assets/category-headphones/desktop/markthree.jpg";
+import {Link} from 'react-router-dom'
 
 function Section(props) {
   return (
@@ -18,7 +19,7 @@ function Section(props) {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </p>
-          <button className='sectionButton'>SEE PRODUCT</button>
+          <Link to='/xx99-mark-two' className='sectionButton'>SEE PRODUCT</Link>
         </div>
       </section>
       <section className="HeadphoneSection">
@@ -29,7 +30,7 @@ function Section(props) {
             detailed and accurate audio reproduction for audiophiles, mixing
             engineers, and music aficionados alike in studios and on the go.
           </p>
-          <button className='sectionButton'>SEE PRODUCT</button>
+          <Link to='/xx99-mark-one' className='sectionButton'>SEE PRODUCT</Link>
         </div>
         <div className="HeadImageOne">
           <img src={firstImagedesktop} alt='firstimage'></img>
@@ -46,7 +47,7 @@ function Section(props) {
             tastes with the XX59 headphones. The stylish yet durable versatile
             wireless headset is a brilliant companion at home or on the move.
           </p>
-          <button className='sectionButton'>SEE PRODUCT</button>
+          <Link to='/xx59' className='sectionButton'>SEE PRODUCT</Link>
         </div>
       </section>
     </div>
