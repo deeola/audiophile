@@ -552,8 +552,45 @@ nav .cartIcon, .footerNav .cartIcon {
   top: 10rem;
   right: 0;
   z-index: 10000;
-  background-color: #3f1616;
+  background-color: #f1f1f1;
   width: 377px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.Buckets {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: 10000;
+  background-color: #f1f1f1;
+  width: 377px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.733);
+  z-index: 500;
+}
+
+.App {
+  position: relative;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+.nameEmail, .zipCity {
+  display: flex;
 }
 
 @media (max-width: 802px) {

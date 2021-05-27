@@ -13,15 +13,46 @@ import HeadphoneOne from "./components/pdetails/productHeadphone/HeadphoneOne/He
 import HeadphoneTwo from "./components/pdetails/productHeadphone/HeadphoneTwo/HeadphoneTwo";
 import HeadphoneThree from "./components/pdetails/productHeadphone/HeadphoneThree/HeadphoneThree";
 import Basket from "./components/cart/Basket";
+import Layer from "./components/home/Layer";
+import Checkout from "./components/checkout/Checkout";
 
 function App(props) {
-  
   const [cartItems, setCartItems] = useState([]);
 
+  //SET Basket display
+
+  const [myBucketDisplay, setMyBucketDisplay] = useState(false);
+
+  const openBucket = () => {
+    return myBucketDisplay ? {} : { display: "none" };
+  };
+
+  //Open
+  const bucketIconClicked = () => {
+    setMyBucketDisplay(!myBucketDisplay);
+  };
+
+  //CHECKOUT DISPLAY
+  const [myCheckoutDisplay, setMyCheckoutDisplay] = useState(false);
+
+  const openCHECKOUT = () => {
+    return myCheckoutDisplay ? {} : { display: "none" };
+  };
+
+  //Open
+  const CheckoutIconClicked = () => {
+    setMyCheckoutDisplay(!myCheckoutDisplay);
+    closeIconClicked();
+  };
+
+  //Close
+  const closeIconClicked = () => {
+    setMyBucketDisplay(false);
+  };
 
   //On ADD
   const onAdd = (product) => {
-    const exist = cartItems.find( x => x.id === product.id);
+    const exist = cartItems.find((x) => x.id === product.id);
 
     if (exist) {
       setCartItems(
@@ -29,24 +60,18 @@ function App(props) {
           x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
         )
       );
-    } else{
-      setCartItems([...cartItems, {...product, qty:1}])
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
 
-
-  
-
-  const onRemove= (product) => {
-    const exist = cartItems.find( x => x.id === product.id);
+  //OnRemove Function
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
 
     if (exist.qty === 1) {
-      setCartItems(
-        cartItems.filter((x) =>
-          x.id !== product.id
-        )
-      );
-    } else{
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
       setCartItems(
         cartItems.map((x) =>
           x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
@@ -55,30 +80,164 @@ function App(props) {
     }
   };
 
-  //ON REMOVE
+  //Submitted
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  function Submitform() {
+    setIsSubmitted(true);
+  }
+
+
+
+  //REMOVE ALL
+
+  const removeAll = () => {
+    setCartItems([]);
+  }
 
   return (
     <AudioState>
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/" render={(props) => <Home  countCartItems={cartItems.length} />} />
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Home
+                  bucketIconClicked={bucketIconClicked}
+                  closeIconClicked={closeIconClicked}
+                  countCartItems={cartItems.length}
+                />
+              )}
+            />
 
-            <Route path="/headphones" render={(props) => <Headphones countCartItems={cartItems.length}  />} />
-            <Route path="/speakers" render={(props) => <Speakers countCartItems={cartItems.length}  />} />
-            <Route path="/earphones" render={(props) => <Earphones countCartItems={cartItems.length}  />} />
-            <Route path="/yx1" render={(props) => <EarpodProduct onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/zx9" render={(props) => <SpeakerOne onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/zx7" render={(props) => <SpeakerTwo onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx99-mark-one" render={(props) => <HeadphoneOne onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx99-mark-two" render={(props) => <HeadphoneTwo onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
-            <Route path="/xx59" render={(props) => <HeadphoneThree onRemove={onRemove} countCartItems={cartItems.length} onAdd={onAdd} />} />
+            <Route
+              path="/headphones"
+              render={(props) => (
+                <Headphones
+                  bucketIconClicked={bucketIconClicked}
+                  countCartItems={cartItems.length}
+                />
+              )}
+            />
+            <Route
+              path="/speakers"
+              render={(props) => (
+                <Speakers
+                  bucketIconClicked={bucketIconClicked}
+                  countCartItems={cartItems.length}
+                />
+              )}
+            />
+            <Route
+              path="/earphones"
+              render={(props) => (
+                <Earphones
+                  bucketIconClicked={bucketIconClicked}
+                  countCartItems={cartItems.length}
+                />
+              )}
+            />
+            <Route
+              path="/yx1"
+              render={(props) => (
+                <EarpodProduct
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
+            <Route
+              path="/zx9"
+              render={(props) => (
+                <SpeakerOne
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
+            <Route
+              path="/zx7"
+              render={(props) => (
+                <SpeakerTwo
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
+            <Route
+              path="/xx99-mark-one"
+              render={(props) => (
+                <HeadphoneOne
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
+            <Route
+              path="/xx99-mark-two"
+              render={(props) => (
+                <HeadphoneTwo
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
+            <Route
+              path="/xx59"
+              render={(props) => (
+                <HeadphoneThree
+                  bucketIconClicked={bucketIconClicked}
+                  onRemove={onRemove}
+                  countCartItems={cartItems.length}
+                  onAdd={onAdd}
+                />
+              )}
+            />
             <Route
               path="/cart"
-              render={(props) => <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}
+              render={(props) => (
+                <Basket
+                  cartItems={cartItems}
+                  onAdd={onAdd}
+                  onRemove={onRemove}
+                />
+              )}
             />
           </Switch>
-          <Basket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
+          <Basket
+            closeIconClicked={closeIconClicked}
+            openBucket={openBucket}
+            myBucketDisplay={myBucketDisplay}
+            cartItems={cartItems}
+            onAdd={onAdd}
+            onRemove={onRemove}
+            CheckoutIconClicked={CheckoutIconClicked}
+            removeAll={removeAll}
+          />
+          <Layer openBucket={openBucket} />
+          <Checkout
+            openBucket={openBucket}
+            myBucketDisplay={myBucketDisplay}
+            onAdd={onAdd}
+            onRemove={onRemove}
+            CheckoutIconClicked={CheckoutIconClicked}
+            cartItems={cartItems}
+            openCHECKOUT={openCHECKOUT}
+            myCheckoutDisplay={myCheckoutDisplay}
+            Submitform={Submitform}
+          />
         </div>
       </Router>
     </AudioState>

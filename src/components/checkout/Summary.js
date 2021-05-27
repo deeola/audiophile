@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom'
 
 import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
 
-function Basket(props) {
-  const { cartItems, onAdd, onRemove, myBucketDisplay,openBucket,closeIconClicked,CheckoutIconClicked,removeAll } = props;
+function Summary(props) {
+  const { cartItems, onAdd, onRemove, myBucketDisplay,openBucket,closeIconClicked,CheckoutIconClicked } = props;
+
+  console.log(cartItems)
 
 //   const image = require('../../assets/shared/desktop/icon-facebook.svg')
 
@@ -23,11 +25,9 @@ function Basket(props) {
 //   const {,closeIconClicked } = props
 
 
+
   return (
-    <div className="Bucket" style={openBucket()}>
-      <div id='closeModal' onClick={closeIconClicked} style={{ textAlign: "right", color: "red", cursor: "pointer" }}>
-        X
-      </div>
+    <div className="Bucket" >
       <div
         style={{
           display: "flex",
@@ -37,7 +37,7 @@ function Basket(props) {
         }}
       >
         <h2>cart {` (${cartItems.length})`}</h2>
-        <p onClick={removeAll} style={{ borderBottom: "1px solid black", cursor:'pointer'}}>Remove all</p>
+        <p style={{ borderBottom: "1px solid black" }}>Remove all</p>
       </div>
 
       <div>{cartItems.length === 0 && <div>CART IS EMPTY</div>}</div>
@@ -136,4 +136,4 @@ function Basket(props) {
   );
 }
 
-export default Basket;
+export default Summary;

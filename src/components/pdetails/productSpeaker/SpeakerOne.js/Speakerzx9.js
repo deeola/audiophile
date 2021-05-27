@@ -9,7 +9,7 @@ import SpeakerOnebody from "./SpeakerOnebody";
 
 function Speakerzx9(props) {
 
-  const {countCartItems, onAdd} = props;
+  const {countCartItems, onAdd,bucketIconClicked} = props;
   return (
     <div>
       <div
@@ -23,7 +23,7 @@ function Speakerzx9(props) {
           alignItems: "center",
         }}
       >
-        <Navbar countCartItems={countCartItems}/>
+        <Navbar bucketIconClicked={bucketIconClicked} countCartItems={countCartItems}/>
       </div>
       <Link className='Gobacklink' to='/speakers'>Go Back</Link>
       <SpeakerOnebody onAdd={onAdd} />

@@ -10,7 +10,7 @@ import EarpodBody from "./EarpodBody";
 function Test(props) {
 
 
-  const {onAdd,countCartItems, onRemove } = props;
+  const {onAdd,countCartItems, onRemove,bucketIconClicked } = props;
 
   return (
     <div>
@@ -18,7 +18,7 @@ function Test(props) {
         className="productnav"
         style={{ backgroundColor: "black", width: "100%", height: "97px", display:'flex', justifyContent:'center', alignItems:'center'}}
       >
-        <Navbar  countCartItems = {countCartItems}/>
+        <Navbar bucketIconClicked={bucketIconClicked}  countCartItems = {countCartItems}/>
       </div>
       <Link className='Gobacklink' to='/earphones'>Go Back</Link>
       <EarpodBody onAdd={onAdd} onRemove={onRemove}/>

@@ -8,9 +8,8 @@ import { Link } from "react-router-dom";
 
 function Navbar(props) {
 
-  const {countCartItems} = props;
+  const {countCartItems, bucketIconClicked} = props;
 
-  console.log(countCartItems)
 
   return (
     <nav className='sticky'>
@@ -29,9 +28,9 @@ function Navbar(props) {
         <Link className='mylink' to='/Earphones'>Earphones</Link>
       </ul>
       <div>
-        <Link style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={cart} alt="carticon"></img>{''} {countCartItems ? (
+        <button onClick={bucketIconClicked} style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={cart} alt="carticon"></img>{''} {countCartItems ? (
           <p style={{marginLeft:'10px'}} className='countCart'>{countCartItems}</p>
-        ) : ('')}</Link>
+        ) : ('')}</button>
         
       </div>
     </nav>

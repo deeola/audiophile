@@ -8,10 +8,10 @@ import EarphoneBody from "./Earphone/EarphoneBody";
 
 
 function Earphones(props) {
-  const {countCartItems} = props;
+  const {countCartItems,bucketIconClicked} = props;
   return (
     <div className='EarphoneMain'>
-      <HeaderShared countCartItems={countCartItems} />
+      <HeaderShared bucketIconClicked={bucketIconClicked} countCartItems={countCartItems} />
       <EarphoneBody />
       <Shop />
       <Gear />

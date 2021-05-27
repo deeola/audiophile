@@ -6,10 +6,10 @@ import Footer from '../layouts/footer/Footer'
 
 function Home(props) {
 
-    const {countCartItems} = props;
+    const {countCartItems, bucketIconClicked,closeIconClicked } = props;
     return (
         <div className='mainDiv'>
-            <Header countCartItems={countCartItems} /> 
+            <Header closeIconClicked={closeIconClicked }  countCartItems={countCartItems} bucketIconClicked={bucketIconClicked} /> 
             <Main />
             <Footer />
 

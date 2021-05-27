@@ -8,7 +8,7 @@ import Footer from "../../../layouts/footer/Footer";
 
 function Speakerzx7(props) {
 
-  const {countCartItems, onAdd} = props;
+  const {countCartItems, onAdd, bucketIconClicked} = props;
   return (
     <div>
       <div
@@ -22,7 +22,7 @@ function Speakerzx7(props) {
           alignItems: "center",
         }}
       >
-        <Navbar countCartItems={countCartItems} />
+        <Navbar bucketIconClicked={bucketIconClicked} countCartItems={countCartItems} />
       </div>
       <Link className='Gobacklink' to='/speakers'>Go Back</Link>
       <SpeakerTwobody onAdd={onAdd} />

@@ -4,11 +4,11 @@ import HeroShared from './HeroShared';
 
 
 function HeaderShared(props) {
-    const {countCartItems} = props;
+    const {countCartItems,bucketIconClicked} = props;
     
     return (
         <div className='HeaderShared'>
-            <Navbar countCartItems={countCartItems}/>
+            <Navbar bucketIconClicked={bucketIconClicked} countCartItems={countCartItems}/>
             <HeroShared />
             
         </div>
