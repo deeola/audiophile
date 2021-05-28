@@ -231,6 +231,7 @@ function App(props) {
                   openCHECKOUT={openCHECKOUT}
                   myCheckoutDisplay={myCheckoutDisplay}
                   Submitform={Submitform}
+                  removeAll={removeAll}
                 />
               )}
             />

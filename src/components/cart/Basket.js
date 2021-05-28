@@ -1,13 +1,10 @@
 import React from "react";
-import images from '../../assets/cart/image-xx59-headphones.jpg'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
-import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
 
 function Basket(props) {
   const { cartItems, onAdd, onRemove, myBucketDisplay,openBucket,closeIconClicked,CheckoutIconClicked,removeAll } = props;
 
-//   const image = require('../../assets/shared/desktop/icon-facebook.svg')
 
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -65,7 +62,7 @@ function Basket(props) {
 
               <div style={{ width: "20px", marginRight: "10px" }}>
                 {/* image */}
-                <img src={sampleimage} alt="smallimage"></img>
+                <img src={require('../../assets'+item.image.desktop).default} alt="smallimage"></img>
               </div>
               <div>
                 {/* name and price here */}
@@ -103,20 +100,6 @@ function Basket(props) {
               
             </div>
           </div>
-          {/* <div>
-            {item.qty} x {item.price.toFixed(2)}
-            {cartItems.length !== 0 && (
-              <>
-                <hr></hr>
-                <div>Items Price</div>
-                <div>€{item.price.toFixed(2)}</div>
-                <div>Tax</div>
-                <div>€{taxprice}</div>
-                <div>Shipping</div>
-                <div>€{shippingPrice}</div>
-              </>
-            )}
-          </div> */}
         </div>
       ))}
 

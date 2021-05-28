@@ -1,7 +1,9 @@
 import React from "react";
+import Layer from "../home/Layer";
 import Footer from "../layouts/footer/Footer";
 import Navbar from "../layouts/Header/Navbar";
 import FormCheckout from "./FormCheckout";
+import Success from "./Success";
 import Summary from "./Summary";
 
 function Checkout(props) {
@@ -12,6 +14,7 @@ function Checkout(props) {
     onRemove,
     openBucket,
     myBucketDisplay,
+    removeAll
   } = props;
   return (
     <div >
@@ -30,13 +33,8 @@ function Checkout(props) {
       </div>
       <FormCheckout />
       <Footer />
-      {/* <Summary
-        openBucket={openBucket}
-        myBucketDisplay={myBucketDisplay}
-        onAdd={onAdd}
-        onRemove={onRemove}
-        cartItems={cartItems}
-      /> */}
+      <Success removeAll={removeAll} />
+      {/* <Layer /> */}
     </div>
   );
 }

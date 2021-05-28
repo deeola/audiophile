@@ -17,6 +17,7 @@ function PerosnalDetails({ Submitform }) {
     moneyPin,
     country,
     style,
+    Moneystyle
   } = values;
 
   //  FETCH LOCAL STORAGE
@@ -28,6 +29,8 @@ function PerosnalDetails({ Submitform }) {
   const shippingPrice = 50;
 
   const TotalPrice = itemsPrice + taxprice + shippingPrice;
+
+  localStorage.setItem('grandtotal', JSON.stringify(TotalPrice))
 
   return (
     <div className="mainFormDiv">
@@ -241,11 +244,13 @@ function PerosnalDetails({ Submitform }) {
               
             </div>
 
-
-            <div className='EmoneyText'>
-  
-
-              hello
+            <div style={Moneystyle}>
+              <div className='EmoneyText' >
+              <i class="fas fa-hand-holding-usd"></i>
+              <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
+              </p>
+              </div>
+             
             </div>
           </div>
         </div>
@@ -261,7 +266,7 @@ function PerosnalDetails({ Submitform }) {
 
                     <div className='summaryImage'>
                       {/* image */}
-                      <img src={sampleimage} alt="smallimage"></img>
+                      <img src={require('../../assets'+item.image.desktop).default} alt="smallimage"></img>
                     </div>
                     <div>
                       {/* name and price here */}
@@ -288,20 +293,20 @@ function PerosnalDetails({ Submitform }) {
 
             <div className='priceShipping'>
               <div>Total</div>
-              <div className='boldPrices'>€{itemsPrice}</div>
+              <div className='boldPrices'>€{itemsPrice.toFixed(2)}</div>
             </div>
             <div className='priceShipping'>
               <div>SHIPPING</div>
-              <div className='boldPrices'>€{shippingPrice}</div>
+              <div className='boldPrices'>€{shippingPrice.toFixed(2)}</div>
             </div>
             <div className='priceShipping'>
               <div>VAT(Tax Included)</div>
-              <div className='boldPrices'>€{taxprice}</div>
+              <div className='boldPrices'>€{taxprice.toFixed(2)}</div>
             </div>
 
             <div className='priceShipping'>
               <div>GRAND TOTAL</div>
-              <div className='boldPrices'>€{TotalPrice}</div>
+              <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
             </div>
               <button className='submitButton' type='submit'>CONTINUE & PAY</button>
           </div>

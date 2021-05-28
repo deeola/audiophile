@@ -23,6 +23,12 @@ const useSign = (callback, ValidateSign) => {
       width:'100%'
       
     },
+    Moneystyle: {
+      display: "none",
+      width:'100%'
+      
+    },
+
   });
 
   const radioChange = (e) => {
@@ -32,6 +38,11 @@ const useSign = (callback, ValidateSign) => {
           display: "block",
           width:'100%'
         },
+        Moneystyle: {
+          display: "none",
+          width:'100%'
+          
+        }
       });
     }
   };
@@ -43,6 +54,12 @@ const useSign = (callback, ValidateSign) => {
         style: {
           display: "none",
         },
+        Moneystyle: {
+          display: "block",
+          width:'100%'
+          
+        }
+
       });
     }
   };
