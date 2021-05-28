@@ -32,6 +32,8 @@ function App(props) {
     setMyBucketDisplay(!myBucketDisplay);
   };
 
+
+
   //CHECKOUT DISPLAY
   const [myCheckoutDisplay, setMyCheckoutDisplay] = useState(false);
 
@@ -49,6 +51,8 @@ function App(props) {
   const closeIconClicked = () => {
     setMyBucketDisplay(false);
   };
+
+
 
   //On ADD
   const onAdd = (product) => {
@@ -245,6 +249,7 @@ function App(props) {
             onRemove={onRemove}
             CheckoutIconClicked={CheckoutIconClicked}
             removeAll={removeAll}
+            
           />
           <Layer openBucket={openBucket} />
         </div>

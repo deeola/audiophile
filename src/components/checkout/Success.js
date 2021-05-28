@@ -3,19 +3,17 @@ import { Link } from 'react-router-dom';
 
 function Success(props) {
 
-    const {removeAll} = props;
+    const {removeAll,successDisplay} = props;
 
     const summaryItems = JSON.parse(localStorage.getItem("newItems"));
     const grandTotal = JSON.parse(localStorage.getItem('grandtotal'))
 
 
-    console.log(summaryItems)
-
     const summaryothers = summaryItems.length - 1;
 
 
     return (
-        <div className='SuccessMain'>
+        <div className='SuccessMain' style={successDisplay} >
             <i class="fas fa-check-circle"></i>
             <h2>THANK YOU</h2>
             <h2>FOR YOU ORDER</h2>

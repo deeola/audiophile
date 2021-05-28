@@ -1,8 +1,8 @@
-import React from "react";
-import Layer from "../home/Layer";
+import React,{useState} from "react";
 import Footer from "../layouts/footer/Footer";
 import Navbar from "../layouts/Header/Navbar";
 import FormCheckout from "./FormCheckout";
+import LayoutCheck from "./LayoutCheck";
 import Success from "./Success";
 import Summary from "./Summary";
 
@@ -16,6 +16,36 @@ function Checkout(props) {
     myBucketDisplay,
     removeAll
   } = props;
+
+
+  //SET SUCCESS MODAL
+  const [successDisplay, setSuccessDisplay] = useState({
+
+      display:'none'
+
+  });
+
+
+
+  //Open
+  const continueAndPay = () => {
+    setSuccessDisplay({
+
+        display:'block'
+
+    });
+
+    console.log(successDisplay)
+  };
+
+
+
+  const openBuckets = () => {
+    return setSuccessDisplay ? {} : { display: "none" };
+  };
+
+
+
   return (
     <div >
       <div
@@ -31,10 +61,10 @@ function Checkout(props) {
       >
         <Navbar />
       </div>
-      <FormCheckout />
+      <FormCheckout continueAndPay={continueAndPay} />
       <Footer />
-      <Success removeAll={removeAll} />
-      {/* <Layer /> */}
+      <Success successDisplay={successDisplay}  removeAll={removeAll} />
+      <LayoutCheck successDisplay={successDisplay}  />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import PaymentDetails from './PaymentDetails';
 import PerosnalDetails from './PersonalDetails';
-import ShipingInfo from './ShipingInfo';
+
 
 function FormCheckout(props) {
+    const {continueAndPay} = props;
     return (
         <div>
-            <PerosnalDetails />
+            <PerosnalDetails continueAndPay={continueAndPay} />
         </div>
     )
 }

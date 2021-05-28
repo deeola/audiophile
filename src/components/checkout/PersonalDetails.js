@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import useSign from "./useSign";
 import ValidateSign from "./ValidateSign";
 import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
 
-function PerosnalDetails({ Submitform }) {
+function PerosnalDetails({ Submitform,continueAndPay }) {
   const { values, handleChange, onSubmit, error, radioChange, radioChangeA } =
     useSign(Submitform, ValidateSign);
   const {
@@ -20,7 +20,11 @@ function PerosnalDetails({ Submitform }) {
     Moneystyle
   } = values;
 
+
+  console.log(continueAndPay)
+
   //  FETCH LOCAL STORAGE
+
 
   const summaryItems = JSON.parse(localStorage.getItem("newItems"));
 
@@ -308,7 +312,7 @@ function PerosnalDetails({ Submitform }) {
               <div>GRAND TOTAL</div>
               <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
             </div>
-              <button className='submitButton' type='submit'>CONTINUE & PAY</button>
+              <button onClick={continueAndPay} className='submitButton' type='submit'>CONTINUE & PAY</button>
           </div>
         </div>
       </form>
