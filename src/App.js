@@ -87,13 +87,15 @@ function App(props) {
     setIsSubmitted(true);
   }
 
-
-
   //REMOVE ALL
 
   const removeAll = () => {
     setCartItems([]);
-  }
+  };
+
+  //Local storage Cart Items
+
+  localStorage.setItem("newItems", JSON.stringify(cartItems));
 
   return (
     <AudioState>
@@ -215,6 +217,23 @@ function App(props) {
                 />
               )}
             />
+
+            <Route
+              path="/checkout"
+              render={(props) => (
+                <Checkout
+                  openBucket={openBucket}
+                  myBucketDisplay={myBucketDisplay}
+                  onAdd={onAdd}
+                  onRemove={onRemove}
+                  CheckoutIconClicked={CheckoutIconClicked}
+                  cartItems={cartItems}
+                  openCHECKOUT={openCHECKOUT}
+                  myCheckoutDisplay={myCheckoutDisplay}
+                  Submitform={Submitform}
+                />
+              )}
+            />
           </Switch>
           <Basket
             closeIconClicked={closeIconClicked}
@@ -227,17 +246,6 @@ function App(props) {
             removeAll={removeAll}
           />
           <Layer openBucket={openBucket} />
-          <Checkout
-            openBucket={openBucket}
-            myBucketDisplay={myBucketDisplay}
-            onAdd={onAdd}
-            onRemove={onRemove}
-            CheckoutIconClicked={CheckoutIconClicked}
-            cartItems={cartItems}
-            openCHECKOUT={openCHECKOUT}
-            myCheckoutDisplay={myCheckoutDisplay}
-            Submitform={Submitform}
-          />
         </div>
       </Router>
     </AudioState>

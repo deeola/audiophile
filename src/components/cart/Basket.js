@@ -99,6 +99,8 @@ function Basket(props) {
                 <div>{item.qty}</div>
                 <button  style={{border:'1px solid gray'}} onClick={() => onAdd(item)}>+</button>
               </div>
+
+              
             </div>
           </div>
           {/* <div>
@@ -130,7 +132,7 @@ function Basket(props) {
         <div style={{ fontWeight: "700" }}>€{itemsPrice}</div>
       </div>
       <div style= {{marginTop:'20px'}}>
-          <button onClick={CheckoutIconClicked} style={{display:'inline-block', width:'100%', height:'40px', cursor:'pointer'}}>CHECKOUT</button>
+          <Link to='/checkout' onClick={CheckoutIconClicked}  style={{display:'inline-block', width:'100%', height:'40px', cursor:'pointer'}}>CHECKOUT</Link>
       </div>
     </div>
   );

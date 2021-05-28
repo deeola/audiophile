@@ -1,660 +1,878 @@
-@import 'config';
-@import 'utilities';
+@import "config";
+@import "utilities";
 
-
-
-
-nav, .footerNav{
+nav,
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  position: sticky;
+  padding-top: 20px;
+  top: 0;
+  z-index: 200;
+  ul {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: auto;
+    color: $very-light-gray;
     align-items: center;
-    position: sticky;
-    padding-top: 20px;
-    top: 0;
-    z-index: 200;
-    ul{
-        display: flex;
-        justify-content: space-between;
-        color: $very-light-gray;
-        align-items: center;
-        align-items: center;
+    align-items: center;
 
-        .mylink,li{
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 13px;
-            list-style: none;
-            margin-left: 1em;
-            text-decoration: none;
-            color: $gray;
-            &:hover{
-                color: $orange;
-                cursor: pointer;
-            }
-        }
-
-
-
-    }
-
-    .logo-ham{
-        display: flex;
-
-        .hamburger{
-            display: none;
-        }
-    }
-
-    .cartIcon{
+    .mylink,
+    li {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      list-style: none;
+      margin-left: 1em;
+      text-decoration: none;
+      color: $gray;
+      &:hover {
+        color: $orange;
         cursor: pointer;
+      }
     }
-}
+  }
 
-.footerNav{
-    padding-top: unset;
-}
-
-
-
-.Header{
-    background-image: url("../assets/home/desktop/image-hero.jpg");
-    background-position: center;
-    background-size:cover;
-    max-width:100%;
-    height: 698px;
-    background-repeat: no-repeat;
-    
-}
-
-.mainHero{
-    width: 100%;
-    background-size: cover;
-    
-}
-
-
-.herowrapper{
-    width: 80%;
-    margin: auto;
-
-}
-
-.heroText{
-    width: 30%;
+  .logo-ham {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    text-align: left;
-    position: relative;
-    top: 170px;
-    .productPara{
-        opacity: 0.5;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        color: $very-light-gray;
-        text-align: left;
 
+    .hamburger {
+      display: none;
     }
+  }
 
-    h1{
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 58px;
-        letter-spacing: 2px;
-        color:$very-light-gray;
-        margin-top: 24px;
-        text-transform: uppercase;
-        
-    }
-
-    .productDescr{
-        font-weight: 500px;
-        font-size: 15px;
-        line-height: 25px;
-        margin-top: 24px;
-        color: $light-gray;
-    }
-
-    button{
-        width: 160px;
-        height: 48px;
-        margin-top: 24px;
-        background-color: $orange;
-        color: $very-light-gray;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-size: 15px;
-    }
+  .cartIcon {
+    cursor: pointer;
+  }
 }
 
+.footerNav {
+  padding-top: unset;
+}
 
+.Header {
+  background-image: url("../assets/home/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  height: 698px;
+  background-repeat: no-repeat;
+}
+
+.mainHero {
+  width: 100%;
+  background-size: cover;
+}
+
+.herowrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.heroText {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  position: relative;
+  top: 170px;
+  .productPara {
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: $very-light-gray;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 2px;
+    color: $very-light-gray;
+    margin-top: 24px;
+    text-transform: uppercase;
+  }
+
+  .productDescr {
+    font-weight: 500px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 24px;
+    color: $light-gray;
+  }
+
+  button {
+    width: 160px;
+    height: 48px;
+    margin-top: 24px;
+    background-color: $orange;
+    color: $very-light-gray;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
 
 //BODY
 
-.firstSection{
+.firstSection {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .shopSection {
+    width: 30%;
+    position: relative;
     display: flex;
-    width: 80%;
-    margin: auto;
-    margin-top: 2rem;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 48px;
 
-    
-
-    .shopSection{
-        width: 30%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 48px;
-
-        .shopImageDiv{
-            position: absolute;
-            top: 0%;
-            bottom: 32.66%;
-            z-index: 100;
-            width: 80%;
-            margin: auto;
-        }
-
-        .shopTextDiv{
-            background-color: $gray;
-            position: relative;
-            top:6rem;
-            text-align: center;
-            color: rgb(99, 61, 61);
-            padding-top: 5rem;
-            padding-bottom: 30px;
-            width: 100%;
-
-            .shoptitle{
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-bottom: 10px;
-                display: inline-block;
-                padding-top: 40px;
-
-                
-            }
-
-            .shopText{
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            span{
-                color: $orange;
-                cursor: pointer;
-                margin-left: 3px;
-                font-weight: 700;
-                font-size: 22px;
-            }
-        }
+    .shopImageDiv {
+      position: absolute;
+      top: 0%;
+      bottom: 32.66%;
+      z-index: 100;
+      width: 80%;
+      margin: auto;
     }
-    
+
+    .shopTextDiv {
+      background-color: $gray;
+      position: relative;
+      top: 6rem;
+      text-align: center;
+      color: rgb(99, 61, 61);
+      padding-top: 5rem;
+      padding-bottom: 30px;
+      width: 100%;
+
+      .shoptitle {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+        padding-top: 40px;
+      }
+
+      .shopText {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      span {
+        color: $orange;
+        cursor: pointer;
+        margin-left: 3px;
+        font-weight: 700;
+        font-size: 22px;
+      }
+    }
+  }
 }
-
-
 
 //Second Div
 
-.secondSection{
+.secondSection {
+  .imagetab {
+    display: none;
+  }
 
-    .imagetab{
-        display: none;
-    }
-    
-    .imagedesktop{
-        display: block;
-        width: 410px;
-        height: 473px;
-        position: relative;
-        top: 45px;
-        right: 60px;
-        overflow: hidden;
-    }
-    background-color: $orange !important;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-    width: 80%;
+  .imagedesktop {
+    display: block;
+    width: 410px;
+    height: 473px;
     position: relative;
-    margin: 98px auto auto auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    top: 45px;
+    right: 60px;
     overflow: hidden;
+  }
+  background-color: $orange !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  margin: 98px auto auto auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 
-    .secondTextDiv{
-        width: 349px;
-        height: 303px;
+  .secondTextDiv {
+    width: 349px;
+    height: 303px;
 
-        .sdMainText{
-            font-size: 56px;
-            color: $light-gray;
-        }
-
-        .sdproductDescr {
-            font-size: 15px;
-            color: $gray;
-            margin-top: 10px;
-            
-        }
-
-        button{
-            width: 160px;
-            height: 48px;
-            background-color: $black;
-            color: white;
-            margin-top: 20px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
+    .sdMainText {
+      font-size: 56px;
+      color: $light-gray;
     }
+
+    .sdproductDescr {
+      font-size: 15px;
+      color: $gray;
+      margin-top: 10px;
+    }
+
+    button {
+      width: 160px;
+      height: 48px;
+      background-color: $black;
+      color: white;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
 }
 
 //Zspeaker
 
-.zspeakermain{
-    width: 80%;
-    margin: 48px auto;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+.zspeakermain {
+  width: 80%;
+  margin: 48px auto;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
 
-    //height
-    height: 320px;
+  //height
+  height: 320px;
 
-    .zspeakerDiv{
-        width: 204px;
-        height: 118px;
-        left: 2em;
-        position: relative;
-        left: 100px;
-        top: 100px;
+  .zspeakerDiv {
+    width: 204px;
+    height: 118px;
+    left: 2em;
+    position: relative;
+    left: 100px;
+    top: 100px;
 
-        .zspeakertitle{
-            font-size: 28px;
-            font-weight: 700;
-        }
-        button{
-            width: 160px;
-            height: 48px;
-            margin-top: 10px;
-            border: 1px solid $black;
-            cursor: pointer;
-
-        }
+    .zspeakertitle {
+      font-size: 28px;
+      font-weight: 700;
     }
+    button {
+      width: 160px;
+      height: 48px;
+      margin-top: 10px;
+      border: 1px solid $black;
+      cursor: pointer;
+    }
+  }
 }
-
 
 //Earphones
 
-.earphonesDiv{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    margin:  auto auto 48px auto;
-    justify-content: space-between;
+.earphonesDiv {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin: auto auto 48px auto;
+  justify-content: space-between;
 
-
-    .earphoneImageDiv{
-        width: 49%;
-        height: 100%;
-        background-color: bisque;
-        img{
-            display: block;
-        }
-
-
+  .earphoneImageDiv {
+    width: 49%;
+    height: 100%;
+    background-color: bisque;
+    img {
+      display: block;
     }
+  }
 
-    .earphonestab{
-        display: none;
-    }
-    
+  .earphonestab {
+    display: none;
+  }
 
-    .earphoneTextDiv{
-        background-color: $gray;
-        width: 49%;
-        // padding: 10px 50px 0px 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        .earphoneText{
-            position: relative;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-left: 3em;
-            
-            p{
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 2rem;
-                
-            }
-
-            button{
-                padding: .9em;
-                border: 1px solid $black;
-                color: $black;
-                margin-top: .9rem;
-                display: inline-block;
-                width: 40%;
-                text-transform: uppercase;
-            }
-
-        }
- 
-    }
-}
-
-
-//GEAR DIV
-
-
-.Gear{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 48px;
-
-
-    flex-direction: row;
-
-    .GearTextDiv{
-        width: 50%;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-
-
-       
-        
-
-        .ggtext{
-            position: relative;
-            width: 80%;
-            .gearmaintitle{
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 2.5rem;
-                span{
-                    color: $orange;
-                }
-
-            }
-
-            .gmaintext{
-                font-size: .9rem;
-                margin-top: 20px;
-                line-height: 24px;
-            }
-        }
-    }
-
-    .gearImageDiv{
-        width: 50%;
-        height: 100%;
-        img{
-            display: block;
-        }
-    }
-
-    .tabgear{
-        display: none;
-    }
-
-    .mobilegear{
-        display: none;
-    }
-
-}
-
-
-//Footer
-
-
-.footer{
-    background-color: $very-black;
-    padding: 106px 0px 50px 0px;
-
-    .footerSecondDiv{
-        display: flex;
-        width: 80%;
-        margin: auto;
-        justify-content: space-between;
-
-        .footerSecondText{
-            width: 50%;
-            line-height: 24px;
-            font-size: 15px;
-            margin-top: 40px;
-            color: $gray;
-            font-weight: 500;
-        }
-    }
-}
-
-.copyIcon{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
-    margin-top: 10px;
-    align-items: flex-start;
-}
-
-.icons{
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-
-    
-    width: 10%;
-    
-
-    .iconDiv{
-        width: 14px;
-        position: relative;
-        bottom: 0;
-        cursor: pointer;
-    }
-}
-
-
-
-.copyRight{
-    color: $gray;
-    margin-top: 30px;
-
-    span{
-        color: $orange;
-    }
-    
-
-}
-
-
-//Headphone Section
-
-.HeaderShared{
-    background-color: $black;
-    height:316px;
-}
-
-.proptitle{
-    color: white;
-    text-transform: uppercase;
-    font-size: 50px;
-}
-
-.headers{
-    height:100%;
+  .earphoneTextDiv {
+    background-color: $gray;
+    width: 49%;
+    // padding: 10px 50px 0px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .earphoneText {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-left: 3em;
+
+      p {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+      }
+
+      button {
+        padding: 0.9em;
+        border: 1px solid $black;
+        color: $black;
+        margin-top: 0.9rem;
+        display: inline-block;
+        width: 40%;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 
-.HeadphoneGear{
-    margin-top: 40px !important;
-    background-color: aliceblue !important;
+//GEAR DIV
+
+.Gear {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 48px;
+
+  flex-direction: row;
+
+  .GearTextDiv {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    .ggtext {
+      position: relative;
+      width: 80%;
+      .gearmaintitle {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        span {
+          color: $orange;
+        }
+      }
+
+      .gmaintext {
+        font-size: 0.9rem;
+        margin-top: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .gearImageDiv {
+    width: 50%;
+    height: 100%;
+    img {
+      display: block;
+    }
+  }
+
+  .tabgear {
+    display: none;
+  }
+
+  .mobilegear {
+    display: none;
+  }
 }
 
-.HeadphoneSection{
+//Footer
+
+.footer {
+  background-color: $very-black;
+  padding: 106px 0px 50px 0px;
+
+  .footerSecondDiv {
     display: flex;
     width: 80%;
     margin: auto;
-    margin-top: 48px;
-}
-.HeadImageOne{
-    
-    width: 50% !important;
-    img{
-        display: block;
+    justify-content: space-between;
+
+    .footerSecondText {
+      width: 50%;
+      line-height: 24px;
+      font-size: 15px;
+      margin-top: 40px;
+      color: $gray;
+      font-weight: 500;
     }
+  }
 }
 
-.SectionText{
-    width: 50%;
+.copyIcon {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: flex-start;
 }
 
-.sectionOne{
-    padding: 10px 70px !important;
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 10%;
+
+  .iconDiv {
+    width: 14px;
+    position: relative;
+    bottom: 0;
+    cursor: pointer;
+  }
 }
 
-.sectionTwo{
-    padding: 130px  0px 0px 0px !important;
-    .sectionPara{
-        width: 70% !important;
-        margin-top: 10px;
-        font-size: 13.5px;
-        line-height: 20px;
-    }
-    
+.copyRight {
+  color: $gray;
+  margin-top: 30px;
 
-
-}
-
-.newProductSec{
-    margin-top: 100px;
-    letter-spacing: 7px;
+  span {
     color: $orange;
+  }
 }
 
-.secTopic{
-    margin-top: 150px !important;
+//Headphone Section
+
+.HeaderShared {
+  background-color: $black;
+  height: 316px;
 }
 
-.SectionMainTitle{
-    text-transform: uppercase;
-    width: 70%;
-    font-size: 40px;
-    margin-top: 5px;
+.proptitle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
 }
 
-.sectionPara{
-    width: 100%;
+.headers {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeadphoneGear {
+  margin-top: 40px !important;
+  background-color: aliceblue !important;
+}
+
+.HeadphoneSection {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 48px;
+}
+.HeadImageOne {
+  width: 50% !important;
+  img {
+    display: block;
+  }
+}
+
+.SectionText {
+  width: 50%;
+}
+
+.sectionOne {
+  padding: 10px 70px !important;
+}
+
+.sectionTwo {
+  padding: 130px 0px 0px 0px !important;
+  .sectionPara {
+    width: 70% !important;
     margin-top: 10px;
     font-size: 13.5px;
     line-height: 20px;
+  }
 }
 
-.sectionButton{
-    padding: 15px 25px;
-    margin-top: 20px;
-    background-color: $orange;
-    color: $gray;
-    cursor: pointer;
+.newProductSec {
+  margin-top: 100px;
+  letter-spacing: 7px;
+  color: $orange;
 }
 
-.HeadphoneMain,.EarphoneMain,.SpeakerMain{
-    .Gear{
-        margin-top: 100px;
-    }
+.secTopic {
+  margin-top: 150px !important;
 }
 
+.SectionMainTitle {
+  text-transform: uppercase;
+  width: 70%;
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.sectionPara {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 13.5px;
+  line-height: 20px;
+}
+
+.sectionButton {
+  padding: 15px 25px;
+  margin-top: 20px;
+  background-color: $orange;
+  color: $gray;
+  cursor: pointer;
+}
+
+.HeadphoneMain,
+.EarphoneMain,
+.SpeakerMain {
+  .Gear {
+    margin-top: 100px;
+  }
+}
 
 //PRODUCT DESIGN
 
-
-.productnav{
-    background-color: $very-black;
-    width: 100%;
-    height: 97px;
+.productnav {
+  background-color: $very-black;
+  width: 100%;
+  height: 97px;
 }
 
-.Gobacklink{
-    display: block;
-    width: 80%;
-    margin: 80px auto auto auto;
-    text-decoration: none;
-    color: $black;
+.Gobacklink {
+  display: block;
+  width: 80%;
+  margin: 80px auto auto auto;
+  text-decoration: none;
+  color: $black;
 }
 
-
-.countCart{
-    color: $orange;
-    font-weight: 700;
-    text-decoration: none;
+.countCart {
+  color: $orange;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.Bucket{
-    position: absolute;
-    top: 10rem;
-    right:0;
-    z-index: 10000;
-    background-color: $gray;
-    width: 377px;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-
-.Buckets{
-    position: absolute;
-    top: 10rem;
-    right:0;
-    z-index: 10000;
-    background-color: $gray;
-    width: 377px;
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
+.Bucket {
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  z-index: 10000;
+  background-color: $gray;
+  width: 377px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 
-.layer{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.733);
-    z-index: 500;
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.76);
 }
 .App{
     position: relative;
 }
 
-
-form{
-    width: 100%;
-    height: 100%;
+.form-inputss {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto 40px auto;
+  background-color: white;
 }
 
-.nameEmail,.zipCity{
+.PersonalDetails {
+  width: 70%;
+  padding: 20px;
+  background-color: $light-gray;
+
+  .nameEmail {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .formControl {
+      width: 48%;
+
+      .labelError {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        display: block;
+        border: 1px solid $orange;
+        padding: 10px;
+      }
+    }
+  }
+
+  .phoneNumber {
+    width: 48%;
+    margin-top: 20px;
+
+    .labelError {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      display: block;
+      border: 1px solid $orange;
+      padding: 10px;
+    }
+  }
+
+  .shippingInfo {
+    margin-top: 20px;
+
+    .address {
+      width: 100%;
+      margin: 10px 0px;
+
+      .labelError {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        display: block;
+        border: 1px solid $orange;
+        padding: 10px;
+      }
+    }
+
+    .zipCity {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .zip{
+          width: 48%;
+      }
+
+      .city{
+        width: 48%;
+    }
+
+      .labelError {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      input {
+        width: 100%;
+        height: 40px;
+        display: block;
+        border: 1px solid $orange;
+        padding: 10px;
+      }
+    }
+
+
+
+    .country {
+        width: 48%;
+        margin-top: 20px;
+    
+        .labelError {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        input {
+          width: 100%;
+          height: 40px;
+          display: block;
+          border: 1px solid $orange;
+          padding: 10px;
+        }
+      }
+  }
+
+
+  .paymentDetails{
+    margin-top: 20px;
+
+    .paymentMethodDiv{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .radioDiv{
+            width: 48%;
+
+            .radios{
+                display: flex;
+                height: 40px;
+                align-items: center;
+                border: 1px solid $orange;
+                margin-bottom: 10px;
+                padding: 10px;;
+
+                input{
+                    background-color: $orange;
+                }
+
+                label{
+                    margin-left: 10px;
+                }
+
+            }
+
+            // .radios {
+            //     display: inline-block;
+            //     position: relative;
+            //     padding: 0 6px;
+            //     margin: 10px 0 0;
+            //     cursor: pointer;
+            //   }
+              
+            //   .radios input[type='radio'] {
+            //     display: none;
+            //   }
+              
+            //   .radios label {
+            //     color: #666;
+            //     font-weight: normal;
+            //   }
+
+            //   .radios label:before {
+            //     content: " ";
+            //     display: inline-block;
+            //     position: relative;
+            //     top: 5px;
+            //     margin: 0 5px 0 0;
+            //     width: 20px;
+            //     height: 20px;
+            //     border-radius: 11px;
+            //     border: 1px solid gray;
+            //     background-color: transparent;
+            //   }
+              
+            //   .radios input[type=radio]:checked + label:after {
+            //     border-radius: 11px;
+            //     width: 12px;
+            //     height: 12px;
+            //     position: absolute;
+            //     top: 9px;
+            //     left: 10px;
+            //     content: " ";
+            //     display: block;
+            //     background: $orange;
+            //     cursor: pointer;
+            //   }
+        }
+    }
+
+    .NumberPinWrapper{
+        width: 100%;
+    }
+
+    .NumberPin{
+        display: flex;
+        width: 100% ;
+        justify-content: space-between;
+        margin-top: 20px;
+        .moneyNumber,.MoneyPin{
+            width: 48%;
+        }
+  
+        
+
+        .formControl {
+            width: 48%;
+      
+            .labelError {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            input {
+              width: 100%;
+              height: 40px;
+              display: block;
+              border: 1px solid $orange;
+              padding: 10px;
+            }
+          }
+
+        
+    }
+  }
+
 }
-@import 'mediaQueries';
+
+
+//SUMMARY
+
+
+.summary{
+    width: 28%;
+    padding: 10px;
+    
+    .summaryWrapper{
+        background-color: $light-gray;
+    }
+
+    .SummaryHeader{
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+
+    .eachItemDiv{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .eachItemImageName{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .priceShipping{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .boldPrices{
+        font-weight: 700;
+    }
+
+    .submitButton{
+        width: 100%;
+        display: block;
+        height: 40px;
+        background-color: $orange;
+        color: $light-gray;
+        outline: none;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .summaryImage{
+        margin-right: 10px;
+    }
+}
+
+
+
+
+@import "mediaQueries";

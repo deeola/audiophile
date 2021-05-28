@@ -9,7 +9,8 @@ img {
   width: 100%;
 }
 
-nav, .footerNav {
+nav,
+.footerNav {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -21,7 +22,8 @@ nav, .footerNav {
   z-index: 200;
 }
 
-nav ul, .footerNav ul {
+nav ul,
+.footerNav ul {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
@@ -29,7 +31,10 @@ nav ul, .footerNav ul {
   align-items: center;
 }
 
-nav ul .mylink, nav ul li, .footerNav ul .mylink, .footerNav ul li {
+nav ul .mylink,
+nav ul li,
+.footerNav ul .mylink,
+.footerNav ul li {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
@@ -39,20 +44,26 @@ nav ul .mylink, nav ul li, .footerNav ul .mylink, .footerNav ul li {
   color: #f1f1f1;
 }
 
-nav ul .mylink:hover, nav ul li:hover, .footerNav ul .mylink:hover, .footerNav ul li:hover {
+nav ul .mylink:hover,
+nav ul li:hover,
+.footerNav ul .mylink:hover,
+.footerNav ul li:hover {
   color: #d87d4a;
   cursor: pointer;
 }
 
-nav .logo-ham, .footerNav .logo-ham {
+nav .logo-ham,
+.footerNav .logo-ham {
   display: flex;
 }
 
-nav .logo-ham .hamburger, .footerNav .logo-ham .hamburger {
+nav .logo-ham .hamburger,
+.footerNav .logo-ham .hamburger {
   display: none;
 }
 
-nav .cartIcon, .footerNav .cartIcon {
+nav .cartIcon,
+.footerNav .cartIcon {
   cursor: pointer;
 }
 
@@ -319,10 +330,10 @@ nav .cartIcon, .footerNav .cartIcon {
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText button {
-  padding: .9em;
+  padding: 0.9em;
   border: 1px solid #101010;
   color: #101010;
-  margin-top: .9rem;
+  margin-top: 0.9rem;
   display: inline-block;
   width: 40%;
   text-transform: uppercase;
@@ -359,7 +370,7 @@ nav .cartIcon, .footerNav .cartIcon {
 }
 
 .Gear .GearTextDiv .ggtext .gmaintext {
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-top: 20px;
   line-height: 24px;
 }
@@ -481,7 +492,7 @@ nav .cartIcon, .footerNav .cartIcon {
 }
 
 .sectionTwo {
-  padding: 130px  0px 0px 0px !important;
+  padding: 130px 0px 0px 0px !important;
 }
 
 .sectionTwo .sectionPara {
@@ -523,7 +534,9 @@ nav .cartIcon, .footerNav .cartIcon {
   cursor: pointer;
 }
 
-.HeadphoneMain .Gear, .EarphoneMain .Gear, .SpeakerMain .Gear {
+.HeadphoneMain .Gear,
+.EarphoneMain .Gear,
+.SpeakerMain .Gear {
   margin-top: 100px;
 }
 
@@ -558,39 +571,261 @@ nav .cartIcon, .footerNav .cartIcon {
   border-radius: 5px;
 }
 
-.Buckets {
-  position: absolute;
-  top: 10rem;
-  right: 0;
-  z-index: 10000;
-  background-color: #f1f1f1;
-  width: 377px;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-}
-
 .layer {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.733);
-  z-index: 500;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.76);
 }
 
 .App {
   position: relative;
 }
 
-form {
-  width: 100%;
-  height: 100%;
+.form-inputss {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto 40px auto;
+  background-color: white;
 }
 
-.nameEmail, .zipCity {
+.PersonalDetails {
+  width: 70%;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.PersonalDetails .nameEmail {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.PersonalDetails .nameEmail .formControl {
+  width: 48%;
+}
+
+.PersonalDetails .nameEmail .formControl .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .nameEmail .formControl input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.PersonalDetails .phoneNumber {
+  width: 48%;
+  margin-top: 20px;
+}
+
+.PersonalDetails .phoneNumber .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .phoneNumber input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.PersonalDetails .shippingInfo {
+  margin-top: 20px;
+}
+
+.PersonalDetails .shippingInfo .address {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.PersonalDetails .shippingInfo .address .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .shippingInfo .address input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.PersonalDetails .shippingInfo .zipCity {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.PersonalDetails .shippingInfo .zipCity .zip {
+  width: 48%;
+}
+
+.PersonalDetails .shippingInfo .zipCity .city {
+  width: 48%;
+}
+
+.PersonalDetails .shippingInfo .zipCity .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .shippingInfo .zipCity input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.PersonalDetails .shippingInfo .country {
+  width: 48%;
+  margin-top: 20px;
+}
+
+.PersonalDetails .shippingInfo .country .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .shippingInfo .country input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.PersonalDetails .paymentDetails {
+  margin-top: 20px;
+}
+
+.PersonalDetails .paymentDetails .paymentMethodDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv {
+  width: 48%;
+}
+
+.PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv .radios {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border: 1px solid #d87d4a;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv .radios input {
+  background-color: #d87d4a;
+}
+
+.PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv .radios label {
+  margin-left: 10px;
+}
+
+.PersonalDetails .paymentDetails .NumberPinWrapper {
+  width: 100%;
+}
+
+.PersonalDetails .paymentDetails .NumberPin {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.PersonalDetails .paymentDetails .NumberPin .moneyNumber, .PersonalDetails .paymentDetails .NumberPin .MoneyPin {
+  width: 48%;
+}
+
+.PersonalDetails .paymentDetails .NumberPin .formControl {
+  width: 48%;
+}
+
+.PersonalDetails .paymentDetails .NumberPin .formControl .labelError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PersonalDetails .paymentDetails .NumberPin .formControl input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border: 1px solid #d87d4a;
+  padding: 10px;
+}
+
+.summary {
+  width: 28%;
+  padding: 10px;
+}
+
+.summary .summaryWrapper {
+  background-color: #fafafa;
+}
+
+.summary .SummaryHeader {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summary .eachItemDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.summary .eachItemImageName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary .priceShipping {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.summary .boldPrices {
+  font-weight: 700;
+}
+
+.summary .submitButton {
+  width: 100%;
+  display: block;
+  height: 40px;
+  background-color: #d87d4a;
+  color: #fafafa;
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.summary .summaryImage {
+  margin-right: 10px;
 }
 
 @media (max-width: 802px) {

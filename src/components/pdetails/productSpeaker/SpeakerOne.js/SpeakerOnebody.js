@@ -10,7 +10,6 @@ function SpeakerOnebody(props) {
 
   const {onAdd} = props;
 
-  console.log(onAdd)
 
   //Price
   let price;

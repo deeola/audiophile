@@ -20,6 +20,8 @@ const useSign = (callback, ValidateSign) => {
     country: "",
     style: {
       display: "none",
+      width:'100%'
+      
     },
   });
 
@@ -28,6 +30,7 @@ const useSign = (callback, ValidateSign) => {
       setValue({
         style: {
           display: "block",
+          width:'100%'
         },
       });
     }
