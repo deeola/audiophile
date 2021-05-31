@@ -9,7 +9,10 @@ function HeadphoneTwobody(props) {
 
   const AudioContext = useContext(audioContext);
 
-  const onAdd= AudioContext.onAdd
+  const onAdd= AudioContext.onAdd;
+  const quantity = AudioContext.quantity;
+  const decreaseQuantity = AudioContext.decreaseQuantity;
+  const increaseQuantity = AudioContext.increaseQuantity;
 
   //Price
   let price;
@@ -43,10 +46,6 @@ function HeadphoneTwobody(props) {
     // eslint-disable-next-line
   }, []);
 
-  const [quantity, setquantity] = useState(1);
-
-  const increaseQuantity = () => setquantity(quantity + 1);
-  const decreaseQuantity = () => setquantity(quantity - 1);
   return (
     <div>
       <section className="HeadphoneSection">

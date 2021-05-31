@@ -1,68 +1,58 @@
-import React,{useReducer,useState} from 'react';
-import audioContext from './audioContext';
-import audioReducer from './audioReducer';
-import {
-    get_Data,
-    set_loading
-} from '../types';
+import React, { useReducer, useState } from "react";
+import audioContext from "./audioContext";
+import audioReducer from "./audioReducer";
+import { get_Data, set_loading } from "../types";
 
+const AudioState = (props) => {
+  //INITIAL STATE
+  const initialState = {
+    data: [],
+    loading: false
+  };
 
-const AudioState = props => {
+  const [state, dispatch] = useReducer(audioReducer, initialState);
 
+  //Fetch data from JSON USING FETCH
+  const getdata = async () => {
+    setloading();
+    const res = await fetch("./data.json");
 
+    const items = await res.json();
 
-    //INITIAL STATE
-    const initialState = {
-        data:[],
-        loading:false,
-        // cartItems:[],
-        // myBucketDisplay:false,
-        // myCheckoutDisplay:false,
-        // isSubmitted:false
+    dispatch({
+      type: get_Data,
+      payload: items,
+    });
+  };
 
-    }
+  //SET LOADING
+  const setloading = () => dispatch({ type: set_loading });
 
-    const [state,dispatch] = useReducer(audioReducer, initialState)
+  //SET QUANTITY
 
+  const [quantity, setquantity] = useState(1);
 
+  const increaseQuantity = () => setquantity(quantity + 1);
+  const decreaseQuantity = () => setquantity(quantity - 1);
 
-    //Fetch data from JSON USING FETCH
-    const getdata = async () => {
-        setloading()
-        const res = await fetch("./data.json");
-    
-        const items = await res.json();
+  //ONADD
 
-    
+  const [cartItems, setCartItems] = useState([]);
 
-        dispatch({
-            type:get_Data,
-            payload : items
-        });
-    };
-
-    //SET LOADING
-    const setloading = () => dispatch({type:set_loading})
-
-
-    //ONADD
-
-    const [cartItems, setCartItems] = useState([])
-
-    // On ADD
-    const onAdd = (product) => {
+  // On ADD
+  const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.id === product.id ? { ...exist, qty: quantity + 1 } : x
         )
       );
+      increaseQuantity();
     } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
+      setCartItems([...cartItems, { ...product, qty: quantity }]);
     }
-
   };
 
   //OnRemove Function
@@ -71,15 +61,17 @@ const AudioState = props => {
 
     if (exist.qty === 1) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
+      increaseQuantity();
+      decreaseQuantity();
     } else {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          x.id === product.id ? { ...exist, qty: quantity - 1 } : x
         )
       );
+      decreaseQuantity();
     }
   };
-
 
   //BUCKET LIST
   const [myBucketDisplay, setMyBucketDisplay] = useState(false);
@@ -92,7 +84,6 @@ const AudioState = props => {
   const bucketIconClicked = () => {
     setMyBucketDisplay(!myBucketDisplay);
   };
-
 
   //CHECKOUT DISPLAY
   const [myCheckoutDisplay, setMyCheckoutDisplay] = useState(false);
@@ -107,7 +98,6 @@ const AudioState = props => {
     closeIconClicked();
   };
 
-
   //Close
   const closeIconClicked = () => {
     setMyBucketDisplay(false);
@@ -120,52 +110,39 @@ const AudioState = props => {
     setIsSubmitted(true);
   }
 
-  const removeAll=()=>{
-      setCartItems([])
-  }
-
-
+  const removeAll = () => {
+    setCartItems([]);
+  };
 
   //SET SUCCESS MODAL
   const [successDisplay, setSuccessDisplay] = useState({
+    display: "none",
+  });
 
-    display:'none'
+  //Open
+  const continueAndPay = () => {
+    setSuccessDisplay({
+      display: "block",
+    });
+  };
 
-});
+  const openBuckets = () => {
+    return setSuccessDisplay ? {} : { display: "none" };
+  };
 
-
-
-//Open
-const continueAndPay = () => {
-
-  setSuccessDisplay({
-
-    display:'block'
-
-});
-
-  
-};
-
-
-
-const openBuckets = () => {
-  return setSuccessDisplay ? {} : { display: "none" };
-};
-
-
-
-
- //Local storage Cart Items
+  //Local storage Cart Items
 
   localStorage.setItem("newItems", JSON.stringify(cartItems));
 
-
-    //RETURN
-    return <audioContext.Provider
-    value={{
-        data : state.data,
-        loading:state.loading,
+  //RETURN
+  return (
+    <audioContext.Provider
+      value={{
+        quantity,
+        increaseQuantity,
+        decreaseQuantity,
+        data: state.data,
+        loading: state.loading,
         getdata,
         onAdd,
         onRemove,
@@ -182,14 +159,12 @@ const openBuckets = () => {
         removeAll,
         continueAndPay,
         successDisplay,
-        openBuckets
-
-    }}
+        openBuckets,
+      }}
     >
-
-        {props.children}
+      {props.children}
     </audioContext.Provider>
-
-}
+  );
+};
 
 export default AudioState;

@@ -25,7 +25,6 @@ function PerosnalDetails({ Submitform }) {
 
 
 
-
   //  FETCH LOCAL STORAGE
 
 

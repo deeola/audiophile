@@ -10,14 +10,10 @@ function SpeakerOnebody(props) {
 
 
   const onAdd= AudioContext.onAdd;
+  const quantity = AudioContext.quantity;
+  const decreaseQuantity = AudioContext.decreaseQuantity;
+  const increaseQuantity = AudioContext.increaseQuantity;
 
-
-
-  // const { onAdd } = props;
-
-  // const [cartItems, setCartItems] = useState([]);
-
-  //DATA
 
   let data;
   if (AudioContext.data.length > 0) {
@@ -52,10 +48,6 @@ function SpeakerOnebody(props) {
     // eslint-disable-next-line
   }, []);
 
-  const [quantity, setquantity] = useState(1);
-
-  const increaseQuantity = () => setquantity(quantity + 1);
-  const decreaseQuantity = () => setquantity(quantity - 1);
 
   return (
     <div>
