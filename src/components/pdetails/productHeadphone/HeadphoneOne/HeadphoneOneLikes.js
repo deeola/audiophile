@@ -6,7 +6,7 @@ import secondimagedesktop from "../../../../assets/shared/desktop/image-xx59-hea
 
 
 function HeadphoneOneLikes(props) {
-    const AudioContexts = useContext(audioContext);
+  const AudioContexts = useContext(audioContext);
 
   let others;
 

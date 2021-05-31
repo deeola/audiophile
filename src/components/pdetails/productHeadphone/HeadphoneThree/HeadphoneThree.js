@@ -8,7 +8,6 @@ import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneThree(props) {
 
-  const {countCartItems, onAdd,bucketIconClicked} = props
   return (
     <div>
       <div
@@ -22,12 +21,12 @@ function HeadphoneThree(props) {
           alignItems: "center",
         }}
       >
-        <Navbar bucketIconClicked={bucketIconClicked} countCartItems={countCartItems} />
+        <Navbar  />
       </div>
       <Link className="Gobacklink" to="/headphones">
         Go Back
       </Link>
-      <HeadphoneThreebody onAdd={onAdd} />
+      <HeadphoneThreebody  />
       <Shop />
       <Gear />
       <Footer />

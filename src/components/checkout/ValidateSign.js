@@ -6,11 +6,11 @@ function ValidateSign(values) {
     //Fetch passwords from local storage
 
     if(!values.name){
-        errors.name = 'name cannot be empty'
+        errors.name = 'Name Required'
     }
 
     if(!values.number){
-        errors.number = 'number cannot be empty'
+        errors.number = 'Phone Number Required'
     }
 
     if(!values.address){
@@ -18,10 +18,10 @@ function ValidateSign(values) {
     }
 
     if(!values.city){
-        errors.city= 'city cannot be empty'
+        errors.city= 'City Required'
     }
     if(!values.zip){
-        errors.zip = 'name cannot be empty'
+        errors.zip = 'zip cannot be empty'
     } else if(values.zip.length > 5){
         errors.zip = 'Not a valid zip code'
     }
@@ -29,9 +29,6 @@ function ValidateSign(values) {
     if(!values.country){
         errors.country= 'country cannot be empty'
     }
-
-
-
 
 
     if(!values.moneyPin){
@@ -42,17 +39,19 @@ function ValidateSign(values) {
         errors.moneyNumber= 'E-money Number cannot be empty'
     }
 
-    if(!values.email){
-        errors.email = 'email cannot be empty'
-    }
+    if (!values.email) {
+        errors.email = 'Email required';
+      } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = 'Email address is invalid';
+      }
 
 
-    if(!values.password2){
-        errors.password2= 'pasword cannot be empty'
-    } else if (values.password2 !== values.password){
-        errors.password2 = 'password does not match'
+    // if(!values.password2){
+    //     errors.password2= 'pasword cannot be empty'
+    // } else if (values.password2 !== values.password){
+    //     errors.password2 = 'password does not match'
 
-    }
+    // }
 
     return errors;
 

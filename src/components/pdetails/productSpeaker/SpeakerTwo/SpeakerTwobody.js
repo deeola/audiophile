@@ -7,8 +7,13 @@ import SpeakerTwoLikes from "./SpeakerTwoLikes";
 
 function SpeakerTwobody(props) {
 
-  const {onAdd} = props;
+
   const AudioContext = useContext(audioContext);
+
+  const carty = AudioContext.onAdd;
+
+
+  console.log(AudioContext.cartItems)
 
   //Price
   let price;
@@ -68,7 +73,7 @@ function SpeakerTwobody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button onClick={() => onAdd(data)}>ADD TO CART</button>
+            <button onClick={() => carty(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>

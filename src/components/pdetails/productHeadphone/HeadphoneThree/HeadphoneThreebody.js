@@ -8,8 +8,10 @@ import HeadphoneThreeLikes from './HeadphoneThreeLikes';
 
 function HeadphoneThreebody(props) {
 
-  const {onAdd} = props
+
     const AudioContext = useContext(audioContext);
+
+    const onAdd= AudioContext.onAdd;
 
   //Price
   let price;

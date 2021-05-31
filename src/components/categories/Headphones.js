@@ -8,10 +8,10 @@ import HeaderShared from "./shared/HeaderShared";
 
 function Headphones(props) {
 
-  const {countCartItems,bucketIconClicked} = props;
+
   return (
     <div className='HeadphoneMain'>
-        <HeaderShared bucketIconClicked={bucketIconClicked} countCartItems = {countCartItems} />
+        <HeaderShared  />
         <HeadphoneBody />
         <Shop />
         <Gear className='HeadphoneGear' />

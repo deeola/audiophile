@@ -1,14 +1,29 @@
-import React, { useContext, useEffect,useState } from "react";
-import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from '../../../../assets/product-zx9-speaker/desktop/image-product.jpg'
+import React, { useContext, useEffect, useState } from "react";
+import imageDesktop from "../../../../assets/product-zx9-speaker/desktop/image-product.jpg";
 import SpeakerOneFeatures from "./SpeakerOneFeatures";
 import SpeakerOneImages from "./SpeakerOneImages";
 import SpeakerOneLke from "./SpeakerOneLke";
+import audioContext from "../../../../context/Audiophile/audioContext";
 
 function SpeakerOnebody(props) {
   const AudioContext = useContext(audioContext);
 
-  const {onAdd} = props;
+
+  const onAdd= AudioContext.onAdd;
+
+
+
+  // const { onAdd } = props;
+
+  // const [cartItems, setCartItems] = useState([]);
+
+  //DATA
+
+  let data;
+  if (AudioContext.data.length > 0) {
+    data = AudioContext.data[5];
+  }
+
 
 
   //Price
@@ -31,13 +46,6 @@ function SpeakerOnebody(props) {
     description = AudioContext.data[5].description;
   }
 
-  //DATA
-
-  let data;
-  if (AudioContext.data.length > 0) {
-    data = AudioContext.data[5];
-  }
-
   useEffect(() => {
     AudioContext.getdata();
 
@@ -48,7 +56,6 @@ function SpeakerOnebody(props) {
 
   const increaseQuantity = () => setquantity(quantity + 1);
   const decreaseQuantity = () => setquantity(quantity - 1);
-
 
   return (
     <div>
@@ -71,7 +78,13 @@ function SpeakerOnebody(props) {
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button  onClick={() => onAdd(data)}>ADD TO CART</button>
+            <button
+              onClick={() => {
+                onAdd(data);
+              }}
+            >
+              ADD TO CART
+            </button>
           </div>
         </div>
       </section>
@@ -79,7 +92,7 @@ function SpeakerOnebody(props) {
       <SpeakerOneImages />
       <SpeakerOneLke />
     </div>
-    )
+  );
 }
 
 export default SpeakerOnebody;

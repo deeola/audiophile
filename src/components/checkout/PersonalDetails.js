@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React,{useContext} from "react";
 import useSign from "./useSign";
 import ValidateSign from "./ValidateSign";
-import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
+import audioContext from '../../context/Audiophile/audioContext'
 
-function PerosnalDetails({ Submitform,continueAndPay }) {
+function PerosnalDetails({ Submitform }) {
   const { values, handleChange, onSubmit, error, radioChange, radioChangeA } =
     useSign(Submitform, ValidateSign);
   const {
@@ -20,8 +20,11 @@ function PerosnalDetails({ Submitform,continueAndPay }) {
     Moneystyle
   } = values;
 
+  const AudioContext = useContext(audioContext)
+  const continueAndPay = AudioContext.continueAndPay;
 
-  console.log(continueAndPay)
+
+
 
   //  FETCH LOCAL STORAGE
 
@@ -250,7 +253,7 @@ function PerosnalDetails({ Submitform,continueAndPay }) {
 
             <div style={Moneystyle}>
               <div className='EmoneyText' >
-              <i class="fas fa-hand-holding-usd"></i>
+              <i className="fas fa-hand-holding-usd"></i>
               <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
               </p>
               </div>
@@ -312,7 +315,8 @@ function PerosnalDetails({ Submitform,continueAndPay }) {
               <div>GRAND TOTAL</div>
               <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
             </div>
-              <button onClick={continueAndPay} className='submitButton' type='submit'>CONTINUE & PAY</button>
+            <button onClick={continueAndPay}   className='submitButton' type='submit'>CONTINUE & PAY</button>
+              
           </div>
         </div>
       </form>

@@ -1,23 +1,23 @@
-import React from "react";
+import React,{useContext} from "react";
 import {Link} from 'react-router-dom';
+import audioContext from '../../context/Audiophile/audioContext'
 
 
 function Basket(props) {
-  const { cartItems, onAdd, onRemove, myBucketDisplay,openBucket,closeIconClicked,CheckoutIconClicked,removeAll } = props;
 
+  const AudioContext = useContext(audioContext);
+
+  const cartItems = AudioContext.cartItems;
+  const onAdd = AudioContext.onAdd;
+  const onRemove = AudioContext.onRemove;
+  const openBucket = AudioContext.openBucket;
+  const CheckoutIconClicked = AudioContext.CheckoutIconClicked;
+  const closeIconClicked = AudioContext.closeIconClicked;
+  const removeAll = AudioContext.removeAll;
 
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-  const taxprice = itemsPrice * 0.2;
-  const shippingPrice = 50;
 
-  const TotalPrice = itemsPrice + taxprice + shippingPrice;
-
-
-  //Styles
-
-
-//   const {,closeIconClicked } = props
 
 
   return (
@@ -114,9 +114,11 @@ function Basket(props) {
         <div>Total</div>
         <div style={{ fontWeight: "700" }}>€{itemsPrice}</div>
       </div>
-      <div style= {{marginTop:'20px'}}>
+
+      {cartItems.length !== 0 && <div style= {{marginTop:'20px'}}>
           <Link to='/checkout' onClick={CheckoutIconClicked}  style={{display:'inline-block', width:'100%', height:'40px', cursor:'pointer'}}>CHECKOUT</Link>
-      </div>
+      </div> }
+      
     </div>
   );
 }

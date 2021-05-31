@@ -7,8 +7,9 @@ import HeadphoneTwoLikes from "./HeadphoneTwoLikes";
 
 function HeadphoneTwobody(props) {
 
-  const {onAdd} = props;
   const AudioContext = useContext(audioContext);
+
+  const onAdd= AudioContext.onAdd
 
   //Price
   let price;

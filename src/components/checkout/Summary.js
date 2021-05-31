@@ -1,24 +1,13 @@
-import React from "react";
-import images from "../../assets/cart/image-xx59-headphones.jpg";
-import { Link } from "react-router-dom";
-
+import React,{useContext} from "react";
 import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
+import audioContext from "../../context/Audiophile/audioContext";
 
 function Summary(props) {
-  const {
-    cartItems,
-    onAdd,
-    onRemove,
-    myBucketDisplay,
-    openBucket,
-    closeIconClicked,
-    CheckoutIconClicked,
-  } = props;
 
-  console.log(cartItems);
+  const AudioContext = useContext(audioContext)
+  const cartItems = AudioContext.cartItems
 
   //  FETCH LOCAL STORAGE
-
   const summaryItems = JSON.parse(localStorage.getItem("newItems"));
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);

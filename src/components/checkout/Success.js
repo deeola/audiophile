@@ -1,9 +1,13 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
+import audioContext from '../../context/Audiophile/audioContext'
 
 function Success(props) {
+    
+    const AudioContext = useContext(audioContext);
+    const removeAll =AudioContext.removeAll;
+    const successDisplay= AudioContext.successDisplay;
 
-    const {removeAll,successDisplay} = props;
 
     const summaryItems = JSON.parse(localStorage.getItem("newItems"));
     const grandTotal = JSON.parse(localStorage.getItem('grandtotal'))
@@ -23,7 +27,7 @@ function Success(props) {
                     <div className='qtyImg'>
                         <div className='imgPrice'>
                             <div className='successImg'>
-                            <img src={require('../../assets'+ summaryItems[0].image.desktop).default}></img>
+                            <img src={require('../../assets'+ summaryItems[0].image.desktop).default} alt='simmarydesktop'></img>
                             </div>
                             
                             <div>

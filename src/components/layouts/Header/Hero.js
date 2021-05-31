@@ -2,12 +2,10 @@ import React from "react";
 import Navbar from "./Navbar";
 
 function Hero(props) {
-  const {countCartItems,bucketIconClicked} = props;
 
-  console.log(countCartItems)
   return (
     <div className="mainHero">
-      <Navbar countCartItems={countCartItems}  bucketIconClicked={bucketIconClicked}/>
+      <Navbar />
       <div className="herowrapper">
         <div className="heroText">
           <p className="productPara">New Product</p>
