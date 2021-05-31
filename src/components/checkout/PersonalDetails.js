@@ -1,27 +1,32 @@
 import React,{useContext} from "react";
-import useSign from "./useSign";
+import useForm from "./useForm";
 import ValidateSign from "./ValidateSign";
 import audioContext from '../../context/Audiophile/audioContext'
 
 function PerosnalDetails({ Submitform }) {
-  const { values, handleChange, onSubmit, error, radioChange, radioChangeA } =
-    useSign(Submitform, ValidateSign);
-  const {
-    name,
-    email,
-    number,
-    address,
-    zip,
-    city,
-    moneyNumber,
-    moneyPin,
-    country,
-    style,
-    Moneystyle
-  } = values;
+  const { values, handleChange, handleSubmit, error, radioChange, radioChangeA } =
+    useForm( Submitform, ValidateSign);
+
+
+    const  {
+      name,
+      email,
+      number,
+      address,
+      zip,
+      city,
+      moneyNumber,
+      moneyPin,
+      country,
+      style,
+      Moneystyle
+    } = values;
+
+
 
   const AudioContext = useContext(audioContext)
   const continueAndPay = AudioContext.continueAndPay;
+  
 
 
 
@@ -40,7 +45,7 @@ function PerosnalDetails({ Submitform }) {
 
   return (
     <div className="mainFormDiv">
-      <form className="form-inputss" onSubmit={onSubmit}>
+      <form className="form-inputss" onSubmit={handleSubmit} noValidate>
         <div className="PersonalDetails">
           <div>BILLING DETAILS</div>
           <div className="nameEmail">
@@ -314,8 +319,8 @@ function PerosnalDetails({ Submitform }) {
               <div>GRAND TOTAL</div>
               <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
             </div>
-            <button onClick={continueAndPay}   className='submitButton' type='submit'>CONTINUE & PAY</button>
-              
+            {console.log(error)}
+            <button  className='submitButton' type='submit'>CONTINUE & PAY</button>
           </div>
         </div>
       </form>
@@ -325,3 +330,6 @@ function PerosnalDetails({ Submitform }) {
 }
 
 export default PerosnalDetails;
+
+
+// onClick={ Object.keys(error).length === 0 ? continueAndPay : ''}

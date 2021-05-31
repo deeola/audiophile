@@ -121,9 +121,12 @@ const AudioState = (props) => {
 
   //Open
   const continueAndPay = () => {
-    setSuccessDisplay({
-      display: "block",
-    });
+
+      setSuccessDisplay({
+        display: "block",
+      });
+
+    
   };
 
   const openBuckets = () => {
@@ -160,6 +163,7 @@ const AudioState = (props) => {
         continueAndPay,
         successDisplay,
         openBuckets,
+        setIsSubmitted
       }}
     >
       {props.children}

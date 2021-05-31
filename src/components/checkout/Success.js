@@ -7,9 +7,11 @@ function Success(props) {
     const AudioContext = useContext(audioContext);
     const removeAll =AudioContext.removeAll;
     const successDisplay= AudioContext.successDisplay;
+    
 
 
-    const summaryItems = JSON.parse(localStorage.getItem("newItems"));
+
+    const summaryItems = AudioContext.cartItems;
     const grandTotal = JSON.parse(localStorage.getItem('grandtotal'))
 
 
@@ -47,7 +49,7 @@ function Success(props) {
                     <p className='successTotal'>€ {grandTotal.toFixed(2)}</p>
                 </div>
             </div>
-            <Link className='successLink' to='/'><button onClick={removeAll}>BACK TO HOME</button></Link>
+            <Link onClick={removeAll} className='successLink' to='/'><button >BACK TO HOME</button></Link>
         </div>
     )
 }

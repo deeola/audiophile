@@ -31,13 +31,13 @@ function ValidateSign(values) {
     }
 
 
-    if(!values.moneyPin){
-        errors.moneyPin= 'E-money pin cannot be empty'
-    }
+    // if(!values.moneyPin){
+    //     errors.moneyPin= 'E-money pin cannot be empty'
+    // }
 
-    if(!values.moneyNumber){
-        errors.moneyNumber= 'E-money Number cannot be empty'
-    }
+    // if(!values.moneyNumber){
+    //     errors.moneyNumber= 'E-money Number cannot be empty'
+    // }
 
     if (!values.email) {
         errors.email = 'Email required';
@@ -45,13 +45,6 @@ function ValidateSign(values) {
         errors.email = 'Email address is invalid';
       }
 
-
-    // if(!values.password2){
-    //     errors.password2= 'pasword cannot be empty'
-    // } else if (values.password2 !== values.password){
-    //     errors.password2 = 'password does not match'
-
-    // }
 
     return errors;
 

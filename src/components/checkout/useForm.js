@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
+import audioContext from '../../context/Audiophile/audioContext'
 
-const useSign = (callback, ValidateSign) => {
+const useForm = (callback, ValidateSign) => {
+
+  const AudioContext = useContext(audioContext)
+  const continueAndPay = AudioContext.continueAndPay
+
+  const setIsSubmitted = AudioContext.setIsSubmitted;
   //GENERAL
 
-  const [error, setError] = useState({});
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   //SIGN UP
@@ -29,6 +35,8 @@ const useSign = (callback, ValidateSign) => {
     },
 
   });
+
+  const [error, setError] = useState({});
 
   const radioChange = (e) => {
     if (e.target.value === "true") {
@@ -65,7 +73,7 @@ const useSign = (callback, ValidateSign) => {
 
   //handle change event
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setValue({
       ...values,
@@ -81,30 +89,58 @@ const useSign = (callback, ValidateSign) => {
 
   //On submit Event
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setError(ValidateSign(values));
-    setIsSubmitting(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setError(ValidateSign(values));
+  //   setIsSubmitting(true);
+  //   if (Object.keys(error).length === 0 && isSubmitting) {
+  //     continueAndPay()
+     
+  //   }
+    
 
-    signUpLocal();
-  };
+  // };
 
-  useEffect(() => {
-    if (Object.keys(error).length === 0 && isSubmitting) {
-      callback();
-    }
+  
 
-    //eslint-disable-next-line
-  }, [error]);
+  // useEffect(() => {
+    
+
+  //   //eslint-disable-next-line
+  // }, [error]);
+
+      useEffect(
+        () => {
+        if (Object.keys(error).length === 0 && isSubmitting) {
+          if (callback) {
+            callback()
+          }
+          continueAndPay()
+        }
+
+        //eslint-disable-next-line
+    }, [error]
+    );
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        if (ValidateSign){
+          setError(ValidateSign(values));
+        }
+        setIsSubmitting(true);
+
+    };
+
 
   return {
+    handleSubmit,
     handleChange,
     values,
-    onSubmit,
     error,
     radioChange,
     radioChangeA,
   };
 };
 
-export default useSign;
+export default useForm;
