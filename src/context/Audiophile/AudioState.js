@@ -110,9 +110,19 @@ const AudioState = (props) => {
     setIsSubmitted(true);
   }
 
+    
+
   const removeAll = () => {
+  
     setCartItems([]);
   };
+
+  const removeAllandReturn = () => {
+  
+    setCartItems([]);
+    window.location.href="/" 
+  };
+
 
   //SET SUCCESS MODAL
   const [successDisplay, setSuccessDisplay] = useState({
@@ -163,7 +173,8 @@ const AudioState = (props) => {
         continueAndPay,
         successDisplay,
         openBuckets,
-        setIsSubmitted
+        setIsSubmitted,
+        removeAllandReturn
       }}
     >
       {props.children}

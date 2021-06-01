@@ -6,6 +6,8 @@ import Footer from '../layouts/footer/Footer'
 
 function Home(props) {
 
+    
+
     return (
         <div className='mainDiv'>
             <Header  /> 

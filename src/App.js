@@ -17,7 +17,6 @@ import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
 
 function App(props) {
- 
 
   return (
     <AudioState>

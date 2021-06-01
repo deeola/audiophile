@@ -4,7 +4,7 @@ import ValidateSign from "./ValidateSign";
 import audioContext from '../../context/Audiophile/audioContext'
 
 function PerosnalDetails({ Submitform }) {
-  const { values, handleChange, handleSubmit, error, radioChange, radioChangeA } =
+  const { values, handleChange, handleSubmit, error, radioChange, radioChangeA,onchangeRadio } =
     useForm( Submitform, ValidateSign);
 
 
@@ -19,7 +19,9 @@ function PerosnalDetails({ Submitform }) {
       moneyPin,
       country,
       style,
-      Moneystyle
+      Moneystyle,
+      radioVal,
+      radioFalse 
     } = values;
 
 
@@ -175,7 +177,7 @@ function PerosnalDetails({ Submitform }) {
             </div>
           </div>
 
-          <div className="paymentDetails">
+          <div className="paymentDetails" >
             <div>PAYMENT DETAILS</div>
             <div className="paymentMethodDiv">
               <div>
@@ -184,28 +186,31 @@ function PerosnalDetails({ Submitform }) {
               <div className="radioDiv">
                 <div className="radios">
                   <input
-                    onClick={radioChange}
+                    onClick={ onchangeRadio}
                     type="radio"
                     name="paymentSelect"
                     value="true"
                     id="emoney"
+                    // checked={radioVal==='true'}
+                    
                   ></input>
                   <label htmlFor="emoney">e-Money</label>
                 </div>
                 <div className="radios">
                   <input
-                    onClick={radioChangeA}
+                    onClick={ onchangeRadio}
                     type="radio"
                     name="paymentSelect"
                     value="false"
                     id="cash"
+                    checked={radioVal==='false'}
                   ></input>
                   <label htmlFor="cash">Cash on Delivery</label>
                 </div>
               </div>
             </div>
 
-            <div className='NumberPinWrapper' style={style}>
+            {radioVal === 'true' && <div className='NumberPinWrapper' style={style}>
               <div className="NumberPin"  >
                 
 
@@ -223,7 +228,7 @@ function PerosnalDetails({ Submitform }) {
                     type="number"
                     placeholder="53392*********"
                     name="moneyNumber"
-                    value={moneyNumber}
+                    value={moneyNumber || ''}
                     id="moneyNumber"
                   ></input>
                 </div>
@@ -233,7 +238,7 @@ function PerosnalDetails({ Submitform }) {
                   <div className="labelError">
                     <label htmlFor="moneyPin">E-money Pin</label>
                     {error.moneyPin && (
-                      <p className="error">{error.moneyPin}</p>
+                      <p className="error">{error.moneyPin }</p>
                     )}
                   </div>
                   <input
@@ -241,7 +246,7 @@ function PerosnalDetails({ Submitform }) {
                     type="password"
                     placeholder=" E-MONEY PIN"
                     name="moneyPin"
-                    value={moneyPin}
+                    value={moneyPin || ''}
                     id="moneyPin"
                   ></input>
                 </div>
@@ -254,15 +259,20 @@ function PerosnalDetails({ Submitform }) {
 
               
             </div>
+            }
 
-            <div style={Moneystyle}>
+            {radioVal === 'false' && <div style={Moneystyle}>
               <div className='EmoneyText' >
               <i className="fas fa-hand-holding-usd"></i>
               <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
               </p>
               </div>
              
-            </div>
+            </div> }
+
+            
+
+            
           </div>
         </div>
 
@@ -319,7 +329,6 @@ function PerosnalDetails({ Submitform }) {
               <div>GRAND TOTAL</div>
               <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
             </div>
-            {console.log(error)}
             <button  className='submitButton' type='submit'>CONTINUE & PAY</button>
           </div>
         </div>

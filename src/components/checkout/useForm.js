@@ -33,8 +33,17 @@ const useForm = (callback, ValidateSign) => {
       width:'100%'
       
     },
+    radioVal:'true',
+    radioFalse : 'false'
 
   });
+
+
+  const onchangeRadio=e =>{
+    setValue({
+      radioVal:e.target.value
+    })
+  }
 
   const [error, setError] = useState({});
 
@@ -89,26 +98,6 @@ const useForm = (callback, ValidateSign) => {
 
   //On submit Event
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setError(ValidateSign(values));
-  //   setIsSubmitting(true);
-  //   if (Object.keys(error).length === 0 && isSubmitting) {
-  //     continueAndPay()
-     
-  //   }
-    
-
-  // };
-
-  
-
-  // useEffect(() => {
-    
-
-  //   //eslint-disable-next-line
-  // }, [error]);
-
       useEffect(
         () => {
         if (Object.keys(error).length === 0 && isSubmitting) {
@@ -140,6 +129,7 @@ const useForm = (callback, ValidateSign) => {
     error,
     radioChange,
     radioChangeA,
+    onchangeRadio
   };
 };
 
