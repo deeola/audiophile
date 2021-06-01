@@ -1,7 +1,4 @@
 import React from "react";
-import imageheadphones from '../../../assets/shared/desktop/imageheadphones.png';
-import imagespeakers from '../../../assets/shared/desktop/imagespeakers.png';
-import imageearphones from '../../../assets/shared/desktop/imageearphones.png';
 import {Link} from 'react-router-dom'
 
 
@@ -10,7 +7,9 @@ function Shop(props) {
     <section className="firstSection">
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imageheadphones} alt='imageheadphones'></img>
+          <img src={require('../../../assets/shared/desktop/imageheadphones.png').default} alt='imageheadphones'></img>
+          <img style={{display:'none'}} src={require('../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg').default} alt='imageheadphones'></img>
+          <img style={{display:'none'}} src={require('../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg').default} alt='imageheadphones'></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -22,7 +21,9 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imagespeakers} alt='imagespeakers'></img>
+          <img src={require('../../../assets/shared/desktop/imagespeakers.png').default} alt='imagespeakers'></img>
+          <img style={{display:'none'}} src={require('../../../assets/shared/tablet/image-zx9-speaker.jpg').default} alt='imagespeakers'></img>
+          <img style={{display:'none'}} src={require('../../../assets/shared/mobile/image-zx9-speaker.jpg').default} alt='imagespeakers'></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -34,7 +35,7 @@ function Shop(props) {
       </div>
       <div className="shopSection">
         <div className="shopImageDiv">
-          <img src={imageearphones} alt='imageearphones'></img>
+          <img src={require('../../../assets/shared/desktop/imageearphones.png').default} alt='imageearphones'></img>
         </div>
 
         <div className='shopTextDiv'>

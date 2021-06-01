@@ -53,7 +53,7 @@ function SpeakerOnebody(props) {
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={imageDesktop} alt="speaker"></img>
+          <img src={require('../../../../assets/product-zx9-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>

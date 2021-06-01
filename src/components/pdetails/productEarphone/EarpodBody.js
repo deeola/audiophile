@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import imageDesktop from "../../../assets/product-yx1-earphones/desktop/image-product.jpg";
 import EarpodFeatures from "./EarpodFeatures";
 import EarpodImages from "./EarpodImages";
 import EarpodLike from "./EarpodLike";
@@ -57,7 +56,9 @@ function EarpodBody(props) {
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={imageDesktop} alt="speaker"></img>
+          <img src={require('../../../assets/product-yx1-earphones/desktop/image-product.jpg').default} alt="earpodxy"></img>
+          <img style={{display:'none'}} src={require('../../../assets/product-yx1-earphones/tablet/image-product.jpg').default} alt="earpodxy"></img>
+          <img  style={{display:'none'}} src={require('../../../assets/product-yx1-earphones/mobile/image-product.jpg').default} alt="earpodxy"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>

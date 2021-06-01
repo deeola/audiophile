@@ -63,6 +63,8 @@ function Basket(props) {
               <div style={{ width: "20px", marginRight: "10px" }}>
                 {/* image */}
                 <img src={require('../../assets'+item.image.desktop).default} alt="smallimage"></img>
+                <img style={{display:'none'}} src={require('../../assets'+item.image.tablet).default} alt="smallimage"></img>
+                <img style={{display:'none'}}  src={require('../../assets'+item.image.mobile).default} alt="smallimage"></img>
               </div>
               <div>
                 {/* name and price here */}

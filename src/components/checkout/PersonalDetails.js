@@ -283,14 +283,13 @@ function PerosnalDetails({ Submitform }) {
               <div className='itemDiv' key={item.id}>
                 <div className='eachItemDiv'>
                   <div className='eachItemImageName'>
-                    {/* image, name and price here */}
 
                     <div className='summaryImage'>
-                      {/* image */}
                       <img src={require('../../assets'+item.image.desktop).default} alt="smallimage"></img>
+                      <img style={{display:'none'}} src={require('../../assets'+item.image.tablet).default} alt="smallimage"></img>
+                      <img style={{display:'none'}} src={require('../../assets'+item.image.mobile).default} alt="smallimage"></img>
                     </div>
                     <div>
-                      {/* name and price here */}
                       <p className='boldPrices'>{item.name}</p>
                       {summaryItems.length !== 0 && (
                         <>
@@ -302,7 +301,6 @@ function PerosnalDetails({ Submitform }) {
                   </div>
 
                   <div>
-                    {/* Button  and number here */}
 
                     <div>
                       <div>{item.qty}</div>

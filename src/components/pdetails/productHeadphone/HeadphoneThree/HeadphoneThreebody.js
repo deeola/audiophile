@@ -54,7 +54,9 @@ function HeadphoneThreebody(props) {
         <div>
             <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={imageDesktop} alt="speaker"></img>
+          <img src={require('../../../../assets/product-xx59-headphones/desktop/image-product.jpg').default} alt="speaker"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx59-headphones/tablet/image-product.jpg').default} alt="speaker"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx59-headphones/mobile/image-product.jpg').default} alt="speaker"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>

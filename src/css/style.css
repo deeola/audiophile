@@ -199,20 +199,6 @@ nav .cartIcon,
   font-size: 22px;
 }
 
-.secondSection {
-  background-color: #d87d4a !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  position: relative;
-  margin: 98px auto auto auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
 .secondSection .imagetab {
   display: none;
 }

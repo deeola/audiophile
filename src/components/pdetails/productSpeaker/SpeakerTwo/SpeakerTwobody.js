@@ -56,7 +56,9 @@ function SpeakerTwobody(props) {
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={imageDesktop} alt="speaker"></img>
+          <img src={require('../../../../assets/product-zx7-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-zx7-speaker/tablet/image-product.jpg').default} alt="speaker"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-zx7-speaker/mobile/image-product.jpg').default} alt="speaker"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>

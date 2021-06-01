@@ -31,7 +31,9 @@ function HeadphoneTwoLikes(props) {
             justifyContent: "center",
           }}
         >
-          <img src={firstimagedesktop} alt="imagedesktop"></img>
+          <img src={require('../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}} src={require('../../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
           <p>{others !== undefined ? others[0].name : null}</p>
           <button>SEE PRODUCT</button>
         </div>
@@ -44,7 +46,9 @@ function HeadphoneTwoLikes(props) {
             justifyContent: "center",
           }}
         >
-          <img src={secondimagedesktop} alt="imagedesktop"></img>
+          <img src={require('../../../../assets/shared/desktop/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}}  src={require('../../../../assets/shared/tablet/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}}  src={require('../../../../assets/shared/mobile/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
           <p>{others !== undefined ? others[1].name : null}</p>
           <button>SEE PRODUCT</button>
         </div>
@@ -57,7 +61,9 @@ function HeadphoneTwoLikes(props) {
             justifyContent: "center",
           }}
         >
-          <img src={thirdimagedesktop} alt="imagedesktop"></img>
+          <img src={require('../../../../assets/shared/desktop/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}}  src={require('../../../../assets/shared/tablet/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
+          <img style={{display:'none'}}  src={require('../../../../assets/shared/mobile/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
           <p>{others !== undefined ? others[2].name : null}</p>
           <button>SEE PRODUCT</button>
         </div>

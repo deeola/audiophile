@@ -1,7 +1,4 @@
 import React from 'react';
-import leftImage from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg'
-import righttop from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg'
-import rightbottom from '../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg'
 
 
 function HeadphoneTwoImages(props) {
@@ -9,14 +6,20 @@ function HeadphoneTwoImages(props) {
         <div style={{display:'flex'}}>
       <div style={{width:'50%'}}>
           <div>
-          <img src={righttop} alt='righttop'></img>
+          <img src={require('../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg').default} alt='righttop'></img>
           </div>
           <div>
-          <img src={rightbottom} alt='rightbottom'></img>
+          <img src={require('../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg').default} alt='righttop'></img>
           </div>
       </div>
       <div style={{width:'50%'}}>
-          <img src={leftImage} alt='leftiage'></img>
+      <img src={require('../../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg').default} alt='righttop'></img>
+          <img style={{display:'none'}} src={require('../../../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg').default} alt='righttop'></img>
       </div>
     </div>
     )

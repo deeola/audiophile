@@ -1,13 +1,13 @@
 import React from "react";
-import secondImagedesktop from "../../../assets/category-speakers/desktop/image-zx7.jpg";
-import firstImagedesktop from "../../../assets/category-speakers/desktop/image-zx9.jpg";
 import {Link} from 'react-router-dom'
 function SpeakerSec(props) {
   return (
     <div >
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={firstImagedesktop} alt='speaker section'></img>
+          <img src={require('../../../assets/category-speakers/desktop/image-zx9.jpg').default}  alt='speaker section'></img>
+          <img style={{display:'none'}} src={require('../../../assets/category-speakers/tablet/image-zx9.jpg').default}  alt='speaker section'></img>
+          <img style={{display:'none'}}  src={require('../../../assets/category-speakers/mobile/image-zx9.jpg').default}  alt='speaker section'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -33,7 +33,9 @@ function SpeakerSec(props) {
           <Link to='/zx7' className="sectionButton">SEE PRODUCT</Link>
         </div>
         <div className="HeadImageOne">
-          <img src={secondImagedesktop} alt='another speaker'></img>
+        <img src={require('../../../assets/category-speakers/desktop/image-zx7.jpg').default}  alt='speaker section'></img>
+          <img style={{display:'none'}} src={require('../../../assets/category-speakers/tablet/image-zx7.jpg').default}  alt='speaker section'></img>
+          <img style={{display:'none'}}  src={require('../../../assets/category-speakers/mobile/image-zx7.jpg').default}  alt='speaker section'></img>
         </div>
       </section>
     </div>
