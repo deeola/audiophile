@@ -147,10 +147,28 @@ const AudioState = (props) => {
 
   localStorage.setItem("newItems", JSON.stringify(cartItems));
 
+
+  //MENU BAR
+
+  const [menuOpened, setMenuOpend] = useState(false);
+
+  const slideMenu = () =>{
+    
+    return menuOpened ? {} : {marginLeft:-930}
+  }
+
+  const menuIconClicked = () => {
+    
+    setMenuOpend(!menuOpened);
+    openBucket();
+  }
+
   //RETURN
   return (
     <audioContext.Provider
       value={{
+        slideMenu,
+        menuIconClicked,
         quantity,
         increaseQuantity,
         decreaseQuantity,

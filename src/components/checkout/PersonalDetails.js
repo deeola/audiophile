@@ -26,9 +26,7 @@ function PerosnalDetails({ Submitform }) {
 
 
 
-  const AudioContext = useContext(audioContext)
-  const continueAndPay = AudioContext.continueAndPay;
-  
+  const AudioContext = useContext(audioContext);
 
 
 

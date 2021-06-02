@@ -9,12 +9,8 @@ img {
   width: 100%;
 }
 
-nav,
-.footerNav {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: auto;
+nav {
+  width: 100%;
   align-items: center;
   position: sticky;
   padding-top: 20px;
@@ -22,82 +18,126 @@ nav,
   z-index: 200;
 }
 
-nav ul,
-.footerNav ul {
+.rectangle {
+  background-color: #4e4e4e;
+  width: 80%;
+  height: 1px;
+  margin: auto;
+  margin-top: 10px;
+  z-index: 200;
+  position: relative;
+}
+
+.footerNav,
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.footerNav ul,
+.navContainer ul {
   display: flex;
   justify-content: space-between;
   color: #ffffff;
   align-items: center;
   align-items: center;
+  width: 50%;
+  margin-right: 60px;
 }
 
-nav ul .mylink,
-nav ul li,
 .footerNav ul .mylink,
-.footerNav ul li {
+.footerNav ul li,
+.navContainer ul .mylink,
+.navContainer ul li {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
   list-style: none;
-  margin-left: 1em;
   text-decoration: none;
   color: #f1f1f1;
+  margin-left: 10px;
 }
 
-nav ul .mylink:hover,
-nav ul li:hover,
 .footerNav ul .mylink:hover,
-.footerNav ul li:hover {
+.footerNav ul li:hover,
+.navContainer ul .mylink:hover,
+.navContainer ul li:hover {
   color: #d87d4a;
   cursor: pointer;
 }
 
-nav .logo-ham,
-.footerNav .logo-ham {
+.footerNav .logo-ham,
+.navContainer .logo-ham {
   display: flex;
 }
 
-nav .logo-ham .hamburger,
-.footerNav .logo-ham .hamburger {
+.footerNav .logo-ham .hamburger,
+.navContainer .logo-ham .hamburger {
   display: none;
 }
 
-nav .cartIcon,
-.footerNav .cartIcon {
+.footerNav .cartIcon,
+.navContainer .cartIcon {
   cursor: pointer;
 }
 
 .footerNav {
   padding-top: unset;
+  width: 80%;
+}
+
+.navContainer {
+  width: 80%;
+  padding-bottom: 10px;
 }
 
 .Header {
-  background-image: url("../assets/home/desktop/image-hero.jpg");
-  background-position: center;
-  background-size: cover;
-  max-width: 100%;
-  height: 698px;
-  background-repeat: no-repeat;
+  background: #272727;
+  padding-bottom: 145px;
+  height: 729px;
 }
 
 .mainHero {
   width: 100%;
   background-size: cover;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+.heroContainer {
+  display: flex;
+  width: 80%;
+  min-height: 100%;
+  margin: auto;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .herowrapper {
-  width: 80%;
-  margin: auto;
+  width: 45%;
+  min-height: 45.5rem;
+  background: url("../assets/home/desktop/image-hero.jpg") repeat-x fixed center;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  z-index: 1;
 }
 
 .heroText {
-  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align: left;
   position: relative;
-  top: 170px;
+  top: 160px;
 }
 
 .heroText .productPara {
@@ -106,35 +146,44 @@ nav .cartIcon,
   letter-spacing: 10px;
   color: #ffffff;
   text-align: left;
+  font-size: 1rem;
+  margin-bottom: 17px;
 }
 
 .heroText h1 {
-  font-size: 50px;
+  font-size: 2.8rem;
   font-weight: 700;
-  line-height: 58px;
+  line-height: 45px;
   letter-spacing: 2px;
   color: #ffffff;
-  margin-top: 24px;
   text-transform: uppercase;
 }
 
 .heroText .productDescr {
   font-weight: 500px;
-  font-size: 15px;
+  font-size: .9rem;
   line-height: 25px;
-  margin-top: 24px;
   color: #fafafa;
 }
 
-.heroText button {
-  width: 160px;
-  height: 48px;
+.heroText .secondh {
   margin-top: 24px;
+}
+
+.heroText button {
+  width: 168px;
+  height: 48px;
+  margin-top: 48px;
   background-color: #d87d4a;
   color: #ffffff;
   cursor: pointer;
   text-transform: uppercase;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.heroText button:hover {
+  background-color: #fbaf85;
 }
 
 .firstSection {
@@ -232,7 +281,7 @@ nav .cartIcon,
 .secondSection .secondTextDiv button {
   width: 160px;
   height: 48px;
-  background-color: #101010;
+  background-color: #272727;
   color: white;
   margin-top: 20px;
   border-radius: 5px;
@@ -267,7 +316,7 @@ nav .cartIcon,
   width: 160px;
   height: 48px;
   margin-top: 10px;
-  border: 1px solid #101010;
+  border: 1px solid #272727;
   cursor: pointer;
 }
 
@@ -317,8 +366,8 @@ nav .cartIcon,
 
 .earphonesDiv .earphoneTextDiv .earphoneText button {
   padding: 0.9em;
-  border: 1px solid #101010;
-  color: #101010;
+  border: 1px solid #272727;
+  color: #272727;
   margin-top: 0.9rem;
   display: inline-block;
   width: 40%;
@@ -432,7 +481,7 @@ nav .cartIcon,
 }
 
 .HeaderShared {
-  background-color: #101010;
+  background-color: #272727;
   height: 316px;
 }
 
@@ -537,7 +586,7 @@ nav .cartIcon,
   width: 80%;
   margin: 80px auto auto auto;
   text-decoration: none;
-  color: #101010;
+  color: #272727;
 }
 
 .countCart {
@@ -922,16 +971,32 @@ nav .cartIcon,
   color: white;
 }
 
+.menu {
+  display: none;
+}
+
+@media (max-width: 973px) {
+  body .rectangle {
+    width: 90%;
+  }
+  body .heroContainer {
+    width: 90%;
+  }
+}
+
 @media (max-width: 802px) {
-  body nav ul {
+  body {
+    display: block;
+  }
+  body .navContainer ul {
     display: none;
   }
-  body nav .logo-ham {
+  body .navContainer .logo-ham {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  body nav .logo-ham .hamburger {
+  body .navContainer .logo-ham .hamburger {
     display: block;
     margin-right: 50px;
   }
@@ -1071,6 +1136,14 @@ nav .cartIcon,
   }
   .copyRight {
     margin-top: unset;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    top: 60px;
+    left: 0;
+    width: 100%;
   }
 }
 

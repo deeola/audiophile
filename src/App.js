@@ -15,6 +15,8 @@ import HeadphoneThree from "./components/pdetails/productHeadphone/HeadphoneThre
 import Basket from "./components/cart/Basket";
 import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
+import Menu from "./components/layouts/Header/Menu";
+import Navbar from "./components/layouts/Header/Navbar";
 
 function App(props) {
 
@@ -22,6 +24,7 @@ function App(props) {
     <AudioState>
       <Router>
         <div className="App">
+          {/* <Navbar /> */}
           <Switch>
             <Route exact path="/" render={(props) => <Home />} />
             <Route path="/headphones" render={(props) => <Headphones />} />
@@ -36,6 +39,7 @@ function App(props) {
             <Route path="/cart" render={(props) => <Basket />} />
             <Route path="/checkout" render={(props) => <Checkout />} />
           </Switch>
+          <Menu />
           <Basket />
           <Layer />
         </div>

@@ -11,12 +11,14 @@ function Navbar(props) {
   const AudioContext = useContext(audioContext);
   const Cartlength = AudioContext.cartItems.length;
   const bucketIconClicked = AudioContext.bucketIconClicked;
+  const menuIconClicked = AudioContext.menuIconClicked;
 
   
   return (
-    <nav className='sticky'>
+    <nav className='sticky' >
+      <div className='navContainer'>
       <div className='logo-ham'>
-        <img alt="hamburger" className="hamburger hamtab" src={require('../../../assets/shared/tablet/hamburger.svg').default} ></img>
+        <img onClick={() => {menuIconClicked()}} alt="hamburger" className="hamburger hamtab" src={require('../../../assets/shared/tablet/hamburger.svg').default} ></img>
         <img alt="logo" className="logo" src={require('../../../assets/shared/desktop/logo.svg').default} alt='logo'></img>
       </div>
       <ul>
@@ -25,12 +27,15 @@ function Navbar(props) {
         <Link className='mylink' to='/Speakers'>Speakers</Link>
         <Link className='mylink' to='/Earphones'>Earphones</Link>
       </ul>
-      <div>
-        <button onClick={bucketIconClicked} style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={require('../../../assets/shared/desktop/cart.svg').default} alt="carticon"></img>{''} {Cartlength? (
+      <div style={{background:'black'}}>
+        <p onClick={bucketIconClicked} style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={require('../../../assets/shared/desktop/cart.svg').default} alt="carticon"></img>{''} {Cartlength? (
           <p style={{marginLeft:'10px'}} className='countCart'>{Cartlength}</p>
-        ) : ('')}</button>
+        ) : ('')}</p>
         
       </div>
+
+      </div>
+      
     </nav>
   );
 }

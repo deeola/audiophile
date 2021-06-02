@@ -1,6 +1,22 @@
+@media (max-width: 973px){
+  body{
+
+    .rectangle{
+      width: 90%;
+    }
+
+    .heroContainer{
+      width: 90%;
+    }
+  }
+
+}
+
+
 @media (max-width: 802px) {
   body {
-    nav {
+    display: block;
+    .navContainer {
       ul {
         display: none;
       }
@@ -193,6 +209,16 @@
 
   .copyRight {
     margin-top: unset;
+  }
+
+  .menu{
+    display: block;
+    position: absolute;
+    background: $very-light-gray;
+    top: 60px;
+    left: 0;
+    width: 100%;
+
   }
 }
 
