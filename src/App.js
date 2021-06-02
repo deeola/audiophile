@@ -17,6 +17,7 @@ import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/layouts/Header/Menu";
 import Navbar from "./components/layouts/Header/Navbar";
+import SecondLayer from "./components/home/SecondLayer";
 
 function App(props) {
 
@@ -42,6 +43,8 @@ function App(props) {
           <Menu />
           <Basket />
           <Layer />
+          <SecondLayer />
+          
         </div>
       </Router>
     </AudioState>

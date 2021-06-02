@@ -625,13 +625,37 @@ nav{
 
 .Bucket {
   position: absolute;
-  top: 10rem;
-  right: 0;
   z-index: 10000;
-  background-color: $gray;
-  width: 377px;
+  background-color: $light-gray;
+  width: 30%;
   padding: 20px;
   border-radius: 5px;
+  top: 1.3%;
+  left: 65%;
+  margin-top: 50px;
+  margin-left: -50px;
+}
+
+.bucketAddition{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: $gray;
+  height: 20px;
+}
+
+.basketButton{
+  width: 100%;
+  display: inline-block;
+  background-color: $orange;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 30px;
 }
 
 
@@ -639,11 +663,17 @@ nav{
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top:65px;
   left: 0;
   z-index: 900;
   background-color: rgba(0, 0, 0, 0.76);
+  
 }
+
+.secondlayer{
+  display: none;
+}
+
 .App{
     position: relative;
 }
@@ -1060,6 +1090,8 @@ nav{
 
 .menu{
   display: none;
+  position: relative;
+  z-index: 10000;
 }
 
 

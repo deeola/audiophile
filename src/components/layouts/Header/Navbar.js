@@ -21,6 +21,7 @@ function Navbar(props) {
         <img onClick={() => {menuIconClicked()}} alt="hamburger" className="hamburger hamtab" src={require('../../../assets/shared/tablet/hamburger.svg').default} ></img>
         <img alt="logo" className="logo" src={require('../../../assets/shared/desktop/logo.svg').default} alt='logo'></img>
       </div>
+      
       <ul>
         <Link className='mylink' to='/'>Home</Link>
         <Link  className='mylink' to='/Headphones'>Headphones</Link>

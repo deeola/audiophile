@@ -83,6 +83,7 @@ const AudioState = (props) => {
   //Open
   const bucketIconClicked = () => {
     setMyBucketDisplay(!myBucketDisplay);
+    setMenuOpend(false)
   };
 
   //CHECKOUT DISPLAY
@@ -152,15 +153,15 @@ const AudioState = (props) => {
 
   const [menuOpened, setMenuOpend] = useState(false);
 
+
   const slideMenu = () =>{
     
     return menuOpened ? {} : {marginLeft:-930}
   }
 
   const menuIconClicked = () => {
-    
     setMenuOpend(!menuOpened);
-    openBucket();
+    setMyBucketDisplay(false)
   }
 
   //RETURN

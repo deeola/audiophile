@@ -30,10 +30,10 @@ function Basket(props) {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          margin: "10px 0px",
+          margin: "10px 0px 30px 0px",
         }}
       >
-        <h2>cart {` (${cartItems.length})`}</h2>
+        <h2>CART {` (${cartItems.length})`}</h2>
         <p onClick={removeAll} style={{ borderBottom: "1px solid black", cursor:'pointer'}}>Remove all</p>
       </div>
 
@@ -86,17 +86,11 @@ function Basket(props) {
               {/* Button  and number here */}
 
               <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  width: "100%",
-                  background: "white",
-                }}
+              className='bucketAddition'
               >
-                <button style={{border:'1px solid gray'}} onClick={() => onRemove(item)}>-</button>
+                <p  onClick={() => onRemove(item)}>-</p>
                 <div>{item.qty}</div>
-                <button  style={{border:'1px solid gray'}} onClick={() => onAdd(item)}>+</button>
+                <p  onClick={() => onAdd(item)}>+</p>
               </div>
 
               
@@ -113,12 +107,12 @@ function Basket(props) {
           margin: "10px 0px",
         }}
       >
-        <div>Total</div>
+        <div>TOTAL</div>
         <div style={{ fontWeight: "700" }}>€{itemsPrice}</div>
       </div>
 
       {cartItems.length !== 0 && <div style= {{marginTop:'20px'}}>
-          <Link to='/checkout' onClick={CheckoutIconClicked}  style={{display:'inline-block', width:'100%', height:'40px', cursor:'pointer'}}>CHECKOUT</Link>
+          <Link to='/checkout' onClick={CheckoutIconClicked} className='basketButton'>CHECKOUT</Link>
       </div> }
       
     </div>

@@ -15,7 +15,27 @@
 
 @media (max-width: 802px) {
   body {
-    display: block;
+
+    .Bucket{
+      width: 60%;
+      left: 40%;
+      top: .7%;
+    }
+
+    .secondlayer{
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:65px;
+      left: 0;
+      z-index: 900;
+      background-color: rgba(0, 0, 0, 0.76);
+    }
+
+    .herowrapper{
+      display: none;
+    }
     .navContainer {
       ul {
         display: none;
@@ -37,20 +57,27 @@
       background-image: url("../assets/home/tablet/image-header.jpg");
       display: flex;
       justify-content: center;
+      background-position: center;
+      background-size:cover;
+      background-attachment:fixed;
+      height: 800px;
     }
   }
 
   .herowrapper {
-    width: 379px;
-    position: relative;
     height: 346px;
     top: 150px;
+  }
+
+  .menu{
+    position: relative;
+    top: 70px !important ;
   }
 
   .heroText {
     justify-content: center;
     width: 100%;
-    top: 0;
+    top: 20px;
     align-items: center;
 
     .productPara {
@@ -225,6 +252,11 @@
 //MOBILE
 
 @media (max-width: 490px) {
+  .Bucket{
+    width: 90% !important;
+    left: 20% !important;
+    margin-left: -63px !important;
+  }
   nav {
     .logo-ham {
       .hamburger {
