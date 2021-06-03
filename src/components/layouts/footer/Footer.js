@@ -10,7 +10,6 @@ function Footer(props) {
       <FooterNav />
       <div className="footerSecondDiv">
         <p className="footerSecondText">
-          {" "}
           Audiophile is an all in one stop to fulfill your audio needs. We're a
           small team of music lovers and sound specialists who are devoted to
           helping you get the most out of personal audio. Come and visit our
@@ -18,7 +17,7 @@ function Footer(props) {
         </p>
       </div>
       <div className='copyIcon'>
-      <p className='copyRight'>Copyright 2021. All Rights Reserved by  <span>Adeola Bamigboye</span> </p>
+        <p className='copyRight'>Copyright  2021. </p>
         <div className="icons">
           <div className="iconDiv">
             <img src={facebook} alt='facebookicon'></img>

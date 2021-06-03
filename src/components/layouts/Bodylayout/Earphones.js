@@ -6,7 +6,7 @@ function Earphones(props) {
     
     return (
         
-        <div className='earphonesDiv' style={{display:'flex'}}>
+        <div className='earphonesDiv' >
             <div className='earphoneImageDiv' >
                 <img className='earphonesDesktop' src={require('../../../assets/home/desktop/earphones.jpg').default} alt='earbud'></img>
                 <img style={{display:'none'}}  className='earphonetab' src={require('../../../assets/home/tablet/earphonestab.jpg').default} alt='earbud'></img>

@@ -1,5 +1,6 @@
 import React from 'react';
 import footerlogo from '../../../assets/shared/desktop/logo.svg';
+import {Link} from 'react-router-dom'
 // import earphonestab from '../../../assets/home/tablet/earphonestab.jpg';
 
 
@@ -15,10 +16,10 @@ function FooterNav(props) {
             <img alt='logo' className='logo' src={footerlogo}></img>
           </div>
           <ul>
-            <li>Home</li>
-            <li>Headphones</li>
-            <li>Speakers</li>
-            <li>Earphones</li>
+          <Link className='mylink' to='/'>Home</Link>
+        <Link  className='mylink' to='/Headphones'>Headphones</Link>
+        <Link className='mylink' to='/Speakers'>Speakers</Link>
+        <Link className='mylink' to='/Earphones'>Earphones</Link>
           </ul>
         </div>
       );

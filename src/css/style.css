@@ -369,7 +369,7 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 3em;
+  padding-left: 1em;
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText p {
@@ -384,8 +384,10 @@ nav {
   color: #272727;
   margin-top: 0.9rem;
   display: inline-block;
-  width: 40%;
+  width: 160px;
+  height: 40px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .Gear {
@@ -454,9 +456,9 @@ nav {
 }
 
 .footer .footerSecondDiv .footerSecondText {
-  width: 50%;
+  width: 40%;
   line-height: 24px;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 40px;
   color: #f1f1f1;
   font-weight: 500;
@@ -475,6 +477,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
+  right: 60px;
   width: 10%;
 }
 
@@ -1138,14 +1142,16 @@ nav {
     text-align: center;
     margin: 30px 0px;
   }
-  .earphonesDiv .earphoneImageDiv {
-    display: none;
+  .zspeakermain {
+    margin: 28px auto 28px auto !important;
+  }
+  .earphonesDiv {
+    margin-bottom: 28px;
   }
   .earphonesDiv .earphonestab {
     display: block;
-    width: 49%;
-    height: 100%;
-    background-color: bisque;
+    width: 100% !important;
+    background-color: bisque !important;
   }
   .earphonesDiv .earphonestab img {
     display: block;
@@ -1154,10 +1160,9 @@ nav {
     padding-left: 1em !important;
   }
   .earphoneText p {
-    font-size: 1.2rem !important;
+    font-size: 1.7rem !important;
   }
   .earphoneText button {
-    width: 70% !important;
     padding: 0.4em !important;
   }
   .Gear {
@@ -1181,36 +1186,42 @@ nav {
     margin: auto;
   }
   .footerNav {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    margin: auto;
-    align-items: center;
-    position: unset;
-    padding-top: 20px;
-    top: 0;
-    z-index: 200;
-    align-items: flex-start;
+    text-align: left;
+    align-items: unset;
+    justify-content: left;
   }
   .footerNav .logo-ham {
     justify-content: left;
+    width: 140px;
   }
   .footerNav ul {
     text-align: left;
     justify-content: left;
-    padding: 0px;
-    margin-top: 2rem;
+    padding: 0px !important;
+    margin-top: 20px !important;
+    margin-right: unset !important;
+    width: 100%;
   }
-  .footerNav ul li {
-    text-align: left;
-    margin-left: unset;
-    margin-right: 1rem;
+  .footerNav ul .mylink {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .footerSecondDiv {
+    margin-bottom: 24px !important;
+  }
+  .footerSecondDiv .footerSecondText {
+    width: 100% !important;
+    font-size: 12px !important;
   }
   .icons {
     align-items: center;
+    width: 20%;
+    right: unset !important;
   }
   .copyRight {
     margin-top: unset;
+    font-size: 14px !important;
   }
   .menu {
     display: block;
@@ -1219,6 +1230,15 @@ nav {
     top: 60px;
     left: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .earphoneText p {
+    font-size: 1.3rem !important;
+  }
+  .earphoneText button {
+    width: 120px !important;
   }
 }
 
@@ -1288,7 +1308,7 @@ nav {
   .zspeakermain {
     height: unset !important;
     background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
-    margin: 48px auto 48px auto !important;
+    margin: 28px auto 0px auto !important;
     padding: 50px 10px;
   }
   .zspeakerDiv {
@@ -1302,13 +1322,36 @@ nav {
   .earphonesDiv {
     flex-direction: column;
   }
+  .earphonesDiv .earphoneImageDiv {
+    display: none;
+  }
   .earphonesDiv .earphonestab {
     width: 100%;
   }
   .earphonesDiv .earphoneTextDiv {
     width: 100%;
-    padding: 50px 10px;
-    margin-top: 20px;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .earphonesDiv .earphoneTextDiv .earphoneText {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+  }
+  .earphonesDiv .earphoneTextDiv .earphoneText p {
+    font-size: 1.5rem !important;
+  }
+  .earphonesDiv .earphoneTextDiv .earphoneText button {
+    padding: 0.9em;
+    border: 1px solid #272727;
+    color: #272727;
+    margin-top: 0.9rem;
+    display: inline-block;
+    width: 160px !important;
+    height: 40px !important;
+    text-transform: uppercase;
   }
   .Gear {
     margin-bottom: 48px;
@@ -1352,7 +1395,7 @@ nav {
   .footerNav ul {
     flex-direction: column;
   }
-  .footerNav ul li {
+  .footerNav ul .mylink {
     margin-top: 10px;
   }
   .footerSecondDiv {
