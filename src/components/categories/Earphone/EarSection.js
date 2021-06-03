@@ -6,9 +6,9 @@ function EarSection(props) {
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={require('../../../assets/category-earphones/desktop/earphoneDesktop.jpg').default}  alt='earphone section'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-earphones/tablet/image-yx1-earphones.jpg').default} alt='earphone section'></img>
-          <img style={{display:'none'}}  src={require('../../../assets/category-earphones/mobile/image-yx1-earphones.jpg').default}  alt='earphone section'></img>
+          <img className='desktop' src={require('../../../assets/category-earphones/desktop/earphoneDesktop.jpg').default}  alt='earphone section'></img>
+          <img className='tablet' src={require('../../../assets/category-earphones/tablet/image-yx1-earphones.jpg').default} alt='earphone section'></img>
+          <img className='mobile'  src={require('../../../assets/category-earphones/mobile/image-yx1-earphones.jpg').default}  alt='earphone section'></img>
         </div>
         <div className="SectionText sectionOne">
           <h2 className="SectionMainTitle">YX1 wireless earphones</h2>

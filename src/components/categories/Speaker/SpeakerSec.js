@@ -5,9 +5,9 @@ function SpeakerSec(props) {
     <div >
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={require('../../../assets/category-speakers/desktop/image-zx9.jpg').default}  alt='speaker section'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-speakers/tablet/image-zx9.jpg').default}  alt='speaker section'></img>
-          <img style={{display:'none'}}  src={require('../../../assets/category-speakers/mobile/image-zx9.jpg').default}  alt='speaker section'></img>
+          <img className='desktop' src={require('../../../assets/category-speakers/desktop/image-zx9.jpg').default}  alt='speaker section'></img>
+          <img className='tablet'  src={require('../../../assets/category-speakers/tablet/image-zx9.jpg').default}  alt='speaker section'></img>
+          <img className='mobile' src={require('../../../assets/category-speakers/mobile/image-zx9.jpg').default}  alt='speaker section'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -33,9 +33,9 @@ function SpeakerSec(props) {
           <Link to='/zx7' className="sectionButton">SEE PRODUCT</Link>
         </div>
         <div className="HeadImageOne">
-        <img src={require('../../../assets/category-speakers/desktop/image-zx7.jpg').default}  alt='speaker section'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-speakers/tablet/image-zx7.jpg').default}  alt='speaker section'></img>
-          <img style={{display:'none'}}  src={require('../../../assets/category-speakers/mobile/image-zx7.jpg').default}  alt='speaker section'></img>
+        <img className='desktop' src={require('../../../assets/category-speakers/desktop/image-zx7.jpg').default}  alt='speaker section'></img>
+          <img className='tablet' src={require('../../../assets/category-speakers/tablet/image-zx7.jpg').default}  alt='speaker section'></img>
+          <img  className='mobile' src={require('../../../assets/category-speakers/mobile/image-zx7.jpg').default}  alt='speaker section'></img>
         </div>
       </section>
     </div>
