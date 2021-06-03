@@ -2,8 +2,8 @@ import React from 'react'
 function HeadphoneThreeEar(props) {
     return (
         <div>
-            <div style={{display:'flex'}}>
-                <p>{props.number}</p>
+            <div className='boXFeat' style={{display:'flex'}}>
+                <p className='boxquantity'>{props.number}x</p>
                 <p>{props.name}</p>
             </div>
             

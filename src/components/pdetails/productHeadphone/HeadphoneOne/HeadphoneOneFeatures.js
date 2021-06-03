@@ -27,18 +27,21 @@ function HeadphoneOneFeatures(props) {
        // eslint-disable-next-line
     }, []);
     return (
-        <div style={{ display: "flex", width: "80%", margin: "auto" }}>
-      <div style={{ width: "50%" }}>
-        <h4>Features</h4>
-        {features !== undefined ? features : null}
+        <div className='FeatureDiv'>
+      <div className='featureDescription' >
+        <h4>FEATURES</h4>
+        <p className='featurePara'>{features !== undefined ? features : null}</p>
+        
       </div>
-      <div style={{ width: "50%" }}>
+      <div className='FeatureBox' >
         <h4>IN THE BOX</h4>
+        <div className='divFeat'>
         {includes !== undefined
           ? includes.map((feature) => (
               <HeadphoneOneEar key={uuidv4()} number={feature.quantity} name={feature.item} />
             ))
           : null}
+          </div>
       </div>
 
     </div>

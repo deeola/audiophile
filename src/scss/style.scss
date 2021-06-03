@@ -1184,5 +1184,40 @@ nav{
 }
 
 
+//FEATURES
+
+.FeatureDiv{
+  margin: 24px  auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featureDescription{
+  width: 50%;
+
+  .featurePara{
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1.7;
+  }
+}
+
+.FeatureBox{
+  width: 40%;
+}
+
+.boXFeat{
+  font-size: 13px;
+  margin-top: 10px;
+  
+}
+
+.boxquantity{
+  color: $orange;
+  margin-right: 10px;
+  font-weight: 700;
+  text-transform:capitalize;
+}
 
 @import "mediaQueries";

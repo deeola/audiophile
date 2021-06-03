@@ -427,6 +427,32 @@
     //   order: 1;
     // }
   }
+
+
+  //FEATURES BOX
+
+  .FeatureDiv{
+    flex-direction: column;
+  }
+  .featureDescription{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .FeatureBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    h4{
+      width: 50%;
+      margin-top: 7px;
+    }
+
+    .divFeat{
+      width: 50%;
+    }
+  }
 }
 
 
@@ -753,5 +779,12 @@
     }
     
 
+  }
+
+  //FEATUREBOX
+
+  .FeatureBox{
+    flex-direction: column !important;
+    width: 100%;
   }
 }
