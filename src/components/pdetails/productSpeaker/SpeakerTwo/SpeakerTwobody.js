@@ -54,28 +54,28 @@ function SpeakerTwobody(props) {
   const decreaseQuantity = () => setquantity(quantity - 1);
   return (
     <div>
-      <section className="HeadphoneSection">
+      <section className="HeadphoneSection productSection">
         <div className="HeadImageOne">
-          <img src={require('../../../../assets/product-zx7-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
-          <img style={{display:'none'}} src={require('../../../../assets/product-zx7-speaker/tablet/image-product.jpg').default} alt="speaker"></img>
-          <img style={{display:'none'}} src={require('../../../../assets/product-zx7-speaker/mobile/image-product.jpg').default} alt="speaker"></img>
+          <img className='desktop' src={require('../../../../assets/product-zx7-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
+          <img className='tablet' src={require('../../../../assets/product-zx7-speaker/tablet/image-product.jpg').default} alt="speaker"></img>
+          <img className='mobile' src={require('../../../../assets/product-zx7-speaker/mobile/image-product.jpg').default} alt="speaker"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
           <h2 className="SectionMainTitle">
-            {slug !== undefined ? slug : null}
+            ZX7 SPEAKER
           </h2>
           <p className="sectionPara">
             {description !== undefined ? description : null}
           </p>
-          <p className="price">{price !== undefined ? price : null}</p>
-          <div>
-            <div>
+          <p className="price" style={{margin:'10px 0px', fontWeight:'700'}}>€{price !== undefined ? price : null}</p>
+          <div className='buttonAddandRemove'>
+            <div className='addandremove'>
               <p onClick={quantity > 1 ? decreaseQuantity : undefined}>-</p>
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button onClick={() => carty(data)}>ADD TO CART</button>
+            <button className='onAddbutton'  onClick={() => carty(data)}>ADD TO CART</button>
           </div>
         </div>
       </section>

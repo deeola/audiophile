@@ -1042,6 +1042,33 @@ nav {
   z-index: 10000;
 }
 
+.onAddbutton {
+  background-color: #d87d4a;
+  cursor: pointer;
+  color: #f1f1f1;
+  width: 55%;
+  padding: 7px;
+}
+
+.addandremove {
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 38%;
+  padding: 7px;
+}
+
+.addandremove p {
+  cursor: pointer;
+}
+
+.buttonAddandRemove {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
 @media (max-width: 973px) {
   body .rectangle {
     width: 90%;
@@ -1296,6 +1323,63 @@ nav {
   .HeadphoneSection .sectionTwo {
     order: 1;
   }
+  .productSection {
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-bottom: 24px;
+  }
+  .productSection .HeadImageOne {
+    width: 50% !important;
+  }
+  .productSection .HeadImageOne img {
+    display: block;
+  }
+  .productSection .HeadImageOne .desktop, .productSection .HeadImageOne .mobile {
+    display: none;
+  }
+  .productSection .newProductSec {
+    margin-top: 0px !important;
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+  }
+  .productSection .SectionText {
+    width: 50%;
+    text-align: left;
+  }
+  .productSection .sectionOne, .productSection .sectionTwo {
+    align-items: center;
+  }
+  .productSection .sectionPara {
+    font-size: 10px !important;
+    line-height: unset;
+  }
+  .productSection .SectionMainTitle {
+    font-size: 1rem !important;
+    width: 100%;
+    margin: 10px 0px !important;
+  }
+  .productSection .sectionButton {
+    width: 140px !important;
+    margin-bottom: unset !important;
+  }
+  .productSection .buttonAddandRemove {
+    width: 100%;
+  }
+  .productSection .price {
+    width: 100%;
+    text-align: left;
+  }
+  .productSection .onAddbutton {
+    width: 45%;
+    padding: 5px !important;
+    font-size: 10px !important;
+  }
+  .productSection .addandremove {
+    width: 45%;
+    padding: 5px !important;
+    font-size: 10px !important;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1489,5 +1573,35 @@ nav {
   }
   .HeadImageOne .mobile {
     display: block !important;
+  }
+  .productSection {
+    flex-direction: column !important;
+  }
+  .productSection .HeadImageOne {
+    width: 100% !important;
+  }
+  .productSection .SectionText {
+    width: 100% !important;
+  }
+  .productSection .SectionMainTitle {
+    font-size: 1.7rem !important;
+  }
+  .productSection .sectionPara {
+    font-size: 16px !important;
+  }
+  .productSection .onAddbutton {
+    width: 35% !important;
+    padding: 7px !important;
+  }
+  .productSection .addandremove {
+    width: 25% !important;
+    padding: 7px !important;
+    margin-right: 10px;
+  }
+  .productSection .buttonAddandRemove {
+    justify-content: unset !important;
+  }
+  .productSection .newProductSec {
+    margin-top: 10px !important;
   }
 }

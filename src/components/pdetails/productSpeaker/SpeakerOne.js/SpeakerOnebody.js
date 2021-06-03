@@ -51,26 +51,29 @@ function SpeakerOnebody(props) {
 
   return (
     <div>
-      <section className="HeadphoneSection">
+      <section className="HeadphoneSection productSection">
         <div className="HeadImageOne">
-          <img src={require('../../../../assets/product-zx9-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
+          <img className='desktop' src={require('../../../../assets/product-zx9-speaker/desktop/image-product.jpg').default} alt="speaker"></img>
+          <img className='tablet' src={require('../../../../assets/product-zx9-speaker/tablet/image-product.jpg').default} alt="speaker"></img>
+          <img className='mobile' src={require('../../../../assets/product-zx9-speaker/mobile/image-product.jpg').default} alt="speaker"></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
           <h2 className="SectionMainTitle">
-            {slug !== undefined ? slug : null}
+            ZX9 SPEAKER
           </h2>
           <p className="sectionPara">
             {description !== undefined ? description : null}
           </p>
-          <p className="price">{price !== undefined ? price : null}</p>
-          <div>
-            <div>
+          <p className="price" style={{margin:'10px 0px', fontWeight:'700'}}>€{price !== undefined ? price : null}</p>
+          <div className='buttonAddandRemove'>
+            <div className='addandremove' >
               <p onClick={quantity > 1 ? decreaseQuantity : undefined}>-</p>
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
             <button
+            className='onAddbutton' 
               onClick={() => {
                 onAdd(data);
               }}

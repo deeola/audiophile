@@ -1153,6 +1153,36 @@ nav{
   z-index: 10000;
 }
 
+.onAddbutton{
+  background-color: $orange;
+  cursor: pointer;
+  color: $gray;
+  width: 55%;
+  padding: 7px ;
+  
+}
+
+.addandremove{
+  background-color: $gray;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 38%;
+  padding: 7px;
+  p{
+    // margin: 0px 10px ;
+    cursor: pointer;
+  }
+}
+
+
+
+.buttonAddandRemove{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
 
 
 @import "mediaQueries";

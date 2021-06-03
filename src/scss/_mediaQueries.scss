@@ -345,6 +345,88 @@
 
     
   }
+
+
+  //Headphone product detail
+
+  .productSection{
+    flex-direction: row !important;
+
+    align-items: center !important;
+    margin-bottom: 24px;
+
+    .HeadImageOne {
+      width: 50% !important;
+      img {
+        display: block;
+      }
+
+      .desktop,.mobile{
+        display: none;
+      }
+    }
+
+    .newProductSec{
+      margin-top: 0px !important;
+      font-size: 10px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .SectionText {
+      width: 50%;
+      text-align: left;
+    
+    }
+
+    .sectionOne,.sectionTwo{
+      align-items: center;
+    }
+
+    .sectionPara{
+      font-size: 10px !important;
+      line-height: unset;
+    }
+
+    .SectionMainTitle{
+      font-size: 1rem !important;
+      width: 100%;
+      margin: 10px 0px !important;
+    }
+
+    .sectionButton {
+
+      width: 140px !important;
+      margin-bottom: unset !important;
+    }
+
+    .buttonAddandRemove{
+      width: 100%;
+    }
+
+    .price{
+      width: 100%;
+      text-align: left;
+    }
+
+    .onAddbutton{
+      width: 45%;
+      padding: 5px !important;
+      font-size: 10px !important;
+      
+    }
+    
+    .addandremove{
+      width: 45%;
+      padding: 5px !important;
+      font-size: 10px !important;
+    }
+    
+
+    // .sectionTwo{
+    //   order: 1;
+    // }
+  }
 }
 
 
@@ -372,6 +454,7 @@
 //MOBILE
 
 @media (max-width: 490px) {
+
   .Bucket{
     width: 90% !important;
     left: 20% !important;
@@ -624,5 +707,51 @@
     .mobile{
       display: block !important;
     }
+  }
+
+  //PRODUCT DETAILS SECTION HEADPHONE
+
+  .productSection{
+    flex-direction: column !important;
+
+    .HeadImageOne {
+      width: 100% !important;
+    }
+
+    .SectionText{
+      width: 100% !important;
+    }
+    .SectionMainTitle{
+      font-size: 1.7rem !important;
+    }
+
+    .sectionPara{
+      font-size: 16px !important;
+      
+    }
+
+    .onAddbutton{
+      width: 35% !important;
+      padding: 7px !important;
+      
+    }
+    
+    .addandremove{
+      width: 25% !important;
+      padding: 7px !important;
+      margin-right: 10px;
+    }
+
+    .buttonAddandRemove{
+
+      justify-content: unset !important;
+
+    }
+
+    .newProductSec{
+      margin-top: 10px !important;
+    }
+    
+
   }
 }
