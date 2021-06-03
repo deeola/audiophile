@@ -185,6 +185,8 @@ nav{
   }
 }
 
+
+
 //BODY
 
 .firstSection {
@@ -206,11 +208,27 @@ nav{
 
     .shopImageDiv {
       position: absolute;
-      top: 0%;
-      bottom: 32.66%;
+      top: 30px;
       z-index: 100;
-      width: 80%;
+      width: 200px;
       margin: auto;
+
+      
+    }
+
+    .imageheadphones{
+      position: absolute;
+      top: -10px;
+    }
+
+    .imagespeakers{
+      position: absolute;
+      top: -4px;
+    }
+
+    .imageearphones{
+      position: absolute;
+      top: 10px;
     }
 
     .shopTextDiv {
@@ -219,7 +237,7 @@ nav{
       top: 6rem;
       text-align: center;
       color: rgb(99, 61, 61);
-      padding-top: 5rem;
+      padding-top: 2rem;
       padding-bottom: 30px;
       width: 100%;
 
@@ -237,6 +255,9 @@ nav{
         align-items: center;
         justify-content: center;
       }
+
+
+      
 
       span {
         color: $orange;

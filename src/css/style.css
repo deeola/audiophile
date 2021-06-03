@@ -207,11 +207,25 @@ nav {
 
 .firstSection .shopSection .shopImageDiv {
   position: absolute;
-  top: 0%;
-  bottom: 32.66%;
+  top: 30px;
   z-index: 100;
-  width: 80%;
+  width: 200px;
   margin: auto;
+}
+
+.firstSection .shopSection .imageheadphones {
+  position: absolute;
+  top: -10px;
+}
+
+.firstSection .shopSection .imagespeakers {
+  position: absolute;
+  top: -4px;
+}
+
+.firstSection .shopSection .imageearphones {
+  position: absolute;
+  top: 10px;
 }
 
 .firstSection .shopSection .shopTextDiv {
@@ -220,7 +234,7 @@ nav {
   top: 6rem;
   text-align: center;
   color: #633d3d;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 30px;
   width: 100%;
 }
@@ -1044,6 +1058,7 @@ nav {
   body .navContainer .logo-ham .hamburger {
     display: block;
     margin-right: 50px;
+    width: 20px;
   }
   body .Header {
     background-image: url("../assets/home/tablet/image-header.jpg");
@@ -1081,11 +1096,20 @@ nav {
     text-align: center;
     width: 80%;
   }
-  .firstSection .shopSection {
-    width: 32%;
+  .firstSection {
+    margin-top: 1rem;
+  }
+  .firstSection .shopSection .imageheadphones {
+    top: 11px;
+  }
+  .firstSection .shopSection .imagespeakers {
+    top: 12px;
+  }
+  .firstSection .shopSection .imageearphones {
+    top: 16px;
   }
   .firstSection .shopSection .shopImageDiv {
-    width: 50%;
+    width: 90px;
     margin-bottom: 0px;
   }
   .firstSection .shopSection .shopTextDiv {
@@ -1095,7 +1119,7 @@ nav {
   }
   .secondSection {
     flex-direction: column;
-    margin: 48px auto auto auto;
+    margin-top: 28px !important;
     padding-top: 50px;
   }
   .secondSection .imagedesktop {
@@ -1229,6 +1253,15 @@ nav {
   }
   .shopSection {
     width: 100% !important;
+  }
+  .shopSection .imageheadphones {
+    top: 15px !important;
+  }
+  .shopSection .imagespeakers {
+    top: 15px !important;
+  }
+  .shopSection .imageearphones {
+    top: 20px !important;
   }
   .shopImageDiv {
     top: -5% !important;

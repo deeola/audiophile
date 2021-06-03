@@ -6,10 +6,8 @@ function Shop(props) {
   return (
     <section className="firstSection">
       <div className="shopSection">
-        <div className="shopImageDiv">
-          <img src={require('../../../assets/shared/desktop/imageheadphones.png').default} alt='imageheadphones'></img>
-          <img style={{display:'none'}} src={require('../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg').default} alt='imageheadphones'></img>
-          <img style={{display:'none'}} src={require('../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg').default} alt='imageheadphones'></img>
+        <div className="shopImageDiv imageheadphones">
+          <img className='desktop' src={require('../../../assets/shared/desktop/imageheadphones.png').default} alt='imageheadphones'></img>
         </div>
 
         <div className='shopTextDiv'>
@@ -20,10 +18,9 @@ function Shop(props) {
         </div>
       </div>
       <div className="shopSection">
-        <div className="shopImageDiv">
+        <div className="shopImageDiv imagespeakers">
           <img src={require('../../../assets/shared/desktop/imagespeakers.png').default} alt='imagespeakers'></img>
-          <img style={{display:'none'}} src={require('../../../assets/shared/tablet/image-zx9-speaker.jpg').default} alt='imagespeakers'></img>
-          <img style={{display:'none'}} src={require('../../../assets/shared/mobile/image-zx9-speaker.jpg').default} alt='imagespeakers'></img>
+          
         </div>
 
         <div className='shopTextDiv'>
@@ -34,8 +31,9 @@ function Shop(props) {
         </div>
       </div>
       <div className="shopSection">
-        <div className="shopImageDiv">
+        <div className="shopImageDiv  imageearphones">
           <img src={require('../../../assets/shared/desktop/imageearphones.png').default} alt='imageearphones'></img>
+
         </div>
 
         <div className='shopTextDiv'>
