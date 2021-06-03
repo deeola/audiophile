@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Rectangle from "./Rectangle";
 
@@ -26,7 +27,7 @@ function Hero(props) {
           <p className="productDescr ">
             enthusiast.
           </p>
-          <button>See product</button>
+          <button> <Link to='/xx99-mark-two' className='shopTextLink'>See product</Link> </button>
         </div>
         <div className="herowrapper">
           {/* <img style={{width:'100%', top:'0px'}} src={require('../../../assets/home/desktop/image-hero.jpg').default}></img> */}

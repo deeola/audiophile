@@ -186,6 +186,16 @@ nav {
   background-color: #fbaf85;
 }
 
+.shopTextLink {
+  text-decoration: none !important;
+  color: white;
+}
+
+.shopTextLinkSecond {
+  text-decoration: none !important;
+  color: #000000;
+}
+
 .firstSection {
   display: flex;
   width: 80%;
@@ -237,6 +247,10 @@ nav {
   padding-top: 2rem;
   padding-bottom: 30px;
   width: 100%;
+}
+
+.firstSection .shopSection .shopTextDiv .shopTextLink {
+  text-decoration: none;
 }
 
 .firstSection .shopSection .shopTextDiv .shoptitle {
@@ -396,24 +410,25 @@ nav {
   margin: auto;
   margin-bottom: 48px;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Gear .GearTextDiv {
-  width: 50%;
+  width: 40%;
   display: flex;
-  justify-content: left;
   align-items: center;
 }
 
 .Gear .GearTextDiv .ggtext {
   position: relative;
-  width: 80%;
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle span {
@@ -422,13 +437,10 @@ nav {
 
 .Gear .GearTextDiv .ggtext .gmaintext {
   font-size: 0.9rem;
-  margin-top: 20px;
-  line-height: 24px;
 }
 
 .Gear .gearImageDiv {
   width: 50%;
-  height: 100%;
 }
 
 .Gear .gearImageDiv img {
@@ -500,7 +512,7 @@ nav {
 
 .HeaderShared {
   background-color: #272727;
-  height: 316px;
+  height: 300px;
 }
 
 .proptitle {
@@ -526,38 +538,41 @@ nav {
   width: 80%;
   margin: auto;
   margin-top: 48px;
+  justify-content: space-between;
 }
 
 .HeadImageOne {
-  width: 50% !important;
+  width: 50%;
 }
 
 .HeadImageOne img {
   display: block;
 }
 
+.HeadImageOne .tablet, .HeadImageOne .mobile {
+  display: none;
+}
+
 .SectionText {
-  width: 50%;
+  width: 45%;
 }
 
 .sectionOne {
-  padding: 10px 70px !important;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .sectionTwo {
-  padding: 130px 0px 0px 0px !important;
-}
-
-.sectionTwo .sectionPara {
-  width: 70% !important;
-  margin-top: 10px;
-  font-size: 13.5px;
-  line-height: 20px;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .newProductSec {
-  margin-top: 100px;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   color: #d87d4a;
 }
 
@@ -568,23 +583,27 @@ nav {
 .SectionMainTitle {
   text-transform: uppercase;
   width: 70%;
-  font-size: 40px;
-  margin-top: 5px;
+  font-size: 2rem;
+  margin: 10px 0px;
 }
 
 .sectionPara {
   width: 100%;
-  margin-top: 10px;
   font-size: 13.5px;
   line-height: 20px;
 }
 
 .sectionButton {
-  padding: 15px 25px;
   margin-top: 20px;
   background-color: #d87d4a;
   color: #f1f1f1;
   cursor: pointer;
+  width: 160px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .HeadphoneMain .Gear,
@@ -1030,6 +1049,15 @@ nav {
   body .heroContainer {
     width: 90%;
   }
+  body .SectionMainTitle {
+    font-size: 1.7rem;
+  }
+  body .gearmaintitle {
+    font-size: 1.5rem !important;
+  }
+  body .gearmaintitle span {
+    color: #d87d4a;
+  }
 }
 
 @media (max-width: 802px) {
@@ -1167,6 +1195,7 @@ nav {
   }
   .Gear {
     flex-direction: column;
+    margin-top: 10px !important;
   }
   .Gear .tabgear {
     display: block;
@@ -1230,6 +1259,42 @@ nav {
     top: 60px;
     left: 0;
     width: 100%;
+  }
+  .HeadphoneSection {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+  }
+  .HeadphoneSection .HeadImageOne {
+    width: 100%;
+  }
+  .HeadphoneSection .HeadImageOne img {
+    display: block;
+  }
+  .HeadphoneSection .HeadImageOne .desktop, .HeadphoneSection .HeadImageOne .mobile {
+    display: none;
+  }
+  .HeadphoneSection .newProductSec {
+    margin-top: 12px;
+  }
+  .HeadphoneSection .SectionText {
+    width: 100%;
+  }
+  .HeadphoneSection .sectionOne, .HeadphoneSection .sectionTwo {
+    align-items: center;
+  }
+  .HeadphoneSection .sectionPara {
+    font-size: 16px !important;
+  }
+  .HeadphoneSection .SectionMainTitle {
+    font-size: 1.3rem !important;
+  }
+  .HeadphoneSection .sectionButton {
+    width: 140px !important;
+    margin-bottom: 20px;
+  }
+  .HeadphoneSection .sectionTwo {
+    order: 1;
   }
 }
 
@@ -1418,5 +1483,11 @@ nav {
     justify-content: space-between !important;
     width: 30% !important;
     margin-top: 10px;
+  }
+  .HeadImageOne .desktop, .HeadImageOne .tablet {
+    display: none !important;
+  }
+  .HeadImageOne .mobile {
+    display: block !important;
   }
 }

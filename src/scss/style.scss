@@ -185,7 +185,16 @@ nav{
   }
 }
 
+.shopTextLink{
+  text-decoration: none !important;
+  color: white;
+}
 
+.shopTextLinkSecond{
+  text-decoration: none !important;
+  color: $very-black;
+
+}
 
 //BODY
 
@@ -240,6 +249,10 @@ nav{
       padding-top: 2rem;
       padding-bottom: 30px;
       width: 100%;
+      
+      .shopTextLink{
+        text-decoration: none;
+      }
 
       .shoptitle {
         font-weight: 700;
@@ -254,6 +267,7 @@ nav{
         display: flex;
         align-items: center;
         justify-content: center;
+        
       }
 
 
@@ -428,20 +442,22 @@ nav{
   margin-bottom: 48px;
 
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
   .GearTextDiv {
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: left;
     align-items: center;
 
     .ggtext {
       position: relative;
-      width: 80%;
       .gearmaintitle {
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
+        margin-bottom: 10px;
+        
         span {
           color: $orange;
         }
@@ -449,15 +465,12 @@ nav{
 
       .gmaintext {
         font-size: 0.9rem;
-        margin-top: 20px;
-        line-height: 24px;
       }
     }
   }
 
   .gearImageDiv {
     width: 50%;
-    height: 100%;
     img {
       display: block;
     }
@@ -533,7 +546,7 @@ nav{
 
 .HeaderShared {
   background-color: $black;
-  height: 316px;
+  height: 300px;
 }
 
 .proptitle {
@@ -559,35 +572,51 @@ nav{
   width: 80%;
   margin: auto;
   margin-top: 48px;
+  justify-content: space-between;
+
+  
 }
+
 .HeadImageOne {
-  width: 50% !important;
+  width: 50% ;
   img {
     display: block;
+  }
+
+  .tablet,.mobile{
+    display: none;
   }
 }
 
 .SectionText {
-  width: 50%;
+  width: 45%;
+
 }
 
 .sectionOne {
-  padding: 10px 70px !important;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .sectionTwo {
-  padding: 130px 0px 0px 0px !important;
-  .sectionPara {
-    width: 70% !important;
-    margin-top: 10px;
-    font-size: 13.5px;
-    line-height: 20px;
-  }
+  // padding: 130px 0px 0px 0px !important;
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // .sectionPara {
+  //   width: 70% !important;
+  //   margin-top: 10px;
+  //   font-size: 13.5px;
+  //   line-height: 20px;
+  // }
 }
 
 .newProductSec {
-  margin-top: 100px;
-  letter-spacing: 7px;
+  // margin-top: 100px;
+  letter-spacing: 5px;
   color: $orange;
 }
 
@@ -598,23 +627,29 @@ nav{
 .SectionMainTitle {
   text-transform: uppercase;
   width: 70%;
-  font-size: 40px;
-  margin-top: 5px;
+  font-size: 2rem;
+  margin: 10px 0px;
 }
 
 .sectionPara {
   width: 100%;
-  margin-top: 10px;
+  // margin-top: 10px;
   font-size: 13.5px;
   line-height: 20px;
 }
 
 .sectionButton {
-  padding: 15px 25px;
+  // padding: 15px 25px;
   margin-top: 20px;
   background-color: $orange;
   color: $gray;
   cursor: pointer;
+  width: 160px;
+  height: 40px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .HeadphoneMain,

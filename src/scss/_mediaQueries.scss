@@ -8,6 +8,21 @@
     .heroContainer{
       width: 90%;
     }
+
+    .SectionMainTitle {
+
+      font-size: 1.7rem;
+      // margin-top: 5px;
+    }
+
+    .gearmaintitle {
+
+      font-size: 1.5rem !important;
+      
+      span {
+        color: $orange;
+      }
+    }
   }
 
 }
@@ -195,6 +210,8 @@
 
   .Gear {
     flex-direction: column;
+    margin-top: 10px !important;
+    
     .tabgear {
       display: block;
     }
@@ -276,7 +293,67 @@
     width: 100%;
 
   }
+
+  //HEADPHONE SECTION
+
+  .HeadphoneSection{
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+
+    .HeadImageOne {
+      width: 100% ;
+      img {
+        display: block;
+      }
+
+      .desktop,.mobile{
+        display: none;
+      }
+    }
+
+    .newProductSec{
+      margin-top: 12px;
+    }
+
+    .SectionText {
+      width: 100%;
+    
+    }
+
+    .sectionOne,.sectionTwo{
+      align-items: center;
+    }
+
+    .sectionPara{
+      font-size: 16px !important;
+    }
+
+    .SectionMainTitle{
+      font-size: 1.3rem !important;
+    }
+
+    .sectionButton {
+
+      width: 140px !important;
+      margin-bottom: 20px;
+    }
+
+    .sectionTwo{
+      order: 1;
+    }
+
+    
+  }
 }
+
+
+
+
+
+
+
+
 
 @media (max-width:650px) {
   .earphoneText {
@@ -535,5 +612,17 @@
       justify-content: space-between !important;
       width: 30% !important;
       margin-top: 10px;
+  }
+
+  //HEADPHONE SECTION
+
+  .HeadImageOne {
+
+    .desktop,.tablet{
+      display: none !important;
+    }
+    .mobile{
+      display: block !important;
+    }
   }
 }

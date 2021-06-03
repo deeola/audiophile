@@ -6,9 +6,9 @@ function Section(props) {
     <div >
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={require('../../../assets/category-headphones/desktop/marktwo.jpg').default} alt='secondimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/tablet/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/mobile/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
+          <img className='desktop' src={require('../../../assets/category-headphones/desktop/marktwo.jpg').default} alt='secondimage'></img>
+          <img className='tablet' src={require('../../../assets/category-headphones/tablet/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
+          <img className='mobile'  src={require('../../../assets/category-headphones/mobile/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -32,19 +32,19 @@ function Section(props) {
           <Link to='/xx99-mark-one' className='sectionButton'>SEE PRODUCT</Link>
         </div>
         <div className="HeadImageOne">
-          <img src={require('../../../assets/category-headphones/desktop/markone.jpg').default} alt='firstimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/tablet/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/mobile/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
+          <img className='desktop' src={require('../../../assets/category-headphones/desktop/markone.jpg').default} alt='firstimage'></img>
+          <img className='tablet'  src={require('../../../assets/category-headphones/tablet/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
+          <img className='mobile' src={require('../../../assets/category-headphones/mobile/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
         </div>
       </section>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img src={require('../../../assets/category-headphones/desktop/markthree.jpg').default}  alt='thirdimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/tablet/image-xx59.jpg').default} alt='secondimage'></img>
-          <img style={{display:'none'}} src={require('../../../assets/category-headphones/mobile/image-xx59.jpg').default} alt='secondimage'></img>
+          <img className='desktop' src={require('../../../assets/category-headphones/desktop/markthree.jpg').default}  alt='thirdimage'></img>
+          <img className='tablet' src={require('../../../assets/category-headphones/tablet/image-xx59.jpg').default} alt='secondimage'></img>
+          <img className='mobile' src={require('../../../assets/category-headphones/mobile/image-xx59.jpg').default} alt='secondimage'></img>
         </div>
         <div className="SectionText sectionOne">
-          <h2 className="SectionMainTitle secTopic">XX59 Headphones</h2>
+          <h2 className="SectionMainTitle">XX59 Headphones</h2>
           <p className="sectionPara">
             Enjoy your audio almost anywhere and customize it to your specific
             tastes with the XX59 headphones. The stylish yet durable versatile

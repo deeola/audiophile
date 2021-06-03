@@ -13,7 +13,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Headphones</p>
           <p className='shopText'>
-            Shop <Link to= '/headphones'><span>&#62;</span> </Link> 
+            Shop <Link className='shopTextLink' to= '/headphones'><span>&#62;</span> </Link> 
           </p>
         </div>
       </div>
@@ -26,7 +26,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Speakers</p>
           <p className='shopText'>
-            Shop <Link to='/speakers'> <span>&#62;</span> </Link> 
+            Shop <Link className='shopTextLink' to='/speakers'> <span>&#62;</span> </Link> 
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Earphones</p>
           <p className='shopText'>
-            Shop <Link to='/earphones'> <span>&#62;</span> </Link> 
+            Shop <Link className='shopTextLink' to='/earphones'> <span>&#62;</span> </Link> 
           </p>
         </div>
       </div>

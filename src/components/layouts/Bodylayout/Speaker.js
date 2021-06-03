@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import backgroundPattern from "../../../assets/home/desktop/pattern-circles.svg";
 
 function Speaker(props) {
@@ -27,13 +28,13 @@ function Speaker(props) {
       </div>
       <div className="secondTextDiv">
         <h1 className="sdMainText">
-          ZX99 <br></br>SPEAKER
+          ZX9 <br></br>SPEAKER
         </h1>
         <p className="sdproductDescr">
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <button>See product</button>
+        <button><Link to='/zx9' className='shopTextLink'>See product</Link></button>
       </div>
     </section>
   );
