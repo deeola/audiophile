@@ -743,6 +743,17 @@ nav{
   width: 80%;
   margin: 20px auto 40px auto;
   background-color: white;
+  .inputTitles{
+    color: $orange;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .error{
+    color: $orange;
+    font-size: 12px;
+    font-weight: 700;
+  }
 }
 
 .PersonalDetails {
@@ -767,8 +778,14 @@ nav{
         width: 100%;
         height: 40px;
         display: block;
-        border: 1px solid $orange;
+        border: 1px solid gray;
         padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        &:focus{
+          border: 1px solid $orange;
+          outline: none
+        }
       }
     }
   }
@@ -786,8 +803,14 @@ nav{
       width: 100%;
       height: 40px;
       display: block;
-      border: 1px solid $orange;
+      border: 1px solid gray;
       padding: 10px;
+      border-radius: 5px;
+        margin-top: 10px;
+        &:focus{
+          border: 1px solid $orange;
+          outline: none
+        }
     }
   }
 
@@ -807,8 +830,14 @@ nav{
         width: 100%;
         height: 40px;
         display: block;
-        border: 1px solid $orange;
+        border: 1px solid gray;
         padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        &:focus{
+          border: 1px solid $orange;
+          outline: none
+        }
       }
     }
 
@@ -816,13 +845,9 @@ nav{
       display: flex;
       justify-content: space-between;
       width: 100%;
-      .zip{
+      .zip,.city{
           width: 48%;
       }
-
-      .city{
-        width: 48%;
-    }
 
       .labelError {
         display: flex;
@@ -834,8 +859,14 @@ nav{
         width: 100%;
         height: 40px;
         display: block;
-        border: 1px solid $orange;
+        border: 1px solid gray;
         padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        &:focus{
+          border: 1px solid $orange;
+          outline: none
+        }
       }
     }
 
@@ -854,8 +885,15 @@ nav{
           width: 100%;
           height: 40px;
           display: block;
-          border: 1px solid $orange;
+          border: 1px solid gray;
           padding: 10px;
+          margin-top: 10px;
+          border-radius: 5px;
+
+          &:focus{
+            border: 1px solid $orange;
+            outline: none
+          }
         }
       }
   }
@@ -876,12 +914,17 @@ nav{
                 display: flex;
                 height: 40px;
                 align-items: center;
-                border: 1px solid $orange;
+                border: 1px solid gray;
                 margin-bottom: 10px;
                 padding: 10px;;
+                border-radius: 5px;
+                &:active{
+                  border: 1px solid $orange;
+                }
 
                 input{
                     background-color: $orange;
+                    
                 }
 
                 label{
@@ -979,8 +1022,15 @@ nav{
               width: 100%;
               height: 40px;
               display: block;
-              border: 1px solid $orange;
+              border: 1px solid gray;
               padding: 10px;
+              outline: none;
+              margin-top: 10px;
+              border-radius: 5px;
+              &:focus{
+                border: 1px solid $orange;
+                outline: none
+              }
             }
           }
 
@@ -996,10 +1046,12 @@ nav{
 
 .summary{
     width: 28%;
-    padding: 10px;
+
     
     .summaryWrapper{
-        background-color: $light-gray;
+      background-color: $light-gray;
+          padding: 10px 10px;
+        
     }
 
     .SummaryHeader{
@@ -1024,6 +1076,11 @@ nav{
         justify-content: space-between;
         margin-top: 20px;
         align-items: center;
+        text-transform: uppercase;
+        
+    }
+    .pricetitle{
+      color: gray;
     }
 
     .boldPrices{
@@ -1054,7 +1111,8 @@ nav{
 .SuccessMain{
     position: absolute;
     top:8rem;
-    left:20rem;
+    left:25rem;
+    border-radius: 10px;
     z-index: 1000;
     width: 40%;
     margin: auto;
@@ -1091,6 +1149,7 @@ nav{
         width: 50%;
         margin-bottom: 20px;
         padding: 20px;
+        background-color: $light-gray;
     }
 
     .imgPrice{
@@ -1143,6 +1202,10 @@ nav{
         margin-top: 30px;
         background-color: $orange;
         color: white;
+        cursor: pointer;
+        &:hover{
+          background: $orange-light;
+        }
     }
 }
 
@@ -1312,6 +1375,18 @@ nav{
     background: none !important;
     color: $gray;
     cursor: pointer;
+  }
+}
+
+.productBody{
+
+
+  .Gear{
+    margin-top: 90px;
+  }
+
+  .firstSection{
+    margin-top: 54px;
   }
 }
 

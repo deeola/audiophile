@@ -38,7 +38,7 @@ function Success(props) {
                             </div>
                         </div>
                         <div>
-                            <p>X{summaryItems[0].qty}</p>
+                            <p>x{summaryItems[0].qty}</p>
                         </div>
                         
                     </div>

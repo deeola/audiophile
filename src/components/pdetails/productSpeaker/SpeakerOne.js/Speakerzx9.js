@@ -10,7 +10,7 @@ import SpeakerOnebody from "./SpeakerOnebody";
 function Speakerzx9(props) {
 
   return (
-    <div>
+    <div className='productBody'>
       <div
         className="productnav"
         style={{

@@ -12,7 +12,7 @@ function Test(props) {
 
 
   return (
-    <div>
+    <div className='productBody'>
       <div
         className="productnav"
         style={{ backgroundColor: "black", width: "100%", height: "97px", display:'flex', justifyContent:'center', alignItems:'center'}}

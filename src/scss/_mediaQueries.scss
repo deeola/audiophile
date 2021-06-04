@@ -35,10 +35,19 @@
 @media (max-width: 802px) {
   body {
 
+
     .Bucket{
       width: 60%;
       left: 40%;
       top: .7%;
+    }
+    .productBody{
+
+  
+  
+      .firstSection{
+        margin-top: unset !important;
+      }
     }
 
     .secondlayer{
@@ -486,6 +495,32 @@
       display: block;
     }
   }
+
+  //FORM IMPUTs
+
+  .form-inputss{
+    flex-direction: column;
+  }
+
+  .PersonalDetails {
+    width: 100%;
+  }
+  .summary{
+    width: 100%;
+
+    .pricetotal{
+      color:  $orange;
+    }
+  }
+
+  //SUCCESS MODAL
+
+  .SuccessMain{
+    top:8rem;
+    left:2.5rem;
+    width: 90%;
+    padding: 40px;
+  }
 }
 
 
@@ -873,4 +908,110 @@
       margin-bottom: 24px;
     }
   }
+
+  .productBody{
+
+  
+  
+    .firstSection{
+      margin-top: unset !important;
+    }
+  }
+
+  //FORM
+
+  .PersonalDetails {
+    .nameEmail{
+      flex-direction: column;
+      .formControl{
+        width: 100%;
+      }
+    }
+
+    .phoneNumber{
+      width: 100%;
+    }
+
+    .zipCity{
+      flex-direction: column;
+      width: 100%;
+      .zip,.city{
+        width: 100% !important;
+    }
+    }
+
+    .country {
+      width: 100% !important;
+    }
+
+    
+
+
+  }
+
+  .paymentMethodDiv{
+    flex-direction: column;
+
+    .radioDiv{
+      width: 100% !important;
+    }
+  }
+
+  .NumberPin{
+    flex-direction: column;
+
+    .moneyNumber,.MoneyPin{
+      width: 100% !important;
+  }
+
+  }
+
+  .EmoneyText{
+    justify-content: space-between;
+    p{
+      font-size: 10px;
+      width: 80% !important;
+    }
+    i{
+      width: 10% !important;
+      font-size: 30px !important;
+    }
+  }
+  .form-inputss{
+    .error{
+
+      font-size: 8px !important;
+
+    }
+  }
+
+  //SUCCESS MODAL
+  .SuccessMain{
+    top:8rem;
+    left:  1.4rem !important;
+    width: 90%;
+    padding: 40px;
+
+    h2{
+      font-size: 1.5rem !important;
+    }
+
+    .confirmMail{
+      margin: 20px 0px !important;
+  }
+    
+  }
+  
+  .imgTitle{
+    width: 100% !important;
+    margin-bottom: unset !important;
+  }
+  .grandTotal{
+    width: 100% !important;
+  }
+
+  .grandImg{
+    flex-direction: column;
+  }
+
 }

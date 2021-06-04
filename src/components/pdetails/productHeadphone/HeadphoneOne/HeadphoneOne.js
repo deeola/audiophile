@@ -8,7 +8,7 @@ import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneOne(props) {
   return (
-    <div>
+    <div className='productBody'>
       <div
         className="productnav"
         style={{

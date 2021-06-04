@@ -47,7 +47,7 @@ function PerosnalDetails({ Submitform }) {
     <div className="mainFormDiv">
       <form className="form-inputss" onSubmit={handleSubmit} noValidate>
         <div className="PersonalDetails">
-          <div>BILLING DETAILS</div>
+          <div className='inputTitles'>BILLING DETAILS</div>
           <div className="nameEmail">
             <div className="formControl">
               <div className="labelError">
@@ -98,7 +98,7 @@ function PerosnalDetails({ Submitform }) {
           </div>
 
           <div className="shippingInfo">
-            <div>SHIPPING INFO</div>
+            <div className='inputTitles'>SHIPPING INFO</div>
             <div className="address">
               <div className="formControl">
                 <div className="labelError">
@@ -176,10 +176,10 @@ function PerosnalDetails({ Submitform }) {
           </div>
 
           <div className="paymentDetails" >
-            <div>PAYMENT DETAILS</div>
+            <div className='inputTitles'>PAYMENT DETAILS</div>
             <div className="paymentMethodDiv">
               <div>
-                <p>Payment Method</p>
+                <p style={{fontWeight:'700', fontSize:'14px'}}>PAYMENT METHOD</p>
               </div>
               <div className="radioDiv">
                 <div className="radios">
@@ -301,7 +301,7 @@ function PerosnalDetails({ Submitform }) {
                   <div>
 
                     <div>
-                      <div>{item.qty}</div>
+                      <div className='pricetitle'>x{item.qty}</div>
                     </div>
                   </div>
                 </div>
@@ -309,21 +309,21 @@ function PerosnalDetails({ Submitform }) {
             ))}
 
             <div className='priceShipping'>
-              <div>Total</div>
+              <div className='pricetitle'>Total</div>
               <div className='boldPrices'>€{itemsPrice.toFixed(2)}</div>
             </div>
             <div className='priceShipping'>
-              <div>SHIPPING</div>
+              <div className='pricetitle'>SHIPPING</div>
               <div className='boldPrices'>€{shippingPrice.toFixed(2)}</div>
             </div>
             <div className='priceShipping'>
-              <div>VAT(Tax Included)</div>
+              <div className='pricetitle'>VAT(Tax Included)</div>
               <div className='boldPrices'>€{taxprice.toFixed(2)}</div>
             </div>
 
             <div className='priceShipping'>
-              <div>GRAND TOTAL</div>
-              <div className='boldPrices'>€{TotalPrice.toFixed(2)}</div>
+              <div className='pricetitle'>GRAND TOTAL</div>
+              <div className='boldPrices pricetotal'>€{TotalPrice.toFixed(2)}</div>
             </div>
             <button  className='submitButton' type='submit'>CONTINUE & PAY</button>
           </div>

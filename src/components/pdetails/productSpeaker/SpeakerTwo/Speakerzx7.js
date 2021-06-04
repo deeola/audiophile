@@ -10,7 +10,7 @@ function Speakerzx7(props) {
 
 
   return (
-    <div>
+    <div className='productBody'>
       <div
         className="productnav"
         style={{

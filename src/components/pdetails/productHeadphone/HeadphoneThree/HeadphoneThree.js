@@ -9,7 +9,7 @@ import Footer from "../../../layouts/footer/Footer";
 function HeadphoneThree(props) {
 
   return (
-    <div>
+    <div className='productBody'>
       <div
         className="productnav"
         style={{
