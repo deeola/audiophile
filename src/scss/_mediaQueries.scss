@@ -23,6 +23,10 @@
         color: $orange;
       }
     }
+
+    .rightImageDiv{
+      margin-left: 15px;
+    }
   }
 
 }
@@ -453,6 +457,35 @@
       width: 50%;
     }
   }
+
+
+  //FEATURE IMAGES
+
+  .FeaturesImagesDiv{
+    .mobile,.desktop{
+      display: none;
+    }
+
+    .tablet{
+      display: block;
+    }
+
+    .rightImageDiv{
+      margin-left: 12px;
+    }
+  }
+
+  //ALSO LIKE
+
+  .alsoLike{
+    .desktop,.mobile{
+      display: none;
+    }
+
+    .tablet{
+      display: block;
+    }
+  }
 }
 
 
@@ -473,6 +506,10 @@
     button{
       width: 120px !important;
     }
+  }
+
+  .rightImageDiv{
+    margin-left: 9px !important;
   }
 
 }
@@ -786,5 +823,54 @@
   .FeatureBox{
     flex-direction: column !important;
     width: 100%;
+  }
+
+  //FEATURE IMAGES
+
+  .FeaturesImagesDiv{
+    flex-direction: column;
+    .tablet,.desktop{
+      display: none;
+    }
+
+    .mobile{
+      display: block;
+    }
+
+
+    .LefImageDiv{
+      width: 100% !important;
+      
+    }
+
+    .secondImageDiv{
+      margin-top: 10px;
+    }
+  
+    .rightImageDiv{
+      width: 100% !important;
+      margin-left: unset !important;
+      margin-top: 10px;
+    }
+  }
+
+  //ALSO LIKE
+
+  .alsoLike{
+    .tablet,.desktop{
+      display: none;
+    }
+
+    .mobile{
+      display: block;
+    }
+    .likeDiv{
+      flex-direction: column;
+    }
+
+    .eachLike{
+      width: 100%;
+      margin-bottom: 24px;
+    }
   }
 }

@@ -1220,4 +1220,99 @@ nav{
   text-transform:capitalize;
 }
 
+
+//PRODUCT IMAGES
+
+.FeaturesImagesDiv{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 24px;
+
+
+  img{
+    display: block;
+  }
+
+
+  .LefImageDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 57%;
+  }
+
+  // .firstImageDiv{
+  //   height: 49%;
+  // }
+  // .secondImageDiv{
+  //   height: 49%;
+  // }
+
+  .rightImageDiv{
+    width: 80%;
+    margin-left: 20px;
+  }
+
+  .tablet,.mobile{
+    display: none
+  }
+
+}
+
+
+//ALSO LIKES
+
+
+.alsoLike{
+
+  width: 80%;
+  margin: 48px auto auto auto;
+
+  h4{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .likeDiv{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .eachLike{
+    display: flex;
+    width: 32%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobile,.tablet{
+    display: none;
+  }
+
+  .likeName{
+    font-size: 19px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .likeLink{
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: $orange;
+    cursor: pointer;
+    
+  }
+
+  button{
+    background: none !important;
+    color: $gray;
+    cursor: pointer;
+  }
+}
+
 @import "mediaQueries";

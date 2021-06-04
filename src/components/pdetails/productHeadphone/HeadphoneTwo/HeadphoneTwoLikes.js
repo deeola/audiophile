@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
+import {Link} from 'react-router-dom';
 import firstimagedesktop from "../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
 import secondimagedesktop from "../../../../assets/shared/desktop/image-xx59-headphones.jpg";
 import thirdimagedesktop from "../../../../assets/shared/desktop/image-zx9-speaker.jpg";
-
 
 function HeadphoneTwoLikes(props) {
   const AudioContexts = useContext(audioContext);
@@ -19,53 +19,90 @@ function HeadphoneTwoLikes(props) {
     // eslint-disable-next-line
   }, []);
   return (
-    <div>
+    <div className="alsoLike">
       <h4>YOU MAY ALSO LIKE</h4>
-      <div style={{ display: "flex", margin: "auto", width: "80%" }}>
-        <div
-          style={{
-            width: "30%",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <img src={require('../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}} src={require('../../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}} src={require('../../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg').default} alt="imagedesktop"></img>
-          <p>{others !== undefined ? others[0].name : null}</p>
-          <button>SEE PRODUCT</button>
+      <div className="likeDiv">
+        <div className="eachLike">
+          <img className='desktop'
+
+            src={
+              require("../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='tablet'
+            src={
+              require("../../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='mobile' 
+            src={
+              require("../../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <p className='likeName'>{others !== undefined ? others[0].name : null}</p>
+          <Link className='likeLink' to='/xx99-mark-one'><button>SEE PRODUCT</button></Link>
         </div>
-        <div
-          style={{
-            width: "30%",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <img src={require('../../../../assets/shared/desktop/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}}  src={require('../../../../assets/shared/tablet/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}}  src={require('../../../../assets/shared/mobile/image-xx59-headphones.jpg').default} alt="imagedesktop"></img>
-          <p>{others !== undefined ? others[1].name : null}</p>
-          <button>SEE PRODUCT</button>
+        <div className="eachLike">
+          <img className='desktop'
+            src={
+              require("../../../../assets/shared/desktop/image-xx59-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='tablet'
+            src={
+              require("../../../../assets/shared/tablet/image-xx59-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='mobile' 
+            src={
+              require("../../../../assets/shared/mobile/image-xx59-headphones.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <p className='likeName'>{others !== undefined ? others[1].name : null}</p>
+          <Link className='likeLink' to='/xx59'><button>SEE PRODUCT</button></Link>
         </div>
-        <div
-          style={{
-            width: "30%",
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <img src={require('../../../../assets/shared/desktop/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}}  src={require('../../../../assets/shared/tablet/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
-          <img style={{display:'none'}}  src={require('../../../../assets/shared/mobile/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
-          <p>{others !== undefined ? others[2].name : null}</p>
-          <button>SEE PRODUCT</button>
+        <div className="eachLike">
+          <img className='desktop'
+            src={
+              require("../../../../assets/shared/desktop/image-zx9-speaker.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='tablet'
+            src={
+              require("../../../../assets/shared/tablet/image-zx9-speaker.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <img
+            className='mobile' 
+            src={
+              require("../../../../assets/shared/mobile/image-zx9-speaker.jpg")
+                .default
+            }
+            alt="imagedesktop"
+          ></img>
+          <p className='likeName'>{others !== undefined ? others[2].name : null}</p>
+          <Link className='likeLink' to='/zx9'><button>SEE PRODUCT</button></Link>
         </div>
       </div>
     </div>

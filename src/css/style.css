@@ -1102,6 +1102,82 @@ nav {
   text-transform: capitalize;
 }
 
+.FeaturesImagesDiv {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.FeaturesImagesDiv img {
+  display: block;
+}
+
+.FeaturesImagesDiv .LefImageDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 57%;
+}
+
+.FeaturesImagesDiv .rightImageDiv {
+  width: 80%;
+  margin-left: 20px;
+}
+
+.FeaturesImagesDiv .tablet, .FeaturesImagesDiv .mobile {
+  display: none;
+}
+
+.alsoLike {
+  width: 80%;
+  margin: 48px auto auto auto;
+}
+
+.alsoLike h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alsoLike .likeDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alsoLike .eachLike {
+  display: flex;
+  width: 32%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alsoLike .mobile, .alsoLike .tablet {
+  display: none;
+}
+
+.alsoLike .likeName {
+  font-size: 19px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.alsoLike .likeLink {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #d87d4a;
+  cursor: pointer;
+}
+
+.alsoLike button {
+  background: none !important;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
 @media (max-width: 973px) {
   body .rectangle {
     width: 90%;
@@ -1117,6 +1193,9 @@ nav {
   }
   body .gearmaintitle span {
     color: #d87d4a;
+  }
+  body .rightImageDiv {
+    margin-left: 15px;
   }
 }
 
@@ -1433,6 +1512,21 @@ nav {
   .FeatureBox .divFeat {
     width: 50%;
   }
+  .FeaturesImagesDiv .mobile, .FeaturesImagesDiv .desktop {
+    display: none;
+  }
+  .FeaturesImagesDiv .tablet {
+    display: block;
+  }
+  .FeaturesImagesDiv .rightImageDiv {
+    margin-left: 12px;
+  }
+  .alsoLike .desktop, .alsoLike .mobile {
+    display: none;
+  }
+  .alsoLike .tablet {
+    display: block;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1441,6 +1535,9 @@ nav {
   }
   .earphoneText button {
     width: 120px !important;
+  }
+  .rightImageDiv {
+    margin-left: 9px !important;
   }
 }
 
@@ -1660,5 +1757,38 @@ nav {
   .FeatureBox {
     flex-direction: column !important;
     width: 100%;
+  }
+  .FeaturesImagesDiv {
+    flex-direction: column;
+  }
+  .FeaturesImagesDiv .tablet, .FeaturesImagesDiv .desktop {
+    display: none;
+  }
+  .FeaturesImagesDiv .mobile {
+    display: block;
+  }
+  .FeaturesImagesDiv .LefImageDiv {
+    width: 100% !important;
+  }
+  .FeaturesImagesDiv .secondImageDiv {
+    margin-top: 10px;
+  }
+  .FeaturesImagesDiv .rightImageDiv {
+    width: 100% !important;
+    margin-left: unset !important;
+    margin-top: 10px;
+  }
+  .alsoLike .tablet, .alsoLike .desktop {
+    display: none;
+  }
+  .alsoLike .mobile {
+    display: block;
+  }
+  .alsoLike .likeDiv {
+    flex-direction: column;
+  }
+  .alsoLike .eachLike {
+    width: 100%;
+    margin-bottom: 24px;
   }
 }
