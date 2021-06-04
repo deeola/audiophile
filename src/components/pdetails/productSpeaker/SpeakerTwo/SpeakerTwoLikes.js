@@ -22,8 +22,8 @@ function SpeakerTwoLikes(props) {
       <div className='likeDiv'>
         <div className='eachLike'>
           <img className='desktop' src={require('../../../../assets/shared/desktop/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
-          <img className='tablet' src={require('../../../../assets/shared/desktop/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
-          <img className='mobile' src={require('../../../../assets/shared/desktop/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
+          <img className='tablet' src={require('../../../../assets/shared/tablet/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
+          <img className='mobile' src={require('../../../../assets/shared/mobile/image-zx9-speaker.jpg').default} alt="imagedesktop"></img>
           <p className='likeName'>{others !== undefined ? others[0].name : null}</p>
           <Link className='likeLink' to='/zx9'><button>SEE PRODUCT</button></Link>
         </div>

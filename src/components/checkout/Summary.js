@@ -42,14 +42,14 @@ function Summary(props) {
                 justifyContent: "space-between",
               }}
             >
-              {/* image, name and price here */}
+
 
               <div style={{ width: "20px", marginRight: "10px" }}>
-                {/* image */}
+
                 <img src={sampleimage} alt="smallimage"></img>
               </div>
               <div>
-                {/* name and price here */}
+
                 <p>{item.name}</p>
                 {summaryItems.length !== 0 && (
                   <>

@@ -13,6 +13,21 @@ html {
   min-height: 100%;
 }
 
+body i {
+  font-family: "FontAwesome" !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 nav {
   width: 100%;
   align-items: center;
@@ -1812,7 +1827,7 @@ nav {
   }
   .earphonesDiv .earphoneTextDiv {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0px !important;
     margin-top: 1rem;
   }
   .earphonesDiv .earphoneTextDiv .earphoneText {

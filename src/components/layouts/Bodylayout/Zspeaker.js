@@ -6,7 +6,7 @@ function Zspeaker(props) {
         <div className='zspeakermain'>
             <div className='zspeakerDiv'>
                 <p className='zspeakertitle'>ZX7 SPEAKER</p>
-                <button><Link to='/zx7' className='shopTextLinkSecond'>SEE PRODUCT</Link> </button>
+                <Link  to='/zx7' className='shopTextLinkSecond'><button>SEE PRODUCT</button> </Link>
             </div>
         </div>
     )
