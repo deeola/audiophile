@@ -34,22 +34,23 @@ nav {
 
 .footerNav,
 .navContainer {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .footerNav ul,
 .navContainer ul {
-  display: flex;
-  justify-content: space-between;
   color: #ffffff;
-  align-items: center;
-  align-items: center;
   width: 50%;
   margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footerNav ul .mylink,
@@ -57,12 +58,12 @@ nav {
 .navContainer ul .mylink,
 .navContainer ul li {
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13px;
   list-style: none;
   text-decoration: none;
-  color: #f1f1f1;
   margin-left: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #f1f1f1;
 }
 
 .footerNav ul .mylink:hover,
@@ -114,11 +115,13 @@ nav {
 }
 
 .heroContainer {
-  display: flex;
   width: 80%;
   min-height: 100%;
   margin: auto;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -136,37 +139,38 @@ nav {
 }
 
 .heroText {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align: left;
   position: relative;
   top: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
 }
 
 .heroText .productPara {
   opacity: 0.5;
   text-transform: uppercase;
   letter-spacing: 10px;
-  color: #ffffff;
   text-align: left;
-  font-size: 1rem;
   margin-bottom: 17px;
+  font-weight: unset;
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 .heroText h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
   line-height: 45px;
   letter-spacing: 2px;
-  color: #ffffff;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #ffffff;
 }
 
 .heroText .productDescr {
-  font-weight: 500px;
-  font-size: .9rem;
   line-height: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: #fafafa;
 }
 
@@ -179,11 +183,12 @@ nav {
   height: 48px;
   margin-top: 48px;
   background-color: #d87d4a;
-  color: #ffffff;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 15px;
   cursor: pointer;
+  font-weight: unset;
+  font-size: 15px;
+  color: #ffffff;
 }
 
 .heroText button:hover {
@@ -201,12 +206,13 @@ nav {
 }
 
 .firstSection {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-top: 2rem;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .firstSection .shopSection {
@@ -214,8 +220,8 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 48px;
 }
 
@@ -268,16 +274,17 @@ nav {
 .firstSection .shopSection .shopTextDiv .shopText {
   text-align: center;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .firstSection .shopSection .shopTextDiv span {
-  color: #d87d4a;
   cursor: pointer;
   margin-left: 3px;
   font-weight: 700;
   font-size: 22px;
+  color: #d87d4a;
 }
 
 .secondSection .imagetab {
@@ -300,11 +307,13 @@ nav {
 }
 
 .secondSection .secondTextDiv .sdMainText {
+  font-weight: unset;
   font-size: 56px;
   color: #fafafa;
 }
 
 .secondSection .secondTextDiv .sdproductDescr {
+  font-weight: unset;
   font-size: 15px;
   color: #f1f1f1;
   margin-top: 10px;
@@ -340,8 +349,9 @@ nav {
 }
 
 .zspeakermain .zspeakerDiv .zspeakertitle {
-  font-size: 28px;
   font-weight: 700;
+  font-size: 28px;
+  color: unset;
 }
 
 .zspeakermain .zspeakerDiv button {
@@ -353,10 +363,11 @@ nav {
 }
 
 .earphonesDiv {
-  display: flex;
   width: 80%;
-  margin: auto;
   margin: auto auto 48px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -378,8 +389,9 @@ nav {
   background-color: #f1f1f1;
   width: 49%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText {
@@ -387,6 +399,8 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: unset;
+  justify-content: unset;
   padding-left: 1em;
 }
 
@@ -394,6 +408,7 @@ nav {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2rem;
+  color: unset;
 }
 
 .earphonesDiv .earphoneTextDiv .earphoneText button {
@@ -409,10 +424,10 @@ nav {
 }
 
 .Gear {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-bottom: 48px;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -421,7 +436,9 @@ nav {
 .Gear .GearTextDiv {
   width: 40%;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: unset;
 }
 
 .Gear .GearTextDiv .ggtext {
@@ -429,10 +446,11 @@ nav {
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle {
-  font-weight: 700;
   text-transform: uppercase;
-  font-size: 2.3rem;
   margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: unset;
 }
 
 .Gear .GearTextDiv .ggtext .gearmaintitle span {
@@ -465,37 +483,41 @@ nav {
 }
 
 .footer .footerSecondDiv {
-  display: flex;
   width: 80%;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
 .footer .footerSecondDiv .footerSecondText {
   width: 40%;
   line-height: 24px;
-  font-size: 14px;
   margin-top: 40px;
-  color: #f1f1f1;
   font-weight: 500;
+  font-size: 14px;
+  color: #f1f1f1;
 }
 
 .copyIcon {
-  display: flex;
   width: 80%;
   margin: auto;
-  justify-content: space-between;
   margin-top: 10px;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   position: relative;
   right: 60px;
   width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .icons .iconDiv {
@@ -528,8 +550,9 @@ nav {
 .headers {
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .HeadphoneGear {
@@ -538,10 +561,12 @@ nav {
 }
 
 .HeadphoneSection {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-top: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -553,7 +578,8 @@ nav {
   display: block;
 }
 
-.HeadImageOne .tablet, .HeadImageOne .mobile {
+.HeadImageOne .tablet,
+.HeadImageOne .mobile {
   display: none;
 }
 
@@ -561,18 +587,13 @@ nav {
   width: 45%;
 }
 
-.sectionOne {
-  padding: 0rem 1rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
+.sectionOne,
 .sectionTwo {
   padding: 0rem 1rem;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: unset;
+  justify-content: center;
 }
 
 .newProductSec {
@@ -606,8 +627,9 @@ nav {
   height: 40px;
   text-decoration: none;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .HeadphoneMain .Gear,
@@ -631,8 +653,9 @@ nav {
 }
 
 .countCart {
-  color: #d87d4a;
   font-weight: 700;
+  font-size: unset;
+  color: #d87d4a;
   text-decoration: none;
 }
 
@@ -651,6 +674,7 @@ nav {
 
 .bucketAddition {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -664,8 +688,9 @@ nav {
   background-color: #d87d4a;
   height: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   color: white;
   text-decoration: none;
   margin-top: 30px;
@@ -690,24 +715,26 @@ nav {
 }
 
 .form-inputss {
-  display: flex;
-  justify-content: space-between;
   width: 80%;
   margin: 20px auto 40px auto;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
 }
 
 .form-inputss .inputTitles {
-  color: #d87d4a;
   font-weight: 700;
   font-size: 14px;
+  color: #d87d4a;
   margin-bottom: 10px;
 }
 
 .form-inputss .error {
-  color: #d87d4a;
-  font-size: 12px;
   font-weight: 700;
+  font-size: 12px;
+  color: #d87d4a;
 }
 
 .PersonalDetails {
@@ -718,6 +745,8 @@ nav {
 
 .PersonalDetails .nameEmail {
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
   width: 100%;
 }
@@ -728,8 +757,9 @@ nav {
 
 .PersonalDetails .nameEmail .formControl .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .nameEmail .formControl input {
@@ -754,8 +784,9 @@ nav {
 
 .PersonalDetails .phoneNumber .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .phoneNumber input {
@@ -784,8 +815,9 @@ nav {
 
 .PersonalDetails .shippingInfo .address .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .shippingInfo .address input {
@@ -805,18 +837,22 @@ nav {
 
 .PersonalDetails .shippingInfo .zipCity {
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
   width: 100%;
 }
 
-.PersonalDetails .shippingInfo .zipCity .zip, .PersonalDetails .shippingInfo .zipCity .city {
+.PersonalDetails .shippingInfo .zipCity .zip,
+.PersonalDetails .shippingInfo .zipCity .city {
   width: 48%;
 }
 
 .PersonalDetails .shippingInfo .zipCity .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .shippingInfo .zipCity input {
@@ -841,8 +877,9 @@ nav {
 
 .PersonalDetails .shippingInfo .country .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .shippingInfo .country input {
@@ -865,8 +902,10 @@ nav {
 }
 
 .PersonalDetails .paymentDetails .paymentMethodDiv {
-  display: flex;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -875,13 +914,15 @@ nav {
 }
 
 .PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv .radios {
-  display: flex;
   height: 40px;
-  align-items: center;
   border: 1px solid gray;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset;
 }
 
 .PersonalDetails .paymentDetails .paymentMethodDiv .radioDiv .radios:active {
@@ -902,13 +943,17 @@ nav {
 
 .PersonalDetails .paymentDetails .EmoneyText {
   width: 100%;
-  display: flex;
   margin: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: unset;
 }
 
 .PersonalDetails .paymentDetails .EmoneyText i {
   width: 20%;
+  font-weight: unset;
   font-size: 60px;
   color: #d87d4a;
 }
@@ -918,13 +963,16 @@ nav {
 }
 
 .PersonalDetails .paymentDetails .NumberPin {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
 }
 
-.PersonalDetails .paymentDetails .NumberPin .moneyNumber, .PersonalDetails .paymentDetails .NumberPin .MoneyPin {
+.PersonalDetails .paymentDetails .NumberPin .moneyNumber,
+.PersonalDetails .paymentDetails .NumberPin .MoneyPin {
   width: 48%;
 }
 
@@ -934,8 +982,9 @@ nav {
 
 .PersonalDetails .paymentDetails .NumberPin .formControl .labelError {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .PersonalDetails .paymentDetails .NumberPin .formControl input {
@@ -971,6 +1020,8 @@ nav {
 .summary .eachItemDiv {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
   margin-top: 20px;
 }
@@ -980,11 +1031,12 @@ nav {
 }
 
 .summary .priceShipping {
-  display: flex;
-  justify-content: space-between;
   margin-top: 20px;
-  align-items: center;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .summary .pricetitle {
@@ -1041,6 +1093,8 @@ nav {
 
 .SuccessMain .grandImg {
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -1125,11 +1179,12 @@ nav {
 
 .addandremove {
   background-color: #f1f1f1;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
   width: 38%;
   padding: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .addandremove p {
@@ -1142,14 +1197,18 @@ nav {
 
 .buttonAddandRemove {
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
   width: 70%;
 }
 
 .FeatureDiv {
-  margin: 24px  auto;
+  margin: 24px auto;
   width: 80%;
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
@@ -1173,10 +1232,11 @@ nav {
 }
 
 .boxquantity {
-  color: #d87d4a;
   margin-right: 10px;
-  font-weight: 700;
   text-transform: capitalize;
+  font-weight: 700;
+  font-size: unset;
+  color: #d87d4a;
 }
 
 .FeaturesImagesDiv {
@@ -1192,7 +1252,9 @@ nav {
 
 .FeaturesImagesDiv .LefImageDiv {
   display: flex;
+  display: flex;
   flex-direction: column;
+  align-items: unset;
   justify-content: space-between;
   width: 57%;
 }
@@ -1202,7 +1264,8 @@ nav {
   margin-left: 20px;
 }
 
-.FeaturesImagesDiv .tablet, .FeaturesImagesDiv .mobile {
+.FeaturesImagesDiv .tablet,
+.FeaturesImagesDiv .mobile {
   display: none;
 }
 
@@ -1218,28 +1281,32 @@ nav {
 
 .alsoLike .likeDiv {
   display: flex;
+  flex-direction: row;
+  align-items: unset;
   justify-content: space-between;
 }
 
 .alsoLike .eachLike {
-  display: flex;
   width: 32%;
-  align-items: center;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.alsoLike .mobile, .alsoLike .tablet {
+.alsoLike .mobile,
+.alsoLike .tablet {
   display: none;
 }
 
 .alsoLike .likeName {
-  font-size: 19px;
-  font-weight: 700;
   width: 100%;
   text-align: center;
   margin-top: 10px;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 19px;
+  color: #d87d4a;
 }
 
 .alsoLike .likeLink {
@@ -1288,7 +1355,7 @@ nav {
   body .Bucket {
     width: 60%;
     left: 40%;
-    top: .7%;
+    top: 0.7%;
   }
   body .productBody .firstSection {
     margin-top: unset !important;
@@ -1311,8 +1378,9 @@ nav {
   }
   body .navContainer .logo-ham {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   body .navContainer .logo-ham .hamburger {
     display: block;
@@ -1322,6 +1390,8 @@ nav {
   body .Header {
     background-image: url("../assets/home/tablet/image-header.jpg");
     display: flex;
+    flex-direction: row;
+    align-items: unset;
     justify-content: center;
     background-position: center;
     background-size: cover;
@@ -1386,8 +1456,9 @@ nav {
   }
   .secondSection .zxspeaker {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   .secondSection .imagetab {
     display: block;
@@ -1427,9 +1498,7 @@ nav {
   .Gear .tabgear {
     display: block;
   }
-  .Gear .mobilegear {
-    display: none;
-  }
+  .Gear .mobilegear,
   .Gear .gearImageDiv {
     display: none;
   }
@@ -1442,8 +1511,9 @@ nav {
     margin: auto;
   }
   .footerNav {
-    flex-direction: column;
     text-align: left;
+    display: flex;
+    flex-direction: column;
     align-items: unset;
     justify-content: left;
   }
@@ -1498,7 +1568,8 @@ nav {
   .HeadphoneSection .HeadImageOne img {
     display: block;
   }
-  .HeadphoneSection .HeadImageOne .desktop, .HeadphoneSection .HeadImageOne .mobile {
+  .HeadphoneSection .HeadImageOne .desktop,
+  .HeadphoneSection .HeadImageOne .mobile {
     display: none;
   }
   .HeadphoneSection .newProductSec {
@@ -1507,7 +1578,8 @@ nav {
   .HeadphoneSection .SectionText {
     width: 100%;
   }
-  .HeadphoneSection .sectionOne, .HeadphoneSection .sectionTwo {
+  .HeadphoneSection .sectionOne,
+  .HeadphoneSection .sectionTwo {
     align-items: center;
   }
   .HeadphoneSection .sectionPara {
@@ -1534,7 +1606,8 @@ nav {
   .productSection .HeadImageOne img {
     display: block;
   }
-  .productSection .HeadImageOne .desktop, .productSection .HeadImageOne .mobile {
+  .productSection .HeadImageOne .desktop,
+  .productSection .HeadImageOne .mobile {
     display: none;
   }
   .productSection .newProductSec {
@@ -1547,7 +1620,8 @@ nav {
     width: 50%;
     text-align: left;
   }
-  .productSection .sectionOne, .productSection .sectionTwo {
+  .productSection .sectionOne,
+  .productSection .sectionTwo {
     align-items: center;
   }
   .productSection .sectionPara {
@@ -1588,10 +1662,11 @@ nav {
     margin-bottom: 10px;
   }
   .FeatureBox {
-    display: flex;
     width: 100%;
-    justify-content: space-between;
+    display: flex;
     flex-direction: row;
+    align-items: unset;
+    justify-content: space-between;
   }
   .FeatureBox h4 {
     width: 50%;
@@ -1600,7 +1675,8 @@ nav {
   .FeatureBox .divFeat {
     width: 50%;
   }
-  .FeaturesImagesDiv .mobile, .FeaturesImagesDiv .desktop {
+  .FeaturesImagesDiv .mobile,
+  .FeaturesImagesDiv .desktop {
     display: none;
   }
   .FeaturesImagesDiv .tablet {
@@ -1609,7 +1685,8 @@ nav {
   .FeaturesImagesDiv .rightImageDiv {
     margin-left: 12px;
   }
-  .alsoLike .desktop, .alsoLike .mobile {
+  .alsoLike .desktop,
+  .alsoLike .mobile {
     display: none;
   }
   .alsoLike .tablet {
@@ -1743,6 +1820,8 @@ nav {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: unset;
+    justify-content: unset;
     padding-left: 3em;
   }
   .earphonesDiv .earphoneTextDiv .earphoneText p {
@@ -1769,12 +1848,6 @@ nav {
   }
   .mobilegear {
     display: block !important;
-  }
-  .GearTextDiv {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
   }
   .GearTextDiv .ggtext {
     position: relative;
@@ -1805,17 +1878,17 @@ nav {
   }
   .footerSecondDiv {
     width: 100% !important;
-    align-items: center;
-    justify-content: center;
   }
   .footerSecondDiv .footerSecondText {
     width: 90% !important;
     margin: auto;
   }
   .copyIcon {
-    flex-direction: column;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: unset;
     margin-top: 20px;
   }
   .icons {
@@ -1824,7 +1897,8 @@ nav {
     width: 30% !important;
     margin-top: 10px;
   }
-  .HeadImageOne .desktop, .HeadImageOne .tablet {
+  .HeadImageOne .desktop,
+  .HeadImageOne .tablet {
     display: none !important;
   }
   .HeadImageOne .mobile {
@@ -1867,7 +1941,8 @@ nav {
   .FeaturesImagesDiv {
     flex-direction: column;
   }
-  .FeaturesImagesDiv .tablet, .FeaturesImagesDiv .desktop {
+  .FeaturesImagesDiv .tablet,
+  .FeaturesImagesDiv .desktop {
     display: none;
   }
   .FeaturesImagesDiv .mobile {
@@ -1884,7 +1959,8 @@ nav {
     margin-left: unset !important;
     margin-top: 10px;
   }
-  .alsoLike .tablet, .alsoLike .desktop {
+  .alsoLike .tablet,
+  .alsoLike .desktop {
     display: none;
   }
   .alsoLike .mobile {
@@ -1913,7 +1989,8 @@ nav {
     flex-direction: column;
     width: 100%;
   }
-  .PersonalDetails .zipCity .zip, .PersonalDetails .zipCity .city {
+  .PersonalDetails .zipCity .zip,
+  .PersonalDetails .zipCity .city {
     width: 100% !important;
   }
   .PersonalDetails .country {
@@ -1928,7 +2005,8 @@ nav {
   .NumberPin {
     flex-direction: column;
   }
-  .NumberPin .moneyNumber, .NumberPin .MoneyPin {
+  .NumberPin .moneyNumber,
+  .NumberPin .MoneyPin {
     width: 100% !important;
   }
   .EmoneyText {

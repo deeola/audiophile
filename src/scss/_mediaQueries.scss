@@ -1,67 +1,56 @@
-@media (max-width: 973px){
-  body{
-
-    .rectangle{
+@media (max-width: 973px) {
+  body {
+    .rectangle {
       width: 90%;
     }
 
-    .heroContainer{
+    .heroContainer {
       width: 90%;
     }
 
     .SectionMainTitle {
-
       font-size: 1.7rem;
-      // margin-top: 5px;
     }
 
     .gearmaintitle {
-
       font-size: 1.5rem !important;
-      
+
       span {
         color: $orange;
       }
     }
 
-    .rightImageDiv{
+    .rightImageDiv {
       margin-left: 15px;
     }
   }
-
 }
-
 
 @media (max-width: 802px) {
   body {
-
-
-    .Bucket{
+    .Bucket {
       width: 60%;
       left: 40%;
-      top: .7%;
+      top: 0.7%;
     }
-    .productBody{
-
-  
-  
-      .firstSection{
+    .productBody {
+      .firstSection {
         margin-top: unset !important;
       }
     }
 
-    .secondlayer{
+    .secondlayer {
       display: block;
       position: absolute;
       width: 100%;
       height: 100%;
-      top:65px;
+      top: 65px;
       left: 0;
       z-index: 900;
       background-color: rgba(0, 0, 0, 0.76);
     }
 
-    .herowrapper{
+    .herowrapper {
       display: none;
     }
     .navContainer {
@@ -70,9 +59,7 @@
       }
 
       .logo-ham {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include FlexCenter(row, center, center);
 
         .hamburger {
           display: block;
@@ -84,11 +71,10 @@
 
     .Header {
       background-image: url("../assets/home/tablet/image-header.jpg");
-      display: flex;
-      justify-content: center;
+      @include FlexCenter(row, unset, center);
       background-position: center;
-      background-size:cover;
-      background-attachment:fixed;
+      background-size: cover;
+      background-attachment: fixed;
       height: 800px;
     }
   }
@@ -98,7 +84,7 @@
     top: 150px;
   }
 
-  .menu{
+  .menu {
     position: relative;
     top: 70px !important ;
   }
@@ -131,26 +117,20 @@
   .firstSection {
     margin-top: 1rem;
     .shopSection {
-
-
-      .imageheadphones{
-
+      .imageheadphones {
         top: 11px;
       }
 
-      .imagespeakers{
-
+      .imagespeakers {
         top: 12px;
       }
 
-      .imageearphones{
+      .imageearphones {
         top: 16px;
       }
 
-
-
       .shopImageDiv {
-        width: 90px;;
+        width: 90px;
         margin-bottom: 0px;
       }
 
@@ -170,14 +150,11 @@
     margin-top: 28px !important;
     padding-top: 50px;
 
-
     .imagedesktop {
       display: none;
     }
     .zxspeaker {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include FlexCenter(row, center, center);
     }
     .imagetab {
       display: block;
@@ -190,14 +167,13 @@
     }
   }
 
-  .zspeakermain{
+  .zspeakermain {
     margin: 28px auto 28px auto !important;
   }
   //Third Section
 
   .earphonesDiv {
     margin-bottom: 28px;
-
 
     .earphonestab {
       display: block;
@@ -224,14 +200,11 @@
   .Gear {
     flex-direction: column;
     margin-top: 10px !important;
-    
+
     .tabgear {
       display: block;
     }
-    .mobilegear {
-      display: none;
-    }
-
+    .mobilegear,
     .gearImageDiv {
       display: none;
     }
@@ -250,10 +223,8 @@
   //Footer
 
   .footerNav {
-    flex-direction: column;
     text-align: left;
-    align-items: unset;
-    justify-content: left;
+    @include FlexCenter(column, unset, left);
 
     .logo-ham {
       justify-content: left;
@@ -268,23 +239,21 @@
       margin-right: unset !important;
       width: 100%;
 
-      .mylink{
+      .mylink {
         margin-left: 0px;
         margin-right: 10px;
       }
     }
   }
 
-  .footerSecondDiv{
+  .footerSecondDiv {
     margin-bottom: 24px !important;
 
-    .footerSecondText{
+    .footerSecondText {
       width: 100% !important;
       font-size: 12px !important;
     }
   }
-
-
 
   .icons {
     align-items: center;
@@ -297,72 +266,68 @@
     font-size: 14px !important;
   }
 
-  .menu{
+  .menu {
     display: block;
     position: absolute;
     background: $very-light-gray;
     top: 60px;
     left: 0;
     width: 100%;
-
   }
 
   //HEADPHONE SECTION
 
-  .HeadphoneSection{
+  .HeadphoneSection {
     flex-direction: column;
     align-items: center !important;
     text-align: center;
 
     .HeadImageOne {
-      width: 100% ;
+      width: 100%;
       img {
         display: block;
       }
 
-      .desktop,.mobile{
+      .desktop,
+      .mobile {
         display: none;
       }
     }
 
-    .newProductSec{
+    .newProductSec {
       margin-top: 12px;
     }
 
     .SectionText {
       width: 100%;
-    
     }
 
-    .sectionOne,.sectionTwo{
+    .sectionOne,
+    .sectionTwo {
       align-items: center;
     }
 
-    .sectionPara{
+    .sectionPara {
       font-size: 16px !important;
     }
 
-    .SectionMainTitle{
+    .SectionMainTitle {
       font-size: 1.3rem !important;
     }
 
     .sectionButton {
-
       width: 140px !important;
       margin-bottom: 20px;
     }
 
-    .sectionTwo{
+    .sectionTwo {
       order: 1;
     }
-
-    
   }
-
 
   //Headphone product detail
 
-  .productSection{
+  .productSection {
     flex-direction: row !important;
 
     align-items: center !important;
@@ -374,12 +339,13 @@
         display: block;
       }
 
-      .desktop,.mobile{
+      .desktop,
+      .mobile {
         display: none;
       }
     }
 
-    .newProductSec{
+    .newProductSec {
       margin-top: 0px !important;
       font-size: 10px;
       text-align: left;
@@ -389,629 +355,147 @@
     .SectionText {
       width: 50%;
       text-align: left;
-    
     }
 
-    .sectionOne,.sectionTwo{
+    .sectionOne,
+    .sectionTwo {
       align-items: center;
     }
 
-    .sectionPara{
+    .sectionPara {
       font-size: 10px !important;
       line-height: unset;
     }
 
-    .SectionMainTitle{
+    .SectionMainTitle {
       font-size: 1rem !important;
       width: 100%;
       margin: 10px 0px !important;
     }
 
     .sectionButton {
-
       width: 140px !important;
       margin-bottom: unset !important;
     }
 
-    .buttonAddandRemove{
+    .buttonAddandRemove {
       width: 100%;
     }
 
-    .price{
+    .price {
       width: 100%;
       text-align: left;
     }
 
-    .onAddbutton{
-      width: 45%;
-      padding: 5px !important;
-      font-size: 10px !important;
-      
-    }
-    
-    .addandremove{
+    .onAddbutton {
       width: 45%;
       padding: 5px !important;
       font-size: 10px !important;
     }
-    
 
-    // .sectionTwo{
-    //   order: 1;
-    // }
+    .addandremove {
+      width: 45%;
+      padding: 5px !important;
+      font-size: 10px !important;
+    }
   }
-
 
   //FEATURES BOX
 
-  .FeatureDiv{
+  .FeatureDiv {
     flex-direction: column;
   }
-  .featureDescription{
+  .featureDescription {
     width: 100%;
     margin-bottom: 10px;
   }
-  .FeatureBox{
-    display: flex;
+  .FeatureBox {
     width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
-    
-    h4{
+    @include FlexCenter(row, unset, space-between);
+
+    h4 {
       width: 50%;
       margin-top: 7px;
     }
 
-    .divFeat{
+    .divFeat {
       width: 50%;
     }
   }
 
-
   //FEATURE IMAGES
 
-  .FeaturesImagesDiv{
-    .mobile,.desktop{
+  .FeaturesImagesDiv {
+    .mobile,
+    .desktop {
       display: none;
     }
 
-    .tablet{
+    .tablet {
       display: block;
     }
 
-    .rightImageDiv{
+    .rightImageDiv {
       margin-left: 12px;
     }
   }
 
   //ALSO LIKE
 
-  .alsoLike{
-    .desktop,.mobile{
+  .alsoLike {
+    .desktop,
+    .mobile {
       display: none;
     }
 
-    .tablet{
+    .tablet {
       display: block;
     }
   }
 
   //FORM IMPUTs
 
-  .form-inputss{
+  .form-inputss {
     flex-direction: column;
   }
 
   .PersonalDetails {
     width: 100%;
   }
-  .summary{
+  .summary {
     width: 100%;
 
-    .pricetotal{
-      color:  $orange;
+    .pricetotal {
+      color: $orange;
     }
   }
 
   //SUCCESS MODAL
 
-  .SuccessMain{
-    top:8rem;
-    left:2.5rem;
+  .SuccessMain {
+    top: 8rem;
+    left: 2.5rem;
     width: 90%;
     padding: 40px;
   }
 }
 
-
-
-
-
-
-
-
-
-@media (max-width:650px) {
+@media (max-width: 650px) {
   .earphoneText {
-
     p {
       font-size: 1.3rem !important;
     }
 
-    button{
+    button {
       width: 120px !important;
     }
   }
 
-  .rightImageDiv{
+  .rightImageDiv {
     margin-left: 9px !important;
   }
-
 }
 
 //MOBILE
 
-@media (max-width: 490px) {
-
-  .Bucket{
-    width: 90% !important;
-    left: 20% !important;
-    margin-left: -63px !important;
-  }
-  nav {
-    .logo-ham {
-      .hamburger {
-        display: block;
-        margin-right: 10000px;
-      }
-    }
-  }
-
-  .Header {
-    background-image: url("../assets/home/mobile/image-header.jpg") !important;
-    background-size: cover;
-  }
-
-  .herowrapper {
-    width: 80%;
-    position: relative;
-    height: 346px;
-    top: 180px;
-  }
-
-  h1 {
-    font-size: 36px !important;
-  }
-
-  .productPara {
-    font-size: 14px;
-  }
-
-  //FIRST SECTION
-
-  .firstSection {
-    flex-direction: column;
-  }
-
-  .shopSection {
-    width: 100% !important;
-
-    .imageheadphones{
-
-      top: 15px !important;
-    }
-
-    .imagespeakers{
-
-      top: 15px !important;
-    }
-
-    .imageearphones{
-      top: 20px !important;
-    }
-  }
-
-  .shopImageDiv {
-    top: -5% !important;
-  }
-
-  //Second div
-
-  .secondSection {
-    width: 80%;
-
-
-  }
-
-  .imagedesktop {
-    width: 40% !important;
-    background-color: violet !important;
-  }
-
-  .secondTextDiv {
-    width: 80% !important;
-    height: unset !important;
-  }
-
-  .sdMainText {
-    font-size: 36px !important;
-  }
-
-  .sdproductDescr {
-    font-size: 10px !important;
-    width: 100%;
-    display: inline-block;
-  }
-
-  //Third Div
-
-  .zspeakermain {
-    height: unset !important;
-    background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
-    margin: 28px auto 0px auto !important;
-    padding: 50px 10px;
-  }
-
-  .zspeakerDiv {
-    width: 204px !important;
-    height: 118px !important;
-    position: unset !important;
-
-    .zspeakertitle {
-      font-size: 28px !important;
-    }
-  }
-
-  //earphones section
-
-  .earphonesDiv {
-    flex-direction: column;
-
-    .earphoneImageDiv {
-      display: none;
-    }
-
-
-    .earphonestab {
-      width: 100%;
-    }
-
-    .earphoneTextDiv {
-      width: 100%;
-      padding: 1rem;
-      margin-top: 1rem;
-
-      .earphoneText {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-left: 3em;
-
-        p {
-          font-size: 1.5rem !important;
-        }
-
-        button {
-          padding: 0.9em;
-          border: 1px solid $black;
-          color: $black;
-          margin-top: 0.9rem;
-          display: inline-block;
-          width: 160px !important;
-          height: 40px !important;
-          text-transform: uppercase;
-        }
-
-      }
-
-
-
-    }
-  }
-
-  //Gear
-
-  .Gear{
-      margin-bottom: 48px;
-  }
-
-  .tabgear {
-    display: none !important;
-  }
-
-  .gearImageDiv {
-    display: none !important;
-  }
-  .mobilegear {
-    display: block !important;
-  }
-
-  .GearTextDiv {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    .ggtext {
-      position: relative;
-      width: 80%;
-      .gearmaintitle {
-        font-size: 1.1rem !important;
-      }
-
-      .gmaintext {
-        font-size: 10px !important;
-        margin-top: 20px;
-        line-height: 24px;
-        width: 100%;
-      }
-    }
-  }
-
-  //Footer
-
-  .footer{
-      text-align: center;
-      padding: 30px 0px 30px 0px !important;
-  }
-
-  .footerNav {
-      width: 100% !important;
-      align-items: center;
-    ul {
-      flex-direction: column;
-      .mylink{
-          margin-top: 10px;
-      }
-    }
-  }
-
-  .footerSecondDiv{
-      width: 100% !important;
-      align-items: center;
-      justify-content: center;
-
-      .footerSecondText{
-          width: 90% !important;
-          margin: auto;
-
-      }
-
-  }
-
-  .copyIcon {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 20px;
-
-  }
-
-  .icons{
-      align-items: center;
-      justify-content: space-between !important;
-      width: 30% !important;
-      margin-top: 10px;
-  }
-
-  //HEADPHONE SECTION
-
-  .HeadImageOne {
-
-    .desktop,.tablet{
-      display: none !important;
-    }
-    .mobile{
-      display: block !important;
-    }
-  }
-
-  //PRODUCT DETAILS SECTION HEADPHONE
-
-  .productSection{
-    flex-direction: column !important;
-
-    .HeadImageOne {
-      width: 100% !important;
-    }
-
-    .SectionText{
-      width: 100% !important;
-    }
-    .SectionMainTitle{
-      font-size: 1.7rem !important;
-    }
-
-    .sectionPara{
-      font-size: 16px !important;
-      
-    }
-
-    .onAddbutton{
-      width: 35% !important;
-      padding: 7px !important;
-      
-    }
-    
-    .addandremove{
-      width: 25% !important;
-      padding: 7px !important;
-      margin-right: 10px;
-    }
-
-    .buttonAddandRemove{
-
-      justify-content: unset !important;
-
-    }
-
-    .newProductSec{
-      margin-top: 10px !important;
-    }
-    
-
-  }
-
-  //FEATUREBOX
-
-  .FeatureBox{
-    flex-direction: column !important;
-    width: 100%;
-  }
-
-  //FEATURE IMAGES
-
-  .FeaturesImagesDiv{
-    flex-direction: column;
-    .tablet,.desktop{
-      display: none;
-    }
-
-    .mobile{
-      display: block;
-    }
-
-
-    .LefImageDiv{
-      width: 100% !important;
-      
-    }
-
-    .secondImageDiv{
-      margin-top: 10px;
-    }
-  
-    .rightImageDiv{
-      width: 100% !important;
-      margin-left: unset !important;
-      margin-top: 10px;
-    }
-  }
-
-  //ALSO LIKE
-
-  .alsoLike{
-    .tablet,.desktop{
-      display: none;
-    }
-
-    .mobile{
-      display: block;
-    }
-    .likeDiv{
-      flex-direction: column;
-    }
-
-    .eachLike{
-      width: 100%;
-      margin-bottom: 24px;
-    }
-  }
-
-  .productBody{
-
-  
-  
-    .firstSection{
-      margin-top: unset !important;
-    }
-  }
-
-  //FORM
-
-  .PersonalDetails {
-    .nameEmail{
-      flex-direction: column;
-      .formControl{
-        width: 100%;
-      }
-    }
-
-    .phoneNumber{
-      width: 100%;
-    }
-
-    .zipCity{
-      flex-direction: column;
-      width: 100%;
-      .zip,.city{
-        width: 100% !important;
-    }
-    }
-
-    .country {
-      width: 100% !important;
-    }
-
-    
-
-
-  }
-
-  .paymentMethodDiv{
-    flex-direction: column;
-
-    .radioDiv{
-      width: 100% !important;
-    }
-  }
-
-  .NumberPin{
-    flex-direction: column;
-
-    .moneyNumber,.MoneyPin{
-      width: 100% !important;
-  }
-
-  }
-
-  .EmoneyText{
-    justify-content: space-between;
-    p{
-      font-size: 10px;
-      width: 80% !important;
-    }
-    i{
-      width: 10% !important;
-      font-size: 30px !important;
-    }
-  }
-  .form-inputss{
-    .error{
-
-      font-size: 8px !important;
-
-    }
-  }
-
-  //SUCCESS MODAL
-  .SuccessMain{
-    top:8rem;
-    left:  1.4rem !important;
-    width: 90%;
-    padding: 40px;
-
-    h2{
-      font-size: 1.5rem !important;
-    }
-
-    .confirmMail{
-      margin: 20px 0px !important;
-  }
-    
-  }
-  
-  .imgTitle{
-    width: 100% !important;
-    margin-bottom: unset !important;
-  }
-  .grandTotal{
-    width: 100% !important;
-  }
-
-  .grandImg{
-    flex-direction: column;
-  }
-
-}
+@import "mobileQuery";

@@ -1,19 +1,17 @@
 @import "config";
 @import "utilities";
 
-nav{
+nav {
   width: 100%;
   align-items: center;
   position: sticky;
   padding-top: 20px;
   top: 0;
   z-index: 200;
-  
-  
 }
 
-.rectangle{
-  background-color: rgb(78, 78, 78);
+.rectangle {
+  background-color: $rectangle;
   width: 80%;
   height: 1px;
   margin: auto;
@@ -23,31 +21,26 @@ nav{
 }
 .footerNav,
 .navContainer {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin: auto;
-  align-items: center;
-  
+
+  @include FlexCenter(row, center, space-between);
+
   ul {
-    display: flex;
-    justify-content: space-between;
     color: $very-light-gray;
-    align-items: center;
-    align-items: center;
     width: 50%;
     margin-right: 60px;
+
+    @include FlexCenter(row, center, space-between);
 
     .mylink,
     li {
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: 13px;
       list-style: none;
       text-decoration: none;
-      color: $gray;
       margin-left: 10px;
-      
+      @include Font(700, 13px, $gray);
+
       &:hover {
         color: $orange;
         cursor: pointer;
@@ -68,25 +61,20 @@ nav{
   }
 }
 
-
-
 .footerNav {
   padding-top: unset;
   width: 80%;
 }
 
-.navContainer{
+.navContainer {
   width: 80%;
   padding-bottom: 10px;
-  
 }
 
 .Header {
   background: $black;
   padding-bottom: 145px;
   height: 729px;
-
-  
 }
 
 .mainHero {
@@ -96,73 +84,57 @@ nav{
   background-size: cover;
   max-width: 100%;
   background-repeat: no-repeat;
-  
-  
 }
 
-
-
-.heroContainer{
-  display: flex;
+.heroContainer {
   width: 80%;
   min-height: 100%;
   margin: auto;
   height: 100%;
-  justify-content: space-between;
-  
-  
+
+  @include FlexCenter(row, unset, space-between);
 }
 
 .herowrapper {
   width: 45%;
   min-height: 45.5rem;
   background: url("../assets/home/desktop/image-hero.jpg") repeat-x fixed center;
-  background-position: center bottom ;
-  background-size:cover;
-  background-attachment:fixed;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
   position: absolute;
   right: 10%;
   top: 0;
   z-index: 1;
-  // padding-bottom: 550px;
-  
 }
 
 .heroText {
-  // width: 398px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  text-align: left;
   position: relative;
   top: 160px;
+  @include FlexCenter(column, left, left);
+
   .productPara {
     opacity: 0.5;
     text-transform: uppercase;
     letter-spacing: 10px;
-    color: $very-light-gray;
     text-align: left;
-    font-size: 1rem;
     margin-bottom: 17px;
+    @include Font(unset, 1rem, $very-light-gray);
   }
 
   h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
     line-height: 45px;
     letter-spacing: 2px;
-    color: $very-light-gray;
     text-transform: uppercase;
+    @include Font(700, 2.8rem, $very-light-gray);
   }
 
   .productDescr {
-    font-weight: 500px;
-    font-size: .9rem;
     line-height: 25px;
-    color: $light-gray;
+    @include Font(500, 0.9rem, $light-gray);
   }
 
-  .secondh{
+  .secondh {
     margin-top: 24px;
   }
 
@@ -171,48 +143,41 @@ nav{
     height: 48px;
     margin-top: 48px;
     background-color: $orange;
-    color: $very-light-gray;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 15px;
     cursor: pointer;
-
-    
+    @include Font(unset, 15px, $very-light-gray);
   }
 
-  button:hover{
+  button:hover {
     background-color: $orange-light;
   }
 }
 
-.shopTextLink{
+.shopTextLink {
   text-decoration: none !important;
   color: white;
 }
 
-.shopTextLinkSecond{
+.shopTextLinkSecond {
   text-decoration: none !important;
   color: $very-black;
-
 }
 
 //BODY
 
 .firstSection {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-top: 2rem;
-  justify-content: space-between;
-  align-items: center;
+
+  @include FlexCenter(row, center, space-between);
 
   .shopSection {
     width: 30%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    @include FlexCenter(column, center, center);
     margin-bottom: 48px;
 
     .shopImageDiv {
@@ -221,21 +186,19 @@ nav{
       z-index: 100;
       width: 200px;
       margin: auto;
-
-      
     }
 
-    .imageheadphones{
+    .imageheadphones {
       position: absolute;
       top: -10px;
     }
 
-    .imagespeakers{
+    .imagespeakers {
       position: absolute;
       top: -4px;
     }
 
-    .imageearphones{
+    .imageearphones {
       position: absolute;
       top: 10px;
     }
@@ -249,8 +212,8 @@ nav{
       padding-top: 2rem;
       padding-bottom: 30px;
       width: 100%;
-      
-      .shopTextLink{
+
+      .shopTextLink {
         text-decoration: none;
       }
 
@@ -264,21 +227,13 @@ nav{
 
       .shopText {
         text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
+        @include FlexCenter(row, center, center);
       }
 
-
-      
-
       span {
-        color: $orange;
         cursor: pointer;
         margin-left: 3px;
-        font-weight: 700;
-        font-size: 22px;
+        @include Font(700, 22px, $orange);
       }
     }
   }
@@ -287,7 +242,6 @@ nav{
 //Second Div
 
 .secondSection {
-  
   .imagetab {
     display: none;
   }
@@ -302,19 +256,16 @@ nav{
     overflow: hidden;
   }
 
-
   .secondTextDiv {
     width: 349px;
     height: 303px;
 
     .sdMainText {
-      font-size: 56px;
-      color: $light-gray;
+      @include Font(unset, 56px, $light-gray);
     }
 
     .sdproductDescr {
-      font-size: 15px;
-      color: $gray;
+      @include Font(unset, 15px, $gray);
       margin-top: 10px;
     }
 
@@ -352,8 +303,7 @@ nav{
     top: 100px;
 
     .zspeakertitle {
-      font-size: 28px;
-      font-weight: 700;
+      @include Font(700, 28px, unset);
     }
     button {
       width: 160px;
@@ -368,11 +318,10 @@ nav{
 //Earphones
 
 .earphonesDiv {
-  display: flex;
   width: 80%;
-  margin: auto;
   margin: auto auto 48px auto;
-  justify-content: space-between;
+
+  @include FlexCenter(row, unset, space-between);
 
   .earphoneImageDiv {
     width: 49%;
@@ -390,22 +339,17 @@ nav{
   .earphoneTextDiv {
     background-color: $gray;
     width: 49%;
-    // padding: 10px 50px 0px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include FlexCenter(row, center, center);
 
     .earphoneText {
       position: relative;
       width: 100%;
-      display: flex;
-      flex-direction: column;
+      @include FlexCenter(column, unset, unset);
       padding-left: 1em;
 
       p {
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 2rem;
+        @include Font(700, 2rem, unset);
       }
 
       button {
@@ -426,28 +370,22 @@ nav{
 //GEAR DIV
 
 .Gear {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-bottom: 48px;
-
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  @include FlexCenter(row, center, space-between);
 
   .GearTextDiv {
     width: 40%;
-    display: flex;
-    align-items: center;
+    @include FlexCenter(row, center, unset);
 
     .ggtext {
       position: relative;
       .gearmaintitle {
-        font-weight: 700;
         text-transform: uppercase;
-        font-size: 2.3rem;
         margin-bottom: 10px;
-        
+        @include Font(700, 2.3rem, unset);
+
         span {
           color: $orange;
         }
@@ -482,38 +420,33 @@ nav{
   padding: 106px 0px 50px 0px;
 
   .footerSecondDiv {
-    display: flex;
     width: 80%;
     margin: auto;
-    justify-content: space-between;
+
+    @include FlexCenter(row, unset, space-between);
 
     .footerSecondText {
       width: 40%;
       line-height: 24px;
-      font-size: 14px;
       margin-top: 40px;
-      color: $gray;
-      font-weight: 500;
+      @include Font(500, 14px, $gray);
     }
   }
 }
 
 .copyIcon {
-  display: flex;
   width: 80%;
   margin: auto;
-  justify-content: space-between;
   margin-top: 10px;
-  align-items: flex-start;
+
+  @include FlexCenter(row, center, space-between);
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   position: relative;
   right: 60px;
   width: 10%;
+  @include FlexCenter(row, flex-start, space-between);
 
   .iconDiv {
     width: 14px;
@@ -547,9 +480,7 @@ nav{
 
 .headers {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include FlexCenter(row, center, center);
 }
 
 .HeadphoneGear {
@@ -558,54 +489,35 @@ nav{
 }
 
 .HeadphoneSection {
-  display: flex;
   width: 80%;
   margin: auto;
   margin-top: 48px;
-  justify-content: space-between;
-
-  
+  @include FlexCenter(row, unset, space-between);
 }
 
 .HeadImageOne {
-  width: 50% ;
+  width: 50%;
   img {
     display: block;
   }
 
-  .tablet,.mobile{
+  .tablet,
+  .mobile {
     display: none;
   }
 }
 
 .SectionText {
   width: 45%;
-
 }
 
-.sectionOne {
-  padding: 0rem 1rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
+.sectionOne,
 .sectionTwo {
-  // padding: 130px 0px 0px 0px !important;
   padding: 0rem 1rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  // .sectionPara {
-  //   width: 70% !important;
-  //   margin-top: 10px;
-  //   font-size: 13.5px;
-  //   line-height: 20px;
-  // }
+  @include FlexCenter(column, unset, center);
 }
 
 .newProductSec {
-  // margin-top: 100px;
   letter-spacing: 5px;
   color: $orange;
 }
@@ -623,13 +535,11 @@ nav{
 
 .sectionPara {
   width: 100%;
-  // margin-top: 10px;
   font-size: 13.5px;
   line-height: 20px;
 }
 
 .sectionButton {
-  // padding: 15px 25px;
   margin-top: 20px;
   background-color: $orange;
   color: $gray;
@@ -637,9 +547,7 @@ nav{
   width: 160px;
   height: 40px;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include FlexCenter(row, center, center);
 }
 
 .HeadphoneMain,
@@ -667,8 +575,7 @@ nav{
 }
 
 .countCart {
-  color: $orange;
-  font-weight: 700;
+  @include Font(700, unset, $orange);
   text-decoration: none;
 }
 
@@ -685,64 +592,54 @@ nav{
   margin-left: -50px;
 }
 
-.bucketAddition{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.bucketAddition {
+  @include FlexCenter(row, center, space-between);
   width: 100%;
   background: $gray;
   height: 20px;
 }
 
-.basketButton{
+.basketButton {
   width: 100%;
   display: inline-block;
   background-color: $orange;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include FlexCenter(row, center, center);
+
   color: white;
   text-decoration: none;
   margin-top: 30px;
 }
 
-
 .layer {
   position: absolute;
   width: 100%;
   height: 100%;
-  top:65px;
+  top: 65px;
   left: 0;
   z-index: 900;
   background-color: rgba(0, 0, 0, 0.76);
-  
 }
 
-.secondlayer{
+.secondlayer {
   display: none;
 }
 
-.App{
-    position: relative;
+.App {
+  position: relative;
 }
 
 .form-inputss {
-  display: flex;
-  justify-content: space-between;
   width: 80%;
   margin: 20px auto 40px auto;
   background-color: white;
-  .inputTitles{
-    color: $orange;
-    font-weight: 700;
-    font-size: 14px;
+  @include FlexCenter(row, unset, space-between);
+  .inputTitles {
+    @include Font(700, 14px, $orange);
     margin-bottom: 10px;
   }
-  .error{
-    color: $orange;
-    font-size: 12px;
-    font-weight: 700;
+  .error {
+    @include Font(700, 12px, $orange);
   }
 }
 
@@ -752,17 +649,14 @@ nav{
   background-color: $light-gray;
 
   .nameEmail {
-    display: flex;
-    justify-content: space-between;
+    @include FlexCenter(row, unset, space-between);
     width: 100%;
 
     .formControl {
       width: 48%;
 
       .labelError {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include FlexCenter(row, center, space-between);
       }
       input {
         width: 100%;
@@ -772,9 +666,9 @@ nav{
         padding: 10px;
         border-radius: 5px;
         margin-top: 10px;
-        &:focus{
+        &:focus {
           border: 1px solid $orange;
-          outline: none
+          outline: none;
         }
       }
     }
@@ -785,9 +679,7 @@ nav{
     margin-top: 20px;
 
     .labelError {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include FlexCenter(row, center, space-between);
     }
     input {
       width: 100%;
@@ -796,11 +688,11 @@ nav{
       border: 1px solid gray;
       padding: 10px;
       border-radius: 5px;
-        margin-top: 10px;
-        &:focus{
-          border: 1px solid $orange;
-          outline: none
-        }
+      margin-top: 10px;
+      &:focus {
+        border: 1px solid $orange;
+        outline: none;
+      }
     }
   }
 
@@ -812,9 +704,7 @@ nav{
       margin: 10px 0px;
 
       .labelError {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include FlexCenter(row, center, space-between);
       }
       input {
         width: 100%;
@@ -824,25 +714,23 @@ nav{
         padding: 10px;
         border-radius: 5px;
         margin-top: 10px;
-        &:focus{
+        &:focus {
           border: 1px solid $orange;
-          outline: none
+          outline: none;
         }
       }
     }
 
     .zipCity {
-      display: flex;
-      justify-content: space-between;
+      @include FlexCenter(row, unset, space-between);
       width: 100%;
-      .zip,.city{
-          width: 48%;
+      .zip,
+      .city {
+        width: 48%;
       }
 
       .labelError {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include FlexCenter(row, center, space-between);
       }
 
       input {
@@ -853,23 +741,103 @@ nav{
         padding: 10px;
         border-radius: 5px;
         margin-top: 10px;
-        &:focus{
+        &:focus {
           border: 1px solid $orange;
-          outline: none
+          outline: none;
         }
       }
     }
 
-
-
     .country {
+      width: 48%;
+      margin-top: 20px;
+
+      .labelError {
+        @include FlexCenter(row, center, space-between);
+      }
+      input {
+        width: 100%;
+        height: 40px;
+        display: block;
+        border: 1px solid gray;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+
+        &:focus {
+          border: 1px solid $orange;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .paymentDetails {
+    margin-top: 20px;
+
+    .paymentMethodDiv {
+      width: 100%;
+
+      @include FlexCenter(row, unset, space-between);
+
+      .radioDiv {
         width: 48%;
-        margin-top: 20px;
-    
+
+        .radios {
+          height: 40px;
+          border: 1px solid gray;
+          margin-bottom: 10px;
+          padding: 10px;
+          border-radius: 5px;
+          @include FlexCenter(row, center, unset);
+          &:active {
+            border: 1px solid $orange;
+          }
+
+          input {
+            background-color: $orange;
+          }
+
+          label {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .NumberPinWrapper {
+      width: 100%;
+    }
+
+    .EmoneyText {
+      width: 100%;
+      margin: 20px;
+      padding-right: 20px;
+      @include FlexCenter(row, unset, unset);
+      i {
+        width: 20%;
+        @include Font(unset, 60px, $orange);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .NumberPin {
+      width: 100%;
+      margin-top: 20px;
+      @include FlexCenter(row, unset, space-between);
+      .moneyNumber,
+      .MoneyPin {
+        width: 48%;
+      }
+
+      .formControl {
+        width: 100%;
+
         .labelError {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+          @include FlexCenter(row, center, space-between);
         }
         input {
           width: 100%;
@@ -877,460 +845,320 @@ nav{
           display: block;
           border: 1px solid gray;
           padding: 10px;
+          outline: none;
           margin-top: 10px;
           border-radius: 5px;
-
-          &:focus{
+          &:focus {
             border: 1px solid $orange;
-            outline: none
+            outline: none;
           }
         }
       }
-  }
-
-
-  .paymentDetails{
-    margin-top: 20px;
-
-    .paymentMethodDiv{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-
-        .radioDiv{
-            width: 48%;
-
-            .radios{
-                display: flex;
-                height: 40px;
-                align-items: center;
-                border: 1px solid gray;
-                margin-bottom: 10px;
-                padding: 10px;;
-                border-radius: 5px;
-                &:active{
-                  border: 1px solid $orange;
-                }
-
-                input{
-                    background-color: $orange;
-                    
-                }
-
-                label{
-                    margin-left: 10px;
-                }
-
-            }
-
-        }
-    }
-
-    .NumberPinWrapper{
-        width: 100%;
-    }
-
-    .EmoneyText{
-        width: 100%;
-        display: flex;
-        margin: 20px;
-        padding-right: 20px;
-        i{
-            width: 20%;
-            font-size: 60px;
-            color: $orange;
-        }
-
-        p{
-            width: 100%;
-        }
-    }
-
-
-    .NumberPin{
-        display: flex;
-        width: 100% ;
-        justify-content: space-between;
-        margin-top: 20px;
-        .moneyNumber,.MoneyPin{
-            width: 48%;
-        }
-  
-        
-
-        .formControl {
-            width: 100%;
-      
-            .labelError {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-            }
-            input {
-              width: 100%;
-              height: 40px;
-              display: block;
-              border: 1px solid gray;
-              padding: 10px;
-              outline: none;
-              margin-top: 10px;
-              border-radius: 5px;
-              &:focus{
-                border: 1px solid $orange;
-                outline: none
-              }
-            }
-          }
-
-        
     }
   }
-
 }
-
 
 //SUMMARY
 
+.summary {
+  width: 28%;
 
-.summary{
-    width: 28%;
+  .summaryWrapper {
+    background-color: $light-gray;
+    padding: 10px 10px;
+  }
 
-    
-    .summaryWrapper{
-      background-color: $light-gray;
-          padding: 10px 10px;
-        
-    }
+  .SummaryHeader {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-    .SummaryHeader{
-        font-weight: 600;
-        text-transform: uppercase;
-    }
+  .eachItemDiv {
+    width: 100%;
+    @include FlexCenter(row, unset, space-between);
+    margin-top: 20px;
+  }
 
+  .eachItemImageName {
+    display: flex;
+  }
 
-    .eachItemDiv{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
+  .priceShipping {
+    margin-top: 20px;
+    text-transform: uppercase;
+    @include FlexCenter(row, center, space-between);
+  }
+  .pricetitle {
+    color: gray;
+  }
 
-    .eachItemImageName{
-        display: flex;
-    }
+  .boldPrices {
+    font-weight: 700;
+  }
 
-    .priceShipping{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        align-items: center;
-        text-transform: uppercase;
-        
-    }
-    .pricetitle{
-      color: gray;
-    }
+  .submitButton {
+    width: 100%;
+    display: block;
+    height: 40px;
+    background-color: $orange;
+    color: $light-gray;
+    outline: none;
+    margin-top: 20px;
+    cursor: pointer;
+  }
 
-    .boldPrices{
-        font-weight: 700;
-    }
-
-    .submitButton{
-        width: 100%;
-        display: block;
-        height: 40px;
-        background-color: $orange;
-        color: $light-gray;
-        outline: none;
-        margin-top: 20px;
-        cursor: pointer;
-    }
-
-    .summaryImage{
-        width: 10%;
-        margin-right: 10px;
-    }
+  .summaryImage {
+    width: 10%;
+    margin-right: 10px;
+  }
 }
-
 
 //SUCCESS MODAL
 
+.SuccessMain {
+  position: absolute;
+  top: 8rem;
+  left: 25rem;
+  border-radius: 10px;
+  z-index: 1000;
+  width: 40%;
+  margin: auto;
+  background-color: $very-light-gray;
+  padding: 20px;
+  i {
+    color: $orange;
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
 
-.SuccessMain{
-    position: absolute;
-    top:8rem;
-    left:25rem;
-    border-radius: 10px;
-    z-index: 1000;
-    width: 40%;
-    margin: auto;
-    background-color:$very-light-gray;
+  h2 {
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+  }
+
+  .confirmMail {
+    margin: 40px 0px;
+  }
+
+  .grandImg {
+    @include FlexCenter(row, unset, space-between);
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .imgTitle {
+    width: 50%;
+    margin-bottom: 20px;
     padding: 20px;
-    i{
-        color: $orange;
-        font-size: 70px;
-        margin-bottom: 20px;
+    background-color: $light-gray;
+  }
+
+  .imgPrice {
+    display: flex;
+  }
+
+  .qtyImg {
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+  }
+
+  .andOthers {
+    padding-top: 10px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .grandTotal {
+    background-color: $very-black;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  .successTotal {
+    margin-top: 15px;
+  }
+
+  .successTotalTitle {
+    color: rgb(172, 172, 172);
+  }
+
+  .successImg {
+    width: 30%;
+  }
+
+  .successLink {
+    text-decoration: none;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    background-color: $orange;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background: $orange-light;
     }
-
-    h2{
-        font-size: 2rem;
-        width: 100%;
-        display: block;
-    }
-
-    .confirmMail{
-        margin: 40px 0px;
-    }
-
-    .grandImg{
-        display: flex;
-        justify-content: space-between;
-        
-    }
-
-    img{
-        width: 50%;
-    }
-    
-
-    .imgTitle{
-        width: 50%;
-        margin-bottom: 20px;
-        padding: 20px;
-        background-color: $light-gray;
-    }
-
-    .imgPrice{
-        display: flex;
-
-    }
-
-
-    .qtyImg{
-        display: flex;
-        border-bottom: 1px solid gray;
-        padding-bottom: 10px;
-    }
-
-    .andOthers{
-        padding-top: 10px;
-        font-size: 13px;
-        text-align: center;
-    }
-
-    .grandTotal{
-        background-color: $very-black;
-        color: white;
-        width: 50%;
-        padding: 20px;
-        padding-top: 40px;
-    }
-
-    .successTotal{
-        margin-top: 15px;
-    }
-
-    .successTotalTitle{
-
-        color: rgb(172, 172, 172);
-    }
-
-    .successImg{
-        width: 30%;
-    }
-    
-    .successLink{
-        text-decoration: none;
-    }
-
-    button{
-        display: block;
-        width: 100%;
-        height: 40px;
-        margin-top: 30px;
-        background-color: $orange;
-        color: white;
-        cursor: pointer;
-        &:hover{
-          background: $orange-light;
-        }
-    }
+  }
 }
 
-
-.menu{
+.menu {
   display: none;
   position: relative;
   z-index: 10000;
 }
 
-.onAddbutton{
+.onAddbutton {
   background-color: $orange;
   cursor: pointer;
   color: $gray;
   width: 55%;
-  padding: 7px ;
-  
+  padding: 7px;
 }
 
-.addandremove{
+.addandremove {
   background-color: $gray;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
+
   width: 38%;
   padding: 7px;
-  p{
-    // margin: 0px 10px ;
+  @include FlexCenter(row, center, space-between);
+  p {
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       color: $orange;
     }
   }
 }
 
-
-
-.buttonAddandRemove{
-  display: flex;
-  justify-content: space-between;
+.buttonAddandRemove {
+  @include FlexCenter(row, unset, space-between);
   width: 70%;
 }
 
-
 //FEATURES
 
-.FeatureDiv{
-  margin: 24px  auto;
+.FeatureDiv {
+  margin: 24px auto;
   width: 80%;
-  display: flex;
-  justify-content: space-between;
+  @include FlexCenter(row, unset, space-between);
 }
 
-.featureDescription{
+.featureDescription {
   width: 50%;
 
-  .featurePara{
+  .featurePara {
     font-size: 13px;
     margin-top: 10px;
     line-height: 1.7;
   }
 }
 
-.FeatureBox{
+.FeatureBox {
   width: 40%;
 }
 
-.boXFeat{
+.boXFeat {
   font-size: 13px;
   margin-top: 10px;
-  
 }
 
-.boxquantity{
-  color: $orange;
+.boxquantity {
   margin-right: 10px;
-  font-weight: 700;
-  text-transform:capitalize;
+  text-transform: capitalize;
+  @include Font(700, unset, $orange);
 }
-
 
 //PRODUCT IMAGES
 
-.FeaturesImagesDiv{
+.FeaturesImagesDiv {
   width: 80%;
   margin: auto;
   display: flex;
   margin-bottom: 24px;
 
-
-  img{
+  img {
     display: block;
   }
 
-
-  .LefImageDiv{
+  .LefImageDiv {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include FlexCenter(column, unset, space-between);
     width: 57%;
   }
 
-  .rightImageDiv{
+  .rightImageDiv {
     width: 80%;
     margin-left: 20px;
   }
 
-  .tablet,.mobile{
-    display: none
+  .tablet,
+  .mobile {
+    display: none;
   }
-
 }
-
 
 //ALSO LIKES
 
-
-.alsoLike{
-
+.alsoLike {
   width: 80%;
   margin: 48px auto auto auto;
 
-  h4{
+  h4 {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .likeDiv{
-    display: flex;
-    justify-content: space-between;
+  .likeDiv {
+    @include FlexCenter(row, unset, space-between);
   }
 
-  .eachLike{
-    display: flex;
+  .eachLike {
     width: 32%;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    @include FlexCenter(column, center, center);
   }
 
-  .mobile,.tablet{
+  .mobile,
+  .tablet {
     display: none;
   }
 
-  .likeName{
-    font-size: 19px;
-    font-weight: 700;
+  .likeName {
     width: 100%;
     text-align: center;
     margin-top: 10px;
     text-transform: uppercase;
+    @include Font(700, 19px, $orange);
   }
 
-  .likeLink{
+  .likeLink {
     margin-top: 10px;
     padding: 10px 15px;
     background-color: $orange;
     cursor: pointer;
-    
   }
 
-  button{
+  button {
     background: none !important;
     color: $gray;
     cursor: pointer;
   }
 }
 
-.productBody{
-
-
-  .Gear{
+.productBody {
+  .Gear {
     margin-top: 90px;
   }
 
-  .firstSection{
+  .firstSection {
     margin-top: 54px;
   }
 }
