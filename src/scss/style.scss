@@ -301,17 +301,7 @@ nav{
     right: 60px;
     overflow: hidden;
   }
-  // background-color: $orange !important;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // width: 80%;
-  // position: relative;
-  // margin: 98px auto auto auto;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-  // overflow: hidden;
+
 
   .secondTextDiv {
     width: 349px;
@@ -933,48 +923,6 @@ nav{
 
             }
 
-            // .radios {
-            //     display: inline-block;
-            //     position: relative;
-            //     padding: 0 6px;
-            //     margin: 10px 0 0;
-            //     cursor: pointer;
-            //   }
-              
-            //   .radios input[type='radio'] {
-            //     display: none;
-            //   }
-              
-            //   .radios label {
-            //     color: #666;
-            //     font-weight: normal;
-            //   }
-
-            //   .radios label:before {
-            //     content: " ";
-            //     display: inline-block;
-            //     position: relative;
-            //     top: 5px;
-            //     margin: 0 5px 0 0;
-            //     width: 20px;
-            //     height: 20px;
-            //     border-radius: 11px;
-            //     border: 1px solid gray;
-            //     background-color: transparent;
-            //   }
-              
-            //   .radios input[type=radio]:checked + label:after {
-            //     border-radius: 11px;
-            //     width: 12px;
-            //     height: 12px;
-            //     position: absolute;
-            //     top: 9px;
-            //     left: 10px;
-            //     content: " ";
-            //     display: block;
-            //     background: $orange;
-            //     cursor: pointer;
-            //   }
         }
     }
 
@@ -1235,6 +1183,10 @@ nav{
   p{
     // margin: 0px 10px ;
     cursor: pointer;
+
+    &:hover{
+      color: $orange;
+    }
   }
 }
 
@@ -1304,13 +1256,6 @@ nav{
     justify-content: space-between;
     width: 57%;
   }
-
-  // .firstImageDiv{
-  //   height: 49%;
-  // }
-  // .secondImageDiv{
-  //   height: 49%;
-  // }
 
   .rightImageDiv{
     width: 80%;

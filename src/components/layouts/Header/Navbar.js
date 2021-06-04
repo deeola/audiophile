@@ -28,7 +28,7 @@ function Navbar(props) {
         <Link className='mylink' to='/Speakers'>Speakers</Link>
         <Link className='mylink' to='/Earphones'>Earphones</Link>
       </ul>
-      <div style={{background:'black'}}>
+      <div >
         <p onClick={bucketIconClicked} style={{display:'flex', justifyContent:'spacebetween', alignItems:'center'}} to='/cart'> <img className='cartIcon' src={require('../../../assets/shared/desktop/cart.svg').default} alt="carticon"></img>{''} {Cartlength? (
           <p style={{marginLeft:'10px'}} className='countCart'>{Cartlength}</p>
         ) : ('')}</p>

@@ -152,22 +152,34 @@ const AudioState = (props) => {
   //MENU BAR
 
   const [menuOpened, setMenuOpend] = useState(false);
+  // const [menuDisplay, setMenuDisplay] = useState({
+  //   style:{
+  //     display:'block'
+  //   }
+  // });
 
 
   const slideMenu = () =>{
-    
-    return menuOpened ? {} : {marginLeft:-930}
+
+    return menuOpened ? {} : {display: "none", marginLeft:-930}
   }
 
   const menuIconClicked = () => {
+
     setMenuOpend(!menuOpened);
     setMyBucketDisplay(false)
+  
+  }
+
+  const closeMenuOnClick = () => {
+    setMenuOpend(false)
   }
 
   //RETURN
   return (
     <audioContext.Provider
       value={{
+        closeMenuOnClick,
         slideMenu,
         menuIconClicked,
         quantity,

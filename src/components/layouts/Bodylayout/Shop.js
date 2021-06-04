@@ -1,8 +1,12 @@
-import React from "react";
-import {Link} from 'react-router-dom'
+import React, { useContext } from "react";
+import {Link} from 'react-router-dom';
+
+import audioContext from '../../../context/Audiophile/audioContext'
 
 
 function Shop(props) {
+  const AudioContext = useContext(audioContext)
+  const closeMenuOnClick = AudioContext.closeMenuOnClick
   return (
     <section className="firstSection">
       <div className="shopSection">
@@ -13,7 +17,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Headphones</p>
           <p className='shopText'>
-            Shop <Link className='shopTextLink' to= '/headphones'><span>&#62;</span> </Link> 
+            Shop <Link onClick={closeMenuOnClick}  className='shopTextLink' to= '/headphones'><span>&#62;</span> </Link> 
           </p>
         </div>
       </div>
@@ -26,7 +30,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Speakers</p>
           <p className='shopText'>
-            Shop <Link className='shopTextLink' to='/speakers'> <span>&#62;</span> </Link> 
+            Shop <Link onClick={closeMenuOnClick}  className='shopTextLink' to='/speakers'> <span>&#62;</span> </Link> 
           </p>
         </div>
       </div>
@@ -39,7 +43,7 @@ function Shop(props) {
         <div className='shopTextDiv'>
           <p className='shoptitle'>Earphones</p>
           <p className='shopText'>
-            Shop <Link className='shopTextLink' to='/earphones'> <span>&#62;</span> </Link> 
+            Shop <Link onClick={closeMenuOnClick}  className='shopTextLink' to='/earphones'> <span>&#62;</span> </Link> 
           </p>
         </div>
       </div>

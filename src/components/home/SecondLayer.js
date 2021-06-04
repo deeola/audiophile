@@ -8,7 +8,7 @@ function SecondLayer(props) {
     const slideMenu = AudioContext.slideMenu
 
     return (
-        <div className='secondlayer' style={slideMenu()}>
+        <div className='layer' style={slideMenu()}>
             
         </div>
     )
