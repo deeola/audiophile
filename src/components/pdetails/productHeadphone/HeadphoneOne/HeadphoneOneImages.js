@@ -1,8 +1,4 @@
 import React from 'react';
-import leftImage from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg'
-import righttop from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'
-import rightbottom from '../../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg'
-
 
 
 function HeadphoneOneImages(props) {

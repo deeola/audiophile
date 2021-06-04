@@ -1,10 +1,9 @@
-import React,{useContext} from "react";
+import React from "react";
 import useForm from "./useForm";
 import ValidateSign from "./ValidateSign";
-import audioContext from '../../context/Audiophile/audioContext'
 
 function PerosnalDetails({ Submitform }) {
-  const { values, handleChange, handleSubmit, error, radioChange, radioChangeA,onchangeRadio } =
+  const { values, handleChange, handleSubmit, error,onchangeRadio } =
     useForm( Submitform, ValidateSign);
 
 
@@ -21,12 +20,10 @@ function PerosnalDetails({ Submitform }) {
       style,
       Moneystyle,
       radioVal,
-      radioFalse 
     } = values;
 
 
 
-  const AudioContext = useContext(audioContext);
 
 
 

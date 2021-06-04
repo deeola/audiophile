@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import EarpodFeatures from "./EarpodFeatures";
 import EarpodImages from "./EarpodImages";
 import EarpodLike from "./EarpodLike";
@@ -17,12 +17,6 @@ function EarpodBody(props) {
   let price;
   if (AudioContext.data.length > 0) {
     price = AudioContext.data[0].price;
-  }
-
-  //Slug
-  let slug;
-  if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[0].slug;
   }
 
   //Description

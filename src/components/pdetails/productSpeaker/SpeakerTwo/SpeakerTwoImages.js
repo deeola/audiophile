@@ -1,7 +1,4 @@
 import React from 'react';
-import righttop from '../../../../assets/product-zx7-speaker/desktop/image-gallery-1.jpg'
-import rightbottom from '../../../../assets/product-zx7-speaker/desktop/image-gallery-2.jpg'
-import leftImage from '../../../../assets/product-zx7-speaker/desktop/image-gallery-3.jpg'
 
 function SpeakerTwoImages(props) {
     return (

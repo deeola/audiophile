@@ -1,9 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
 import {Link} from 'react-router-dom';
-import firstimagedesktop from "../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
-import secondimagedesktop from "../../../../assets/shared/desktop/image-xx59-headphones.jpg";
-import thirdimagedesktop from "../../../../assets/shared/desktop/image-zx9-speaker.jpg";
 
 function HeadphoneTwoLikes(props) {
   const AudioContexts = useContext(audioContext);

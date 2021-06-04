@@ -1,6 +1,5 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from "../../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
 import HeadphoneTwoFeatures from "./HeadphoneTwoFeatures";
 import HeadphoneTwoImages from "./HeadphoneTwoImages";
 import HeadphoneTwoLikes from "./HeadphoneTwoLikes";
@@ -20,11 +19,6 @@ function HeadphoneTwobody(props) {
     price = AudioContext.data[3].price;
   }
 
-  //Slug
-  let slug;
-  if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[3].slug;
-  }
 
   //Description
 

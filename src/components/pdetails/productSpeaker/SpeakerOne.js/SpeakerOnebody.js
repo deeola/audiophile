@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import imageDesktop from "../../../../assets/product-zx9-speaker/desktop/image-product.jpg";
+import React, { useContext, useEffect} from "react";
 import SpeakerOneFeatures from "./SpeakerOneFeatures";
 import SpeakerOneImages from "./SpeakerOneImages";
 import SpeakerOneLke from "./SpeakerOneLke";
@@ -28,11 +27,6 @@ function SpeakerOnebody(props) {
     price = AudioContext.data[5].price;
   }
 
-  //Slug
-  let slug;
-  if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[5].slug;
-  }
 
   //Description
 

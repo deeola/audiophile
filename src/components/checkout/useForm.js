@@ -6,7 +6,6 @@ const useForm = (callback, ValidateSign) => {
   const AudioContext = useContext(audioContext)
   const continueAndPay = AudioContext.continueAndPay
 
-  const setIsSubmitted = AudioContext.setIsSubmitted;
   //GENERAL
 
   
@@ -90,11 +89,6 @@ const useForm = (callback, ValidateSign) => {
     });
   };
 
-  //Set to local storage
-
-  const signUpLocal = () => {
-    localStorage.setItem("PersonalDetails", JSON.stringify(values));
-  };
 
   //On submit Event
 

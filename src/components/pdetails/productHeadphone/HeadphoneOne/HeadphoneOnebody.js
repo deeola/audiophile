@@ -1,6 +1,5 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext} from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from "../../../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
 import HeadphoneOneFeatures from "./HeadphoneOneFeatures";
 import HeadphoneOneImages from "./HeadphoneOneImages";
 import HeadphoneOneLikes from "./HeadphoneOneLikes";
@@ -22,11 +21,6 @@ function HeadphoneOnebody(props) {
     price = AudioContext.data[2].price;
   }
 
-  //Slug
-  let slug;
-  if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[2].slug;
-  }
 
   //Description
 

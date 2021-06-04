@@ -16,7 +16,6 @@ import Basket from "./components/cart/Basket";
 import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/layouts/Header/Menu";
-import Navbar from "./components/layouts/Header/Navbar";
 import SecondLayer from "./components/home/SecondLayer";
 
 function App(props) {
@@ -25,7 +24,6 @@ function App(props) {
     <AudioState>
       <Router>
         <div className="App">
-          {/* <Navbar /> */}
           <Switch>
             <Route exact path="/" render={(props) => <Home />} />
             <Route path="/headphones" render={(props) => <Headphones />} />

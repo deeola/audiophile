@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import imageDesktop from "../../../../assets/product-zx7-speaker/desktop/image-product.jpg";
 import SpeakerTwoFeatures from "./SpeakerTwoFeatures";
 import SpeakerTwoImages from "./SpeakerTwoImages";
 import SpeakerTwoLikes from "./SpeakerTwoLikes";
@@ -21,11 +20,6 @@ function SpeakerTwobody(props) {
     price = AudioContext.data[4].price;
   }
 
-  //Slug
-  let slug;
-  if (AudioContext.data.length > 0) {
-    slug = AudioContext.data[4].slug;
-  }
 
   //Description
 
