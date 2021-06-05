@@ -1,30 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
 import useForm from "./useForm";
-import ValidateSign from "./ValidateSign";
+import validate from "./ValidateSign";
+import audioContext from '../../context/Audiophile/audioContext'
 
-function PerosnalDetails({ Submitform }) {
-  const { values, handleChange, handleSubmit, error,onchangeRadio } =
-    useForm( Submitform, ValidateSign);
+function PerosnalDetails() {
+  const AudioContext = useContext(audioContext);
 
-
-    const  {
-      name,
-      email,
-      number,
-      address,
-      zip,
-      city,
-      moneyNumber,
-      moneyPin,
-      country,
-      style,
-      Moneystyle,
-      radioVal,
-    } = values;
+  const continueAndPay = AudioContext.continueAndPay;
+  const clickTrue = AudioContext.clickTrue;
+  const showIconclicked= AudioContext.showIconclicked;
+  const clickTrues = AudioContext.clickTrues;
+  const showIconclickeds= AudioContext.showIconclickeds;
 
 
-
-
+  const {handleChange,handleSubmit,values,errors} = useForm(continueAndPay,validate);
+    
 
 
   //  FETCH LOCAL STORAGE
@@ -49,14 +39,14 @@ function PerosnalDetails({ Submitform }) {
             <div className="formControl">
               <div className="labelError">
                 <label htmlFor="name">Name</label>
-                {error.name && <p className="error">{error.name}</p>}
+                {errors.name && <p className="error">{errors.name}</p>}
               </div>
               <input
                 onChange={handleChange}
                 type="text"
                 placeholder="Wagner Adeyemi"
                 name="name"
-                value={name}
+                value={values.name}
                 id="name"
               ></input>
             </div>
@@ -64,7 +54,7 @@ function PerosnalDetails({ Submitform }) {
             <div className="formControl">
               <div className="labelError">
                 <label htmlFor="email">Email</label>
-                {error.email && <p className="error">{error.email}</p>}
+                {errors.email && <p className="error">{errors.email}</p>}
               </div>
               <input
                 onChange={handleChange}
@@ -72,7 +62,7 @@ function PerosnalDetails({ Submitform }) {
                 placeholder="lovecoding@gmail.com"
                 name="email"
                 id="email"
-                value={email}
+                value={values.email}
               ></input>
             </div>
           </div>
@@ -81,14 +71,14 @@ function PerosnalDetails({ Submitform }) {
             <div className="formControl">
               <div className="labelError">
                 <label htmlFor="number">Phone Number</label>
-                {error.number && <p className="error">{error.number}</p>}
+                {errors.number && <p className="error">{errors.number}</p>}
               </div>
               <input
                 onChange={handleChange}
                 type="number"
                 placeholder="+123456789"
                 name="number"
-                value={number}
+                value={values.number}
                 id="number"
               ></input>
             </div>
@@ -100,7 +90,7 @@ function PerosnalDetails({ Submitform }) {
               <div className="formControl">
                 <div className="labelError">
                   <label htmlFor="address">Address</label>
-                  {error.address && <p className="error">{error.address}</p>}
+                  {errors.address && <p className="error">{errors.address}</p>}
                 </div>
 
                 <input
@@ -108,7 +98,7 @@ function PerosnalDetails({ Submitform }) {
                   type="text"
                   placeholder="mystraße 49"
                   name="address"
-                  value={address}
+                  value={values.address}
                   id="address"
                 ></input>
               </div>
@@ -119,7 +109,7 @@ function PerosnalDetails({ Submitform }) {
                 <div className="formControl">
                   <div className="labelError">
                     <label htmlFor="zip">ZIP</label>
-                    {error.zip && <p className="error">{error.zip}</p>}
+                    {errors.zip && <p className="error">{errors.zip}</p>}
                   </div>
 
                   <input
@@ -127,7 +117,7 @@ function PerosnalDetails({ Submitform }) {
                     type="number"
                     placeholder="27392"
                     name="zip"
-                    value={zip}
+                    value={values.zip}
                     id="zip"
                   ></input>
                 </div>
@@ -137,7 +127,7 @@ function PerosnalDetails({ Submitform }) {
                 <div className="formControl">
                   <div className="labelError">
                     <label htmlFor="city">City</label>
-                    {error.city && <p className="error">{error.city}</p>}
+                    {errors.city && <p className="error">{errors.city}</p>}
                   </div>
 
                   <input
@@ -145,7 +135,7 @@ function PerosnalDetails({ Submitform }) {
                     type="text"
                     placeholder="Berlin"
                     name="city"
-                    value={city}
+                    value={values.city}
                     id="city"
                   ></input>
                 </div>
@@ -157,7 +147,7 @@ function PerosnalDetails({ Submitform }) {
                 <div className="labelError">
                   <label htmlFor="address">Country</label>
 
-                  {error.country && <p className="error">{error.country}</p>}
+                  {errors.country && <p className="error">{errors.country}</p>}
                 </div>
 
                 <input
@@ -165,7 +155,7 @@ function PerosnalDetails({ Submitform }) {
                   type="text"
                   placeholder="Germany"
                   name="country"
-                  value={country}
+                  value={values.country}
                   id="country"
                 ></input>
               </div>
@@ -181,31 +171,29 @@ function PerosnalDetails({ Submitform }) {
               <div className="radioDiv">
                 <div className="radios">
                   <input
-                    onClick={ onchangeRadio}
+                    onClick={showIconclicked}
                     type="radio"
                     name="paymentSelect"
                     value="true"
                     id="emoney"
-                    // checked={radioVal==='true'}
                     
                   ></input>
                   <label htmlFor="emoney">e-Money</label>
                 </div>
                 <div className="radios">
                   <input
-                    onClick={ onchangeRadio}
+                    onClick={showIconclickeds}
                     type="radio"
                     name="paymentSelect"
                     value="false"
                     id="cash"
-                    checked={radioVal==='false'}
                   ></input>
                   <label htmlFor="cash">Cash on Delivery</label>
                 </div>
               </div>
             </div>
 
-            {radioVal === 'true' && <div className='NumberPinWrapper' style={style}>
+            <div className='NumberPinWrapper' style={clickTrue()}>
               <div className="NumberPin"  >
                 
 
@@ -213,9 +201,7 @@ function PerosnalDetails({ Submitform }) {
                 <div className="formControl">
                   <div className="labelError">
                     <label htmlFor="moneyNumber">E-money Number</label>
-                    {error.moneyNumber && (
-                      <p className="error">{error.moneyNumber}</p>
-                    )}
+
                   </div>
 
                   <input
@@ -223,7 +209,6 @@ function PerosnalDetails({ Submitform }) {
                     type="number"
                     placeholder="53392*********"
                     name="moneyNumber"
-                    value={moneyNumber || ''}
                     id="moneyNumber"
                   ></input>
                 </div>
@@ -232,16 +217,13 @@ function PerosnalDetails({ Submitform }) {
                 <div className="formControl">
                   <div className="labelError">
                     <label htmlFor="moneyPin">E-money Pin</label>
-                    {error.moneyPin && (
-                      <p className="error">{error.moneyPin }</p>
-                    )}
+
                   </div>
                   <input
                     onChange={handleChange}
                     type="password"
                     placeholder=" E-MONEY PIN"
                     name="moneyPin"
-                    value={moneyPin || ''}
                     id="moneyPin"
                   ></input>
                 </div>
@@ -254,16 +236,16 @@ function PerosnalDetails({ Submitform }) {
 
               
             </div>
-            }
 
-            {radioVal === 'false' && <div style={Moneystyle}>
+
+            <div style={clickTrues()}>
               <div className='EmoneyText' >
               <i className="fas fa-hand-holding-usd"></i>
               <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
               </p>
               </div>
              
-            </div> }
+            </div> 
 
             
 

@@ -1,129 +1,65 @@
-import { useEffect, useState,useContext } from "react";
-import audioContext from '../../context/Audiophile/audioContext'
+import { useEffect, useState} from "react";
 
-const useForm = (callback, ValidateSign) => {
 
-  const AudioContext = useContext(audioContext)
-  const continueAndPay = AudioContext.continueAndPay
+const useForm = (callback, validate) => {
+
+
 
   //GENERAL
 
-  
+
+  const [values, setValues] = useState({
+    name:'',
+    email:'',
+    number:'',
+    address:'',
+    zip:'',
+    city:'',
+    country:''
+
+})
+
+  const [errors, setErrors] = useState({})
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  //SIGN UP
-  const [values, setValue] = useState({
-    name: "",
-    email: "",
-    number: "",
-    address: "",
-    zip: "",
-    city: "",
-    moneyPin: "",
-    moneyNumber: "",
-    country: "",
-    style: {
-      display: "none",
-      width:'100%'
-      
-    },
-    Moneystyle: {
-      display: "none",
-      width:'100%'
-      
-    },
-    radioVal:'true',
-    radioFalse : 'false'
-
-  });
-
-
-  const onchangeRadio=e =>{
-    setValue({
-      radioVal:e.target.value
-    })
-  }
-
-  const [error, setError] = useState({});
-
-  const radioChange = (e) => {
-    if (e.target.value === "true") {
-      setValue({
-        style: {
-          display: "block",
-          width:'100%'
-        },
-        Moneystyle: {
-          display: "none",
-          width:'100%'
-          
-        }
-      });
-    }
-  };
-
-  const radioChangeA = (e) => {
-    if (e.target.value === "false") {
-      console.log("hello");
-      setValue({
-        style: {
-          display: "none",
-        },
-        Moneystyle: {
-          display: "block",
-          width:'100%'
-          
-        }
-
-      });
-    }
-  };
 
   //handle change event
 
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setValue({
-      ...values,
-      [name]: value,
-    });
-  };
+  const handleChange= e =>{
+      const {name,value} = e.target;
+    
+      setValues({
+        ...values,
+        [name]:value
+      })
 
-
-  //On submit Event
-
-      useEffect(
-        () => {
-        if (Object.keys(error).length === 0 && isSubmitting) {
-          if (callback) {
-            callback()
-          }
-          continueAndPay()
-        }
-
-        //eslint-disable-next-line
-    }, [error]
-    );
-
-    const handleSubmit = e => {
+  
+        
+    }
+    
+    const handleSubmit=e=>{
         e.preventDefault();
-
-        if (ValidateSign){
-          setError(ValidateSign(values));
-        }
+        setErrors(validate(values))
         setIsSubmitting(true);
+    
+    }
 
-    };
+
+    useEffect(() => {
+      if (Object.keys(errors).length === 0 && isSubmitting) {
+        callback();
+      }
+
+      //eslint-disable-next-line
+    }, [errors]);
 
 
   return {
-    handleSubmit,
     handleChange,
+    handleSubmit,
     values,
-    error,
-    radioChange,
-    radioChangeA,
-    onchangeRadio
+    errors
   };
 };
 

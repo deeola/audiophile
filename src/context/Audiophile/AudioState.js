@@ -152,11 +152,7 @@ const AudioState = (props) => {
   //MENU BAR
 
   const [menuOpened, setMenuOpend] = useState(false);
-  // const [menuDisplay, setMenuDisplay] = useState({
-  //   style:{
-  //     display:'block'
-  //   }
-  // });
+
 
 
   const slideMenu = () =>{
@@ -175,10 +171,43 @@ const AudioState = (props) => {
     setMenuOpend(false)
   }
 
+  //SHOW MONEYPIN
+
+  const [showMoneyPin, setShowMoneyPin] = useState(false);
+
+  const clickTrue = () => {
+      //SET TO TRUE
+      return showMoneyPin ? {} : {display: "none"}
+  }
+
+  const showIconclicked=() => {
+      setShowMoneyPin(true);
+      setShowEmoney(false)
+  }
+
+
+  //SHOW MONEYPIN
+
+  const [showEmoney, setShowEmoney] = useState(false);
+
+  const clickTrues = () => {
+      //SET TO TRUE
+      return showEmoney ? {} : {display: "none"}
+  }
+
+  const showIconclickeds=() => {
+      setShowEmoney(true);
+      setShowMoneyPin(false)
+  }
+
   //RETURN
   return (
     <audioContext.Provider
       value={{
+        clickTrues,
+          showIconclickeds,
+          clickTrue,
+          showIconclicked,
         closeMenuOnClick,
         slideMenu,
         menuIconClicked,
