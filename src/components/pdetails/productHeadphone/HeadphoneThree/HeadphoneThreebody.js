@@ -1,38 +1,28 @@
-import React,{useEffect,useContext} from 'react';
+import React, { useEffect, useContext } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import HeadphoneThreeFeatures from './HeadphoneThreeFeatures';
-import HeadphoneThreeImages from './HeadphoneThreeImages';
-import HeadphoneThreeLikes from './HeadphoneThreeLikes';
-
+import HeadphoneThreeFeatures from "./HeadphoneThreeFeatures";
+import HeadphoneThreeImages from "./HeadphoneThreeImages";
+import HeadphoneThreeLikes from "./HeadphoneThreeLikes";
 
 function HeadphoneThreebody(props) {
+  const AudioContext = useContext(audioContext);
 
+  //destructure audiocontext
+  const {
+    onAdd,
+    quantity,
+    decreaseQuantity,
+    increaseQuantity,
+    cartNotification,
+  } = AudioContext;
 
-    const AudioContext = useContext(audioContext);
-
-    const onAdd= AudioContext.onAdd;
-    const quantity = AudioContext.quantity;
-    const decreaseQuantity = AudioContext.decreaseQuantity;
-    const increaseQuantity = AudioContext.increaseQuantity;
-
-  //Price
+  //Price, data and description from useContext
   let price;
-  if (AudioContext.data.length > 0) {
-    price = AudioContext.data[2].price;
-  }
-
-  //Description
-
   let description;
-
-  if (AudioContext.data.length > 0) {
-    description = AudioContext.data[1].description;
-  }
-
-  //DATA
-
   let data;
   if (AudioContext.data.length > 0) {
+    price = AudioContext.data[1].price;
+    description = AudioContext.data[1].description;
     data = AudioContext.data[1];
   }
 
@@ -42,42 +32,80 @@ function HeadphoneThreebody(props) {
     // eslint-disable-next-line
   }, []);
 
-
-    return (
-        <div>
-            <section className="HeadphoneSection productSection">
+  return (
+    <div>
+      <section className="HeadphoneSection productSection">
         <div className="HeadImageOne">
-          <img className='desktop' src={require('../../../../assets/product-xx59-headphones/desktop/image-product.jpg').default} alt="speaker"></img>
-          <img className='tablet'  src={require('../../../../assets/product-xx59-headphones/tablet/image-product.jpg').default} alt="speaker"></img>
-          <img  className='mobile' src={require('../../../../assets/product-xx59-headphones/mobile/image-product.jpg').default} alt="speaker"></img>
+          <img
+            className="desktop"
+            src={
+              require("../../../../assets/product-xx59-headphones/desktop/image-product.jpg")
+                .default
+            }
+            alt="speaker"
+          ></img>
+          <img
+            className="tablet"
+            src={
+              require("../../../../assets/product-xx59-headphones/tablet/image-product.jpg")
+                .default
+            }
+            alt="speaker"
+          ></img>
+          <img
+            className="mobile"
+            src={
+              require("../../../../assets/product-xx59-headphones/mobile/image-product.jpg")
+                .default
+            }
+            alt="speaker"
+          ></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
-          <h2 className="SectionMainTitle">
-          XX 59  HEADPHONES
-          </h2>
+          <h2 className="SectionMainTitle">XX 59 HEADPHONES</h2>
           <p className="sectionPara">
             {description !== undefined ? description : null}
           </p>
-          <p className="price" style={{margin:'10px 0px', fontWeight:'700'}}>€{price !== undefined ? price : null}</p>
-          <div className='buttonAddandRemove'>
-            <div className='addandremove'>
+          <p
+            className="price"
+            style={{ margin: "10px 0px", fontWeight: "700" }}
+          >
+            €{price !== undefined ? price : null}
+          </p>
+          <div className="buttonAddandRemove">
+            <div className="addandremove">
               <p onClick={quantity > 1 ? decreaseQuantity : undefined}>-</p>
               <p>{quantity}</p>
               <p onClick={increaseQuantity}>+</p>
             </div>
-            <button className='onAddbutton'  onClick={() => onAdd(data)} >ADD TO CART</button>
+            <button className="onAddbutton" onClick={() => onAdd(data)}>
+              ADD TO CART
+            </button>
           </div>
+          {/* SHOW NOTIFICATION ON ITEM ADD and Remove after 3 seconds */}
+          {cartNotification === 1 ? (
+            <div className="cartNotification">Item already added to cart</div>
+          ) : (
+            ""
+          )}
+          {cartNotification === 2 ? (
+            <div className="cartNotification">Item Added to cart</div>
+          ) : (
+            ""
+          )}
+          {cartNotification === 0 ? (
+            <div className="cartNotifications"></div>
+          ) : (
+            ""
+          )}
         </div>
       </section>
       <HeadphoneThreeFeatures />
       <HeadphoneThreeImages />
       <HeadphoneThreeLikes />
-            
-        </div>
-    )
+    </div>
+  );
 }
 
-
-export default HeadphoneThreebody
-
+export default HeadphoneThreebody;

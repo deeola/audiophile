@@ -39,6 +39,8 @@ const AudioState = (props) => {
 
   const [cartItems, setCartItems] = useState([]);
 
+  const [cartNotification, setCartNotification] = useState(0)
+
   // On ADD
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -50,10 +52,32 @@ const AudioState = (props) => {
         )
       );
       increaseQuantity();
+
+      setCartNotification(1)
+
+      setTimeout(() => {
+        setCartNotification(0)
+      },3000)
+  
+      
+
     } else {
       setCartItems([...cartItems, { ...product, qty: quantity }]);
+
+      setCartNotification(2)
+
+      setTimeout(() => {
+        setCartNotification(0)
+      },3000)
+
+      
+
+     
+  
+
     }
   };
+
 
   //OnRemove Function
   const onRemove = (product) => {
@@ -234,7 +258,8 @@ const AudioState = (props) => {
         successDisplay,
         openBuckets,
         setIsSubmitted,
-        removeAllandReturn
+        removeAllandReturn,
+        cartNotification
       }}
     >
       {props.children}
