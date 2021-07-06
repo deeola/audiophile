@@ -6,10 +6,9 @@ import Footer from "../layouts/footer/Footer";
 import SpeakerBody from "./Speaker/SpeakerBody";
 
 function Speakers(props) {
-
   return (
-    <div className='SpeakerMain'>
-      <HeaderShared  />
+    <div className="SpeakerMain">
+      <HeaderShared />
       <SpeakerBody />
       <Shop />
       <Gear />

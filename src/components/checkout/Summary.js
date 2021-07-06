@@ -1,13 +1,12 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import sampleimage from "../../assets/shared/desktop/icon-facebook.svg";
 import audioContext from "../../context/Audiophile/audioContext";
 
 function Summary(props) {
+  const AudioContext = useContext(audioContext);
+  const cartItems = AudioContext.cartItems;
 
-  const AudioContext = useContext(audioContext)
-  const cartItems = AudioContext.cartItems
-
-  //  FETCH LOCAL STORAGE
+  //  FETCH  SUMMARY ITEMS LOCAL STORAGE
   const summaryItems = JSON.parse(localStorage.getItem("newItems"));
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -16,12 +15,8 @@ function Summary(props) {
 
   const TotalPrice = itemsPrice + taxprice + shippingPrice;
 
-  //Styles
-
-  //   const {,closeIconClicked } = props
-
   return (
-    <div >
+    <div>
       <div>{summaryItems.length === 0 && <div>CART IS EMPTY</div>}</div>
       {summaryItems.map((item) => (
         <div key={item.id}>
@@ -42,14 +37,10 @@ function Summary(props) {
                 justifyContent: "space-between",
               }}
             >
-
-
               <div style={{ width: "20px", marginRight: "10px" }}>
-
                 <img src={sampleimage} alt="smallimage"></img>
               </div>
               <div>
-
                 <p>{item.name}</p>
                 {summaryItems.length !== 0 && (
                   <>
@@ -61,8 +52,6 @@ function Summary(props) {
             </div>
 
             <div style={{ width: "20%" }}>
-              {/* Button  and number here */}
-
               <div
                 style={{
                   display: "flex",
@@ -76,20 +65,6 @@ function Summary(props) {
               </div>
             </div>
           </div>
-          {/* <div>
-            {item.qty} x {item.price.toFixed(2)}
-            {cartItems.length !== 0 && (
-              <>
-                <hr></hr>
-                <div>Items Price</div>
-                <div>€{item.price.toFixed(2)}</div>
-                <div>Tax</div>
-                <div>€{taxprice}</div>
-                <div>Shipping</div>
-                <div>€{shippingPrice}</div>
-              </>
-            )}
-          </div> */}
         </div>
       ))}
 
@@ -105,7 +80,6 @@ function Summary(props) {
         <div style={{ fontWeight: "700" }}>€{itemsPrice}</div>
       </div>
 
-
       <div
         style={{
           display: "flex",
@@ -117,8 +91,6 @@ function Summary(props) {
         <div>SHIPPING</div>
         <div style={{ fontWeight: "700" }}>€{shippingPrice}</div>
       </div>
-
-
 
       <div
         style={{
@@ -143,8 +115,6 @@ function Summary(props) {
         <div>GRAND TOTAL</div>
         <div style={{ fontWeight: "700" }}>€{TotalPrice}</div>
       </div>
-
-
 
       <div style={{ marginTop: "20px" }}>
         <button

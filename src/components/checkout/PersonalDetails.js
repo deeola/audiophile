@@ -1,24 +1,24 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import useForm from "./useForm";
 import validate from "./ValidateSign";
-import audioContext from '../../context/Audiophile/audioContext'
+import audioContext from "../../context/Audiophile/audioContext";
 
 function PerosnalDetails() {
   const AudioContext = useContext(audioContext);
+  const {
+    continueAndPay,
+    clickTrue,
+    showIconclicked,
+    showIconclickeds,
+    clickTrues,
+  } = AudioContext;
 
-  const continueAndPay = AudioContext.continueAndPay;
-  const clickTrue = AudioContext.clickTrue;
-  const showIconclicked= AudioContext.showIconclicked;
-  const clickTrues = AudioContext.clickTrues;
-  const showIconclickeds= AudioContext.showIconclickeds;
+  const { handleChange, handleSubmit, values, errors } = useForm(
+    continueAndPay,
+    validate
+  );
 
-
-  const {handleChange,handleSubmit,values,errors} = useForm(continueAndPay,validate);
-    
-
-
-  //  FETCH LOCAL STORAGE
-
+  //  FETCH SUMMARY ITEMS FROM  LOCAL STORAGE
 
   const summaryItems = JSON.parse(localStorage.getItem("newItems"));
 
@@ -28,13 +28,13 @@ function PerosnalDetails() {
 
   const TotalPrice = itemsPrice + taxprice + shippingPrice;
 
-  localStorage.setItem('grandtotal', JSON.stringify(TotalPrice))
+  localStorage.setItem("grandtotal", JSON.stringify(TotalPrice));
 
   return (
     <div className="mainFormDiv">
       <form className="form-inputss" onSubmit={handleSubmit} noValidate>
         <div className="PersonalDetails">
-          <div className='inputTitles'>BILLING DETAILS</div>
+          <div className="inputTitles">BILLING DETAILS</div>
           <div className="nameEmail">
             <div className="formControl">
               <div className="labelError">
@@ -85,7 +85,7 @@ function PerosnalDetails() {
           </div>
 
           <div className="shippingInfo">
-            <div className='inputTitles'>SHIPPING INFO</div>
+            <div className="inputTitles">SHIPPING INFO</div>
             <div className="address">
               <div className="formControl">
                 <div className="labelError">
@@ -162,11 +162,13 @@ function PerosnalDetails() {
             </div>
           </div>
 
-          <div className="paymentDetails" >
-            <div className='inputTitles'>PAYMENT DETAILS</div>
+          <div className="paymentDetails">
+            <div className="inputTitles">PAYMENT DETAILS</div>
             <div className="paymentMethodDiv">
               <div>
-                <p style={{fontWeight:'700', fontSize:'14px'}}>PAYMENT METHOD</p>
+                <p style={{ fontWeight: "700", fontSize: "14px" }}>
+                  PAYMENT METHOD
+                </p>
               </div>
               <div className="radioDiv">
                 <div className="radios">
@@ -176,7 +178,6 @@ function PerosnalDetails() {
                     name="paymentSelect"
                     value="true"
                     id="emoney"
-                    
                   ></input>
                   <label htmlFor="emoney">e-Money</label>
                 </div>
@@ -193,81 +194,85 @@ function PerosnalDetails() {
               </div>
             </div>
 
-            <div className='NumberPinWrapper' style={clickTrue()}>
-              <div className="NumberPin"  >
-                
+            <div className="NumberPinWrapper" style={clickTrue()}>
+              <div className="NumberPin">
+                <div className="moneyNumber">
+                  <div className="formControl">
+                    <div className="labelError">
+                      <label htmlFor="moneyNumber">E-money Number</label>
+                    </div>
 
-              <div className="moneyNumber">
-                <div className="formControl">
-                  <div className="labelError">
-                    <label htmlFor="moneyNumber">E-money Number</label>
-
+                    <input
+                      onChange={handleChange}
+                      type="number"
+                      placeholder="53392*********"
+                      name="moneyNumber"
+                      id="moneyNumber"
+                    ></input>
                   </div>
-
-                  <input
-                    onChange={handleChange}
-                    type="number"
-                    placeholder="53392*********"
-                    name="moneyNumber"
-                    id="moneyNumber"
-                  ></input>
+                </div>
+                <div className="MoneyPin">
+                  <div className="formControl">
+                    <div className="labelError">
+                      <label htmlFor="moneyPin">E-money Pin</label>
+                    </div>
+                    <input
+                      onChange={handleChange}
+                      type="password"
+                      placeholder=" E-MONEY PIN"
+                      name="moneyPin"
+                      id="moneyPin"
+                    ></input>
+                  </div>
                 </div>
               </div>
-              <div className="MoneyPin">
-                <div className="formControl">
-                  <div className="labelError">
-                    <label htmlFor="moneyPin">E-money Pin</label>
-
-                  </div>
-                  <input
-                    onChange={handleChange}
-                    type="password"
-                    placeholder=" E-MONEY PIN"
-                    name="moneyPin"
-                    id="moneyPin"
-                  ></input>
-                </div>
-              </div>
-
-
-
-              </div>
-              
-
-              
             </div>
 
-
             <div style={clickTrues()}>
-              <div className='EmoneyText' >
-              <i className="fas fa-hand-holding-usd"></i>
-              <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
-              </p>
+              <div className="EmoneyText">
+                <i className="fas fa-hand-holding-usd"></i>
+                <p>
+                  The ‘Cash on Delivery’ option enables you to pay in cash when
+                  our delivery courier arrives at your residence. Just make sure
+                  your address is correct so that your order will not be
+                  cancelled.
+                </p>
               </div>
-             
-            </div> 
-
-            
-
-            
+            </div>
           </div>
         </div>
 
         <div className="summary">
-          <div className='summaryWrapper'>
-            <div className='SummaryHeader'>Summary</div>
+          <div className="summaryWrapper">
+            <div className="SummaryHeader">Summary</div>
             {summaryItems.map((item) => (
-              <div className='itemDiv' key={item.id}>
-                <div className='eachItemDiv'>
-                  <div className='eachItemImageName'>
-
-                    <div className='summaryImage'>
-                      <img src={require('../../assets'+item.image.desktop).default} alt="smallimage"></img>
-                      <img style={{display:'none'}} src={require('../../assets'+item.image.tablet).default} alt="smallimage"></img>
-                      <img style={{display:'none'}} src={require('../../assets'+item.image.mobile).default} alt="smallimage"></img>
+              <div className="itemDiv" key={item.id}>
+                <div className="eachItemDiv">
+                  <div className="eachItemImageName">
+                    <div className="summaryImage">
+                      <img
+                        src={
+                          require("../../assets" + item.image.desktop).default
+                        }
+                        alt="smallimage"
+                      ></img>
+                      <img
+                        style={{ display: "none" }}
+                        src={
+                          require("../../assets" + item.image.tablet).default
+                        }
+                        alt="smallimage"
+                      ></img>
+                      <img
+                        style={{ display: "none" }}
+                        src={
+                          require("../../assets" + item.image.mobile).default
+                        }
+                        alt="smallimage"
+                      ></img>
                     </div>
                     <div>
-                      <p className='boldPrices'>{item.name}</p>
+                      <p className="boldPrices">{item.name}</p>
                       {summaryItems.length !== 0 && (
                         <>
                           <hr></hr>
@@ -278,33 +283,36 @@ function PerosnalDetails() {
                   </div>
 
                   <div>
-
                     <div>
-                      <div className='pricetitle'>x{item.qty}</div>
+                      <div className="pricetitle">x{item.qty}</div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
 
-            <div className='priceShipping'>
-              <div className='pricetitle'>Total</div>
-              <div className='boldPrices'>€{itemsPrice.toFixed(2)}</div>
+            <div className="priceShipping">
+              <div className="pricetitle">Total</div>
+              <div className="boldPrices">€{itemsPrice.toFixed(2)}</div>
             </div>
-            <div className='priceShipping'>
-              <div className='pricetitle'>SHIPPING</div>
-              <div className='boldPrices'>€{shippingPrice.toFixed(2)}</div>
+            <div className="priceShipping">
+              <div className="pricetitle">SHIPPING</div>
+              <div className="boldPrices">€{shippingPrice.toFixed(2)}</div>
             </div>
-            <div className='priceShipping'>
-              <div className='pricetitle'>VAT(Tax Included)</div>
-              <div className='boldPrices'>€{taxprice.toFixed(2)}</div>
+            <div className="priceShipping">
+              <div className="pricetitle">VAT(Tax Included)</div>
+              <div className="boldPrices">€{taxprice.toFixed(2)}</div>
             </div>
 
-            <div className='priceShipping'>
-              <div className='pricetitle'>GRAND TOTAL</div>
-              <div className='boldPrices pricetotal'>€{TotalPrice.toFixed(2)}</div>
+            <div className="priceShipping">
+              <div className="pricetitle">GRAND TOTAL</div>
+              <div className="boldPrices pricetotal">
+                €{TotalPrice.toFixed(2)}
+              </div>
             </div>
-            <button  className='submitButton' type='submit'>CONTINUE & PAY</button>
+            <button className="submitButton" type="submit">
+              CONTINUE & PAY
+            </button>
           </div>
         </div>
       </form>
@@ -314,6 +322,5 @@ function PerosnalDetails() {
 }
 
 export default PerosnalDetails;
-
 
 // onClick={ Object.keys(error).length === 0 ? continueAndPay : ''}

@@ -1,17 +1,12 @@
-import React from 'react'
-import SpeakerSec from './SpeakerSec'
-
+import React from "react";
+import SpeakerSec from "./SpeakerSec";
 
 function SpeakerBody(props) {
-    return (
-        <div>
-            <SpeakerSec />
-
-        </div>
-    )
+  return (
+    <div>
+      <SpeakerSec />
+    </div>
+  );
 }
 
-
-
-export default SpeakerBody
-
+export default SpeakerBody;

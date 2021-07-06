@@ -6,11 +6,9 @@ import Footer from "../../../layouts/footer/Footer";
 import Navbar from "../../../layouts/Header/Navbar";
 import SpeakerOnebody from "./SpeakerOnebody";
 
-
 function Speakerzx9(props) {
-
   return (
-    <div className='productBody'>
+    <div className="productBody">
       <div
         className="productnav"
         style={{
@@ -24,8 +22,10 @@ function Speakerzx9(props) {
       >
         <Navbar />
       </div>
-      <Link className='Gobacklink' to='/speakers'>Go Back</Link>
-      <SpeakerOnebody  />
+      <Link className="Gobacklink" to="/speakers">
+        Go Back
+      </Link>
+      <SpeakerOnebody />
       <Shop />
       <Gear />
       <Footer />

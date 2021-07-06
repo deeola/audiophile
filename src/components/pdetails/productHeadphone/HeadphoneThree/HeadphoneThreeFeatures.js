@@ -1,50 +1,47 @@
-import React,{useContext,useEffect} from 'react';
+import React, { useContext, useEffect } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import { v4 as uuidv4 } from 'uuid';
-import HeadphoneThreeEar from './HeadphoneThreeEar';
+import { v4 as uuidv4 } from "uuid";
+import HeadphoneThreeEar from "./HeadphoneThreeEar";
 
 function HeadphoneThreeFeatures(props) {
-    const AudioContexts = useContext(audioContext);
+  const AudioContexts = useContext(audioContext);
 
-    let features;
-  
-    if (AudioContexts.data.length > 0) {
-      features = AudioContexts.data[1].features;
-    }
-  
-    //includes
-  
-    let includes;
-  
-    if (AudioContexts.data.length > 0) {
-      includes = AudioContexts.data[1].includes;
-  
-    }
-  
-    useEffect(() => {
-      AudioContexts.getdata();
-       // eslint-disable-next-line
-    }, []);
-    return (
-        <div  className='FeatureDiv'>
-      <div className='featureDescription'>
+  let features;
+  let includes;
+
+  if (AudioContexts.data.length > 0) {
+    includes = AudioContexts.data[1].includes;
+    features = AudioContexts.data[1].features;
+  }
+
+  useEffect(() => {
+    AudioContexts.getdata();
+    // eslint-disable-next-line
+  }, []);
+  return (
+    <div className="FeatureDiv">
+      <div className="featureDescription">
         <h4>FEATURES</h4>
-        <p className='featurePara'>{features !== undefined ? features : null}</p>
+        <p className="featurePara">
+          {features !== undefined ? features : null}
+        </p>
       </div>
-      <div className='FeatureBox'>
+      <div className="FeatureBox">
         <h4>IN THE BOX</h4>
-        <div className='divFeat'>
-        {includes !== undefined
-          ? includes.map((feature) => (
-              <HeadphoneThreeEar key={uuidv4()} number={feature.quantity} name={feature.item} />
-            ))
-          : null}
-          </div>
+        <div className="divFeat">
+          {includes !== undefined
+            ? includes.map((feature) => (
+                <HeadphoneThreeEar
+                  key={uuidv4()}
+                  number={feature.quantity}
+                  name={feature.item}
+                />
+              ))
+            : null}
+        </div>
       </div>
-
     </div>
-    )
+  );
 }
 
-export default HeadphoneThreeFeatures
-
+export default HeadphoneThreeFeatures;

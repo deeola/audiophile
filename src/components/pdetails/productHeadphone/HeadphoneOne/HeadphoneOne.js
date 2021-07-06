@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "../../../layouts/Header/Navbar";
 import { Link } from "react-router-dom";
-import HeadphoneOnebody from './HeadphoneOnebody';
+import HeadphoneOnebody from "./HeadphoneOnebody";
 import Shop from "../../../layouts/Bodylayout/Shop";
 import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneOne(props) {
   return (
-    <div className='productBody'>
+    <div className="productBody">
       <div
         className="productnav"
         style={{
@@ -20,12 +20,12 @@ function HeadphoneOne(props) {
           alignItems: "center",
         }}
       >
-        <Navbar  />
+        <Navbar />
       </div>
       <Link className="Gobacklink" to="/headphones">
         Go Back
       </Link>
-      <HeadphoneOnebody  />
+      <HeadphoneOnebody />
       <Shop />
       <Gear />
       <Footer />

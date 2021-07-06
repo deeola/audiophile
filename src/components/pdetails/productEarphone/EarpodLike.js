@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import audioContext from "../../../context/Audiophile/audioContext";
 
@@ -7,7 +7,6 @@ function EarpodLike(props) {
   const AudioContexts = useContext(audioContext);
 
   let others;
-
   if (AudioContexts.data.length > 0) {
     others = AudioContexts.data[0].others;
   }
@@ -18,14 +17,12 @@ function EarpodLike(props) {
   }, []);
 
   return (
-    <div className='alsoLike'>
+    <div className="alsoLike">
       <h4>YOU MAY ALSO LIKE</h4>
-      <div className='likeDiv'>
-        <div
-          className='eachLike'
-        >
+      <div className="likeDiv">
+        <div className="eachLike">
           <img
-          className='desktop'
+            className="desktop"
             src={
               require("../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg")
                 .default
@@ -33,7 +30,7 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg")
                 .default
@@ -41,21 +38,23 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='mobile'
+            className="mobile"
             src={
               require("../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg")
                 .default
             }
             alt="firstimagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[0].name : null}</p>
-          <Link className='likeLink' to='/xx99-mark-one'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[0].name : null}
+          </p>
+          <Link className="likeLink" to="/xx99-mark-one">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
-        <div
-          className='eachLike'
-        >
+        <div className="eachLike">
           <img
-          className='desktop'
+            className="desktop"
             src={
               require("../../../assets/shared/desktop/image-xx59-headphones.jpg")
                 .default
@@ -63,7 +62,7 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../assets/shared/tablet/image-xx59-headphones.jpg")
                 .default
@@ -71,21 +70,23 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='mobile'
+            className="mobile"
             src={
               require("../../../assets/shared/mobile/image-xx59-headphones.jpg")
                 .default
             }
             alt="firstimagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[1].name : null}</p>
-          <Link className='likeLink' to='/xx59'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[1].name : null}
+          </p>
+          <Link className="likeLink" to="/xx59">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
-        <div
-          className='eachLike'
-        >
+        <div className="eachLike">
           <img
-          className='desktop'
+            className="desktop"
             src={
               require("../../../assets/shared/desktop/image-zx9-speaker.jpg")
                 .default
@@ -93,7 +94,7 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../assets/shared/tablet/image-zx9-speaker.jpg")
                 .default
@@ -101,15 +102,19 @@ function EarpodLike(props) {
             alt="firstimagedesktop"
           ></img>
           <img
-            className='mobile'
+            className="mobile"
             src={
               require("../../../assets/shared/mobile/image-zx9-speaker.jpg")
                 .default
             }
             alt="firstimagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[2].name : null}</p>
-          <Link className='likeLink' to='/zx9'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[2].name : null}
+          </p>
+          <Link className="likeLink" to="/zx9">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
       </div>
     </div>

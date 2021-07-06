@@ -1,15 +1,14 @@
 import React from "react";
 import Navbar from "../../../layouts/Header/Navbar";
 import HeadphoneTwobody from "./HeadphoneTwobody";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Shop from "../../../layouts/Bodylayout/Shop";
 import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function HeadphoneTwo(props) {
-
   return (
-    <div className='productBody'>
+    <div className="productBody">
       <div
         className="productnav"
         style={{
@@ -21,7 +20,7 @@ function HeadphoneTwo(props) {
           alignItems: "center",
         }}
       >
-        <Navbar  />
+        <Navbar />
       </div>
       <Link className="Gobacklink" to="/headphones">
         Go Back

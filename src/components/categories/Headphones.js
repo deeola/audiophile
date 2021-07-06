@@ -5,18 +5,14 @@ import Footer from "../layouts/footer/Footer";
 import HeadphoneBody from "./Headphone/HeadphoneBody";
 import HeaderShared from "./shared/HeaderShared";
 
-
 function Headphones(props) {
-
-
   return (
-    <div className='HeadphoneMain'>
-        <HeaderShared  />
-        <HeadphoneBody />
-        <Shop />
-        <Gear className='HeadphoneGear' />
-        <Footer />
-        
+    <div className="HeadphoneMain">
+      <HeaderShared />
+      <HeadphoneBody />
+      <Shop />
+      <Gear className="HeadphoneGear" />
+      <Footer />
     </div>
   );
 }

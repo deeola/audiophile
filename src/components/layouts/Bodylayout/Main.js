@@ -7,12 +7,12 @@ import Zspeaker from "./Zspeaker";
 
 function Main(props) {
   return (
-    <div className='mybody'>
+    <div className="mybody">
       <Shop />
       <Speaker />
       <Zspeaker />
       <Earphones />
-      <Gear /> 
+      <Gear />
     </div>
   );
 }

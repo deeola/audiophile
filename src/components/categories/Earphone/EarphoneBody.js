@@ -1,14 +1,12 @@
-import React from 'react'
-import EarSection from './EarSection'
+import React from "react";
+import EarSection from "./EarSection";
 
 function EarphoneBody(props) {
-    return (
-        <div>
-            <EarSection />
-        </div>
-    )
+  return (
+    <div>
+      <EarSection />
+    </div>
+  );
 }
 
-
-export default EarphoneBody
-
+export default EarphoneBody;

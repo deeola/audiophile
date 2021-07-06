@@ -1,16 +1,14 @@
 import React from "react";
 import Navbar from "../../../layouts/Header/Navbar";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import SpeakerTwobody from "./SpeakerTwobody";
 import Shop from "../../../layouts/Bodylayout/Shop";
 import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
 function Speakerzx7(props) {
-
-
   return (
-    <div className='productBody'>
+    <div className="productBody">
       <div
         className="productnav"
         style={{
@@ -22,10 +20,12 @@ function Speakerzx7(props) {
           alignItems: "center",
         }}
       >
-        <Navbar  />
+        <Navbar />
       </div>
-      <Link className='Gobacklink' to='/speakers'>Go Back</Link>
-      <SpeakerTwobody  />
+      <Link className="Gobacklink" to="/speakers">
+        Go Back
+      </Link>
+      <SpeakerTwobody />
       <Shop />
       <Gear />
       <Footer />

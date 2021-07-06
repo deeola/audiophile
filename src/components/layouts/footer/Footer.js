@@ -16,20 +16,19 @@ function Footer(props) {
           demo facility - we’re open 7 days a week.
         </p>
       </div>
-      <div className='copyIcon'>
-        <p className='copyRight'>Copyright  2021. </p>
+      <div className="copyIcon">
+        <p className="copyRight">Copyright 2021. </p>
         <div className="icons">
           <div className="iconDiv">
-            <img src={facebook} alt='facebookicon'></img>
+            <img src={facebook} alt="facebookicon"></img>
           </div>
           <div className="iconDiv">
-            <img src={twitter} alt='twittericon'></img>
+            <img src={twitter} alt="twittericon"></img>
           </div>
           <div className="iconDiv">
-            <img src={instagram} alt='instagramicon'></img>
+            <img src={instagram} alt="instagramicon"></img>
           </div>
         </div>
-        
       </div>
     </div>
   );

@@ -1,14 +1,35 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function EarSection(props) {
   return (
     <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img className='desktop' src={require('../../../assets/category-earphones/desktop/earphoneDesktop.jpg').default}  alt='earphone section'></img>
-          <img className='tablet' src={require('../../../assets/category-earphones/tablet/image-yx1-earphones.jpg').default} alt='earphone section'></img>
-          <img className='mobile'  src={require('../../../assets/category-earphones/mobile/image-yx1-earphones.jpg').default}  alt='earphone section'></img>
+          <img
+            className="desktop"
+            src={
+              require("../../../assets/category-earphones/desktop/earphoneDesktop.jpg")
+                .default
+            }
+            alt="earphone section"
+          ></img>
+          <img
+            className="tablet"
+            src={
+              require("../../../assets/category-earphones/tablet/image-yx1-earphones.jpg")
+                .default
+            }
+            alt="earphone section"
+          ></img>
+          <img
+            className="mobile"
+            src={
+              require("../../../assets/category-earphones/mobile/image-yx1-earphones.jpg")
+                .default
+            }
+            alt="earphone section"
+          ></img>
         </div>
         <div className="SectionText sectionOne">
           <h2 className="SectionMainTitle">YX1 wireless earphones</h2>
@@ -18,7 +39,9 @@ function EarSection(props) {
             even in noisy environments with its active noise cancellation
             feature.
           </p>
-          <Link to='/yx1' className="sectionButton">SEE PRODUCT</Link>
+          <Link to="/yx1" className="sectionButton">
+            SEE PRODUCT
+          </Link>
         </div>
       </section>
     </div>

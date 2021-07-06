@@ -11,7 +11,7 @@ export default (state, action) => {
     case set_cartItems:
       return {
         ...state,
-        cartItems: action.payload
+        cartItems: action.payload,
       };
 
     case set_loading:

@@ -1,12 +1,12 @@
-@mixin FlexCenter($FD,$align,$justify) {
-    display: flex;
-    flex-direction: $FD;
-    align-items: $align;
-    justify-content: $justify;
+@mixin FlexCenter($FD, $align, $justify) {
+  display: flex;
+  flex-direction: $FD;
+  align-items: $align;
+  justify-content: $justify;
 }
 
-@mixin Font($FW,$FS,$color){
-    font-weight: $FW;
-    font-size: $FS;
-    color: $color;
+@mixin Font($FW, $FS, $color) {
+  font-weight: $FW;
+  font-size: $FS;
+  color: $color;
 }

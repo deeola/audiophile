@@ -10,17 +10,11 @@ function SpeakerTwoFeatures(props) {
     const AudioContexts = useContext(audioContext);
 
     let features;
-  
-    if (AudioContexts.data.length > 0) {
-      features = AudioContexts.data[4].features;
-    }
-  
-    //includes
-  
     let includes;
   
     if (AudioContexts.data.length > 0) {
       includes = AudioContexts.data[4].includes;
+      features = AudioContexts.data[4].features;
   
     }
   

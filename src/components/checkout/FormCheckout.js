@@ -1,19 +1,12 @@
-import React from 'react';
-import PerosnalDetails from './PersonalDetails';
-
-
+import React from "react";
+import PerosnalDetails from "./PersonalDetails";
 
 function FormCheckout(props) {
-
-    
-    return (
-        <div>
-            <PerosnalDetails />
-        </div>
-    )
+  return (
+    <div>
+      <PerosnalDetails />
+    </div>
+  );
 }
 
-
-export default FormCheckout
-
-
+export default FormCheckout;

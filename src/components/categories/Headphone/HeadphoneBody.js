@@ -1,16 +1,12 @@
-import React from 'react';
-import Section from '../shared/Section';
-
+import React from "react";
+import Section from "../shared/Section";
 
 function HeadphoneBody(props) {
-    return (
-        <div>
-            <Section />
-        </div>
-    )
+  return (
+    <div>
+      <Section />
+    </div>
+  );
 }
 
-
-
-export default HeadphoneBody
-
+export default HeadphoneBody;

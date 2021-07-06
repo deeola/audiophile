@@ -7,7 +7,7 @@ const AudioState = (props) => {
   //INITIAL STATE
   const initialState = {
     data: [],
-    loading: false
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(audioReducer, initialState);
@@ -39,9 +39,8 @@ const AudioState = (props) => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const [cartNotification, setCartNotification] = useState(0)
+  const [cartNotification, setCartNotification] = useState(0);
 
-  // On ADD
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
@@ -53,31 +52,21 @@ const AudioState = (props) => {
       );
       increaseQuantity();
 
-      setCartNotification(1)
+      setCartNotification(1);
 
       setTimeout(() => {
-        setCartNotification(0)
-      },3000)
-  
-      
-
+        setCartNotification(0);
+      }, 3000);
     } else {
       setCartItems([...cartItems, { ...product, qty: quantity }]);
 
-      setCartNotification(2)
+      setCartNotification(2);
 
       setTimeout(() => {
-        setCartNotification(0)
-      },3000)
-
-      
-
-     
-  
-
+        setCartNotification(0);
+      }, 3000);
     }
   };
-
 
   //OnRemove Function
   const onRemove = (product) => {
@@ -107,7 +96,7 @@ const AudioState = (props) => {
   //Open
   const bucketIconClicked = () => {
     setMyBucketDisplay(!myBucketDisplay);
-    setMenuOpend(false)
+    setMenuOpend(false);
   };
 
   //CHECKOUT DISPLAY
@@ -135,19 +124,14 @@ const AudioState = (props) => {
     setIsSubmitted(true);
   }
 
-    
-
   const removeAll = () => {
-  
     setCartItems([]);
   };
 
   const removeAllandReturn = () => {
-  
     setCartItems([]);
-    window.location.href="/" 
+    window.location.href = "/";
   };
-
 
   //SET SUCCESS MODAL
   const [successDisplay, setSuccessDisplay] = useState({
@@ -156,12 +140,9 @@ const AudioState = (props) => {
 
   //Open
   const continueAndPay = () => {
-
-      setSuccessDisplay({
-        display: "block",
-      });
-
-    
+    setSuccessDisplay({
+      display: "block",
+    });
   };
 
   const openBuckets = () => {
@@ -172,66 +153,59 @@ const AudioState = (props) => {
 
   localStorage.setItem("newItems", JSON.stringify(cartItems));
 
-
   //MENU BAR
 
   const [menuOpened, setMenuOpend] = useState(false);
 
-
-
-  const slideMenu = () =>{
-
-    return menuOpened ? {} : {display: "none", marginLeft:-930}
-  }
+  const slideMenu = () => {
+    return menuOpened ? {} : { display: "none", marginLeft: -930 };
+  };
 
   const menuIconClicked = () => {
-
     setMenuOpend(!menuOpened);
-    setMyBucketDisplay(false)
-  
-  }
+    setMyBucketDisplay(false);
+  };
 
   const closeMenuOnClick = () => {
-    setMenuOpend(false)
-  }
+    setMenuOpend(false);
+  };
 
   //SHOW MONEYPIN
 
   const [showMoneyPin, setShowMoneyPin] = useState(false);
 
   const clickTrue = () => {
-      //SET TO TRUE
-      return showMoneyPin ? {} : {display: "none"}
-  }
+    //SET TO TRUE
+    return showMoneyPin ? {} : { display: "none" };
+  };
 
-  const showIconclicked=() => {
-      setShowMoneyPin(true);
-      setShowEmoney(false)
-  }
-
+  const showIconclicked = () => {
+    setShowMoneyPin(true);
+    setShowEmoney(false);
+  };
 
   //SHOW MONEYPIN
 
   const [showEmoney, setShowEmoney] = useState(false);
 
   const clickTrues = () => {
-      //SET TO TRUE
-      return showEmoney ? {} : {display: "none"}
-  }
+    //SET TO TRUE
+    return showEmoney ? {} : { display: "none" };
+  };
 
-  const showIconclickeds=() => {
-      setShowEmoney(true);
-      setShowMoneyPin(false)
-  }
+  const showIconclickeds = () => {
+    setShowEmoney(true);
+    setShowMoneyPin(false);
+  };
 
   //RETURN
   return (
     <audioContext.Provider
       value={{
         clickTrues,
-          showIconclickeds,
-          clickTrue,
-          showIconclicked,
+        showIconclickeds,
+        clickTrue,
+        showIconclicked,
         closeMenuOnClick,
         slideMenu,
         menuIconClicked,
@@ -259,7 +233,7 @@ const AudioState = (props) => {
         openBuckets,
         setIsSubmitted,
         removeAllandReturn,
-        cartNotification
+        cartNotification,
       }}
     >
       {props.children}

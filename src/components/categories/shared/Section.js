@@ -1,14 +1,35 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Section(props) {
   return (
-    <div >
+    <div>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img className='desktop' src={require('../../../assets/category-headphones/desktop/marktwo.jpg').default} alt='secondimage'></img>
-          <img className='tablet' src={require('../../../assets/category-headphones/tablet/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
-          <img className='mobile'  src={require('../../../assets/category-headphones/mobile/image-xx99-mark-two.jpg').default} alt='secondimage'></img>
+          <img
+            className="desktop"
+            src={
+              require("../../../assets/category-headphones/desktop/marktwo.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
+          <img
+            className="tablet"
+            src={
+              require("../../../assets/category-headphones/tablet/image-xx99-mark-two.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
+          <img
+            className="mobile"
+            src={
+              require("../../../assets/category-headphones/mobile/image-xx99-mark-two.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
         </div>
         <div className="SectionText sectionOne">
           <p className="newProductSec">NEW PRODUCT</p>
@@ -18,7 +39,9 @@ function Section(props) {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </p>
-          <Link to='/xx99-mark-two' className='sectionButton'>SEE PRODUCT</Link>
+          <Link to="/xx99-mark-two" className="sectionButton">
+            SEE PRODUCT
+          </Link>
         </div>
       </section>
       <section className="HeadphoneSection">
@@ -29,19 +52,63 @@ function Section(props) {
             detailed and accurate audio reproduction for audiophiles, mixing
             engineers, and music aficionados alike in studios and on the go.
           </p>
-          <Link to='/xx99-mark-one' className='sectionButton'>SEE PRODUCT</Link>
+          <Link to="/xx99-mark-one" className="sectionButton">
+            SEE PRODUCT
+          </Link>
         </div>
         <div className="HeadImageOne">
-          <img className='desktop' src={require('../../../assets/category-headphones/desktop/markone.jpg').default} alt='firstimage'></img>
-          <img className='tablet'  src={require('../../../assets/category-headphones/tablet/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
-          <img className='mobile' src={require('../../../assets/category-headphones/mobile/image-xx99-mark-one.jpg').default} alt='secondimage'></img>
+          <img
+            className="desktop"
+            src={
+              require("../../../assets/category-headphones/desktop/markone.jpg")
+                .default
+            }
+            alt="firstimage"
+          ></img>
+          <img
+            className="tablet"
+            src={
+              require("../../../assets/category-headphones/tablet/image-xx99-mark-one.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
+          <img
+            className="mobile"
+            src={
+              require("../../../assets/category-headphones/mobile/image-xx99-mark-one.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
         </div>
       </section>
       <section className="HeadphoneSection">
         <div className="HeadImageOne">
-          <img className='desktop' src={require('../../../assets/category-headphones/desktop/markthree.jpg').default}  alt='thirdimage'></img>
-          <img className='tablet' src={require('../../../assets/category-headphones/tablet/image-xx59.jpg').default} alt='secondimage'></img>
-          <img className='mobile' src={require('../../../assets/category-headphones/mobile/image-xx59.jpg').default} alt='secondimage'></img>
+          <img
+            className="desktop"
+            src={
+              require("../../../assets/category-headphones/desktop/markthree.jpg")
+                .default
+            }
+            alt="thirdimage"
+          ></img>
+          <img
+            className="tablet"
+            src={
+              require("../../../assets/category-headphones/tablet/image-xx59.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
+          <img
+            className="mobile"
+            src={
+              require("../../../assets/category-headphones/mobile/image-xx59.jpg")
+                .default
+            }
+            alt="secondimage"
+          ></img>
         </div>
         <div className="SectionText sectionOne">
           <h2 className="SectionMainTitle">XX59 Headphones</h2>
@@ -50,7 +117,9 @@ function Section(props) {
             tastes with the XX59 headphones. The stylish yet durable versatile
             wireless headset is a brilliant companion at home or on the move.
           </p>
-          <Link to='/xx59' className='sectionButton'>SEE PRODUCT</Link>
+          <Link to="/xx59" className="sectionButton">
+            SEE PRODUCT
+          </Link>
         </div>
       </section>
     </div>

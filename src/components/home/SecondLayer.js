@@ -1,20 +1,11 @@
-import React,{useContext} from 'react';
-import audioContext from '../../context/Audiophile/audioContext'
-
+import React, { useContext } from "react";
+import audioContext from "../../context/Audiophile/audioContext";
 
 function SecondLayer(props) {
+  const AudioContext = useContext(audioContext);
+  const slideMenu = AudioContext.slideMenu;
 
-    const AudioContext = useContext(audioContext);
-    const slideMenu = AudioContext.slideMenu
-
-    return (
-        <div className='layer' style={slideMenu()}>
-            
-        </div>
-    )
+  return <div className="layer" style={slideMenu()}></div>;
 }
 
-
-
-export default SecondLayer
-
+export default SecondLayer;

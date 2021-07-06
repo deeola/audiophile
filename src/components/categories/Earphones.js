@@ -5,13 +5,10 @@ import Shop from "../layouts/Bodylayout/Shop";
 import Footer from "../layouts/footer/Footer";
 import EarphoneBody from "./Earphone/EarphoneBody";
 
-
-
 function Earphones(props) {
-
   return (
-    <div className='EarphoneMain'>
-      <HeaderShared  />
+    <div className="EarphoneMain">
+      <HeaderShared />
       <EarphoneBody />
       <Shop />
       <Gear />

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function HeadphoneTwoLikes(props) {
   const AudioContexts = useContext(audioContext);
@@ -20,8 +20,8 @@ function HeadphoneTwoLikes(props) {
       <h4>YOU MAY ALSO LIKE</h4>
       <div className="likeDiv">
         <div className="eachLike">
-          <img className='desktop'
-
+          <img
+            className="desktop"
             src={
               require("../../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg")
                 .default
@@ -29,7 +29,7 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg")
                 .default
@@ -37,18 +37,23 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='mobile' 
+            className="mobile"
             src={
               require("../../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg")
                 .default
             }
             alt="imagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[0].name : null}</p>
-          <Link className='likeLink' to='/xx99-mark-one'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[0].name : null}
+          </p>
+          <Link className="likeLink" to="/xx99-mark-one">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
         <div className="eachLike">
-          <img className='desktop'
+          <img
+            className="desktop"
             src={
               require("../../../../assets/shared/desktop/image-xx59-headphones.jpg")
                 .default
@@ -56,7 +61,7 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../../assets/shared/tablet/image-xx59-headphones.jpg")
                 .default
@@ -64,18 +69,23 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='mobile' 
+            className="mobile"
             src={
               require("../../../../assets/shared/mobile/image-xx59-headphones.jpg")
                 .default
             }
             alt="imagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[1].name : null}</p>
-          <Link className='likeLink' to='/xx59'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[1].name : null}
+          </p>
+          <Link className="likeLink" to="/xx59">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
         <div className="eachLike">
-          <img className='desktop'
+          <img
+            className="desktop"
             src={
               require("../../../../assets/shared/desktop/image-zx9-speaker.jpg")
                 .default
@@ -83,7 +93,7 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='tablet'
+            className="tablet"
             src={
               require("../../../../assets/shared/tablet/image-zx9-speaker.jpg")
                 .default
@@ -91,15 +101,19 @@ function HeadphoneTwoLikes(props) {
             alt="imagedesktop"
           ></img>
           <img
-            className='mobile' 
+            className="mobile"
             src={
               require("../../../../assets/shared/mobile/image-zx9-speaker.jpg")
                 .default
             }
             alt="imagedesktop"
           ></img>
-          <p className='likeName'>{others !== undefined ? others[2].name : null}</p>
-          <Link className='likeLink' to='/zx9'><button>SEE PRODUCT</button></Link>
+          <p className="likeName">
+            {others !== undefined ? others[2].name : null}
+          </p>
+          <Link className="likeLink" to="/zx9">
+            <button>SEE PRODUCT</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -5,15 +5,9 @@ import FormCheckout from "./FormCheckout";
 import LayoutCheck from "./LayoutCheck";
 import Success from "./Success";
 
-
 function Checkout(props) {
-
-
-  
-
-
   return (
-    <div >
+    <div>
       <div
         className="productnav"
         style={{
@@ -27,10 +21,10 @@ function Checkout(props) {
       >
         <Navbar />
       </div>
-      <FormCheckout  />
+      <FormCheckout />
       <Footer />
-      <Success   />
-      <LayoutCheck   />
+      <Success />
+      <LayoutCheck />
     </div>
   );
 }
