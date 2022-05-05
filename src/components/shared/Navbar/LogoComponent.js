@@ -1,9 +1,9 @@
 import React from 'react';
 import { Logo } from './Navbarstyling';
 
-const LogoComponent = ({img, alt}) => {
+const LogoComponent = ({img}) => {
   return (
-    <Logo data-testid='logo' src={img} alt={alt} />
+    <Logo data-testid='logo' src={img} alt={'logo'} />
   )
 }
 

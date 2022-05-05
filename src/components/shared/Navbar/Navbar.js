@@ -17,6 +17,7 @@ import logo from "../../../assets/shared/desktop/logo.svg";
 import cartimg from "../../../assets/shared/desktop/cart.svg";
 import Links from "./Links";
 import LogoComponent from "./LogoComponent";
+import Carts from "./Carts";
 
 const Navbar = () => {
   const AudioContext = useContext(audioContext);
@@ -34,22 +35,21 @@ const Navbar = () => {
         />
       </HamContainer>
       <List to={"/"}>
-        <LogoComponent img={logo} alt={"logo"} />
+        <LogoComponent img={logo} />
       </List>
       <NavList>
-        <Links label={"Home"} to="/"  />
-        <Links  label={"Headphones"} to="/Headphones" />
+        <Links label={"Home"} to="/" />
+        <Links label={"Headphones"} to="/Headphones" />
         <Links to="/Speakers" label={"Speakers"} />
         <Links to="/Earphones" label={"Earphones"} />
       </NavList>
-      <Cart onClick={bucketIconClicked}>
-        <CartImage src={cartimg} alt="cart" />
-        {cartItems.length !== 0 ? (
-          <CartLength>{cartItems.length}</CartLength>
-        ) : (
-          ""
-        )}
-      </Cart>
+      <Carts
+        ci={cartItems}
+        data-testid="kart"
+        func={bucketIconClicked}
+        cartimg={cartimg}
+        cartlength={cartItems.length}
+      />
     </Nav>
   );
 };
