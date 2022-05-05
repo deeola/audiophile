@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Button, SecondaryButton, TetiaryButton} from "../../Buttons/Button";
 import Navbar from "../../shared/Navbar/Navbar";
 
 // import Navbar from "./Navbar";
@@ -28,12 +29,7 @@ function Hero(props) {
             build quality made for the passionate music
           </p>
           <p className="productDescr ">enthusiast.</p>
-          <button>
-            {" "}
-            <Link to="/xx99-mark-two" className="shopTextLink">
-              See product
-            </Link>{" "}
-          </button>
+          <Button  label={'SEE PRODUCT'} link='/xx99-mark-two' />
         </div>
         <div className="herowrapper"></div>
       </div>
@@ -42,4 +38,6 @@ function Hero(props) {
 }
 
 export default Hero;
+
+
 
