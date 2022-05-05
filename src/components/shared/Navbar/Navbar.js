@@ -16,6 +16,7 @@ import hamburger from "../../../assets/shared/tablet/hamburger.svg";
 import logo from "../../../assets/shared/desktop/logo.svg";
 import cartimg from "../../../assets/shared/desktop/cart.svg";
 import Links from "./Links";
+import LogoComponent from "./LogoComponent";
 
 const Navbar = () => {
   const AudioContext = useContext(audioContext);
@@ -32,9 +33,8 @@ const Navbar = () => {
           alt="hamburger"
         />
       </HamContainer>
-
       <List to={"/"}>
-        <Logo src={logo} alt="logo" />
+        <LogoComponent img={logo} alt={"logo"} />
       </List>
       <NavList>
         <Links label={"Home"} to="/"  />
