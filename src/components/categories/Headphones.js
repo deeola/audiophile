@@ -8,7 +8,7 @@ import HeaderShared from "./shared/HeaderShared";
 function Headphones(props) {
   return (
     <div className="HeadphoneMain">
-      <HeaderShared />
+      <HeaderShared title={'Headphones'} />
       <HeadphoneBody />
       <Shop />
       <Gear className="HeadphoneGear" />

@@ -1,16 +1,12 @@
 import React from "react";
+import ProductHero from "../../shared/Hero/ProductHero";
 import Navbar from "../../shared/Navbar/Navbar";
 
-
-import HeroShared from "./HeroShared";
-
-
-
-function HeaderShared(props) {
+function HeaderShared({title}) {
   return (
     <div className="HeaderShared">
       <Navbar />
-      <HeroShared />
+      <ProductHero title={title} />
     </div>
   );
 }

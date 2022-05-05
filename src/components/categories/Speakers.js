@@ -8,7 +8,7 @@ import SpeakerBody from "./Speaker/SpeakerBody";
 function Speakers(props) {
   return (
     <div className="SpeakerMain">
-      <HeaderShared />
+      <HeaderShared title={'Speakers'} />
       <SpeakerBody />
       <Shop />
       <Gear />

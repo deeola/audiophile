@@ -8,7 +8,7 @@ import EarphoneBody from "./Earphone/EarphoneBody";
 function Earphones(props) {
   return (
     <div className="EarphoneMain">
-      <HeaderShared />
+      <HeaderShared title={'Earphones'}/>
       <EarphoneBody />
       <Shop />
       <Gear />

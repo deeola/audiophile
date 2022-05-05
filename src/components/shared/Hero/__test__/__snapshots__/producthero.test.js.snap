@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches product hero snapshot 1`] = `
+<div
+  className="sc-bczRLJ iMgFOz"
+>
+  <h1
+    className="sc-gsnTZi fMClSb"
+    data-testid="title"
+  >
+    Speaker
+  </h1>
+</div>
+`;
