@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import audioContext from "../../../context/Audiophile/audioContext";
 
+
 function Navbar(props) {
   const AudioContext = useContext(audioContext);
 
@@ -50,13 +51,12 @@ function Navbar(props) {
             }}
             to="/cart"
           >
-            {" "}
             <img
               className="cartIcon"
               src={require("../../../assets/shared/desktop/cart.svg").default}
               alt="carticon"
             ></img>
-            {""}{" "}
+
             {Cartlength ? (
               <p style={{ marginLeft: "10px" }} className="countCart">
                 {Cartlength}

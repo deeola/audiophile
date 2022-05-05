@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "../../shared/Navbar/Navbar";
+
+// import Navbar from "./Navbar";
 import Rectangle from "./Rectangle";
+
+
 
 function Hero(props) {
   return (
     <div className="mainHero">
       <div>
         <Navbar />
+        {/* <Navbar /> */}
         <Rectangle />
       </div>
 
@@ -37,3 +42,4 @@ function Hero(props) {
 }
 
 export default Hero;
+

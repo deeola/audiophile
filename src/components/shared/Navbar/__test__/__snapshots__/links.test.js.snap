@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<a
+  className="sc-gKXOVf dnzQcQ"
+  data-testid="list"
+  href="/"
+  onClick={[Function]}
+>
+  Home
+</a>
+`;

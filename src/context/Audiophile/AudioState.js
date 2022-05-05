@@ -28,7 +28,7 @@ const AudioState = (props) => {
   //SET LOADING
   const setloading = () => dispatch({ type: set_loading });
 
-  //SET QUANTITY
+  //SET ITEM QUANTITY
 
   const [quantity, setquantity] = useState(1);
 
@@ -86,6 +86,7 @@ const AudioState = (props) => {
     }
   };
 
+  
   //BUCKET LIST
   const [myBucketDisplay, setMyBucketDisplay] = useState(false);
 

@@ -1,6 +1,10 @@
 import React from "react";
-import Navbar from "../../layouts/Header/Navbar";
+import Navbar from "../../shared/Navbar/Navbar";
+
+
 import HeroShared from "./HeroShared";
+
+
 
 function HeaderShared(props) {
   return (

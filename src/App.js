@@ -25,18 +25,18 @@ function App(props) {
       <Router>
         <div className="App">
           <Switch>
-            <Route exact path="/" render={(props) => <Home />} />
-            <Route path="/headphones" render={(props) => <Headphones />} />
-            <Route path="/speakers" render={(props) => <Speakers />} />
-            <Route path="/earphones" render={(props) => <Earphones />} />
-            <Route path="/yx1" render={(props) => <EarpodProduct />} />
-            <Route path="/zx9" render={(props) => <SpeakerOne />} />
-            <Route path="/zx7" render={(props) => <SpeakerTwo />} />
-            <Route path="/xx99-mark-one" render={(props) => <HeadphoneOne />} />
-            <Route path="/xx99-mark-two" render={(props) => <HeadphoneTwo />} />
-            <Route path="/xx59" render={(props) => <HeadphoneThree />} />
-            <Route path="/cart" render={(props) => <Basket />} />
-            <Route path="/checkout" render={(props) => <Checkout />} />
+            <Route exact path="/" render={() => <Home />} />
+            <Route path="/headphones" render={() => <Headphones />} />
+            <Route path="/speakers" render={() => <Speakers />} />
+            <Route path="/earphones" render={() => <Earphones />} />
+            <Route path="/yx1" render={() => <EarpodProduct />} />
+            <Route path="/zx9" render={() => <SpeakerOne />} />
+            <Route path="/zx7" render={() => <SpeakerTwo />} />
+            <Route path="/xx99-mark-one" render={() => <HeadphoneOne />} />
+            <Route path="/xx99-mark-two" render={() => <HeadphoneTwo />} />
+            <Route path="/xx59" render={() => <HeadphoneThree />} />
+            <Route path="/cart" render={() => <Basket />} />
+            <Route path="/checkout" render={() => <Checkout />} />
           </Switch>
           <Menu />
           <Basket />

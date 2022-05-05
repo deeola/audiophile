@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../../layouts/Header/Navbar";
+import Navbar from "../../../shared/Navbar/Navbar";
 import HeadphoneTwobody from "./HeadphoneTwobody";
 import { Link } from "react-router-dom";
 import Shop from "../../../layouts/Bodylayout/Shop";

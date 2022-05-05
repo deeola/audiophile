@@ -1,9 +1,12 @@
 import React from "react";
 import Footer from "../layouts/footer/Footer";
-import Navbar from "../layouts/Header/Navbar";
+import Navbar from "../shared/Navbar/Navbar";
+
 import FormCheckout from "./FormCheckout";
 import LayoutCheck from "./LayoutCheck";
 import Success from "./Success";
+
+
 
 function Checkout(props) {
   return (
