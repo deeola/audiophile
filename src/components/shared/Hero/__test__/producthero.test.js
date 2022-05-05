@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import renderer from "react-test-renderer";
 import ProductHero from "../ProductHero";
@@ -25,10 +25,9 @@ it("renders correct title of product hero of headphone", () => {
 });
 
 it("renders correct title of product hero of earphone", () => {
-  const { getByTestId } = render(
-    <ProductHero title={"earphone"}></ProductHero>
-  );
-  expect(getByTestId("title")).toHaveTextContent("earphone");
+  render(<ProductHero title={"earphone"} />);
+  const MyElemeng = screen.getByTestId("title");
+  expect(MyElemeng).toHaveTextContent("earphone");
 });
 
 //Snapshots

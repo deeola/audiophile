@@ -73,7 +73,6 @@ export const List = styled(Link)`
   margin-left: 10px;
   font-weight: 700;
   font-size: 13px;
-
   color: white;
   &:hover {
     color: ${orange};
@@ -85,7 +84,6 @@ export const List = styled(Link)`
 
 export const Cart = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
 `;
 export const CartImage = styled.img`
