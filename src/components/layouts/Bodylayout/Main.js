@@ -1,11 +1,12 @@
 import React from "react";
 import HomeEarphone from "../../Homey/Earphone/HomeEarphone";
+import Gear from "../../Homey/Gear/Gear";
 import DescriptionText from "../../Homey/Z7speakers/DescriptionText";
 import SecondSpeaker from "../../Homey/Z7speakers/ZSspeaker";
 import Zspeaker from "../../Homey/Zspeaker/Zspeaker";
 import Shop from "../../shared/Shop/Shop";
 import Earphones from "./Earphones";
-import Gear from "./Gear";
+// import Gear from "./Gear";
 
 
 
@@ -23,6 +24,7 @@ function Main(props) {
       <HomeEarphone />
       {/* <Earphones /> */}
       <Gear />
+      
     </div>
   );
 }

@@ -6,7 +6,6 @@ import mobile from "../../../assets/home/mobile/image-earphones-yx1.jpg";
 export const HomeEarphoneContainer = styled.section`
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   width: 80%;
   margin: 40px auto;
 `;
@@ -36,7 +35,7 @@ const handleBackground = (img) => {
 };
 export const ContDiv = styled.div`
   width: 49%;
-  padding: 110px 40px;
+  padding: 110px 80px;
   ${({ img }) => handleBackground(img)};
 `;
 
