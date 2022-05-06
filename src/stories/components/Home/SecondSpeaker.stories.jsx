@@ -1,20 +1,22 @@
-import Zspeaker from "../../../components/Homey/Zspeaker/Zspeaker";
+
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import SecondSpeaker from "../../../components/Homey/Z7speakers/ZSspeaker";
+
+
 
 export default {
   title: "Components/HOME",
-  component: Zspeaker,
+  component: SecondSpeaker,
 };
 
 const Template = (args) => (
   <BrowserRouter>
-    <Zspeaker {...args} />
+    < SecondSpeaker {...args} />
   </BrowserRouter>
 );
 
-export const ZX9 = Template.bind({});
-ZX9.args = {
-  primary: true,
-};
+export const ZX7 = Template.bind({});
+
+
 

@@ -1,4 +1,6 @@
 import React from "react";
+import DescriptionText from "../../Homey/Z7speakers/DescriptionText";
+import SecondSpeaker from "../../Homey/Z7speakers/ZSspeaker";
 import Zspeaker from "../../Homey/Zspeaker/Zspeaker";
 import Shop from "../../shared/Shop/Shop";
 import Earphones from "./Earphones";
@@ -12,6 +14,9 @@ function Main(props) {
 
       <Shop />
       <Zspeaker />
+
+      <SecondSpeaker />
+      {/* <Z7speaker /> */}
       {/* <Speaker />
       <Zspeaker /> */}
       <Earphones />
