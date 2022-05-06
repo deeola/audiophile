@@ -1,6 +1,6 @@
 import "./css/style.css";
 import Home from "./components/home/Home";
-import Headphones from "./components/categories/Headphones";
+import Headphoness from "./components/categories/Headphones";
 import Speakers from "./components/categories/Speakers";
 import Earphones from "./components/categories/Earphones";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -26,7 +26,7 @@ function App(props) {
         <div className="App">
           <Switch>
             <Route exact path="/" render={() => <Home />} />
-            <Route path="/headphones" render={() => <Headphones />} />
+            <Route path="/headphones" render={() => <Headphoness />} />
             <Route path="/speakers" render={() => <Speakers />} />
             <Route path="/earphones" render={() => <Earphones />} />
             <Route path="/yx1" render={() => <EarpodProduct />} />
