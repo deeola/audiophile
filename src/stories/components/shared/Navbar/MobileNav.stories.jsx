@@ -15,5 +15,4 @@ export default {
   export const Primary = Template.bind({});
   Primary.args = {
     primary: true,
-    label: "Home",
   };

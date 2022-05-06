@@ -1,17 +1,19 @@
 import React from "react";
+import Zspeaker from "../../Homey/Zspeaker/Zspeaker";
 import Shop from "../../shared/Shop/Shop";
 import Earphones from "./Earphones";
 import Gear from "./Gear";
-import Speaker from "./Speaker";
-import Zspeaker from "./Zspeaker";
+
+
 
 function Main(props) {
   return (
     <div className="mybody">
 
       <Shop />
-      <Speaker />
       <Zspeaker />
+      {/* <Speaker />
+      <Zspeaker /> */}
       <Earphones />
       <Gear />
     </div>
@@ -19,3 +21,5 @@ function Main(props) {
 }
 
 export default Main;
+
+
