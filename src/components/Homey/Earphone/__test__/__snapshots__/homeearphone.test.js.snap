@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches  snapshot 1`] = `
+<section
+  className="sc-eCYdqJ eJqvHb"
+  data-testid="earphone"
+>
+  <div
+    className="sc-jSMfEi dCUNTb"
+  />
+  <div
+    className="sc-jSMfEi bPhMgv"
+  >
+    <div
+      className="sc-dkzDqf"
+    >
+      <h4
+        className="sc-hKMtZM cXPvZu"
+        data-testid="title"
+      >
+        YX1 EARPHONES
+      </h4>
+      <a
+        className="sc-bczRLJ gMbnUY"
+        color="secondary"
+        data-testid="secondarybutton"
+        hover="secondary"
+        href="/yx1"
+        onClick={[Function]}
+      >
+        SEE PRODUCT
+      </a>
+    </div>
+  </div>
+</section>
+`;

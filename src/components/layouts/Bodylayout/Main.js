@@ -1,4 +1,5 @@
 import React from "react";
+import HomeEarphone from "../../Homey/Earphone/HomeEarphone";
 import DescriptionText from "../../Homey/Z7speakers/DescriptionText";
 import SecondSpeaker from "../../Homey/Z7speakers/ZSspeaker";
 import Zspeaker from "../../Homey/Zspeaker/Zspeaker";
@@ -19,7 +20,8 @@ function Main(props) {
       {/* <Z7speaker /> */}
       {/* <Speaker />
       <Zspeaker /> */}
-      <Earphones />
+      <HomeEarphone />
+      {/* <Earphones /> */}
       <Gear />
     </div>
   );
