@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import audioContext from "../../../../context/Audiophile/audioContext";
 import { Link } from "react-router-dom";
+import { Button } from "../../../Buttons/Button";
 
 function SpeakerTwoLikes(props) {
   const AudioContexts = useContext(audioContext);
@@ -47,9 +48,7 @@ function SpeakerTwoLikes(props) {
           <p className="likeName">
             {others !== undefined ? others[0].name : null}
           </p>
-          <Link className="likeLink" to="/zx9">
-            <button>SEE PRODUCT</button>
-          </Link>
+          <Button to="/zx9" label={"SEE PRODUCT"} />
         </div>
         <div className="eachLike">
           <img
@@ -79,9 +78,7 @@ function SpeakerTwoLikes(props) {
           <p className="likeName">
             {others !== undefined ? others[1].name : null}
           </p>
-          <Link className="likeLink" to="/xx99-mark-one">
-            <button>SEE PRODUCT</button>
-          </Link>
+          <Button to="/xx99-mark-one" label={"SEE PRODUCT"} />
         </div>
         <div className="eachLike">
           <img
@@ -111,9 +108,7 @@ function SpeakerTwoLikes(props) {
           <p className="likeName">
             {others !== undefined ? others[2].name : null}
           </p>
-          <Link className="likeLink" to="/xx59">
-            <button>SEE PRODUCT</button>
-          </Link>
+          <Button to="xx59" label={"SEE PRODUCT"} />
         </div>
       </div>
     </div>

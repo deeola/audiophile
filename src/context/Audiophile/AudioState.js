@@ -159,7 +159,7 @@ const AudioState = (props) => {
   const [menuOpened, setMenuOpend] = useState(false);
 
   const slideMenu = () => {
-    return menuOpened ? {} : { display: "none", marginLeft: -930 };
+    return menuOpened ? {} : { display: "none"};
   };
 
   const menuIconClicked = () => {

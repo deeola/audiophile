@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../../shared/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import SpeakerTwobody from "./SpeakerTwobody";
-import Shop from "../../../layouts/Bodylayout/Shop";
 import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
@@ -26,7 +25,6 @@ function Speakerzx7(props) {
         Go Back
       </Link>
       <SpeakerTwobody />
-      <Shop />
       <Gear />
       <Footer />
     </div>

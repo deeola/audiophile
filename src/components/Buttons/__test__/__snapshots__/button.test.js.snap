@@ -2,11 +2,12 @@
 
 exports[`Primary Button matches snapshot 1`] = `
 <a
-  className="sc-bczRLJ gPVUWY"
+  className="sc-bczRLJ dRtteY"
+  color="primary"
   data-testid="primarybutton"
+  hover="primary"
   href=""
   onClick={[Function]}
-  primary={true}
 >
   SEE PRODUCT
 </a>
@@ -14,8 +15,10 @@ exports[`Primary Button matches snapshot 1`] = `
 
 exports[`Secondary Button matches snapshot 1`] = `
 <a
-  className="sc-bczRLJ gzLSxt"
+  className="sc-bczRLJ gMbnUY"
+  color="secondary"
   data-testid="secondarybutton"
+  hover="secondary"
   href=""
   onClick={[Function]}
 >

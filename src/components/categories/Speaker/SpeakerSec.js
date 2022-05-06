@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../Buttons/Button";
 function SpeakerSec(props) {
   return (
     <div>
@@ -39,9 +40,7 @@ function SpeakerSec(props) {
             -- creating new possibilities for more pleasing and practical audio
             setups.
           </p>
-          <Link to="/zx9" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+          <Button link={"/zx9"} label={"SEE PRODUCT"} />
         </div>
       </section>
       <section className="HeadphoneSection">
@@ -53,9 +52,8 @@ function SpeakerSec(props) {
             represents the top of the line powered speakers for home or studio
             use.
           </p>
-          <Link to="/zx7" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+
+          <Button link={"/zx7"} label={"SEE PRODUCT"} />
         </div>
         <div className="HeadImageOne">
           <img

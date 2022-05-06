@@ -40,8 +40,8 @@ function App(props) {
           </Switch>
           <Menu />
           <Basket />
-          <Layer />
-          <SecondLayer />
+          {/* <Layer /> */}
+          {/* <SecondLayer /> */}
           
         </div>
       </Router>

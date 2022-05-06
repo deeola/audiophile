@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import { TetiaryButton } from "../../../components/Buttons/Button";
+import { BlackButton } from "../../../components/Buttons/Button";
 
 export default {
   title: "Components/Buttons",
-  component: TetiaryButton,
+  component: BlackButton,
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -13,13 +13,13 @@ export default {
 
 const Template = (args) => (
   <BrowserRouter>
-    <TetiaryButton span={'>'}  {...args} />
+    <BlackButton label={'SEE PRODUCT'} {...args} />
   </BrowserRouter>
 );
 
-export const Tertiary = Template.bind({});
-Tertiary.args = {
+export const BlacButton = Template.bind({});
+BlacButton.args = {
   primary: true,
-  label: "SHOP",
-  
+  label: "SEE PRODUCT",
 };
+

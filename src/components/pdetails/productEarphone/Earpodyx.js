@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Gear from "../../layouts/Bodylayout/Gear";
-import Shop from "../../layouts/Bodylayout/Shop";
 import Footer from "../../layouts/footer/Footer";
 import Navbar from "../../shared/Navbar/Navbar";
 
@@ -30,7 +29,6 @@ function Test(props) {
         Go Back
       </Link>
       <EarpodBody />
-      <Shop />
       <Gear />
       <Footer />
     </div>

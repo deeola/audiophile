@@ -6,27 +6,66 @@ const orange = "#d87d4a";
 const veryblack = "#000000";
 
 const verylightgray = "#ffffff";
+const lightorange = '#FBAF85';
+
+const handleColorType = (colors) => {
+  switch (colors) {
+    case "primary":
+      return `color: ${verylightgray}; background: ${orange};`;
+    case "secondary":
+      return `color: ${veryblack}; background: ${"none"}; border : 1px solid ${veryblack}  `;
+    case "tertiary":
+      return `color: ${verylightgray}; background: ${"none"}; justify-content: "space-between";`;
+    default:
+      return `color: ${verylightgray}; background: black;`;
+  }
+};
+
+// handle hover
+
+const handleHover= (hover) => {
+    switch (hover) {
+      case "primary":
+        return `color: ${verylightgray}; background: ${lightorange};`;
+      case "secondary":
+        return `color: ${"white"}; background: ${veryblack};`;
+      case "tertiary":
+        return `color: ${orange}; background: ${"none"};`;
+      default:
+        return `color: ${"black"}; background: ${"none"}; border:1px solid ${veryblack};`;
+        
+    }
+};
+
+const handleSpacebetween = (space) => {
+    switch (space) {
+      case "spacebetween":
+        return "justify-content: space-between;";
+      default:
+        return "justify-content: center;";
+    }
+};
+
 
 export const Buttons = styled(Link)`
-  background-color: ${(props) => (props.primary ? orange : "none")};
-  color: ${(props) => (props.primary ? verylightgray : veryblack)};
   width: 160px;
   height: 48px;
-  border: ${(props) => (props.primary || props.tetiary ? "unset" : `1px solid ${veryblack}`)};
   text-align: center;
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size:13px;
-  line-height:17.76px;
+  font-size: 13px;
+  line-height: 17.76px;
   font-weight: 700;
-
-
-
+  ${({ color }) => handleColorType(color)};
+  ${({ space }) => handleSpacebetween(space)};
   span {
     color: ${orange};
-    text-align : center;
-    margin-left : 2px;
+    font-size: 13px;
+    margin-left: 10px;
+  }
+
+  &:hover{
+    ${({ hover }) => handleHover(hover)};
   }
 `;

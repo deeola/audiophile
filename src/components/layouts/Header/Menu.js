@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import Shop from "../Bodylayout/Shop";
 import audioContext from "../../../context/Audiophile/audioContext";
+import MobileMenu from "../../shared/MobileMenu/MobileMenu";
+import { MenuCont } from "../../shared/MobileMenu/MobileMenuStyling";
 
 function Menu(props) {
   const AudioContext = useContext(audioContext);
   const slideMenu = AudioContext.slideMenu;
+
   return (
-    <div>
-      <div className="menu" style={slideMenu()}>
-        <Shop />
-      </div>
-    </div>
+    <MenuCont style={slideMenu()}>
+      <MobileMenu primary={"primary"} />
+    </MenuCont>
   );
 }
 

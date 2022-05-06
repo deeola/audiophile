@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Button } from "../../Buttons/Button";
 
 function Section(props) {
   return (
@@ -39,9 +39,8 @@ function Section(props) {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </p>
-          <Link to="/xx99-mark-two" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+
+          <Button link={"/xx99-mark-two"} label={"SEE PRODUCT"} />
         </div>
       </section>
       <section className="HeadphoneSection">
@@ -52,9 +51,8 @@ function Section(props) {
             detailed and accurate audio reproduction for audiophiles, mixing
             engineers, and music aficionados alike in studios and on the go.
           </p>
-          <Link to="/xx99-mark-one" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+
+          <Button link={"/xx99-mark-one"} label={"SEE PRODUCT"} />
         </div>
         <div className="HeadImageOne">
           <img
@@ -117,9 +115,7 @@ function Section(props) {
             tastes with the XX59 headphones. The stylish yet durable versatile
             wireless headset is a brilliant companion at home or on the move.
           </p>
-          <Link to="/xx59" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+          <Button link={"/xx59"} label={"SEE PRODUCT"} />
         </div>
       </section>
     </div>

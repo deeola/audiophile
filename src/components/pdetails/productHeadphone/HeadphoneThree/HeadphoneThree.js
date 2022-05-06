@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../../shared/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import HeadphoneThreebody from "./HeadphoneThreebody";
-import Shop from "../../../layouts/Bodylayout/Shop";
 import Gear from "../../../layouts/Bodylayout/Gear";
 import Footer from "../../../layouts/footer/Footer";
 
@@ -26,7 +25,7 @@ function HeadphoneThree(props) {
         Go Back
       </Link>
       <HeadphoneThreebody />
-      <Shop />
+
       <Gear />
       <Footer />
     </div>

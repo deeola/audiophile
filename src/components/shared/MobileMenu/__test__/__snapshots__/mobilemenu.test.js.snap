@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-bczRLJ hNDPa-d"
+  data-testid="menu"
+>
+  <div
+    className="sc-gsnTZi jWXiqp"
+    data-testid="singlemenu"
+  >
+    <img
+      alt="headphone"
+      className="sc-hKMtZM bESBrL"
+      data-testid="alt"
+      src="imageheadphones.png"
+    />
+    <p
+      className="sc-dkzDqf"
+      data-testid="textlabel"
+    >
+      HEADPHONES
+    </p>
+    <a
+      className="sc-jSMfEi iWZaaL"
+      color="tertiary"
+      data-testid="tetiarybutton"
+      hover="tertiary"
+      href="/heaphones"
+      onClick={[Function]}
+    >
+      Shop
+      <span>
+        &gt;
+      </span>
+    </a>
+  </div>
+  <div
+    className="sc-gsnTZi jWXiqp"
+    data-testid="singlemenu"
+  >
+    <img
+      alt="speaker"
+      className="sc-hKMtZM bESBrL"
+      data-testid="alt"
+      src="imagespeakers.png"
+    />
+    <p
+      className="sc-dkzDqf"
+      data-testid="textlabel"
+    >
+      SPEAKERS
+    </p>
+    <a
+      className="sc-jSMfEi iWZaaL"
+      color="tertiary"
+      data-testid="tetiarybutton"
+      hover="tertiary"
+      href="/speakers"
+      onClick={[Function]}
+    >
+      Shop
+      <span>
+        &gt;
+      </span>
+    </a>
+  </div>
+  <div
+    className="sc-gsnTZi jWXiqp"
+    data-testid="singlemenu"
+  >
+    <img
+      alt="earphone"
+      className="sc-hKMtZM bESBrL"
+      data-testid="alt"
+      src="imageearphones.png"
+    />
+    <p
+      className="sc-dkzDqf"
+      data-testid="textlabel"
+    >
+      EARPHONES
+    </p>
+    <a
+      className="sc-jSMfEi iWZaaL"
+      color="tertiary"
+      data-testid="tetiarybutton"
+      hover="tertiary"
+      href="/earphones"
+      onClick={[Function]}
+    >
+      Shop
+      <span>
+        &gt;
+      </span>
+    </a>
+  </div>
+</div>
+`;

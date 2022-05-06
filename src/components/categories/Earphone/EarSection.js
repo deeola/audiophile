@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "../../Buttons/Button";
 
 function EarSection(props) {
   return (
@@ -39,9 +40,7 @@ function EarSection(props) {
             even in noisy environments with its active noise cancellation
             feature.
           </p>
-          <Link to="/yx1" className="sectionButton">
-            SEE PRODUCT
-          </Link>
+          <Button link='/yx1' label={'SEE PRODUCT'} />
         </div>
       </section>
     </div>

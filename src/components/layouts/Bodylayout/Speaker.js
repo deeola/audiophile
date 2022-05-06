@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import backgroundPattern from "../../../assets/home/desktop/pattern-circles.svg";
+import { BlackButton, Button, SecondaryButton } from "../../Buttons/Button";
 
 function Speaker(props) {
   const styles = {
@@ -47,14 +48,12 @@ function Speaker(props) {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <button>
-          <Link to="/zx9" className="shopTextLink">
-            See product
-          </Link>
-        </button>
+        <BlackButton  link={"/zx9"} label={"SEE PRODUCT"} />
       </div>
     </section>
   );
 }
 
 export default Speaker;
+
+

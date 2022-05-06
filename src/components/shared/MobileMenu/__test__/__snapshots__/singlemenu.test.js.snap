@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-dkzDqf jiZhIC"
+  data-testid="singlemenu"
+>
+  <img
+    className="sc-eCYdqJ jebgBi"
+    data-testid="alt"
+  />
+  <p
+    className="sc-hKMtZM"
+    data-testid="textlabel"
+  />
+  <a
+    className="sc-bczRLJ gBeesS"
+    color="tertiary"
+    data-testid="tetiarybutton"
+    hover="tertiary"
+    href=""
+    onClick={[Function]}
+  >
+    Shop
+    <span>
+      &gt;
+    </span>
+  </a>
+</div>
+`;

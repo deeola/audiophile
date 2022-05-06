@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SecondaryButton } from "../../Buttons/Button";
 
 function Earphones(props) {
   return (
@@ -29,9 +30,7 @@ function Earphones(props) {
       <div className="earphoneTextDiv">
         <div className="earphoneText">
           <p>YX1 earphones</p>
-          <Link to="/yx1">
-            <button>SEE PRODUCT</button>
-          </Link>
+          <SecondaryButton link={"/yx1"} label={'SEE PRODUCT'} />
         </div>
       </div>
     </div>
@@ -39,3 +38,5 @@ function Earphones(props) {
 }
 
 export default Earphones;
+
+
