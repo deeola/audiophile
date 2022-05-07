@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Headphoness from "../../../../components/categories/Headphones";
 import Headphones from "../../../../components/Category/Headphones/Headphones";
 
 

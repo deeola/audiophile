@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<section
+  className="sc-papXJ dRqUPa"
+  data-testid="speaker"
+>
+  <div
+    className="sc-bczRLJ gIwRId"
+    data-testid="productimage"
+  >
+    <img
+      alt="ZX9 speakers"
+      className="sc-dkzDqf gRVFrI"
+      src="image-zx9.jpg"
+    />
+    <article
+      className="sc-hKMtZM bQLcuJ"
+      data-testid="productbutton"
+    >
+      <div
+        className="sc-eCYdqJ bMkDvt"
+      >
+        <p
+          className="sc-iBkjds dIztKO"
+          data-testid="np"
+        >
+           
+          NEW PRODUCT
+        </p>
+        <h2
+          className="sc-jSMfEi imCpJA"
+          data-testid="title"
+        >
+          ZX9 speakers
+        </h2>
+        <p
+          className="sc-gKXOVf dgecyH"
+          data-testid="subtitle"
+        >
+          Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.
+        </p>
+      </div>
+      <a
+        className="sc-ftvSup faGPmV"
+        color="primary"
+        data-testid="primarybutton"
+        hover="primary"
+        href="/zx9"
+        onClick={[Function]}
+      >
+        SEE PRODUCT
+      </a>
+    </article>
+  </div>
+  <div
+    className="sc-bczRLJ htivJk"
+    data-testid="productimage"
+  >
+    <img
+      alt="ZX7 speaker"
+      className="sc-dkzDqf gRVFrI"
+      src="image-zx7.jpg"
+    />
+    <article
+      className="sc-hKMtZM bQLcuJ"
+      data-testid="productbutton"
+    >
+      <div
+        className="sc-eCYdqJ bMkDvt"
+      >
+        <p
+          className="sc-iBkjds dIztKO"
+          data-testid="np"
+        >
+           
+        </p>
+        <h2
+          className="sc-jSMfEi imCpJA"
+          data-testid="title"
+        >
+          ZX7 speaker
+        </h2>
+        <p
+          className="sc-gKXOVf dgecyH"
+          data-testid="subtitle"
+        >
+           Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.
+        </p>
+      </div>
+      <a
+        className="sc-ftvSup faGPmV"
+        color="primary"
+        data-testid="primarybutton"
+        hover="primary"
+        href="/zx7"
+        onClick={[Function]}
+      >
+        SEE PRODUCT
+      </a>
+    </article>
+  </div>
+</section>
+`;

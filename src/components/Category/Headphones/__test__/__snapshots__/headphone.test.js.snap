@@ -12,7 +12,7 @@ exports[`matches headshot snapshot 1`] = `
     <img
       alt="XX99 Mark II Headphones"
       className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
+      src="marktwo.jpg"
     />
     <article
       className="sc-hKMtZM bQLcuJ"
@@ -60,7 +60,7 @@ exports[`matches headshot snapshot 1`] = `
     <img
       alt="XX99 Mark I Headphones"
       className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
+      src="markthree.jpg"
     />
     <article
       className="sc-hKMtZM bQLcuJ"
@@ -107,157 +107,7 @@ exports[`matches headshot snapshot 1`] = `
     <img
       alt="XX59 Headphones"
       className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
-    />
-    <article
-      className="sc-hKMtZM bQLcuJ"
-      data-testid="productbutton"
-    >
-      <div
-        className="sc-eCYdqJ bMkDvt"
-      >
-        <p
-          className="sc-iBkjds dIztKO"
-          data-testid="np"
-        >
-           
-        </p>
-        <h2
-          className="sc-jSMfEi imCpJA"
-          data-testid="title"
-        >
-          XX59 Headphones
-        </h2>
-        <p
-          className="sc-gKXOVf dgecyH"
-          data-testid="subtitle"
-        >
-           Enjoy your audio almost anywhere and customize it to your specifictastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
-        </p>
-      </div>
-      <a
-        className="sc-ftvSup faGPmV"
-        color="primary"
-        data-testid="primarybutton"
-        hover="primary"
-        href="/xx59"
-        onClick={[Function]}
-      >
-        SEE PRODUCT
-      </a>
-    </article>
-  </div>
-</section>
-`;
-
-exports[`matches snapshot 1`] = `
-<section
-  className="sc-papXJ dRqUPa"
-  data-testid="headphone"
->
-  <div
-    className="sc-bczRLJ gIwRId"
-    data-testid="productimage"
-  >
-    <img
-      alt="XX99 Mark II Headphones"
-      className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
-    />
-    <article
-      className="sc-hKMtZM bQLcuJ"
-      data-testid="productbutton"
-    >
-      <div
-        className="sc-eCYdqJ bMkDvt"
-      >
-        <p
-          className="sc-iBkjds dIztKO"
-          data-testid="np"
-        >
-           
-          NEW PRODUCT
-        </p>
-        <h2
-          className="sc-jSMfEi imCpJA"
-          data-testid="title"
-        >
-          XX99 Mark II Headphones
-        </h2>
-        <p
-          className="sc-gKXOVf dgecyH"
-          data-testid="subtitle"
-        >
-          The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
-        </p>
-      </div>
-      <a
-        className="sc-ftvSup faGPmV"
-        color="primary"
-        data-testid="primarybutton"
-        hover="primary"
-        href="/xx99-mark-two"
-        onClick={[Function]}
-      >
-        SEE PRODUCT
-      </a>
-    </article>
-  </div>
-  <div
-    className="sc-bczRLJ htivJk"
-    data-testid="productimage"
-  >
-    <img
-      alt="XX99 Mark I Headphones"
-      className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
-    />
-    <article
-      className="sc-hKMtZM bQLcuJ"
-      data-testid="productbutton"
-    >
-      <div
-        className="sc-eCYdqJ bMkDvt"
-      >
-        <p
-          className="sc-iBkjds dIztKO"
-          data-testid="np"
-        >
-           
-        </p>
-        <h2
-          className="sc-jSMfEi imCpJA"
-          data-testid="title"
-        >
-          XX99 Mark I Headphones
-        </h2>
-        <p
-          className="sc-gKXOVf dgecyH"
-          data-testid="subtitle"
-        >
-          As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.
-        </p>
-      </div>
-      <a
-        className="sc-ftvSup faGPmV"
-        color="primary"
-        data-testid="primarybutton"
-        hover="primary"
-        href="/xx99-mark-one"
-        onClick={[Function]}
-      >
-        SEE PRODUCT
-      </a>
-    </article>
-  </div>
-  <div
-    className="sc-bczRLJ gIwRId"
-    data-testid="productimage"
-  >
-    <img
-      alt="XX59 Headphones"
-      className="sc-dkzDqf gRVFrI"
-      src="image-xx99-mark-two.jpg"
+      src="markone.jpg"
     />
     <article
       className="sc-hKMtZM bQLcuJ"

@@ -7,7 +7,7 @@ const Description = ({ title, subtitle }) => {
     <Desc>
       <Title data-testid='desctitle'>{title}</Title>
       <Subtitle data-testid='descsubtitle'>{subtitle}</Subtitle>
-      <BlackButton  label={"SEE PRODUCT"} to='/zx9' />
+      <BlackButton  label={"SEE PRODUCT"} link='/zx9' />
     </Desc>
   );
 };
