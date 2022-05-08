@@ -7,5 +7,5 @@ const Goback = () => {
   )
 }
 
-export default Goback
+export default Goback;
 

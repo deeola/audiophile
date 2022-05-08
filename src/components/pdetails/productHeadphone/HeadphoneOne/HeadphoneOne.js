@@ -25,6 +25,7 @@ function HeadphoneOne(props) {
         Go Back
       </Link>
       <HeadphoneOnebody />
+      
       <Gear />
       <Footer />
     </div>

@@ -12,4 +12,4 @@ const Generalwithimage = ({img, alt, np, title, subtitle, price, func, num, incr
   )
 }
 
-export default Generalwithimage
+export default Generalwithimage;

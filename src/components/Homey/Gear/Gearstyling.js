@@ -7,8 +7,8 @@ import mobile from "../../../assets/shared/mobile/mobilegear.jpg";
 export const GearContainer = styled.section`
 display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin: 40px auto;
+  width: 100%;
+  margin: 80px auto;
 `;
 
 

@@ -95,3 +95,15 @@ export const CartLength = styled.p`
   text-decoration: none;
   margin-left: 10px;
 `;
+
+
+export const ProductNavCont = styled.div`
+height: 97px;
+width: 100%;
+left: 0px;
+top: 0px;
+background: #000000;
+display: flex;
+justify-content: center;
+align-items: center;
+`

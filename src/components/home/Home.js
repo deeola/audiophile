@@ -9,7 +9,6 @@ function Home(props) {
     <div className="mainDiv">
       <Header />
       <Main />
-      <Headphones />
       <Footer />
     </div>
   );

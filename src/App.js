@@ -17,6 +17,7 @@ import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/layouts/Header/Menu";
 import SecondLayer from "./components/home/SecondLayer";
+import MarkOne from "./components/ProductDetails/Headphone/MarkOne";
 
 function App(props) {
 
@@ -32,10 +33,11 @@ function App(props) {
             <Route path="/yx1" render={() => <EarpodProduct />} />
             <Route path="/zx9" render={() => <SpeakerOne />} />
             <Route path="/zx7" render={() => <SpeakerTwo />} />
-            <Route path="/xx99-mark-one" render={() => <HeadphoneOne />} />
+            <Route path="/xx99-mark-one" render={() => <MarkOne />} />
             <Route path="/xx99-mark-two" render={() => <HeadphoneTwo />} />
             <Route path="/xx59" render={() => <HeadphoneThree />} />
             <Route path="/cart" render={() => <Basket />} />
+            <Route path="/checkout" render={() => <Checkout />} />
             <Route path="/checkout" render={() => <Checkout />} />
           </Switch>
           <Menu />
@@ -50,3 +52,5 @@ function App(props) {
 }
 
 export default App;
+
+

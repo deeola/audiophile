@@ -64,7 +64,9 @@ align-items: center;
 // justify-content :space-between;
 margin-top: 40px;
 `
-export const GobackCont = styled.p``
+export const GobackCont = styled.p`
+margin: 50px 0px;
+`
 
 
 

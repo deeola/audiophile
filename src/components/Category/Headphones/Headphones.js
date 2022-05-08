@@ -20,25 +20,28 @@ import xxmark1mobile from "../../../assets/category-headphones/mobile/image-xx99
 
 const Headphones = () => {
   // use inner width to determine image soure
-  let markone = xx99desktop;
-  let xx99 = xx59desktop;
-  let marktwo = xxmark1desktop;
+  let markone = xxmark1desktop;
+  let xx59 =  xx59desktop;
+  let marktwo =  xx99desktop;
+
+ 
+ 
 
   if (window.innerWidth < 802) {
     markone = xx99tablet;
-    xx99 = xx59tablet;
+    xx59 = xx59tablet;
     marktwo = xxmark1tablet;
   } else if (window.innerWidth < 490) {
     markone = xx99mobile;
-    xx99 = xx59mobile;
+    xx59 = xx59mobile;
     marktwo = xxmark1mobile;
   }
 
   return (
     <HeadphoneCont data-testid="headphone">
       <ProductWithImage
-        link="/xx99-mark-two"
-        img={markone}
+        link="/headphones/xx99-mark-two"
+        img={marktwo}
         label="SEE PRODUCT"
         np={"NEW PRODUCT"}
         title="XX99 Mark II Headphones"
@@ -48,8 +51,8 @@ const Headphones = () => {
       />
       <ProductWithImage
         primary
-        link="/xx99-mark-one"
-        img={xx99}
+        link="/headphones/xx99-mark-one"
+        img={markone}
         label="SEE PRODUCT"
         title="XX99 Mark I Headphones"
         subtitle={
@@ -57,8 +60,8 @@ const Headphones = () => {
         }
       />
       <ProductWithImage
-        link="/xx59"
-        img={marktwo}
+        link="/headphones/xx59"
+        img={xx59}
         label="SEE PRODUCT"
         title="XX59 Headphones"
         subtitle={
