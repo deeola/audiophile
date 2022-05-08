@@ -33,7 +33,11 @@ const AudioState = (props) => {
   const [quantity, setquantity] = useState(1);
 
   const increaseQuantity = () => setquantity(quantity + 1);
-  const decreaseQuantity = () => setquantity(quantity - 1);
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setquantity(quantity - 1);
+    }
+  };
 
   //ONADD
 
@@ -51,12 +55,11 @@ const AudioState = (props) => {
         )
       );
       increaseQuantity();
-
       setCartNotification(1);
-
       setTimeout(() => {
         setCartNotification(0);
       }, 3000);
+      
     } else {
       setCartItems([...cartItems, { ...product, qty: quantity }]);
 
@@ -86,7 +89,6 @@ const AudioState = (props) => {
     }
   };
 
-  
   //BUCKET LIST
   const [myBucketDisplay, setMyBucketDisplay] = useState(false);
 
@@ -159,7 +161,7 @@ const AudioState = (props) => {
   const [menuOpened, setMenuOpend] = useState(false);
 
   const slideMenu = () => {
-    return menuOpened ? {} : { display: "none"};
+    return menuOpened ? {} : { display: "none" };
   };
 
   const menuIconClicked = () => {

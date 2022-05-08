@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Buttons } from "./ButtonStyling";
 
 export const Button = ({ label, link }) => {
@@ -19,4 +18,7 @@ export const TetiaryButton = ({ label, link, span }) => {
 export const BlackButton = ({ label, link }) => {
     return <Buttons data-testid='bgcolorblackbutton'  to={link}>{label}</Buttons>;
 };
+
+
+
 
