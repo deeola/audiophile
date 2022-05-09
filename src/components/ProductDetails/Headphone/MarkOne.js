@@ -51,6 +51,7 @@ import TLikeDesktop from "../../../assets/shared/desktop/image-zx9-speaker.jpg";
 import TLikeTablet from "../../../assets/shared/tablet/image-zx9-speaker.jpg";
 import TLikeMobile from "../../../assets/shared/mobile/image-zx9-speaker.jpg";
 import { ProductDetailsPage } from "./Headphonestyling";
+import Footer from "../../shared/Footer/Footer";
 
 const MarkOne = () => {
   //context
@@ -168,6 +169,7 @@ const MarkOne = () => {
         <Shop />
         <Gear />
       </ProductDetailsPage>
+      <Footer />
     </div>
   );
 };

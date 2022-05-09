@@ -46,7 +46,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/xx99-mark-two"
+        href="/headphones/xx99-mark-two"
         onClick={[Function]}
       >
         SEE PRODUCT
@@ -60,7 +60,7 @@ exports[`matches headshot snapshot 1`] = `
     <img
       alt="XX99 Mark I Headphones"
       className="sc-dkzDqf gRVFrI"
-      src="markthree.jpg"
+      src="markone.jpg"
     />
     <article
       className="sc-hKMtZM bQLcuJ"
@@ -93,7 +93,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/xx99-mark-one"
+        href="/headphones/xx99-mark-one"
         onClick={[Function]}
       >
         SEE PRODUCT
@@ -107,7 +107,7 @@ exports[`matches headshot snapshot 1`] = `
     <img
       alt="XX59 Headphones"
       className="sc-dkzDqf gRVFrI"
-      src="markone.jpg"
+      src="markthree.jpg"
     />
     <article
       className="sc-hKMtZM bQLcuJ"
@@ -140,7 +140,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/xx59"
+        href="/headphones/xx59"
         onClick={[Function]}
       >
         SEE PRODUCT
