@@ -40,7 +40,7 @@ const Headphones = () => {
   return (
     <HeadphoneCont data-testid="headphone">
       <ProductWithImage
-        link="/headphones/xx99-mark-two"
+        link="/xx99-mark-two"
         img={marktwo}
         label="SEE PRODUCT"
         np={"NEW PRODUCT"}
@@ -51,7 +51,7 @@ const Headphones = () => {
       />
       <ProductWithImage
         primary
-        link="/headphones/xx99-mark-one"
+        link="/xx99-mark-one"
         img={markone}
         label="SEE PRODUCT"
         title="XX99 Mark I Headphones"
@@ -60,7 +60,7 @@ const Headphones = () => {
         }
       />
       <ProductWithImage
-        link="/headphones/xx59"
+        link="/xx59"
         img={xx59}
         label="SEE PRODUCT"
         title="XX59 Headphones"

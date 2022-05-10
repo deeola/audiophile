@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import background from '../../../assets/home/desktop/image-speaker-zx7.jpg'
 
 export const ZBackground = styled.div`
-width: 80%;
+width: 100%;
   margin: 40px auto;
   background-size: cover;
   background-position: center;

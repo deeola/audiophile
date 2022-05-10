@@ -10,7 +10,7 @@ export const ZspeakerConatiner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   position: relative;
   margin: 40px auto ;
   background-repeat: no-repeat;

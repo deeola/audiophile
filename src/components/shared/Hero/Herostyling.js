@@ -3,12 +3,12 @@ import background from "../../../assets/home/desktop/image-hero.jpg";
 import tablet from "../../../assets/home/tablet/image-header.jpg";
 
 export const BlackBackground = styled.div`
-  height: 80%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 40px auto;
+  
 `;
 
 export const Lines = styled.div`
@@ -125,3 +125,8 @@ export const SubHeading = styled.p`
     
   }
 `;
+
+export const SharedHeroContainer = styled.header`
+background: black;
+padding: 20px;
+`
