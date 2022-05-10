@@ -22,7 +22,7 @@ import MarkOne from "./components/ProductDetails/Headphone/MarkOne";
 function App(props) {
 
   return (
-    <AudioState>
+  
       <Router>
         <div className="App">
           <Switch>
@@ -47,7 +47,7 @@ function App(props) {
           
         </div>
       </Router>
-    </AudioState>
+   
   );
 }
 

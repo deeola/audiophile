@@ -14,7 +14,7 @@ const verylightgray = " #ffffff";
 // const rectangle =  "rgb(78, 78, 78)";
 
 export const Nav = styled.nav`
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

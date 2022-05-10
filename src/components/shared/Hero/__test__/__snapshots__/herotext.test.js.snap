@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates snapshot for hero text section 1`] = `
+<div
+  className="sc-papXJ ewFfCL"
+  data-testid="hero"
+>
+  <p
+    className="sc-ftvSup hvZees"
+  >
+    NEW PRODUCT
+  </p>
+  <h1
+    className="sc-jqUVSM hFGwfU"
+    data-testid="heroheader"
+  >
+    XX99 MARK II HEADPHONES
+  </h1>
+  <p
+    className="sc-kDDrLX byaiTP"
+    data-testid="subheader"
+  >
+    Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+  </p>
+  <a
+    className="sc-bczRLJ dRtteY"
+    color="primary"
+    data-testid="primarybutton"
+    hover="primary"
+    href="/xx99-mark-two"
+    onClick={[Function]}
+  >
+    SEE PRODUCT
+  </a>
+</div>
+`;

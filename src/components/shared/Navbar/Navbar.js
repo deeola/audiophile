@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   Nav,
   LogoContainer,
@@ -21,8 +21,13 @@ import Carts from "./Carts";
 
 const Navbar = () => {
   const AudioContext = useContext(audioContext);
-  const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext;
-  console.log(CartLength, cartItems);
+  const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext
+
+  console.log(bucketIconClicked)
+
+  useEffect(() => {
+ 
+  },[])
   return (
     <Nav data-testid="navbar">
       <HamContainer>
