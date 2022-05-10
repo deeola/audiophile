@@ -8,26 +8,26 @@ import Shop from "../../shared/Shop/Shop";
 import Gear from "../../Homey/Gear/Gear";
 import ProductNav from "../../shared/Navbar/ProductNav";
 import audioContext from "../../../context/Audiophile/audioContext";
-import desktop from "../../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
-import mobile from "../../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg";
-import tablet from "../../../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg";
+import desktop from "../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
+import mobile from "../../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg";
+import tablet from "../../../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
 
 // grid images
 
 //top left
 import TLgridimageDesktop from "../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
-import TLgridimageTablet from "../../../assets/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg";
-import TLgridimageMobile from "../../../assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg";
+import TLgridimageTablet from "../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg";
+import TLgridimageMobile from "../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg";
 
 // bottom left
-import BLgridimageDesktop from "../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg";
-import BLgridimageTablet from "../../../assets/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg";
-import BLgridimageMobile from "../../../assets/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg";
+import BLgridimageDesktop from "../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
+import BLgridimageTablet from "../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg";
+import BLgridimageMobile from "../../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg";
 
 // RIGHT
-import RgridimageDesktop from "../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg";
-import RgridimageTablet from "../../../assets/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg";
-import RgridimageMobile from "../../../assets/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg";
+import RgridimageDesktop from "../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg";
+import RgridimageTablet from "../../../assets/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg";
+import RgridimageMobile from "../../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg";
 
 //LIKE IMAGES
 
@@ -35,9 +35,9 @@ import RgridimageMobile from "../../../assets/product-xx99-mark-one-headphones/m
 
 //first like
 
-import FLikeDesktop from "../../../assets/shared/desktop/image-xx99-mark-two-headphones.jpg";
-import FLikeTablet from "../../../assets/shared/tablet/tabheadphones.jpg";
-import FLikeMobile from "../../../assets/shared/mobile/image-xx99-mark-two-headphones.jpg";
+import FLikeDesktop from "../../../assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
+import FLikeTablet from "../../../assets/shared/tablet/image-xx99-mark-one-headphones.jpg";
+import FLikeMobile from "../../../assets/shared/mobile/image-xx99-mark-one-headphones.jpg";
 
 //second like
 
@@ -52,11 +52,9 @@ import TLikeTablet from "../../../assets/shared/tablet/image-zx9-speaker.jpg";
 import TLikeMobile from "../../../assets/shared/mobile/image-zx9-speaker.jpg";
 import { ProductDetailsPage } from "./Headphonestyling";
 import Footer from "../../shared/Footer/Footer";
-import MarkOneProduct from "./MarkOneProduct";
+import MarkTwoProduct from "./MarkTwoProduct";
 
-const MarkOne = () => {
-  //context
-
+const MarkTwo = () => {
   const AudioContext = useContext(audioContext);
 
   //destructure audiocontext
@@ -74,10 +72,10 @@ const MarkOne = () => {
   let description;
   let others;
   if (AudioContext.data.length > 0) {
-    price = AudioContext.data[2].price;
-    description = AudioContext.data[2].description;
-    data = AudioContext.data[2];
-    others = AudioContext.data[2].others;
+    price = AudioContext.data[3].price;
+    description = AudioContext.data[3].description;
+    data = AudioContext.data[3];
+    others = AudioContext.data[3].others;
   }
 
   useEffect(() => {
@@ -122,14 +120,15 @@ const MarkOne = () => {
   }
 
   // product like
-
   return (
     <div>
       <ProductNav />
       <ProductDetailsPage>
         <Goback />
-        <MarkOneProduct />
+        <MarkTwoProduct />
         <Features
+          qty5={"1x"}
+          desc5={"Travel Bag"}
           qty4={"1x"}
           desc4={"3.5mm 5m Audio Cable"}
           qty3={"1x"}
@@ -138,23 +137,23 @@ const MarkOne = () => {
           desc2={"Replacement Earcups"}
           qty1={"1x"}
           desc1={"Headphone Unit"}
-          bottomtext={
-            "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector."
-          }
           toptext={
-            "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz."
+            "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat."
+          }
+          bottomtext={
+            "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic."
           }
         />
         <GridImage topleft={TLImage} bottomleft={BLImage} rightimage={RImage} />
         <ProductLike
-          title1={others !== undefined ? others[0].name : ""}
-          title2={others !== undefined ? others[1].name : ""}
-          title3={others !== undefined ? others[2].name : ""}
-          link3={"/zx9"}
+          title1={"XX99 MARK I"}
+          title2={"XX59"}
+          title3={"ZX9 SPEAKER"}
           img1={FLimage}
           img2={SLimage}
           img3={TLimage}
-          link1={"/xx99-mark-two"}
+          link3={"/zx9"}
+          link1={"/xx99-mark-one"}
           link2={"/xx59"}
         />
         <Shop />
@@ -165,4 +164,4 @@ const MarkOne = () => {
   );
 };
 
-export default MarkOne;
+export default MarkTwo;

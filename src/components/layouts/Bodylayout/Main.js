@@ -26,7 +26,6 @@ function Main(props) {
       <HomeEarphone />
       {/* <Earphones /> */}
       <Gear />
-      <MarkOne />
       
     </div>
   );

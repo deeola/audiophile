@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import Generalwithimage from "../Shared/Generalwithimage";
 import { ProductCont } from "./Headphonestyling";
+
 import audioContext from "../../../context/Audiophile/audioContext";
-import desktop from "../../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
-import mobile from "../../../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
-import tablet from "../../../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg";
+import desktop from "../../../assets/product-xx59-headphones/desktop/image-product.jpg";
+import mobile from "../../../assets/product-xx59-headphones/tablet/image-product.jpg";
+import tablet from "../../../assets/product-xx59-headphones/mobile/image-product.jpg";
 
-
-const MarkOneProduct = () => {
+const MarkThreeProduct = () => {
   const AudioContext = useContext(audioContext);
 
   //destructure audiocontext
@@ -24,9 +24,9 @@ const MarkOneProduct = () => {
   let description;
   let data;
   if (AudioContext.data.length > 0) {
-    price = AudioContext.data[2].price;
-    description = AudioContext.data[2].description;
-    data = AudioContext.data[2];
+    price = AudioContext.data[1].price;
+    description = AudioContext.data[1].description;
+    data = AudioContext.data[1];
   }
 
   useEffect(() => {
@@ -49,18 +49,17 @@ const MarkOneProduct = () => {
     <ProductCont>
       <Generalwithimage
         increase={increaseQuantity}
-        decrease={ decreaseQuantity}
+        decrease={decreaseQuantity}
         num={quantity}
         func={() => onAdd(data)}
         subtitle={description}
         price={price}
         img={image}
-        alt="mark-two-headphone"
-        np={"NEW PRODUCT"}
-        title={"XX 99 MARK TWO HEADPHONES"}
+        alt="xx-59-headphone"
+        title={"XX 59 HEADPHONES"}
       />
     </ProductCont>
   );
 };
 
-export default MarkOneProduct;
+export default MarkThreeProduct;
