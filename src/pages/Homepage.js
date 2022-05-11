@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "../components/Basket/Cart";
 import Gear from "../components/Homey/Gear/Gear";
 import SecondSpeaker from "../components/Homey/Z7speakers/ZSspeaker";
 import Zspeaker from "../components/Homey/Zspeaker/Zspeaker";
