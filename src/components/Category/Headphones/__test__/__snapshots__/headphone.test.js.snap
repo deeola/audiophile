@@ -2,7 +2,7 @@
 
 exports[`matches headshot snapshot 1`] = `
 <section
-  className="sc-papXJ dRqUPa"
+  className="sc-papXJ bxEehH"
   data-testid="headphone"
 >
   <div
@@ -46,7 +46,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/headphones/xx99-mark-two"
+        href="/xx99-mark-two"
         onClick={[Function]}
       >
         SEE PRODUCT
@@ -93,7 +93,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/headphones/xx99-mark-one"
+        href="/xx99-mark-one"
         onClick={[Function]}
       >
         SEE PRODUCT
@@ -140,7 +140,7 @@ exports[`matches headshot snapshot 1`] = `
         color="primary"
         data-testid="primarybutton"
         hover="primary"
-        href="/headphones/xx59"
+        href="/xx59"
         onClick={[Function]}
       >
         SEE PRODUCT

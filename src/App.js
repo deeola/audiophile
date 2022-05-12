@@ -1,7 +1,6 @@
 import "./css/style.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
-import Basket from "./components/cart/Basket";
 import Layer from "./components/home/Layer";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/layouts/Header/Menu";
@@ -16,6 +15,8 @@ import Homepage from "./pages/Homepage";
 import HeadphonePage from "./pages/HeadphonePage";
 import SpeakersPage from "./pages/SpeakersPage";
 import EarphonePage from "./pages/EarphonePage";
+import Cart from "./components/Basket/Cart";
+
 
 function App(props) {
   return (
@@ -32,11 +33,11 @@ function App(props) {
           <Route path="/xx99-mark-one" render={() => <MarkOne />} />
           <Route path="/xx99-mark-two" render={() => <MarkTwo />} />
           <Route path="/xx59" render={() => <MarkThree />} />
-          <Route path="/cart" render={() => <Basket />} />
+          <Route path="/cart" render={() => <Cart />} />
           <Route path="/checkout" render={() => <Checkout />} />
         </Switch>
         <Menu />
-        <Basket />
+        <Cart />
         {/* <Layer /> */}
         {/* <SecondLayer /> */}
       </div>
@@ -45,3 +46,5 @@ function App(props) {
 }
 
 export default App;
+
+

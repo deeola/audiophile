@@ -6,23 +6,15 @@ import {
   CartControlNumber,
 } from "./cartsharedstyling";
 
-const CartControl = () => {
-  const AudioContext = useContext(audioContext);
-  const { cartItems, onAdd, onRemove } = AudioContext;
+const CartControl = ({ onRemove, onAdd, itemqty }) => {
   return (
-    <>
-      {cartItems.map((item) => (
-        <CartControlButton key={item.id}>
-          <CartControlAddRemove onClick={() => onRemove(item)}>
-            -
-          </CartControlAddRemove>
-          <CartControlNumber>{item.qty}</CartControlNumber>
-          <CartControlAddRemove onClick={() => onAdd(item)}>
-            +
-          </CartControlAddRemove>
-        </CartControlButton>
-      ))}
-    </>
+ 
+      <CartControlButton>
+        <CartControlAddRemove onClick={onRemove}>-</CartControlAddRemove>
+        <CartControlNumber>{itemqty}</CartControlNumber>
+        <CartControlAddRemove onClick={onAdd}>+</CartControlAddRemove>
+      </CartControlButton>
+ 
   );
 };
 

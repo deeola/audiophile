@@ -7,7 +7,6 @@ const CartImageControl = () => {
   return (
     <CartImageControlContainer>
         <CarItemImage />
-        <CartControl />
     </CartImageControlContainer>
   )
 }
