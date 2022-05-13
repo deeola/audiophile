@@ -22,9 +22,13 @@ function PerosnalDetails() {
 
   const summaryItems = JSON.parse(localStorage.getItem("newItems"));
 
+  
+
   const itemsPrice = summaryItems.reduce((a, c) => a + c.price * c.qty, 0);
   const taxprice = itemsPrice * 0.2;
   const shippingPrice = 50;
+
+  
 
   const TotalPrice = itemsPrice + taxprice + shippingPrice;
 

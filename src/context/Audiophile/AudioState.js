@@ -16,9 +16,7 @@ const AudioState = (props) => {
   const getdata = async () => {
     setloading();
     const res = await fetch("./data.json");
-
     const items = await res.json();
-
     dispatch({
       type: get_Data,
       payload: items,
@@ -201,6 +199,12 @@ const AudioState = (props) => {
     setShowMoneyPin(false);
   };
 
+  // GrandTotalPrices
+  let itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+  let taxprice = itemsPrice * 0.2;
+  let shippingPrice = 50;
+  const TotalPrice = itemsPrice + taxprice + shippingPrice;
+
   //RETURN
   return (
     <audioContext.Provider
@@ -237,6 +241,10 @@ const AudioState = (props) => {
         setIsSubmitted,
         removeAllandReturn,
         cartNotification,
+        taxprice,
+        itemsPrice,
+        TotalPrice,
+        shippingPrice
       }}
     >
       {props.children}

@@ -2,7 +2,6 @@ import "./css/style.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import Layer from "./components/home/Layer";
-import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/layouts/Header/Menu";
 import SecondLayer from "./components/home/SecondLayer";
 import MarkOne from "./pages/MarkOne";
@@ -16,6 +15,7 @@ import HeadphonePage from "./pages/HeadphonePage";
 import SpeakersPage from "./pages/SpeakersPage";
 import EarphonePage from "./pages/EarphonePage";
 import Cart from "./components/Basket/Cart";
+import Checkout from "./components/Checkouts/Checkout";
 
 
 function App(props) {
@@ -34,16 +34,19 @@ function App(props) {
           <Route path="/xx99-mark-two" render={() => <MarkTwo />} />
           <Route path="/xx59" render={() => <MarkThree />} />
           <Route path="/cart" render={() => <Cart />} />
-          <Route path="/checkout" render={() => <Checkout />} />
+          {/* <Route path="/checkout" render={() => <Checkout />} /> */}
         </Switch>
         <Menu />
         <Cart />
+        <Checkout />
         {/* <Layer /> */}
         {/* <SecondLayer /> */}
       </div>
     </Router>
   );
 }
+
+
 
 export default App;
 
