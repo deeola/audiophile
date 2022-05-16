@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import audioContext from "../../../context/Audiophile/audioContext";
 import useForm from "../../checkout/useForm";
 import {
@@ -7,7 +7,6 @@ import {
 } from "../BillingDetails/billingstyling";
 import Input from "../Shared.js/Input";
 import {
-  PaymentRightBottom,
   PaymentRight,
   PaymentRightTop,
   PaymentMethod,
@@ -19,9 +18,25 @@ import CashOnDelivery from "./CashOnDelivery";
 
 const PaymentDetails = () => {
   const AudioContext = useContext(audioContext);
-  const { continueAndPay, showIconclicked, clickTrue, clickTrues } = AudioContext;
+  const { continueAndPay, showIconclicked, clickTrue, clickTrues } =
+    AudioContext;
 
   const {} = useForm(continueAndPay, validate);
+
+  const [radioState, setRadioState] = useState(true);
+
+
+  const changeRadioState = () => {
+    setRadioState(!radioState);
+  };
+
+  const iconClicked = () => {
+    showIconclicked();
+    changeRadioState();
+    console.log(radioState);
+  };
+
+ 
 
   return (
     <BillingContainer>
@@ -30,35 +45,36 @@ const PaymentDetails = () => {
         <PaymentMethod>Payment Method</PaymentMethod>
         <PaymentRight>
           <PaymentRightTop>
-            <Input
-              onClick={showIconclicked}
-              formtype="radio"
+            <label htmlFor={"emoney"}>e-Money</label>
+            <input
+              onClick={() => iconClicked()}
+              type="radio"
               name="paymentSelect"
               value="true"
               id="emoney"
-              label={'E-Money'}
-              forlabel={'emoney'}
+              checked = {radioState === true}
+           
             />
           </PaymentRightTop>
-          <PaymentRightBottom>
-            <Input
-              onClick={showIconclicked}
-              formtype="radio"
+          <PaymentRightTop>
+            <label htmlFor={"cash"}>Cash on Delivery</label>
+            <input
+              onClick={() => iconClicked()}
+              type="radio"
               name="paymentSelect"
               value="false"
               id="cash"
-              forlabel={'cash'}
-              label={'Cash on Delivery'}
+              checked = {radioState === false}
             />
-          </PaymentRightBottom>
+          </PaymentRightTop>
         </PaymentRight>
       </PayementSectionContainer>
-      <EmoneyPin style={clickTrue()} />
-      <CashOnDelivery  style={clickTrues()} />
+   
+      {radioState ? <EmoneyPin /> : <CashOnDelivery />}
+
+    
     </BillingContainer>
   );
 };
 
 export default PaymentDetails;
-
-

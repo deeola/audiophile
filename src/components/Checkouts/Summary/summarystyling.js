@@ -5,7 +5,10 @@ const verylightgray = "#ffffff";
 const lightorange = "#FBAF85";
 
 
-export const SummaryContainer = styled.div``;
+export const SummaryContainer = styled.div`
+background: white;
+padding: 20px;
+`;
 
 export const ItemQuantity = styled.div``;
 

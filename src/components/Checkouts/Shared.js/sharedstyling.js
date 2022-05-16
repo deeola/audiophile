@@ -25,7 +25,7 @@ export const FormInput = styled.input`
 export const FormLabel = styled.label``;
 
 export const FormControl = styled.div`
-  width: ${(prop) => (prop.primary ? "100%" : "50%")};
+  width: ${(prop) => (prop.primary ? "99%" : "50%")};
   margin: 10px 0px;
 `;
 

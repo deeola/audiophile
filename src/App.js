@@ -15,7 +15,7 @@ import HeadphonePage from "./pages/HeadphonePage";
 import SpeakersPage from "./pages/SpeakersPage";
 import EarphonePage from "./pages/EarphonePage";
 import Cart from "./components/Basket/Cart";
-import Checkout from "./components/Checkouts/Checkout";
+import Checkoutpage from "./pages/Checkoutpage";
 
 
 function App(props) {
@@ -34,17 +34,19 @@ function App(props) {
           <Route path="/xx99-mark-two" render={() => <MarkTwo />} />
           <Route path="/xx59" render={() => <MarkThree />} />
           <Route path="/cart" render={() => <Cart />} />
-          {/* <Route path="/checkout" render={() => <Checkout />} /> */}
+          <Route path="/checkout" render={() => <Checkoutpage />} />
         </Switch>
         <Menu />
         <Cart />
-        <Checkout />
+        {/* <Checkout /> */}
         {/* <Layer /> */}
         {/* <SecondLayer /> */}
       </div>
     </Router>
   );
 }
+
+
 
 
 

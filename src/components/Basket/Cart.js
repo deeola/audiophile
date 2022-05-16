@@ -4,15 +4,17 @@ import { CartContainer } from "./CartStyling";
 import CartImageControl from "./shared/CartImageControl";
 import CartTop from "./shared/CartTop";
 import Checkoutbutton from "./shared/Checkoutbutton";
+import EmptyCart from "./shared/EmptyCart";
 import TotalPrice from "./shared/TotalPrice";
 
 const Cart = () => {
   const AudioContext = useContext(audioContext);
-  const { openBucket } = AudioContext;
+  const { openBucket, cartItems } = AudioContext;
 
   return (
-    <CartContainer style={openBucket()}>
+    <CartContainer style={() => openBucket()}>
       <CartTop />
+      {/* {cartItems.length === 0 &&  <EmptyCart /> } */}
       <CartImageControl />
       <TotalPrice />
       <Checkoutbutton />

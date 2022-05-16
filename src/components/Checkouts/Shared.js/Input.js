@@ -16,7 +16,7 @@ const Input = ({
   return (
     <FormControl primary={primary}>
       <div>
-        <FormLabel htmlfor={forlabel}>{label}</FormLabel>
+        <FormLabel htmlFor={forlabel}>{label}</FormLabel>
        {error && <Error> {error}</Error>} 
       </div>
       <FormInput

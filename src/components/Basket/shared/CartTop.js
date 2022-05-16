@@ -11,7 +11,7 @@ const CartTop = () => {
   return (
     <CartTopContainer>
       <Cartcount cartcount={cartItems.length} />
-      <RemoveAll />
+      {cartItems.length !== 0 && <RemoveAll /> }   
     </CartTopContainer>
   );
 };
