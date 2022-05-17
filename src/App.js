@@ -16,7 +16,7 @@ import SpeakersPage from "./pages/SpeakersPage";
 import EarphonePage from "./pages/EarphonePage";
 import Cart from "./components/Basket/Cart";
 import Checkoutpage from "./pages/Checkoutpage";
-
+import OrderSuccess from "./components/Thankyou/OrderSuccess";
 
 function App(props) {
   return (
@@ -37,7 +37,9 @@ function App(props) {
           <Route path="/checkout" render={() => <Checkoutpage />} />
         </Switch>
         <Menu />
-        <Cart />
+        {/* <OrderSuccess /> */}
+
+        {/* <Cart /> */}
         {/* <Checkout /> */}
         {/* <Layer /> */}
         {/* <SecondLayer /> */}
@@ -46,10 +48,4 @@ function App(props) {
   );
 }
 
-
-
-
-
 export default App;
-
-

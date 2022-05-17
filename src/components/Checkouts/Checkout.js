@@ -13,6 +13,7 @@ const Checkout = () => {
   const { continueAndPay } = AudioContext;
 
   const { handleSubmit } = useForm(continueAndPay, validate);
+  
   return (
     <FormContainer onSubmit={handleSubmit} noValidate>
       <FormLeft>
@@ -28,5 +29,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-

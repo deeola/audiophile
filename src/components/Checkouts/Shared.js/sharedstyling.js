@@ -29,4 +29,6 @@ export const FormControl = styled.div`
   margin: 10px 0px;
 `;
 
-export const Error = styled.p``;
+export const Error = styled.p`
+color: red;
+`;

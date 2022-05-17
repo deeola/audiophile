@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const FormContainer = styled.form`
 display: flex;
 justify-content: space-between;
-
 width: 85%;
 margin: auto;
 `
@@ -17,6 +16,6 @@ background: white;
 
 export const FormRight = styled.aside`
 width: 20%;
-padding: 20px;
+
 `
 

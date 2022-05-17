@@ -17,6 +17,7 @@ const AudioState = (props) => {
     setloading();
     const res = await fetch("./data.json");
     const items = await res.json();
+
     dispatch({
       type: get_Data,
       payload: items,
