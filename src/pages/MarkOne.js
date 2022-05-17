@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 
 // import desktop from "../../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
@@ -57,6 +57,9 @@ import ProductNav from "../components/shared/Navbar/ProductNav";
 import MarkOneProduct from "../components/ProductDetails/Headphone/MarkOneProduct";
 
 const MarkOne = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   
 
   //image

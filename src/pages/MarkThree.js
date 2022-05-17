@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Features from "../components/ProductDetails/Shared/Features/Features";
 import Goback from "../components/ProductDetails/Shared/Goback";
 import GridImage from "../components/ProductDetails/Shared/GridImage/GridImage";
@@ -52,6 +52,9 @@ import Footer from "../components/shared/Footer/Footer";
 import MarkThreeProduct from "../components/ProductDetails/Headphone/MarkThreeProduct";
 
 const MarkThree = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
  
   //image
 

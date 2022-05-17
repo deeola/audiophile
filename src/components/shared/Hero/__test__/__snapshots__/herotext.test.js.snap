@@ -23,9 +23,8 @@ exports[`creates snapshot for hero text section 1`] = `
     Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
   </p>
   <a
-    className="sc-bczRLJ dRtteY"
+    className="sc-bczRLJ lnGMsn"
     color="primary"
-    data-testid="primarybutton"
     hover="primary"
     href="/xx99-mark-two"
     onClick={[Function]}

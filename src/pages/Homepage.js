@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Cart from "../components/Basket/Cart";
 import Gear from "../components/Homey/Gear/Gear";
 import SecondSpeaker from "../components/Homey/Z7speakers/ZSspeaker";
@@ -9,9 +9,12 @@ import Shop from "../components/shared/Shop/Shop";
 import { HomeControl } from "./homestyling";
 
 const Homepage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div>
-      <MainHero />
+      <MainHero datatestid={'herosectionbutton'} />
       <HomeControl>
         <Shop />
         <Zspeaker />

@@ -11,9 +11,8 @@ exports[`matches snapshot 1`] = `
     hi
   </h4>
   <a
-    className="sc-bczRLJ gMbnUY"
+    className="sc-bczRLJ cwyJdT"
     color="secondary"
-    data-testid="secondarybutton"
     hover="secondary"
     href=""
     onClick={[Function]}

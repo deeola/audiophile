@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // grid images
 
@@ -52,6 +52,9 @@ import SpeakerTwoProduct from "../components/ProductDetails/Speaker/SpeakerTwoPr
 
 
 const Speakertwo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     let TLImage = TLgridimageDesktop;
     let BLImage = BLgridimageDesktop;
     let RImage = RgridimageDesktop;

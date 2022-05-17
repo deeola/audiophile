@@ -17,8 +17,7 @@ exports[`matches snapshot 1`] = `
     this is a subtitle
   </p>
   <a
-    className="sc-gKXOVf bAgkZL"
-    data-testid="bgcolorblackbutton"
+    className="sc-gKXOVf hXhkdj"
     href="/zx9"
     onClick={[Function]}
   >

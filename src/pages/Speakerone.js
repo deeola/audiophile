@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // grid images
 
@@ -51,6 +51,10 @@ import Gear from "../components/Homey/Gear/Gear";
 import ProductNav from "../components/shared/Navbar/ProductNav";
 
 const Speakerone = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   let TLImage = TLgridimageDesktop;
   let BLImage = BLgridimageDesktop;
   let RImage = RgridimageDesktop;

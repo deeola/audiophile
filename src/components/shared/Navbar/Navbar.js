@@ -21,13 +21,9 @@ import Carts from "./Carts";
 
 const Navbar = () => {
   const AudioContext = useContext(audioContext);
+
   const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext
 
-  console.log(bucketIconClicked)
-
-  useEffect(() => {
- 
-  },[])
   return (
     <Nav data-testid="navbar">
       <HamContainer>
@@ -51,7 +47,7 @@ const Navbar = () => {
       <Carts
         ci={cartItems}
         data-testid="kart"
-        func={bucketIconClicked}
+        func={() => bucketIconClicked()}
         cartimg={cartimg}
         cartlength={cartItems.length}
       />

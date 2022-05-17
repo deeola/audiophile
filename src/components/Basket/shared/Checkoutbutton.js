@@ -4,9 +4,15 @@ import { CheckoutButtonContainer } from "./cartsharedstyling";
 
 const Checkoutbutton = () => {
   const AudioContext = useContext(audioContext);
-  const { CheckoutIconClicked, cartItems } = AudioContext;
+  const { CheckoutIconClicked, cartItems, bucketIconClicked } = AudioContext;
+
+  const btnIconClicked = () => {
+    bucketIconClicked();
+    CheckoutIconClicked()
+  }
+
   return (
-    <CheckoutButtonContainer onClick={() => CheckoutIconClicked} to={cartItems.length !== 0 ? "/checkout" : '' } >
+    <CheckoutButtonContainer onClick={() => btnIconClicked()} to={cartItems.length !== 0 ? "/checkout" : '' } >
       CHECKOUT
     </CheckoutButtonContainer>
   );

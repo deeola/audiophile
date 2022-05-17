@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { Colors } from '../../../Themes';
 
-const gray =  "#f1f1f1";
 
 export const MenuContainer = styled.div`
 display : flex;
@@ -28,7 +28,7 @@ z-index : 2;
     height: 70%;
     position: absolute;
     content: '';
-    background-color:#f1f1f1;
+    background-color:${Colors.gray};
     bottom : 0;
     left: 0;
     z-index: -1;    

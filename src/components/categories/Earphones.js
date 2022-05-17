@@ -8,7 +8,7 @@ import Gear from "../../components/Homey/Gear/Gear";
 
 function Earphones(props) {
   return (
-    <div className="EarphoneMain">
+    <div >
       <HeaderShared title={"Earphones"} />
       <EarphoneBody />
       <Shop />

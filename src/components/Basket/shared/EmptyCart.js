@@ -1,7 +1,16 @@
 import React from "react";
+import { Empty, EmptyCartContainer, ContinueShopping } from "./cartsharedstyling";
 
 const EmptyCart = () => {
-  return <p>Add Items to your cart</p>;
+
+  
+  return (
+    <EmptyCartContainer>
+      <Empty>Your Cart is Empty</Empty>
+      <Empty>Add Items to your cart</Empty>
+      <ContinueShopping>CONTINUE SHOPPING</ContinueShopping>
+    </EmptyCartContainer>
+  );
 };
 
 export default EmptyCart;

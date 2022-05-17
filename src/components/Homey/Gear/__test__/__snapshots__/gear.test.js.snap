@@ -2,14 +2,14 @@
 
 exports[`matches snapshot 1`] = `
 <section
-  className="sc-bczRLJ epiXdn"
+  className="sc-bczRLJ ipeuwb"
   data-testid="gear"
 >
   <div
-    className="sc-gsnTZi jUlwpl"
+    className="sc-gsnTZi qkPPL"
   >
     <div
-      className="sc-hKMtZM kNMStH"
+      className="sc-hKMtZM hXoByT"
     >
       <h2
         className="sc-eCYdqJ jCwkCF"
@@ -28,7 +28,7 @@ exports[`matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-dkzDqf ipoJLd"
+    className="sc-dkzDqf eaVlON"
   />
 </section>
 `;

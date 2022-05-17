@@ -6,7 +6,7 @@ exports[`matches snapshot 1`] = `
   data-testid="menu"
 >
   <div
-    className="sc-gsnTZi jWXiqp"
+    className="sc-gsnTZi dnDcju"
     data-testid="singlemenu"
   >
     <img
@@ -22,9 +22,8 @@ exports[`matches snapshot 1`] = `
       HEADPHONES
     </p>
     <a
-      className="sc-jSMfEi iWZaaL"
+      className="sc-jSMfEi IOoRh"
       color="tertiary"
-      data-testid="tetiarybutton"
       hover="tertiary"
       href="/heaphones"
       onClick={[Function]}
@@ -36,7 +35,7 @@ exports[`matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="sc-gsnTZi jWXiqp"
+    className="sc-gsnTZi dnDcju"
     data-testid="singlemenu"
   >
     <img
@@ -52,9 +51,8 @@ exports[`matches snapshot 1`] = `
       SPEAKERS
     </p>
     <a
-      className="sc-jSMfEi iWZaaL"
+      className="sc-jSMfEi IOoRh"
       color="tertiary"
-      data-testid="tetiarybutton"
       hover="tertiary"
       href="/speakers"
       onClick={[Function]}
@@ -66,7 +64,7 @@ exports[`matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="sc-gsnTZi jWXiqp"
+    className="sc-gsnTZi dnDcju"
     data-testid="singlemenu"
   >
     <img
@@ -82,9 +80,8 @@ exports[`matches snapshot 1`] = `
       EARPHONES
     </p>
     <a
-      className="sc-jSMfEi iWZaaL"
+      className="sc-jSMfEi IOoRh"
       color="tertiary"
-      data-testid="tetiarybutton"
       hover="tertiary"
       href="/earphones"
       onClick={[Function]}

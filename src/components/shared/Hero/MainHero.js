@@ -3,21 +3,18 @@ import { Button } from "../../Buttons/Button";
 import {
   HeroBackground,
   HeroControl,
-  HeroPicture,
-  HeroTextControl,
-  HeroPictureControl,
 } from "./Herostyling";
 import Navbar from "../Navbar/Navbar";
 import Line from "./line";
 import HeroText from "./HeroText";
 
-const MainHero = () => {
+const MainHero = ({datatestid}) => {
   return (
     <HeroBackground>
       <HeroControl >
         <Navbar />
         <Line />
-        <HeroText />
+        <HeroText datatestid={datatestid} />
       </HeroControl>
     </HeroBackground>
   );

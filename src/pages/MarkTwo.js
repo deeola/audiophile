@@ -86,7 +86,7 @@ const MarkTwo = () => {
 
   // product like
   return (
-    <div>
+    <div data-testid={'xxmarktwo'}>
       <ProductNav />
       <ProductDetailsPage>
         <Goback />

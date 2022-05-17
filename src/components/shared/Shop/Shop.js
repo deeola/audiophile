@@ -9,33 +9,31 @@ const Shop = () => {
   return (
     <ShopContainer data-testid="shop">
       <SingleMenu
-      mobile
+        mobile
         label="HEADPHONES"
         img={imageheadphone}
         alt={"headphone"}
-        link={"/heaphones"}
+        link={"/headphones"}
+        datatestid="shopheadphone"
       />
       <SingleMenu
-      mobile
+        mobile
         label="SPEAKERS"
         img={imagespeaker}
         alt={"speaker"}
         link={"/speakers"}
+        datatestid="shopspeakers"
       />
       <SingleMenu
-      mobile
+        mobile
         label="EARPHONES"
         img={imageearphone}
         alt={"earphone"}
         link={"/earphones"}
+        datatestid="shopearphones"
       />
     </ShopContainer>
   );
 };
 
 export default Shop;
-
-
-
-
-

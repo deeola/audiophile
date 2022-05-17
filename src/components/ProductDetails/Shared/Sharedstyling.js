@@ -66,6 +66,7 @@ margin-top: 40px;
 `
 export const GobackCont = styled.p`
 margin: 50px 0px;
+cursor: pointer;
 `
 
 

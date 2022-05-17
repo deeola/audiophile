@@ -42,9 +42,8 @@ exports[`matches snapshot 1`] = `
         </p>
       </div>
       <a
-        className="sc-ftvSup faGPmV"
+        className="sc-ftvSup KzLBC"
         color="primary"
-        data-testid="primarybutton"
         hover="primary"
         href="/yx1"
         onClick={[Function]}

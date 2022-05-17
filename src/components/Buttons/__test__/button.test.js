@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { render, cleanup, screen } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Button, SecondaryButton, TetiaryButton } from "../Button";
 import { BrowserRouter } from "react-router-dom";
@@ -11,7 +10,7 @@ afterEach(cleanup);
 it("renders primary button with correct text", () => {
   const { getByTestId } = render(
     <BrowserRouter>
-      <Button label={"SEE PRODUCT"} />
+      <Button label={"SEE PRODUCT"} datatestid='primarybutton' />
     </BrowserRouter>
   );
   expect(getByTestId("primarybutton")).toHaveTextContent("SEE PRODUCT");
@@ -20,7 +19,7 @@ it("renders primary button with correct text", () => {
 it("renders secondary button with correct text", () => {
   const { getByTestId } = render(
     <BrowserRouter>
-      <SecondaryButton label={"SEE PRODUCT"} />
+      <SecondaryButton datatestid={'secondarybutton'} label={"SEE PRODUCT"} />
     </BrowserRouter>
   );
   expect(getByTestId("secondarybutton")).toHaveTextContent("SEE PRODUCT");
@@ -29,7 +28,7 @@ it("renders secondary button with correct text", () => {
 it("renders tetiary button with correct text", () => {
     const { getByTestId } = render(
       <BrowserRouter>
-        <TetiaryButton label={"SEE PRODUCT"} />
+        <TetiaryButton datatestid={'tetiarybutton'} label={"SEE PRODUCT"} />
       </BrowserRouter>
     );
     expect(getByTestId("tetiarybutton")).toHaveTextContent("SEE PRODUCT");

@@ -21,9 +21,8 @@ exports[`matches  snapshot 1`] = `
         YX1 EARPHONES
       </h4>
       <a
-        className="sc-bczRLJ gMbnUY"
+        className="sc-bczRLJ cwyJdT"
         color="secondary"
-        data-testid="secondarybutton"
         hover="secondary"
         href="/yx1"
         onClick={[Function]}

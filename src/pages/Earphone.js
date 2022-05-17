@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // grid images
 
@@ -52,6 +52,9 @@ import ProductNav from "../components/shared/Navbar/ProductNav";
 import EarphoneProduct from "../components/ProductDetails/Earphone/EarphoneProduct";
 
 const Earphone = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
     let TLImage = TLgridimageDesktop;
     let BLImage = BLgridimageDesktop;
     let RImage = RgridimageDesktop;

@@ -1,17 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import { Colors } from "../../../Themes";
 
 //colors
 
-const orange =  "#d87d4a"
-// const orangelight =  '#fbaf85';
-// const black =  "#272727";
-// const veryblack =  "000000";
-// const grays =  "f1f1f1";
-// const lightgray = "#fafafa";
-const verylightgray = " #ffffff";
-// const rectangle =  "rgb(78, 78, 78)";
+
 
 export const Nav = styled.nav`
   width: 100%;
@@ -30,41 +23,34 @@ export const Nav = styled.nav`
 
 export const LogoContainer = styled.div`
   display: flex;
-
 `;
 
 export const HamContainer = styled.div`
-display: none;
-@media (max-width: 802px) {
-
-    display:block;
-}
-`
-
+  display: none;
+  @media (max-width: 802px) {
+    display: block;
+  }
+`;
 
 export const Logo = styled.img``;
 
 export const Ham = styled.img`
- width:100%;
-
+  width: 100%;
 `;
 
 // Links
 
 export const NavList = styled.ul`
-    color: ${verylightgray};
-    width: 40%;
-    margin-right: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content : space-between;
-    @media (max-width: 802px) {
-
-        display:none;
-    }
- 
-
+  color: ${Colors.white};
+  width: 40%;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 802px) {
+    display: none;
+  }
 `;
 export const List = styled(Link)`
   text-transform: uppercase;
@@ -73,9 +59,9 @@ export const List = styled(Link)`
   margin-left: 10px;
   font-weight: 700;
   font-size: 13px;
-  color: white;
+  color: ${Colors.white};
   &:hover {
-    color: ${orange};
+    color: ${Colors.orange};
     cursor: pointer;
   }
 `;
@@ -91,19 +77,18 @@ export const CartImage = styled.img`
 `;
 export const CartLength = styled.p`
   font-weight: 700;
-  color: ${orange};
+  color: ${Colors.orange};
   text-decoration: none;
   margin-left: 10px;
 `;
 
-
 export const ProductNavCont = styled.div`
-height: 97px;
-width: 100%;
-left: 0px;
-top: 0px;
-background: #000000;
-display: flex;
-justify-content: center;
-align-items: center;
-`
+  height: 97px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

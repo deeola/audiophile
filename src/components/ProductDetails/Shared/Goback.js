@@ -3,7 +3,7 @@ import { GobackCont } from './Sharedstyling'
 
 const Goback = () => {
   return (
-    <GobackCont>Goback</GobackCont>
+    <GobackCont>Go back</GobackCont>
   )
 }
 

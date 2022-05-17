@@ -6,7 +6,7 @@ exports[`matches snapshot 1`] = `
   data-testid="shop"
 >
   <div
-    className="sc-dkzDqf jauCqn"
+    className="sc-dkzDqf dIMyJo"
     data-testid="singlemenu"
   >
     <img
@@ -22,11 +22,11 @@ exports[`matches snapshot 1`] = `
       HEADPHONES
     </p>
     <a
-      className="sc-bczRLJ gBeesS"
+      className="sc-bczRLJ hcrMJw"
       color="tertiary"
-      data-testid="tetiarybutton"
+      data-testid="shopheadphone"
       hover="tertiary"
-      href="/heaphones"
+      href="/headphones"
       onClick={[Function]}
     >
       Shop
@@ -36,7 +36,7 @@ exports[`matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="sc-dkzDqf jauCqn"
+    className="sc-dkzDqf dIMyJo"
     data-testid="singlemenu"
   >
     <img
@@ -52,9 +52,9 @@ exports[`matches snapshot 1`] = `
       SPEAKERS
     </p>
     <a
-      className="sc-bczRLJ gBeesS"
+      className="sc-bczRLJ hcrMJw"
       color="tertiary"
-      data-testid="tetiarybutton"
+      data-testid="shopspeakers"
       hover="tertiary"
       href="/speakers"
       onClick={[Function]}
@@ -66,7 +66,7 @@ exports[`matches snapshot 1`] = `
     </a>
   </div>
   <div
-    className="sc-dkzDqf jauCqn"
+    className="sc-dkzDqf dIMyJo"
     data-testid="singlemenu"
   >
     <img
@@ -82,9 +82,9 @@ exports[`matches snapshot 1`] = `
       EARPHONES
     </p>
     <a
-      className="sc-bczRLJ gBeesS"
+      className="sc-bczRLJ hcrMJw"
       color="tertiary"
-      data-testid="tetiarybutton"
+      data-testid="shopearphones"
       hover="tertiary"
       href="/earphones"
       onClick={[Function]}

@@ -3,18 +3,15 @@ import desktop from "../../../assets/shared/desktop/gearimage.jpg";
 import tablet from "../../../assets/shared/tablet/tabgear.jpg";
 import mobile from "../../../assets/shared/mobile/mobilegear.jpg";
 
-
 export const GearContainer = styled.section`
-display: flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 80px auto;
 `;
 
-
 export const Left = styled.div`
-width: 49%;
-padding: 150px 0px;
+  width: 49%;
 `;
 
 //use window width to deternine image source
@@ -26,7 +23,7 @@ if (window.innerWidth < 802) {
 }
 
 export const Right = styled.div`
-width: 49%;
+  width: 49%;
   background-image: url(${image});
   position: relative;
   background-repeat: no-repeat;
@@ -36,7 +33,7 @@ width: 49%;
 `;
 
 export const Text = styled.div`
-width: 90%;
+  width: 90%;
 `;
 
 export const Title = styled.h2`

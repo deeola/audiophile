@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import SpeakerBody from '../components/Category/Speakers/SpeakerBody'
 import Gear from '../components/Homey/Gear/Gear'
 import Footer from '../components/shared/Footer/Footer'
@@ -7,8 +7,11 @@ import Shop from '../components/shared/Shop/Shop'
 import {HomeControl} from './homestyling'
 
 const SpeakersPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
-    <div>
+    <div data-testid={'speakers'}>
         <SharedHero title={"Speakers"} />
         <HomeControl>
           <SpeakerBody/>

@@ -12,12 +12,12 @@ const Cart = () => {
   const { openBucket, cartItems } = AudioContext;
 
   return (
-    <CartContainer style={() => openBucket()}>
+    <CartContainer style={openBucket()} >
       <CartTop />
-      {/* {cartItems.length === 0 &&  <EmptyCart /> } */}
-      <CartImageControl />
-      <TotalPrice />
-      <Checkoutbutton />
+      {cartItems.length === 0 && <EmptyCart />}
+      {cartItems.length !== 0 && <CartImageControl />}
+      {cartItems.length !== 0 && <TotalPrice />}
+      {cartItems.length !== 0 && <Checkoutbutton  />}
     </CartContainer>
   );
 };

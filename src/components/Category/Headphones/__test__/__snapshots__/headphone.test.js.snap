@@ -42,9 +42,8 @@ exports[`matches headshot snapshot 1`] = `
         </p>
       </div>
       <a
-        className="sc-ftvSup faGPmV"
+        className="sc-ftvSup KzLBC"
         color="primary"
-        data-testid="primarybutton"
         hover="primary"
         href="/xx99-mark-two"
         onClick={[Function]}
@@ -89,9 +88,8 @@ exports[`matches headshot snapshot 1`] = `
         </p>
       </div>
       <a
-        className="sc-ftvSup faGPmV"
+        className="sc-ftvSup KzLBC"
         color="primary"
-        data-testid="primarybutton"
         hover="primary"
         href="/xx99-mark-one"
         onClick={[Function]}
@@ -136,9 +134,8 @@ exports[`matches headshot snapshot 1`] = `
         </p>
       </div>
       <a
-        className="sc-ftvSup faGPmV"
+        className="sc-ftvSup KzLBC"
         color="primary"
-        data-testid="primarybutton"
         hover="primary"
         href="/xx59"
         onClick={[Function]}

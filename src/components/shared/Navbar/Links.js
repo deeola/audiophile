@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Links = ({label, to }) => {
   return (
-    <List to={to} data-testid='list' >{label}</List>
+    <List to={to} data-testid={`list-${label}`} >{label}</List>
   )
 }
 Links.propTypes = {

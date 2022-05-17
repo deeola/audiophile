@@ -29,8 +29,7 @@ exports[`matches snapshot 1`] = `
         Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
       </p>
       <a
-        className="sc-gKXOVf bAgkZL"
-        data-testid="bgcolorblackbutton"
+        className="sc-gKXOVf hXhkdj"
         href="/zx9"
         onClick={[Function]}
       >

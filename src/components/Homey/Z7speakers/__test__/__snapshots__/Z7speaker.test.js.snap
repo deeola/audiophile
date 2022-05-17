@@ -14,9 +14,8 @@ exports[`matches snapshot 1`] = `
       ZX7 SPEAKER
     </h4>
     <a
-      className="sc-bczRLJ gMbnUY"
+      className="sc-bczRLJ cwyJdT"
       color="secondary"
-      data-testid="secondarybutton"
       hover="secondary"
       href="/zx7"
       onClick={[Function]}

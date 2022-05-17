@@ -2,12 +2,17 @@ import React, { useContext } from "react";
 import { BrowserRouter } from "react-router-dom";
 import MainHero from "../../../components/shared/Hero/MainHero";
 import audioContext from "../../../context/Audiophile/audioContext";
+import AudioState from "../../../context/Audiophile/AudioState";
 
-const MockHero = ({func, ...args }) => {
-  const AudioContext = useContext(audioContext);
-  const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext;
+const MockHero = () => {
+  // const AudioContext = useContext(audioContext);
+  // const { bucketIconClicked} = AudioContext;
 
-  return <MainHero func={bucketIconClicked} {...args} />;
+  return (
+    <AudioState>
+      <MainHero />
+    </AudioState>
+  );
 };
 
 export default {
@@ -17,7 +22,7 @@ export default {
 
 const Template = (args) => (
   <BrowserRouter>
-    <MockHero  {...args} />
+    <MockHero />
   </BrowserRouter>
 );
 

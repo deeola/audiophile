@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="sc-dkzDqf jiZhIC"
+  className="sc-dkzDqf kkLfEl"
   data-testid="singlemenu"
 >
   <img
@@ -14,9 +14,8 @@ exports[`matches snapshot 1`] = `
     data-testid="textlabel"
   />
   <a
-    className="sc-bczRLJ gBeesS"
+    className="sc-bczRLJ hcrMJw"
     color="tertiary"
-    data-testid="tetiarybutton"
     hover="tertiary"
     href=""
     onClick={[Function]}
