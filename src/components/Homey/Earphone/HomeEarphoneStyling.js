@@ -58,8 +58,6 @@ export const ContDiv = styled.div`
   @media (max-width: 490px) {
     width: 100%;
     padding: 50px 30px;
-  
-  
   }
 `;
 

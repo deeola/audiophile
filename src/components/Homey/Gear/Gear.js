@@ -26,7 +26,7 @@ const Gear = () => {
           </Paragraph>
         </Text>
       </Left>
-      <Right></Right>
+      <Right />
     </GearContainer>
   );
 };
