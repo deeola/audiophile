@@ -7,6 +7,7 @@ import Footer from "../components/shared/Footer/Footer";
 import MainHero from "../components/shared/Hero/MainHero";
 import Shop from "../components/shared/Shop/Shop";
 import { HomeControl } from "./homestyling";
+import HomeEarphone from '../components/Homey/Earphone/HomeEarphone'
 
 const Homepage = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Homepage = () => {
         <Shop />
         <Zspeaker />
         <SecondSpeaker />
+        <HomeEarphone />
         <Gear />
       </HomeControl>
       <Footer />

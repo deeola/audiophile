@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import background from "../../../assets/home/desktop/image-hero.jpg";
 import tablet from "../../../assets/home/tablet/image-header.jpg";
+import { Colors } from "../../../Themes";
 
 export const BlackBackground = styled.div`
   height: 100%;
@@ -29,12 +30,12 @@ export const Title = styled.h1`
 `;
 
 export const HeroBackground = styled.header`
-//   height: 729px;
   left: 3px;
   top: 0px;
   background: #191919;
   width: 100%;
   background: url(${background});
+  border-radius: 0px 0px 10px 10px;
 
   @media (max-width: 802px) {
     background: url(${tablet});
@@ -90,18 +91,22 @@ export const Header = styled.h1`
   font-weight: 700;
   font-size: 56px;
   line-height: 58px;
-  /* or 104% */
 
   letter-spacing: 2px;
   text-transform: uppercase;
-
-  color: #ffffff;
+  color: ${Colors.white};
   margin: 30px 0px;
 
   @media (max-width: 802px) {
     width: 80%;
     text-align:center;
-    
+  }
+
+  @media (max-width: 490px) {
+    width: 100%;
+    line-height: 38px;
+    text-align:center;
+    margin: 20px 0px;
   }
 `;
 
@@ -110,10 +115,7 @@ export const SubHeading = styled.p`
   font-weight: 500;
   font-size: 15px;
   line-height: 25px;
-  /* or 167% */
-
-  color: #ffffff;
-
+  color: ${Colors.white};
   mix-blend-mode: normal;
   opacity: 0.75;
   width: 80%;
@@ -122,6 +124,12 @@ export const SubHeading = styled.p`
   @media (max-width: 802px) {
     width: 70%;
     text-align:center;
+    
+  }
+
+  @media (max-width: 490px) {
+    width: 100%;
+  
     
   }
 `;

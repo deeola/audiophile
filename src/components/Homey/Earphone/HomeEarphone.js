@@ -11,7 +11,7 @@ const HomeEarphone = () => {
     <HomeEarphoneContainer data-testid='earphone'>
       <ContDiv img='left'>
       </ContDiv>
-      <ContDiv >
+      <ContDiv>
         <DescriptionText title={"YX1 EARPHONES"} link="/yx1" />
       </ContDiv>
     </HomeEarphoneContainer>
