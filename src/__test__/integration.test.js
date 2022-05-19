@@ -74,7 +74,4 @@ describe("APP", () => {
     expect(destinationPage).toBeInTheDocument();
   });
 
-
-
-
 });

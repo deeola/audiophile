@@ -7,7 +7,7 @@ const ProductWithImage = ({img, link, np, label, title, subtitle, primary}) => {
     <ProductWithImageCont data-testid='productimage' primary={primary}>
         <Image src={img} alt={title}>
         </Image>
-        <ProductButton subtitle={subtitle} title={title} label={label} link={link} np={np}  />
+        <ProductButton  subtitle={subtitle} title={title} label={label} link={link} np={np}  />
     </ProductWithImageCont>
   )
 }

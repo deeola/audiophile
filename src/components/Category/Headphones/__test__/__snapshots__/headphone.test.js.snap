@@ -44,6 +44,7 @@ exports[`matches headshot snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-XX99 Mark II Headphones"
         hover="primary"
         href="/xx99-mark-two"
         onClick={[Function]}
@@ -90,6 +91,7 @@ exports[`matches headshot snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-XX99 Mark I Headphones"
         hover="primary"
         href="/xx99-mark-one"
         onClick={[Function]}
@@ -136,6 +138,7 @@ exports[`matches headshot snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-XX59 Headphones"
         hover="primary"
         href="/xx59"
         onClick={[Function]}

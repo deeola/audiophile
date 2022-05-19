@@ -44,6 +44,7 @@ exports[`matches snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-YX1 wireless earphones"
         hover="primary"
         href="/yx1"
         onClick={[Function]}

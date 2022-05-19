@@ -11,6 +11,8 @@ const Cart = () => {
   const AudioContext = useContext(audioContext);
   const { openBucket, cartItems } = AudioContext;
 
+  console.log(cartItems)
+
   return (
     <CartContainer style={openBucket()} >
       <CartTop />

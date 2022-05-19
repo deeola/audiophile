@@ -44,6 +44,7 @@ exports[`matches snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-ZX9 speakers"
         hover="primary"
         href="/zx9"
         onClick={[Function]}
@@ -90,6 +91,7 @@ exports[`matches snapshot 1`] = `
       <a
         className="sc-ftvSup KzLBC"
         color="primary"
+        data-testid="productbutton-ZX7 speaker"
         hover="primary"
         href="/zx7"
         onClick={[Function]}

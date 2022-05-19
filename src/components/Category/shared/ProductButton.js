@@ -7,7 +7,7 @@ const ProductButton = ({link, label, title, np, subtitle}) => {
   return (
     <ProductDetailsGeneral data-testid='productbutton' >
         <ProductDetails np={np} subtitle={subtitle} title={title} />
-        <Button label={label} link={link} />
+        <Button datatestid={`productbutton-${title}`} label={label} link={link} />
     </ProductDetailsGeneral>
   )
 }

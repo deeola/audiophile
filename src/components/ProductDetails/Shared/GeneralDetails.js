@@ -7,7 +7,7 @@ const GeneralDetails = ({price, subtitle, title, np, func, num, increase, decrea
   return (
     <GeneralDetailsCont>
         <PriceProduct price={price} subtitle={subtitle} title={title} np={np} />
-        <ControlCart decrease={decrease} increase={increase} func={func} num={num} />
+        <ControlCart datatestid={`addButton-${title}`} decrease={decrease} increase={increase} func={func} num={num} />
     </GeneralDetailsCont>
   )
 }
