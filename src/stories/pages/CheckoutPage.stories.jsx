@@ -1,19 +1,20 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import AudioState from "../../context/Audiophile/AudioState";
-import MarkOne from '../../pages/MarkOne'
+import Checkoutpage from '../../pages/Checkoutpage'
+
 
 export default {
-  title: "PAGES/HEADPHONES/MARKONE",
-  component: MarkOne,
+  title: "PAGES/Checkout",
+  component: Checkoutpage,
 };
 
 const Template = (args) => (
   <AudioState>
     <BrowserRouter>
-      <MarkOne {...args} />
+      <Checkoutpage  {...args} />
     </BrowserRouter>
   </AudioState>
 );
 
-export const MARKONE = Template.bind({});
+export const Checkout = Template.bind({});
