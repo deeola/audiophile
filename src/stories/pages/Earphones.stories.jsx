@@ -1,19 +1,20 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import AudioState from "../../context/Audiophile/AudioState";
-import HeadphonePage from "../../pages/HeadphonePage";
+import EarphonePage from "../../pages/EarphonePage";
+
 
 export default {
-  title: "PAGES/HeadphoneMainPage",
-  component: HeadphonePage,
+  title: "PAGES/EarphonesMainPage",
+  component: EarphonePage,
 };
 
 const Template = (args) => (
   <AudioState>
     <BrowserRouter>
-      <HeadphonePage {...args} />
+      <EarphonePage {...args} />
     </BrowserRouter>
   </AudioState>
 );
 
-export const Headphone = Template.bind({});
+export const Earphone = Template.bind({});
