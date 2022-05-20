@@ -1,16 +1,5 @@
-import React, { useContext, useEffect } from "react";
-import {
-  Nav,
-  LogoContainer,
-  HamContainer,
-  NavList,
-  List,
-  Ham,
-  Logo,
-  CartImage,
-  Cart,
-  CartLength,
-} from "./Navbarstyling";
+import React, { useContext } from "react";
+import { Nav, HamContainer, NavList, List, Ham } from "./Navbarstyling";
 import audioContext from "../../../context/Audiophile/audioContext";
 import hamburger from "../../../assets/shared/tablet/hamburger.svg";
 import logo from "../../../assets/shared/desktop/logo.svg";
@@ -22,7 +11,7 @@ import Carts from "./Carts";
 const Navbar = () => {
   const AudioContext = useContext(audioContext);
 
-  const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext
+  const { bucketIconClicked, menuIconClicked, cartItems } = AudioContext;
 
   return (
     <Nav data-testid="navbar">
