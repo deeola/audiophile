@@ -1,4 +1,5 @@
 import React, { FC, useContext } from "react";
+
 import audioContext from "../../context/Audiophile/audioContext";
 import { CartContainer } from "./CartStyling";
 import CartImageControl from "./shared/CartImageControl";
@@ -7,8 +8,11 @@ import Checkoutbutton from "./shared/Checkoutbutton";
 import EmptyCart from "./shared/EmptyCart";
 import TotalPrice from "./shared/TotalPrice";
 
+interface Props {
+  
+}
 
-const Cart = () => {
+const Cart:FC<Props> = () => {
   const AudioContext = useContext(audioContext);
   const { openBucket, cartItems } = AudioContext;
 

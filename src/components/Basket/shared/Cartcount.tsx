@@ -1,10 +1,15 @@
-import React from 'react'
+import React,{FC} from 'react'
 import { CartCountContainer } from './cartsharedstyling'
 
-const Cartcount = ({cartcount}) => {
+interface Props {
+  cart: string,
+  cartcount: number
+}
+
+const Cartcount:FC<Props> = ({cartcount, cart}) => {
   return (
     <CartCountContainer>
-        <p>CART</p>
+        <p>{cart}</p>
         <p>({cartcount})</p>
     </CartCountContainer>
   )
