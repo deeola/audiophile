@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import AudioState from "./context/Audiophile/AudioState";
 
 ReactDOM.render(
-  
   <React.StrictMode>
     <AudioState>
       <App />

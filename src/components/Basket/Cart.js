@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import audioContext from "../../context/Audiophile/audioContext";
 import { CartContainer } from "./CartStyling";
 import CartImageControl from "./shared/CartImageControl";
@@ -6,6 +6,7 @@ import CartTop from "./shared/CartTop";
 import Checkoutbutton from "./shared/Checkoutbutton";
 import EmptyCart from "./shared/EmptyCart";
 import TotalPrice from "./shared/TotalPrice";
+
 
 const Cart = () => {
   const AudioContext = useContext(audioContext);
