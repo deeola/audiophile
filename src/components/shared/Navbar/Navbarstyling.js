@@ -4,8 +4,6 @@ import { Colors } from "../../../Themes";
 
 //colors
 
-
-
 export const Nav = styled.nav`
   width: 100%;
   display: flex;
