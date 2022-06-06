@@ -92,6 +92,7 @@ export const ImagePriceName = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+  background: red;
 `;
 
 export const Images = styled.div`
@@ -113,12 +114,14 @@ export const ItemImageCartControl = styled.div`
   width: 30%;
   padding: 8px 10px;
   background: #F1F1F1;
+
 `;
 
 export const ImagePriceInnerControl = styled.div`
   display: flex;
   justify-content: space-between;
   width: 60%;
+
 `;
 
 
@@ -144,4 +147,6 @@ color: white;
 justify-content: center;
 font-weight: 700;
 margin-top: 10px;
+border: none;
+outline: none;
 `

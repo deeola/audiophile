@@ -8,11 +8,9 @@ import Checkoutbutton from "./shared/Checkoutbutton";
 import EmptyCart from "./shared/EmptyCart";
 import TotalPrice from "./shared/TotalPrice";
 
-interface Props {
-  
-}
 
-const Cart:FC<Props> = () => {
+
+const Cart = () => {
   const AudioContext = useContext(audioContext);
   const { openBucket, cartItems } = AudioContext;
 

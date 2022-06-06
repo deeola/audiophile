@@ -7,7 +7,7 @@ import { get_Data, set_loading } from "../types";
 
 
 
-const AudioState = (props: any) => {
+const AudioState = (props) => {
  
   //INITIAL STATE
   const initialState = {
@@ -27,14 +27,14 @@ const AudioState = (props: any) => {
     const res = await fetch("./data.json");
     const items = await res.json();
 
-    // dispatch({
-    //   type: get_Data,
-    //   payload: items,
-    // });
+    dispatch({
+      type: get_Data,
+      payload: items,
+    });
   };
 
   //SET LOADING
-  // const setloading = () => dispatch({ type: set_loading });
+  const setloading = () => dispatch({ type: set_loading });
 
   //SET ITEM QUANTITY
 
@@ -49,18 +49,13 @@ const AudioState = (props: any) => {
 
   //ONADD
 
-  // interface CartItems {
-  //   cartItems: any[],
-  //   setCartItems : React.Dispatch<React.SetStateAction<[]>>
-  // }
-
-  const [cartItems, setCartItems] = useState<any[]>([]);
-
-  const [cartNotification, setCartNotification] = useState<Number>(0);
 
 
+  const [cartItems, setCartItems] = useState([]);
 
-  const onAdd = (product: any) => {
+  const [cartNotification, setCartNotification] = useState(0);
+
+  const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product);
 
     if (exist) {
@@ -87,7 +82,7 @@ const AudioState = (props: any) => {
   };
 
   //OnRemove Function
-  const onRemove = (product: any) => {
+  const onRemove = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
 
     if (exist.qty === 1) {

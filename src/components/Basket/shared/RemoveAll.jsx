@@ -2,11 +2,8 @@ import React, { FC, useContext } from "react";
 import audioContext from "../../../context/Audiophile/audioContext";
 import { RemoveAllContainer } from "./cartsharedstyling";
 
-interface iProps{
 
-}
-
-const RemoveAll:FC<iProps> = () => {
+const RemoveAll = () => {
   const AudioContext = useContext(audioContext);
   const { removeAll } = AudioContext;
 

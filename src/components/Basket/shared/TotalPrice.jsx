@@ -6,7 +6,7 @@ const TotalPrice = () => {
   const AudioContext = useContext(audioContext);
   const { cartItems } = AudioContext;
 
-  const itemsPrice = cartItems.reduce((a: number, c:any) => a + c.price * c.qty, 0);
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
 
   return (
     <TotalContainer>
