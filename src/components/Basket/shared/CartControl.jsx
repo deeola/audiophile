@@ -6,13 +6,6 @@ import {
   CartControlNumber,
 } from "./cartsharedstyling";
 
-// interface Props{
-//   onRemove: () => React.MouseEventHandler<HTMLParagraphElement>,
-//   onAdd: () => React.MouseEventHandler<HTMLParagraphElement>,
-//   itemqty: number
-// }
-
-
 const CartControl= ({ onRemove, onAdd, itemqty }) => {
   return (
  

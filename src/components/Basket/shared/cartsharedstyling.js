@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const orange = "#d87d4a";
-
-const veryblack = "#000000";
-
 const verylightgray = "#ffffff";
-const lightorange = "#FBAF85";
+
 
 export const CheckoutButtonContainer = styled(Link)`
   background: ${orange};
@@ -71,7 +68,8 @@ export const MobileItemImage = styled.img`
 export const ItemName = styled.p`
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 5px;
+
+
 `;
 
 export const ItemPrice = styled.p`
@@ -85,6 +83,7 @@ export const ItemNamePrice = styled.div`
   flex-direction: column;
   width: 80%;
   margin-left: 15px;
+  justify-content: center;
 `;
 
 export const ImagePriceName = styled.div`
@@ -92,7 +91,7 @@ export const ImagePriceName = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
-  background: red;
+
 `;
 
 export const Images = styled.div`
@@ -112,7 +111,7 @@ export const CartTopContainer = styled.div`
 
 export const ItemImageCartControl = styled.div`
   width: 30%;
-  padding: 8px 10px;
+  padding: 0px 10px;
   background: #F1F1F1;
 
 `;
@@ -121,6 +120,7 @@ export const ImagePriceInnerControl = styled.div`
   display: flex;
   justify-content: space-between;
   width: 60%;
+  align-items center;
 
 `;
 
