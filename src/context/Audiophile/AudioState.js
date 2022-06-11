@@ -3,23 +3,14 @@ import audioContext from "./audioContext";
 import audioReducer from "./audioReducer";
 import { get_Data, set_loading } from "../types";
 
-
-
-
-
 const AudioState = (props) => {
- 
   //INITIAL STATE
   const initialState = {
     data: [],
     loading: false,
   };
 
-
-
   const [state, dispatch] = useReducer(audioReducer, initialState);
-
-  
 
   //Fetch data from JSON USING FETCH
   const getdata = async () => {
@@ -49,15 +40,12 @@ const AudioState = (props) => {
 
   //ONADD
 
-
-
   const [cartItems, setCartItems] = useState([]);
 
   const [cartNotification, setCartNotification] = useState(0);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product);
-
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
@@ -69,12 +57,9 @@ const AudioState = (props) => {
       setTimeout(() => {
         setCartNotification(0);
       }, 3000);
-      
     } else {
       setCartItems([...cartItems, { ...product, qty: quantity }]);
-
       setCartNotification(2);
-
       setTimeout(() => {
         setCartNotification(0);
       }, 3000);
@@ -159,11 +144,7 @@ const AudioState = (props) => {
     });
   };
 
- 
-
   const openBuckets = () => {
-
-    
     // return setSuccessDisplay ? {} : { display: "none" };
   };
 
@@ -261,12 +242,12 @@ const AudioState = (props) => {
         taxprice,
         itemsPrice,
         TotalPrice,
-        shippingPrice
+        shippingPrice,
       }}
     >
       {props.children}
     </audioContext.Provider>
   );
-}
+};
 
 export default AudioState;

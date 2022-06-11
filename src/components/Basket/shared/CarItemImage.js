@@ -22,7 +22,9 @@ const CarItemImage = () => {
     <>
       {cartItems.map((item) => (
         <ImagePriceName key={item.id}>
-          <ImagePriceInnerControl>
+
+          
+            <ImagePriceInnerControl>
             <Images>
               <DesktopItemImage
                 src={require("../../../assets" + item.image.desktop).default}
@@ -44,12 +46,16 @@ const CarItemImage = () => {
               )}
             </ItemNamePrice>
           </ImagePriceInnerControl>
+          
+          
           <ItemImageCartControl>
             <CartControl
               itemqty={item.qty}
               onAdd={() => onAdd(item)}
               onRemove={() => onRemove(item)}
             />
+
+
           </ItemImageCartControl>
         </ImagePriceName>
       ))}
